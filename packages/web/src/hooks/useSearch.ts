@@ -1,11 +1,10 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import Fuse from 'fuse.js'
-import type { FunctionEntry, ModuleEntry, SearchIndex } from '@hoogle-effect/api'
+import type { FunctionEntry, ModuleEntry } from '@hoogle-effect/api'
+import { useIndex } from './useIndex'
 
-interface IndexStats {
-  totalFunctions: number
-  totalModules: number
-  effectVersion: string
+export interface SearchFilters {
+  packages?: Set<string>
 }
 
 interface UseSearchResult {
@@ -14,24 +13,12 @@ interface UseSearchResult {
   modules: ModuleEntry[]
   isLoading: boolean
   error: string | null
-  indexStats: IndexStats | null
+  indexStats: ReturnType<typeof useIndex>['indexStats']
+  availablePackages: string[]
 }
 
-// Global index cache
-let indexCache: SearchIndex | null = null
+// Global Fuse cache
 let fuseCache: Fuse<FunctionEntry> | null = null
-
-async function loadIndex(): Promise<SearchIndex> {
-  if (indexCache) return indexCache
-
-  const response = await fetch('/data/index.json')
-  if (!response.ok) {
-    throw new Error('Failed to load search index')
-  }
-
-  indexCache = await response.json()
-  return indexCache!
-}
 
 function createFuse(functions: FunctionEntry[]): Fuse<FunctionEntry> {
   if (fuseCache) return fuseCache
@@ -54,18 +41,8 @@ function createFuse(functions: FunctionEntry[]): Fuse<FunctionEntry> {
   return fuseCache
 }
 
-export function useSearch(query: string): UseSearchResult {
-  const [index, setIndex] = useState<SearchIndex | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  // Load index on mount
-  useEffect(() => {
-    loadIndex()
-      .then(setIndex)
-      .catch((err) => setError(err.message))
-      .finally(() => setIsLoading(false))
-  }, [])
+export function useSearch(query: string, filters?: SearchFilters): UseSearchResult {
+  const { index, isLoading, error, indexStats, availablePackages } = useIndex()
 
   // Compute search results
   const results = useMemo(() => {
@@ -76,19 +53,10 @@ export function useSearch(query: string): UseSearchResult {
     const fuse = createFuse(index.functions)
     const searchResults = fuse.search(query.trim(), { limit: 50 })
 
-    return searchResults.map((result) => result.item)
-  }, [index, query])
-
-  // Compute index stats
-  const indexStats = useMemo((): IndexStats | null => {
-    if (!index) return null
-
-    return {
-      totalFunctions: index.functions.length,
-      totalModules: index.modules.length,
-      effectVersion: index.effectVersion,
-    }
-  }, [index])
+    return searchResults
+      .map((result) => result.item)
+      .filter((item) => !filters?.packages || filters.packages.has(item.package))
+  }, [index, query, filters?.packages])
 
   return {
     results,
@@ -97,5 +65,6 @@ export function useSearch(query: string): UseSearchResult {
     isLoading,
     error,
     indexStats,
+    availablePackages,
   }
 }
