@@ -2,13 +2,20 @@ import { useState } from 'react'
 import { SearchBar } from './components/SearchBar'
 import { ResultsList } from './components/ResultsList'
 import { FunctionDetail } from './components/FunctionDetail'
+import { PackageFilter } from './components/PackageFilter'
 import { useSearch } from './hooks/useSearch'
 import type { FunctionEntry } from '@hoogle-effect/api'
 
 function App() {
   const [query, setQuery] = useState('')
   const [selectedFunction, setSelectedFunction] = useState<FunctionEntry | null>(null)
-  const { results, isLoading, error, indexStats } = useSearch(query)
+  const [selectedPackages, setSelectedPackages] = useState<Set<string>>(
+    new Set(['effect', '@effect/platform'])
+  )
+  const [isFilterOpen, setIsFilterOpen] = useState(false)
+  const { results, isLoading, error, indexStats, availablePackages } = useSearch(query, {
+    packages: selectedPackages,
+  })
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -29,6 +36,15 @@ function App() {
             value={query}
             onChange={setQuery}
             placeholder="Search by name, type, or description... (e.g., map, Effect<A, E, R>, retry)"
+          />
+
+          <PackageFilter
+            packages={availablePackages}
+            selectedPackages={selectedPackages}
+            onSelectionChange={setSelectedPackages}
+            isOpen={isFilterOpen}
+            onToggleOpen={() => setIsFilterOpen(!isFilterOpen)}
+            packageCounts={indexStats?.packageCounts}
           />
 
           {indexStats && (
