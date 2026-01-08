@@ -16,6 +16,7 @@ export interface FunctionEntry {
   id: string;                          // Unique ID: "Effect.map"
   name: string;                        // Function name: "map"
   module: string;                      // Module name: "Effect"
+  package: string;                     // Package name: "effect" or "@effect/platform"
   signature: string;                   // Type signature as string
   signatureParsed?: ParsedSignature;   // Parsed type for matching
   description: string;                 // Short description from JSDoc
@@ -31,6 +32,7 @@ export interface FunctionEntry {
 // Module entry for grouping
 export interface ModuleEntry {
   name: string;                        // "Effect", "Stream", "Option"
+  package: string;                     // "effect" or "@effect/platform"
   description: string;
   functionCount: number;
   path: string;                        // Import path

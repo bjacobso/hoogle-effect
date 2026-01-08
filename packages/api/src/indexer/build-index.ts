@@ -16,42 +16,111 @@ import type { SearchIndex, FunctionEntry, ModuleEntry, Example } from "../types/
 
 // Configuration
 const CONFIG = {
-  // Effect modules to index
-  modules: [
-    "effect",
-    "effect/Effect",
-    "effect/Stream",
-    "effect/Option",
-    "effect/Either",
-    "effect/Array",
-    "effect/Ref",
-    "effect/Queue",
-    "effect/Schedule",
-    "effect/Layer",
-    "effect/Context",
-    "effect/Scope",
-    "effect/Fiber",
-    "effect/FiberRef",
-    "effect/Runtime",
-    "effect/Exit",
-    "effect/Cause",
-    "effect/Config",
-    "effect/ConfigProvider",
-    "effect/Logger",
-    "effect/Metric",
-    "effect/Resource",
-    "effect/Pool",
-    "effect/Cache",
-    "effect/Deferred",
-    "effect/PubSub",
-    "effect/Chunk",
-    "effect/HashMap",
-    "effect/HashSet",
-    "effect/List",
-    "effect/SortedMap",
-    "effect/SortedSet",
-    "effect/Duration",
-    "effect/DateTime",
+  // Packages and their modules to index
+  packages: [
+    {
+      name: "effect",
+      modules: [
+        "effect",
+        "Effect",
+        "Stream",
+        "Option",
+        "Either",
+        "Array",
+        "Ref",
+        "Queue",
+        "Schedule",
+        "Layer",
+        "Context",
+        "Scope",
+        "Fiber",
+        "FiberRef",
+        "Runtime",
+        "Exit",
+        "Cause",
+        "Config",
+        "ConfigProvider",
+        "Logger",
+        "Metric",
+        "Resource",
+        "Pool",
+        "Cache",
+        "Deferred",
+        "PubSub",
+        "Chunk",
+        "HashMap",
+        "HashSet",
+        "List",
+        "SortedMap",
+        "SortedSet",
+        "Duration",
+        "DateTime",
+      ],
+    },
+    {
+      name: "@effect/platform",
+      modules: [
+        "FileSystem",
+        "HttpApi",
+        "HttpApiBuilder",
+        "HttpApiClient",
+        "HttpApiEndpoint",
+        "HttpApiError",
+        "HttpApiGroup",
+        "HttpApiMiddleware",
+        "HttpApiSchema",
+        "HttpApiSecurity",
+        "HttpApiSwagger",
+        "HttpApp",
+        "HttpBody",
+        "HttpClient",
+        "HttpClientError",
+        "HttpClientRequest",
+        "HttpClientResponse",
+        "HttpIncomingMessage",
+        "HttpMethod",
+        "HttpMiddleware",
+        "HttpMultiplex",
+        "HttpPlatform",
+        "HttpRouter",
+        "HttpServer",
+        "HttpServerError",
+        "HttpServerRequest",
+        "HttpServerRespondable",
+        "HttpServerResponse",
+        "HttpTraceContext",
+        "HttpLayerRouter",
+        "Command",
+        "CommandExecutor",
+        "Cookies",
+        "Error",
+        "Etag",
+        "FetchHttpClient",
+        "Headers",
+        "KeyValueStore",
+        "MsgPack",
+        "Multipart",
+        "Ndjson",
+        "OpenApi",
+        "Path",
+        "PlatformConfigProvider",
+        "PlatformLogger",
+        "Runtime",
+        "Socket",
+        "SocketServer",
+        "Template",
+        "Terminal",
+        "Transferable",
+        "Url",
+        "UrlParams",
+        "Worker",
+        "WorkerError",
+        "WorkerRunner",
+        "ChannelSchema",
+        "Effectify",
+        "OpenApiJsonSchema",
+      ],
+    },
   ],
   outputDir: path.resolve(process.cwd(), "../../data"),
 };
@@ -69,11 +138,11 @@ function createProject(): Project {
   return project;
 }
 
-// Find Effect package in node_modules
-function findEffectPackage(): string {
+// Find a package in node_modules
+function findPackage(packageName: string): string {
   const possiblePaths = [
-    path.resolve(process.cwd(), "node_modules/effect"),
-    path.resolve(process.cwd(), "../../node_modules/effect"),
+    path.resolve(process.cwd(), `node_modules/${packageName}`),
+    path.resolve(process.cwd(), `../../node_modules/${packageName}`),
   ];
 
   for (const p of possiblePaths) {
@@ -82,7 +151,7 @@ function findEffectPackage(): string {
     }
   }
 
-  throw new Error("Could not find effect package in node_modules. Run pnpm install first.");
+  throw new Error(`Could not find ${packageName} package in node_modules. Run pnpm install first.`);
 }
 
 // Clean up type signatures by removing full import paths
@@ -164,7 +233,7 @@ function parseExamplesFromDescription(description: string): { cleanDescription: 
 
 // Extract JSDoc comment text
 function extractJSDoc(node: Node): { description: string; fullDescription: string; examples: Example[]; tags: Record<string, string> } {
-  const jsDocs = node.getJsDocs?.() ?? [];
+  const jsDocs = (node as unknown as { getJsDocs?: () => JSDoc[] }).getJsDocs?.() ?? [];
   let rawDescription = "";
   let examples: Example[] = [];
   const tags: Record<string, string> = {};
@@ -173,7 +242,7 @@ function extractJSDoc(node: Node): { description: string; fullDescription: strin
     // Get main description
     const comment = jsDoc.getComment();
     if (comment) {
-      rawDescription = typeof comment === "string" ? comment : comment.map(c => c.getText()).join("");
+      rawDescription = typeof comment === "string" ? comment : comment.map((c) => c?.getText() ?? "").join("");
     }
 
     // Extract tags
@@ -234,15 +303,9 @@ function extractSignature(node: FunctionDeclaration | VariableDeclaration): stri
   return cleanSignature(signature);
 }
 
-// Get module name from file path
-function getModuleName(filePath: string): string {
-  // Extract module name from path like "effect/Effect" or "effect/Stream"
-  const match = filePath.match(/effect\/(\w+)/);
-  return match ? match[1] : "effect";
-}
 
 // Process a source file and extract function entries
-function processSourceFile(sourceFile: SourceFile, moduleName: string): FunctionEntry[] {
+function processSourceFile(sourceFile: SourceFile, moduleName: string, packageName: string): FunctionEntry[] {
   const entries: FunctionEntry[] = [];
 
   console.log(`  Processing: ${sourceFile.getFilePath()}`);
@@ -261,6 +324,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
       id: `${moduleName}.${name}`,
       name,
       module: moduleName,
+      package: packageName,
       signature,
       description,
       documentation: fullDescription,
@@ -286,6 +350,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
         id: `${moduleName}.${name}`,
         name,
         module: moduleName,
+        package: packageName,
         signature,
         description,
         documentation: fullDescription,
@@ -317,6 +382,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
         id: `${nsName}.${name}`,
         name,
         module: nsName,
+        package: packageName,
         signature,
         description,
         documentation: fullDescription,
@@ -340,6 +406,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
           id: `${nsName}.${name}`,
           name,
           module: nsName,
+          package: packageName,
           signature,
           description,
           documentation: fullDescription,
@@ -357,48 +424,54 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
   return entries;
 }
 
-// Load and process Effect package
+// Load and process all configured packages
 async function buildIndex(): Promise<SearchIndex> {
   console.log("Building Hoogle-Effect search index...\n");
-
-  const effectPath = findEffectPackage();
-  console.log(`Found Effect at: ${effectPath}\n`);
-
-  // Read Effect package.json for version info
-  const effectPkg = JSON.parse(
-    fs.readFileSync(path.join(effectPath, "package.json"), "utf-8")
-  );
-  console.log(`Effect version: ${effectPkg.version}\n`);
 
   const project = createProject();
   const allFunctions: FunctionEntry[] = [];
   const moduleMap = new Map<string, ModuleEntry>();
+  const packageVersions: Record<string, string> = {};
 
-  // Add Effect type definitions to project
-  for (const modulePath of CONFIG.modules) {
-    const dtsPath = path.join(effectPath, "dist", "dts", modulePath.replace("effect/", "") + ".d.ts");
+  // Process each package
+  for (const pkg of CONFIG.packages) {
+    const pkgPath = findPackage(pkg.name);
+    console.log(`Found ${pkg.name} at: ${pkgPath}`);
 
-    if (fs.existsSync(dtsPath)) {
-      console.log(`Adding: ${modulePath}`);
-      const sourceFile = project.addSourceFileAtPath(dtsPath);
-      const moduleName = getModuleName(modulePath);
+    // Read package.json for version info
+    const pkgJson = JSON.parse(
+      fs.readFileSync(path.join(pkgPath, "package.json"), "utf-8")
+    );
+    packageVersions[pkg.name] = pkgJson.version;
+    console.log(`${pkg.name} version: ${pkgJson.version}\n`);
 
-      const functions = processSourceFile(sourceFile, moduleName);
-      allFunctions.push(...functions);
+    // Add type definitions to project
+    for (const moduleName of pkg.modules) {
+      const dtsPath = path.join(pkgPath, "dist", "dts", `${moduleName}.d.ts`);
 
-      // Track module info
-      if (!moduleMap.has(moduleName)) {
-        moduleMap.set(moduleName, {
-          name: moduleName,
-          description: "",
-          functionCount: 0,
-          path: modulePath,
-        });
+      if (fs.existsSync(dtsPath)) {
+        console.log(`Adding: ${pkg.name}/${moduleName}`);
+        const sourceFile = project.addSourceFileAtPath(dtsPath);
+
+        const functions = processSourceFile(sourceFile, moduleName, pkg.name);
+        allFunctions.push(...functions);
+
+        // Track module info with unique key (package + module)
+        const moduleKey = `${pkg.name}/${moduleName}`;
+        if (!moduleMap.has(moduleKey)) {
+          moduleMap.set(moduleKey, {
+            name: moduleName,
+            package: pkg.name,
+            description: "",
+            functionCount: 0,
+            path: `${pkg.name}/${moduleName}`,
+          });
+        }
+        const mod = moduleMap.get(moduleKey)!;
+        mod.functionCount += functions.length;
+      } else {
+        console.log(`  Skipping (not found): ${dtsPath}`);
       }
-      const mod = moduleMap.get(moduleName)!;
-      mod.functionCount += functions.length;
-    } else {
-      console.log(`  Skipping (not found): ${dtsPath}`);
     }
   }
 
@@ -407,7 +480,7 @@ async function buildIndex(): Promise<SearchIndex> {
   return {
     version: "1.0.0",
     buildDate: new Date().toISOString(),
-    effectVersion: effectPkg.version,
+    effectVersion: packageVersions["effect"] ?? "unknown",
     functions: allFunctions,
     modules: Array.from(moduleMap.values()),
   };

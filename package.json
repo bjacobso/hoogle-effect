@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "turbo dev",
+    "dev:full": "pnpm build:index && pnpm --filter @hoogle-effect/web copy-index && turbo dev",
     "build": "turbo build",
     "build:index": "turbo run build:index",
     "test": "turbo test",
