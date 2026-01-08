@@ -1,5 +1,4 @@
 import type { FunctionEntry } from '@hoogle-effect/api'
-import { SignatureDisplay } from './SignatureDisplay'
 import { CodeBlock } from './CodeBlock'
 
 interface FunctionDetailProps {
@@ -39,9 +38,7 @@ export function FunctionDetail({ func }: FunctionDetailProps) {
         </div>
 
         {/* Type signature */}
-        <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
-          <SignatureDisplay signature={func.signature} />
-        </div>
+        <CodeBlock code={func.signature} language="typescript" />
       </div>
 
       {/* Description */}
