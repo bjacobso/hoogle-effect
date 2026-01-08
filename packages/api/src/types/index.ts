@@ -26,6 +26,7 @@ export interface FunctionEntry {
   deprecated?: string;                 // Deprecation message if any
   sourceFile?: string;                 // Source file path
   sourceLine?: number;                 // Line number in source
+  githubUrl?: string;                  // GitHub URL to source
 }
 
 // Module entry for grouping

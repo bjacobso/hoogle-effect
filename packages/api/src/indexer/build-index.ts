@@ -241,6 +241,21 @@ function getModuleName(filePath: string): string {
   return match ? match[1] : "effect";
 }
 
+// Generate GitHub URL for a source location
+function generateGitHubUrl(sourceFilePath: string, line: number): string {
+  // Extract the module name from the .d.ts path
+  // e.g., "/path/to/node_modules/effect/dist/dts/Effect.d.ts" -> "Effect"
+  const match = sourceFilePath.match(/\/dist\/dts\/(.+)\.d\.ts$/);
+  if (!match) {
+    return "";
+  }
+  const moduleName = match[1];
+
+  // Construct GitHub URL pointing to the source .ts file
+  // Effect-TS repo structure: packages/effect/src/{ModuleName}.ts
+  return `https://github.com/Effect-TS/effect/blob/main/packages/effect/src/${moduleName}.ts#L${line}`;
+}
+
 // Process a source file and extract function entries
 function processSourceFile(sourceFile: SourceFile, moduleName: string): FunctionEntry[] {
   const entries: FunctionEntry[] = [];
@@ -257,6 +272,9 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
     const { description, fullDescription, examples, tags } = extractJSDoc(func);
     const signature = extractSignature(func);
 
+    const filePath = sourceFile.getFilePath();
+    const lineNumber = func.getStartLineNumber();
+
     entries.push({
       id: `${moduleName}.${name}`,
       name,
@@ -268,8 +286,9 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
       tags: tags.category ? [tags.category] : [],
       since: tags.since,
       deprecated: tags.deprecated,
-      sourceFile: sourceFile.getFilePath(),
-      sourceLine: func.getStartLineNumber(),
+      sourceFile: filePath,
+      sourceLine: lineNumber,
+      githubUrl: generateGitHubUrl(filePath, lineNumber),
     });
   }
 
@@ -282,6 +301,9 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
       const { description, fullDescription, examples, tags } = extractJSDoc(statement);
       const signature = extractSignature(decl);
 
+      const filePath = sourceFile.getFilePath();
+      const lineNumber = decl.getStartLineNumber();
+
       entries.push({
         id: `${moduleName}.${name}`,
         name,
@@ -293,8 +315,9 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
         tags: tags.category ? [tags.category] : [],
         since: tags.since,
         deprecated: tags.deprecated,
-        sourceFile: sourceFile.getFilePath(),
-        sourceLine: decl.getStartLineNumber(),
+        sourceFile: filePath,
+        sourceLine: lineNumber,
+        githubUrl: generateGitHubUrl(filePath, lineNumber),
       });
     }
   }
@@ -313,6 +336,9 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
       const { description, fullDescription, examples, tags } = extractJSDoc(func);
       const signature = extractSignature(func);
 
+      const filePath = sourceFile.getFilePath();
+      const lineNumber = func.getStartLineNumber();
+
       entries.push({
         id: `${nsName}.${name}`,
         name,
@@ -324,8 +350,9 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
         tags: tags.category ? [tags.category] : [],
         since: tags.since,
         deprecated: tags.deprecated,
-        sourceFile: sourceFile.getFilePath(),
-        sourceLine: func.getStartLineNumber(),
+        sourceFile: filePath,
+        sourceLine: lineNumber,
+        githubUrl: generateGitHubUrl(filePath, lineNumber),
       });
     }
 
@@ -335,6 +362,9 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
         const name = decl.getName();
         const { description, fullDescription, examples, tags } = extractJSDoc(statement);
         const signature = extractSignature(decl);
+
+        const filePath = sourceFile.getFilePath();
+        const lineNumber = decl.getStartLineNumber();
 
         entries.push({
           id: `${nsName}.${name}`,
@@ -347,8 +377,9 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string): Function
           tags: tags.category ? [tags.category] : [],
           since: tags.since,
           deprecated: tags.deprecated,
-          sourceFile: sourceFile.getFilePath(),
-          sourceLine: decl.getStartLineNumber(),
+          sourceFile: filePath,
+          sourceLine: lineNumber,
+          githubUrl: generateGitHubUrl(filePath, lineNumber),
         });
       }
     }
