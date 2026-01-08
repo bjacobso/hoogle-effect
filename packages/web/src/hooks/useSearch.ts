@@ -1,6 +1,7 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import Fuse from 'fuse.js'
-import type { FunctionEntry, SearchIndex } from '@hoogle-effect/api'
+import type { FunctionEntry } from '@hoogle-effect/api'
+import { useIndex } from './useIndex'
 
 interface IndexStats {
   totalFunctions: number
@@ -15,21 +16,8 @@ interface UseSearchResult {
   indexStats: IndexStats | null
 }
 
-// Global index cache
-let indexCache: SearchIndex | null = null
+// Global Fuse cache
 let fuseCache: Fuse<FunctionEntry> | null = null
-
-async function loadIndex(): Promise<SearchIndex> {
-  if (indexCache) return indexCache
-
-  const response = await fetch('/data/index.json')
-  if (!response.ok) {
-    throw new Error('Failed to load search index')
-  }
-
-  indexCache = await response.json()
-  return indexCache!
-}
 
 function createFuse(functions: FunctionEntry[]): Fuse<FunctionEntry> {
   if (fuseCache) return fuseCache
@@ -53,17 +41,7 @@ function createFuse(functions: FunctionEntry[]): Fuse<FunctionEntry> {
 }
 
 export function useSearch(query: string): UseSearchResult {
-  const [index, setIndex] = useState<SearchIndex | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  // Load index on mount
-  useEffect(() => {
-    loadIndex()
-      .then(setIndex)
-      .catch((err) => setError(err.message))
-      .finally(() => setIsLoading(false))
-  }, [])
+  const { index, isLoading, error, indexStats } = useIndex()
 
   // Compute search results
   const results = useMemo(() => {
@@ -76,17 +54,6 @@ export function useSearch(query: string): UseSearchResult {
 
     return searchResults.map((result) => result.item)
   }, [index, query])
-
-  // Compute index stats
-  const indexStats = useMemo((): IndexStats | null => {
-    if (!index) return null
-
-    return {
-      totalFunctions: index.functions.length,
-      totalModules: index.modules.length,
-      effectVersion: index.effectVersion,
-    }
-  }, [index])
 
   return {
     results,
