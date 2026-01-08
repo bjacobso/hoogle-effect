@@ -84,7 +84,7 @@ export function SignatureDisplay({ signature, compact }: SignatureDisplayProps) 
 
   if (compact) {
     return (
-      <span className="text-gray-600">
+      <span className="text-gray-600 dark:text-gray-400">
         {displaySig}
       </span>
     )

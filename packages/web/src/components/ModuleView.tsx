@@ -19,11 +19,11 @@ export function ModuleView({
   return (
     <div className="space-y-4">
       {/* Module Header */}
-      <div className="bg-white rounded-lg border border-gray-200 p-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4">
         <div className="flex items-center gap-3">
           <button
             onClick={onBack}
-            className="p-2 -ml-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+            className="p-2 -ml-2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
             aria-label="Back to search"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -31,8 +31,8 @@ export function ModuleView({
             </svg>
           </button>
           <div>
-            <h2 className="text-xl font-bold text-gray-900">{module?.name ?? 'Module'}</h2>
-            <p className="text-sm text-gray-500">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">{module?.name ?? 'Module'}</h2>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               {functions.length} function{functions.length !== 1 ? 's' : ''}
             </p>
           </div>
@@ -47,30 +47,30 @@ export function ModuleView({
             onClick={() => onSelectFunction(func)}
             className={`w-full text-left p-4 rounded-lg border transition-all ${
               selectedFunctionId === func.id
-                ? 'bg-purple-50 border-purple-300 ring-2 ring-purple-200'
-                : 'bg-white border-gray-200 hover:border-purple-200 hover:bg-purple-50/50'
+                ? 'bg-purple-50 dark:bg-purple-900/30 border-purple-300 dark:border-purple-700 ring-2 ring-purple-200 dark:ring-purple-800'
+                : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-700 hover:bg-purple-50/50 dark:hover:bg-purple-900/20'
             }`}
           >
             <div className="flex items-start justify-between gap-2">
               <div className="flex-1 min-w-0">
                 {/* Function name */}
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="font-semibold text-purple-600">{func.name}</span>
+                  <span className="font-semibold text-purple-600 dark:text-purple-400">{func.name}</span>
                   {func.since && (
-                    <span className="text-xs px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded">
+                    <span className="text-xs px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded">
                       v{func.since}
                     </span>
                   )}
                 </div>
 
                 {/* Signature */}
-                <div className="text-sm text-gray-600 font-mono truncate mb-2">
+                <div className="text-sm text-gray-600 dark:text-gray-400 font-mono truncate mb-2">
                   <SignatureDisplay signature={func.signature} compact />
                 </div>
 
                 {/* Description */}
                 {func.description && (
-                  <p className="text-sm text-gray-500 line-clamp-2">{func.description}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{func.description}</p>
                 )}
               </div>
 
@@ -80,7 +80,7 @@ export function ModuleView({
                   {func.tags.slice(0, 2).map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full"
+                      className="text-xs px-2 py-0.5 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full"
                     >
                       {tag}
                     </span>

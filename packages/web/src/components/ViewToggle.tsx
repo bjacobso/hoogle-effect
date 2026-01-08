@@ -7,13 +7,13 @@ interface ViewToggleProps {
 
 export function ViewToggle({ mode, onChange }: ViewToggleProps) {
   return (
-    <div className="flex rounded-lg bg-gray-100 p-1">
+    <div className="flex rounded-lg bg-gray-100 dark:bg-gray-700 p-1">
       <button
         onClick={() => onChange('flat')}
         className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
           mode === 'flat'
-            ? 'bg-white text-purple-700 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-white dark:bg-gray-600 text-purple-700 dark:text-purple-400 shadow-sm'
+            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
         }`}
         title="Flat list"
       >
@@ -25,8 +25,8 @@ export function ViewToggle({ mode, onChange }: ViewToggleProps) {
         onClick={() => onChange('tree')}
         className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
           mode === 'tree'
-            ? 'bg-white text-purple-700 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-white dark:bg-gray-600 text-purple-700 dark:text-purple-400 shadow-sm'
+            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
         }`}
         title="Tree view"
       >
@@ -38,8 +38,8 @@ export function ViewToggle({ mode, onChange }: ViewToggleProps) {
         onClick={() => onChange('list')}
         className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
           mode === 'list'
-            ? 'bg-white text-purple-700 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-white dark:bg-gray-600 text-purple-700 dark:text-purple-400 shadow-sm'
+            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
         }`}
         title="Grouped list"
       >
