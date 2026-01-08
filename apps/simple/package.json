@@ -1,0 +1,25 @@
+{
+  "name": "@hoogle-effect/simple",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "wrangler deploy --dry-run --outdir=dist",
+    "build:css": "tailwindcss -i ./src/input.css -o ./src/static/styles.css --minify",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hoogle-effect/api": "workspace:*",
+    "fuse.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241205.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.7.0",
+    "wrangler": "^3.99.0"
+  }
+}

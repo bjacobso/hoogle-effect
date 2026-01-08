@@ -1,0 +1,23 @@
+name = "hoogle-effect"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Assets (static files)
+[assets]
+directory = "./src/static"
+
+# Development settings
+[dev]
+port = 8787
+local_protocol = "http"
+
+# Future: Durable Objects
+# [durable_objects]
+# bindings = [
+#   { name = "SEARCH_INDEX", class_name = "SearchIndexDO" }
+# ]
+#
+# [[migrations]]
+# tag = "v1"
+# new_classes = ["SearchIndexDO"]
