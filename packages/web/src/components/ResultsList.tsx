@@ -6,9 +6,10 @@ interface ResultsListProps {
   query: string
   selectedId?: string
   onSelect: (func: FunctionEntry) => void
+  onModuleClick?: (moduleName: string) => void
 }
 
-export function ResultsList({ results, query, selectedId, onSelect }: ResultsListProps) {
+export function ResultsList({ results, query, selectedId, onSelect, onModuleClick }: ResultsListProps) {
   if (!query) {
     return (
       <div className="bg-white rounded-lg border border-gray-200 p-8 text-center">
@@ -58,7 +59,19 @@ export function ResultsList({ results, query, selectedId, onSelect }: ResultsLis
           <div className="flex items-start justify-between gap-2">
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
-                <span className="font-semibold text-gray-900">{func.module}</span>
+                {onModuleClick ? (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      onModuleClick(func.module)
+                    }}
+                    className="font-semibold text-gray-900 hover:text-purple-600 hover:underline transition-colors"
+                  >
+                    {func.module}
+                  </button>
+                ) : (
+                  <span className="font-semibold text-gray-900">{func.module}</span>
+                )}
                 <span className="text-gray-400">.</span>
                 <span className="font-semibold text-purple-600">{func.name}</span>
                 {func.since && (

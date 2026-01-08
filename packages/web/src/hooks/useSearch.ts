@@ -1,13 +1,7 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import Fuse from 'fuse.js'
-import type { FunctionEntry, SearchIndex } from '@hoogle-effect/api'
-
-interface IndexStats {
-  totalFunctions: number
-  totalModules: number
-  effectVersion: string
-  packageCounts: Record<string, number>
-}
+import type { FunctionEntry } from '@hoogle-effect/api'
+import { useIndex } from './useIndex'
 
 export interface SearchFilters {
   packages?: Set<string>
@@ -17,25 +11,12 @@ interface UseSearchResult {
   results: FunctionEntry[]
   isLoading: boolean
   error: string | null
-  indexStats: IndexStats | null
+  indexStats: ReturnType<typeof useIndex>['indexStats']
   availablePackages: string[]
 }
 
-// Global index cache
-let indexCache: SearchIndex | null = null
+// Global Fuse cache
 let fuseCache: Fuse<FunctionEntry> | null = null
-
-async function loadIndex(): Promise<SearchIndex> {
-  if (indexCache) return indexCache
-
-  const response = await fetch('/data/index.json')
-  if (!response.ok) {
-    throw new Error('Failed to load search index')
-  }
-
-  indexCache = await response.json()
-  return indexCache!
-}
 
 function createFuse(functions: FunctionEntry[]): Fuse<FunctionEntry> {
   if (fuseCache) return fuseCache
@@ -59,17 +40,7 @@ function createFuse(functions: FunctionEntry[]): Fuse<FunctionEntry> {
 }
 
 export function useSearch(query: string, filters?: SearchFilters): UseSearchResult {
-  const [index, setIndex] = useState<SearchIndex | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  // Load index on mount
-  useEffect(() => {
-    loadIndex()
-      .then(setIndex)
-      .catch((err) => setError(err.message))
-      .finally(() => setIsLoading(false))
-  }, [])
+  const { index, isLoading, error, indexStats, availablePackages } = useIndex()
 
   // Compute search results
   const results = useMemo(() => {
@@ -84,29 +55,6 @@ export function useSearch(query: string, filters?: SearchFilters): UseSearchResu
       .map((result) => result.item)
       .filter((item) => !filters?.packages || filters.packages.has(item.package))
   }, [index, query, filters?.packages])
-
-  // Compute index stats
-  const indexStats = useMemo((): IndexStats | null => {
-    if (!index) return null
-
-    const packageCounts: Record<string, number> = {}
-    for (const func of index.functions) {
-      packageCounts[func.package] = (packageCounts[func.package] || 0) + 1
-    }
-
-    return {
-      totalFunctions: index.functions.length,
-      totalModules: index.modules.length,
-      effectVersion: index.effectVersion,
-      packageCounts,
-    }
-  }, [index])
-
-  // Get available packages
-  const availablePackages = useMemo(() => {
-    if (!index) return []
-    return [...new Set(index.functions.map((f) => f.package))]
-  }, [index])
 
   return {
     results,

@@ -3,19 +3,37 @@ import { SearchBar } from './components/SearchBar'
 import { ResultsList } from './components/ResultsList'
 import { FunctionDetail } from './components/FunctionDetail'
 import { PackageFilter } from './components/PackageFilter'
+import { ModuleView } from './components/ModuleView'
 import { useSearch } from './hooks/useSearch'
+import { useModuleFunctions } from './hooks/useModuleFunctions'
 import type { FunctionEntry } from '@hoogle-effect/api'
+
+type ViewState = { view: 'search' } | { view: 'module'; moduleName: string }
 
 function App() {
   const [query, setQuery] = useState('')
   const [selectedFunction, setSelectedFunction] = useState<FunctionEntry | null>(null)
   const [selectedPackages, setSelectedPackages] = useState<Set<string>>(
-    new Set(['effect', '@effect/platform'])
+    new Set(['effect', '@effect/platform', '@effect/experimental'])
   )
   const [isFilterOpen, setIsFilterOpen] = useState(false)
+  const [viewState, setViewState] = useState<ViewState>({ view: 'search' })
   const { results, isLoading, error, indexStats, availablePackages } = useSearch(query, {
     packages: selectedPackages,
   })
+  const { functions: moduleFunctions, module: selectedModule } = useModuleFunctions(
+    viewState.view === 'module' ? viewState.moduleName : null
+  )
+
+  const handleModuleClick = (moduleName: string) => {
+    setViewState({ view: 'module', moduleName })
+    setSelectedFunction(null)
+  }
+
+  const handleBackToSearch = () => {
+    setViewState({ view: 'search' })
+    setSelectedFunction(null)
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -32,24 +50,32 @@ function App() {
             </div>
           </div>
 
-          <SearchBar
-            value={query}
-            onChange={setQuery}
-            placeholder="Search by name, type, or description... (e.g., map, Effect<A, E, R>, retry)"
-          />
+          {viewState.view === 'search' ? (
+            <>
+              <SearchBar
+                value={query}
+                onChange={setQuery}
+                placeholder="Search by name, type, or description... (e.g., map, Effect<A, E, R>, retry)"
+              />
 
-          <PackageFilter
-            packages={availablePackages}
-            selectedPackages={selectedPackages}
-            onSelectionChange={setSelectedPackages}
-            isOpen={isFilterOpen}
-            onToggleOpen={() => setIsFilterOpen(!isFilterOpen)}
-            packageCounts={indexStats?.packageCounts}
-          />
+              <PackageFilter
+                packages={availablePackages}
+                selectedPackages={selectedPackages}
+                onSelectionChange={setSelectedPackages}
+                isOpen={isFilterOpen}
+                onToggleOpen={() => setIsFilterOpen(!isFilterOpen)}
+                packageCounts={indexStats?.packageCounts}
+              />
 
-          {indexStats && (
-            <div className="mt-3 text-sm text-gray-500">
-              {indexStats.totalFunctions} functions indexed from Effect {indexStats.effectVersion}
+              {indexStats && (
+                <div className="mt-3 text-sm text-gray-500">
+                  {indexStats.totalFunctions} functions indexed from Effect {indexStats.effectVersion}
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="text-sm text-gray-500">
+              Viewing module: <span className="font-semibold text-gray-900">{viewState.moduleName}</span>
             </div>
           )}
         </div>
@@ -70,14 +96,25 @@ function App() {
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Results list */}
+            {/* Results list or Module view */}
             <div>
-              <ResultsList
-                results={results}
-                query={query}
-                selectedId={selectedFunction?.id}
-                onSelect={setSelectedFunction}
-              />
+              {viewState.view === 'search' ? (
+                <ResultsList
+                  results={results}
+                  query={query}
+                  selectedId={selectedFunction?.id}
+                  onSelect={setSelectedFunction}
+                  onModuleClick={handleModuleClick}
+                />
+              ) : (
+                <ModuleView
+                  module={selectedModule}
+                  functions={moduleFunctions}
+                  onBack={handleBackToSearch}
+                  onSelectFunction={setSelectedFunction}
+                  selectedFunctionId={selectedFunction?.id}
+                />
+              )}
             </div>
 
             {/* Detail panel */}
