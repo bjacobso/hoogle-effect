@@ -5,9 +5,10 @@ import { TreeView } from './components/TreeView'
 import { ListView } from './components/ListView'
 import { FunctionDetail } from './components/FunctionDetail'
 import { ViewToggle, type ViewMode } from './components/ViewToggle'
+import { SearchModeToggle } from './components/SearchModeToggle'
 import { PackageFilter } from './components/PackageFilter'
 import { ModuleView } from './components/ModuleView'
-import { useSearch } from './hooks/useSearch'
+import { useSearch, type SearchMode } from './hooks/useSearch'
 import { useModuleFunctions } from './hooks/useModuleFunctions'
 import type { FunctionEntry } from '@hoogle-effect/api'
 
@@ -17,14 +18,17 @@ function App() {
   const [query, setQuery] = useState('')
   const [selectedFunction, setSelectedFunction] = useState<FunctionEntry | null>(null)
   const [viewMode, setViewMode] = useState<ViewMode>('flat')
+  const [searchMode, setSearchMode] = useState<SearchMode>('text')
   const [selectedPackages, setSelectedPackages] = useState<Set<string>>(
     new Set(['effect', '@effect/platform', '@effect/experimental'])
   )
   const [isFilterOpen, setIsFilterOpen] = useState(false)
   const [viewState, setViewState] = useState<ViewState>({ view: 'search' })
-  const { results, allFunctions, isLoading, error, indexStats, availablePackages } = useSearch(query, {
-    packages: selectedPackages,
-  })
+  const { results, allFunctions, isLoading, error, indexStats, availablePackages } = useSearch(
+    query,
+    { packages: selectedPackages },
+    searchMode
+  )
   const { functions: moduleFunctions, module: selectedModule } = useModuleFunctions(
     viewState.view === 'module' ? viewState.moduleName : null
   )
@@ -56,11 +60,20 @@ function App() {
 
           {viewState.view === 'search' ? (
             <>
-              <SearchBar
-                value={query}
-                onChange={setQuery}
-                placeholder="Search by name, type, or description... (e.g., map, Effect<A, E, R>, retry)"
-              />
+              <div className="flex items-center gap-3">
+                <div className="flex-1">
+                  <SearchBar
+                    value={query}
+                    onChange={setQuery}
+                    placeholder={
+                      searchMode === 'type'
+                        ? "Search by type signature... (e.g., Option a -> Effect b, Effect<A, E, R>)"
+                        : "Search by name or description... (e.g., map, flatMap, retry)"
+                    }
+                  />
+                </div>
+                <SearchModeToggle mode={searchMode} onChange={setSearchMode} />
+              </div>
 
               <PackageFilter
                 packages={availablePackages}

@@ -5,6 +5,4 @@
  */
 
 export * from "./types/index.js";
-
-// Search functions will be added here
-// export * from "./search/index.js";
+export * from "./search/index.js";

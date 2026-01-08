@@ -66,6 +66,9 @@ export interface TypeNode {
   // For generic types
   typeName?: string;
   typeArguments?: TypeNode[];
+  // For unification
+  isTypeVariable?: boolean;  // true for A, B, E, R, etc.
+  isWildcard?: boolean;      // true for * in queries
 }
 
 export type TypeKind =
@@ -78,6 +81,8 @@ export type TypeKind =
   | "literal"         // "hello", 42, true
   | "primitive"       // string, number, boolean
   | "reference"       // Named type reference
+  | "typeVariable"    // A, B, E, R (single uppercase letter)
+  | "wildcard"        // * (matches anything in queries)
   | "unknown";
 
 export interface Example {

@@ -1,7 +1,10 @@
 import { useMemo } from 'react'
 import Fuse from 'fuse.js'
 import type { FunctionEntry, ModuleEntry } from '@hoogle-effect/api'
+import { searchByType } from '@hoogle-effect/api'
 import { useIndex } from './useIndex'
+
+export type SearchMode = 'text' | 'type'
 
 export interface SearchFilters {
   packages?: Set<string>
@@ -41,22 +44,37 @@ function createFuse(functions: FunctionEntry[]): Fuse<FunctionEntry> {
   return fuseCache
 }
 
-export function useSearch(query: string, filters?: SearchFilters): UseSearchResult {
+export function useSearch(
+  query: string,
+  filters?: SearchFilters,
+  mode: SearchMode = 'text'
+): UseSearchResult {
   const { index, isLoading, error, indexStats, availablePackages } = useIndex()
 
-  // Compute search results
+  // Compute search results based on mode
   const results = useMemo(() => {
     if (!index || !query.trim()) {
       return []
     }
 
-    const fuse = createFuse(index.functions)
-    const searchResults = fuse.search(query.trim(), { limit: 50 })
+    let items: FunctionEntry[]
 
-    return searchResults
-      .map((result) => result.item)
-      .filter((item) => !filters?.packages || filters.packages.has(item.package))
-  }, [index, query, filters?.packages])
+    if (mode === 'type') {
+      // Type-based search
+      const typeResults = searchByType(query.trim(), index.functions)
+      items = typeResults.map(r => r.entry)
+    } else {
+      // Text-based fuzzy search (default)
+      const fuse = createFuse(index.functions)
+      const searchResults = fuse.search(query.trim(), { limit: 50 })
+      items = searchResults.map(result => result.item)
+    }
+
+    // Apply package filter
+    return items.filter(item =>
+      !filters?.packages || filters.packages.has(item.package)
+    )
+  }, [index, query, filters?.packages, mode])
 
   return {
     results,
