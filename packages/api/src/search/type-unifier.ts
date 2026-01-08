@@ -65,6 +65,11 @@ export function unifyTypes(
 
   // Type variable in target (from indexed function) - matches query
   if (target.isTypeVariable) {
+    // If query is a complex type (generic/effect), give a lower score
+    // A bare type variable like "A" is not a good match for "Option<A>"
+    if (query.kind === "generic" || query.kind === "effect") {
+      return match(30, context.bindings, [target.text]);
+    }
     return match(85, context.bindings, [target.text]);
   }
 
