@@ -14,6 +14,13 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import type { SearchIndex, FunctionEntry, ModuleEntry, Example } from "../types/index.js";
 
+// GitHub repository configuration for source links
+const GITHUB_REPOS: Record<string, { repo: string; packageDir: string }> = {
+  "effect": { repo: "Effect-TS/effect", packageDir: "effect" },
+  "@effect/platform": { repo: "Effect-TS/effect", packageDir: "platform" },
+  "@effect-atom/atom": { repo: "tim-smart/effect-atom", packageDir: "atom" },
+};
+
 // Configuration
 const CONFIG = {
   // Packages and their modules to index
@@ -119,6 +126,18 @@ const CONFIG = {
         "ChannelSchema",
         "Effectify",
         "OpenApiJsonSchema",
+      ],
+    },
+    {
+      name: "@effect-atom/atom",
+      modules: [
+        "Atom",
+        "AtomHttpApi",
+        "AtomRef",
+        "AtomRpc",
+        "Hydration",
+        "Registry",
+        "Result",
       ],
     },
   ],
@@ -305,7 +324,7 @@ function extractSignature(node: FunctionDeclaration | VariableDeclaration): stri
 
 
 // Generate GitHub URL for a source location
-function generateGitHubUrl(sourceFilePath: string, line: number): string {
+function generateGitHubUrl(sourceFilePath: string, line: number, packageName: string): string {
   // Extract the module name from the .d.ts path
   // e.g., "/path/to/node_modules/effect/dist/dts/Effect.d.ts" -> "Effect"
   const match = sourceFilePath.match(/\/dist\/dts\/(.+)\.d\.ts$/);
@@ -314,9 +333,14 @@ function generateGitHubUrl(sourceFilePath: string, line: number): string {
   }
   const moduleName = match[1];
 
+  // Look up the GitHub repo config for this package
+  const repoConfig = GITHUB_REPOS[packageName];
+  if (!repoConfig) {
+    return "";
+  }
+
   // Construct GitHub URL pointing to the source .ts file
-  // Effect-TS repo structure: packages/effect/src/{ModuleName}.ts
-  return `https://github.com/Effect-TS/effect/blob/main/packages/effect/src/${moduleName}.ts#L${line}`;
+  return `https://github.com/${repoConfig.repo}/blob/main/packages/${repoConfig.packageDir}/src/${moduleName}.ts#L${line}`;
 }
 
 // Process a source file and extract function entries
@@ -352,7 +376,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
       deprecated: tags.deprecated,
       sourceFile: filePath,
       sourceLine: lineNumber,
-      githubUrl: generateGitHubUrl(filePath, lineNumber),
+      githubUrl: generateGitHubUrl(filePath, lineNumber, packageName),
     });
   }
 
@@ -382,7 +406,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
         deprecated: tags.deprecated,
         sourceFile: filePath,
         sourceLine: lineNumber,
-        githubUrl: generateGitHubUrl(filePath, lineNumber),
+        githubUrl: generateGitHubUrl(filePath, lineNumber, packageName),
       });
     }
   }
@@ -418,7 +442,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
         deprecated: tags.deprecated,
         sourceFile: filePath,
         sourceLine: lineNumber,
-        githubUrl: generateGitHubUrl(filePath, lineNumber),
+        githubUrl: generateGitHubUrl(filePath, lineNumber, packageName),
       });
     }
 
@@ -446,7 +470,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
           deprecated: tags.deprecated,
           sourceFile: filePath,
           sourceLine: lineNumber,
-          githubUrl: generateGitHubUrl(filePath, lineNumber),
+          githubUrl: generateGitHubUrl(filePath, lineNumber, packageName),
         });
       }
     }

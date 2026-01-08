@@ -1,9 +1,13 @@
+import { useCodeHighlight } from "../hooks/useCodeHighlight"
+
 interface CodeBlockProps {
   code: string
   language?: string
 }
 
-export function CodeBlock({ code }: CodeBlockProps) {
+export function CodeBlock({ code, language = "typescript" }: CodeBlockProps) {
+  const highlighted = useCodeHighlight(code, language)
+
   const copyToClipboard = () => {
     navigator.clipboard.writeText(code)
   }
@@ -11,9 +15,13 @@ export function CodeBlock({ code }: CodeBlockProps) {
   return (
     <div className="relative group">
       <pre className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
-        <code className="text-sm text-gray-100 font-mono whitespace-pre">
-          {code}
-        </code>
+        {highlighted ? (
+          <code className="text-sm font-mono">{highlighted}</code>
+        ) : (
+          <code className="text-sm text-gray-100 font-mono whitespace-pre">
+            {code}
+          </code>
+        )}
       </pre>
       <button
         onClick={copyToClipboard}
