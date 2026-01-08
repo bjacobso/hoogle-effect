@@ -3,17 +3,16 @@ import Fuse from 'fuse.js'
 import type { FunctionEntry } from '@hoogle-effect/api'
 import { useIndex } from './useIndex'
 
-interface IndexStats {
-  totalFunctions: number
-  totalModules: number
-  effectVersion: string
+export interface SearchFilters {
+  packages?: Set<string>
 }
 
 interface UseSearchResult {
   results: FunctionEntry[]
   isLoading: boolean
   error: string | null
-  indexStats: IndexStats | null
+  indexStats: ReturnType<typeof useIndex>['indexStats']
+  availablePackages: string[]
 }
 
 // Global Fuse cache
@@ -40,8 +39,8 @@ function createFuse(functions: FunctionEntry[]): Fuse<FunctionEntry> {
   return fuseCache
 }
 
-export function useSearch(query: string): UseSearchResult {
-  const { index, isLoading, error, indexStats } = useIndex()
+export function useSearch(query: string, filters?: SearchFilters): UseSearchResult {
+  const { index, isLoading, error, indexStats, availablePackages } = useIndex()
 
   // Compute search results
   const results = useMemo(() => {
@@ -52,13 +51,16 @@ export function useSearch(query: string): UseSearchResult {
     const fuse = createFuse(index.functions)
     const searchResults = fuse.search(query.trim(), { limit: 50 })
 
-    return searchResults.map((result) => result.item)
-  }, [index, query])
+    return searchResults
+      .map((result) => result.item)
+      .filter((item) => !filters?.packages || filters.packages.has(item.package))
+  }, [index, query, filters?.packages])
 
   return {
     results,
     isLoading,
     error,
     indexStats,
+    availablePackages,
   }
 }

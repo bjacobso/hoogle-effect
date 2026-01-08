@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { SearchBar } from './components/SearchBar'
 import { ResultsList } from './components/ResultsList'
 import { FunctionDetail } from './components/FunctionDetail'
+import { PackageFilter } from './components/PackageFilter'
 import { ModuleView } from './components/ModuleView'
 import { useSearch } from './hooks/useSearch'
 import { useModuleFunctions } from './hooks/useModuleFunctions'
@@ -12,8 +13,14 @@ type ViewState = { view: 'search' } | { view: 'module'; moduleName: string }
 function App() {
   const [query, setQuery] = useState('')
   const [selectedFunction, setSelectedFunction] = useState<FunctionEntry | null>(null)
+  const [selectedPackages, setSelectedPackages] = useState<Set<string>>(
+    new Set(['effect', '@effect/platform', '@effect/experimental'])
+  )
+  const [isFilterOpen, setIsFilterOpen] = useState(false)
   const [viewState, setViewState] = useState<ViewState>({ view: 'search' })
-  const { results, isLoading, error, indexStats } = useSearch(query)
+  const { results, isLoading, error, indexStats, availablePackages } = useSearch(query, {
+    packages: selectedPackages,
+  })
   const { functions: moduleFunctions, module: selectedModule } = useModuleFunctions(
     viewState.view === 'module' ? viewState.moduleName : null
   )
@@ -49,6 +56,15 @@ function App() {
                 value={query}
                 onChange={setQuery}
                 placeholder="Search by name, type, or description... (e.g., map, Effect<A, E, R>, retry)"
+              />
+
+              <PackageFilter
+                packages={availablePackages}
+                selectedPackages={selectedPackages}
+                onSelectionChange={setSelectedPackages}
+                isOpen={isFilterOpen}
+                onToggleOpen={() => setIsFilterOpen(!isFilterOpen)}
+                packageCounts={indexStats?.packageCounts}
               />
 
               {indexStats && (

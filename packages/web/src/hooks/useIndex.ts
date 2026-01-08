@@ -5,6 +5,7 @@ interface IndexStats {
   totalFunctions: number
   totalModules: number
   effectVersion: string
+  packageCounts: Record<string, number>
 }
 
 // Global index cache (shared across hooks)
@@ -43,14 +44,25 @@ export function useIndex() {
   const indexStats = useMemo((): IndexStats | null => {
     if (!index) return null
 
+    const packageCounts: Record<string, number> = {}
+    for (const func of index.functions) {
+      packageCounts[func.package] = (packageCounts[func.package] || 0) + 1
+    }
+
     return {
       totalFunctions: index.functions.length,
       totalModules: index.modules.length,
       effectVersion: index.effectVersion,
+      packageCounts,
     }
   }, [index])
 
-  return { index, isLoading, error, indexStats }
+  const availablePackages = useMemo(() => {
+    if (!index) return []
+    return [...new Set(index.functions.map((f) => f.package))]
+  }, [index])
+
+  return { index, isLoading, error, indexStats, availablePackages }
 }
 
 // Export for cache sharing with useSearch
