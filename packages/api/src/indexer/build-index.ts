@@ -250,6 +250,36 @@ function parseExamplesFromDescription(description: string): { cleanDescription: 
   return { cleanDescription, examples };
 }
 
+/**
+ * Clean JSDoc comment syntax from text
+ */
+function cleanJSDocText(text: string): string {
+  if (!text) return "";
+
+  return text
+    .replace(/^\/\*\*\s*/, "")           // Remove opening /**
+    .replace(/\s*\*\/$/, "")             // Remove closing */
+    .replace(/^\s*\*\s?/gm, "")          // Remove leading * from lines
+    .replace(/ {2,}/g, " ")              // Collapse multiple spaces
+    .split("\n")
+    .map(line => line.trim())
+    .join("\n")
+    .trim();
+}
+
+/**
+ * Clean JSDoc comment syntax from code examples
+ */
+function cleanJSDocCode(code: string): string {
+  if (!code) return "";
+
+  return code
+    .replace(/^\/\*\*\s*/, "")           // Remove opening /**
+    .replace(/\s*\*\/$/, "")             // Remove closing */
+    .replace(/^\s*\*\s?/gm, "")          // Remove leading * from lines
+    .trim();
+}
+
 // Extract JSDoc comment text
 function extractJSDoc(node: Node): { description: string; fullDescription: string; examples: Example[]; tags: Record<string, string> } {
   const jsDocs = (node as unknown as { getJsDocs?: () => JSDoc[] }).getJsDocs?.() ?? [];
@@ -261,7 +291,8 @@ function extractJSDoc(node: Node): { description: string; fullDescription: strin
     // Get main description
     const comment = jsDoc.getComment();
     if (comment) {
-      rawDescription = typeof comment === "string" ? comment : comment.map((c) => c?.getText() ?? "").join("");
+      const rawComment = typeof comment === "string" ? comment : comment.map((c) => c?.getText() ?? "").join("");
+      rawDescription = cleanJSDocText(rawComment);
     }
 
     // Extract tags
@@ -271,16 +302,18 @@ function extractJSDoc(node: Node): { description: string; fullDescription: strin
 
       if (tagName === "example") {
         // Parse example code blocks from @example tags
-        const code = tagText.replace(/^```[\w-]*\n?/, "").replace(/\n?```$/, "").trim();
+        const cleanedTagText = cleanJSDocText(tagText);
+        const code = cleanedTagText.replace(/^```[\w-]*\n?/, "").replace(/\n?```$/, "").trim();
         if (code) {
-          examples.push({ code });
+          const cleanCode = cleanJSDocCode(code);
+          examples.push({ code: cleanCode });
         }
       } else if (tagName === "since") {
-        tags.since = tagText;
+        tags.since = cleanJSDocText(tagText);
       } else if (tagName === "deprecated") {
-        tags.deprecated = tagText;
+        tags.deprecated = cleanJSDocText(tagText);
       } else if (tagName === "category") {
-        tags.category = tagText;
+        tags.category = cleanJSDocText(tagText);
       }
     }
   }
