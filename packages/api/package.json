@@ -21,6 +21,7 @@
     "effect": "^3.12.0"
   },
   "devDependencies": {
+    "@effect-atom/atom": "^0.4.11",
     "@effect/platform": "^0.94.1",
     "@types/node": "^22.0.0",
     "ts-morph": "^24.0.0",
