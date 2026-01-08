@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import Fuse from 'fuse.js'
-import type { FunctionEntry } from '@hoogle-effect/api'
+import type { FunctionEntry, ModuleEntry } from '@hoogle-effect/api'
 import { useIndex } from './useIndex'
 
 export interface SearchFilters {
@@ -9,6 +9,8 @@ export interface SearchFilters {
 
 interface UseSearchResult {
   results: FunctionEntry[]
+  allFunctions: FunctionEntry[]
+  modules: ModuleEntry[]
   isLoading: boolean
   error: string | null
   indexStats: ReturnType<typeof useIndex>['indexStats']
@@ -58,6 +60,8 @@ export function useSearch(query: string, filters?: SearchFilters): UseSearchResu
 
   return {
     results,
+    allFunctions: index?.functions ?? [],
+    modules: index?.modules ?? [],
     isLoading,
     error,
     indexStats,

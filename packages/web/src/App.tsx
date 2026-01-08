@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import { SearchBar } from './components/SearchBar'
 import { ResultsList } from './components/ResultsList'
+import { TreeView } from './components/TreeView'
+import { ListView } from './components/ListView'
 import { FunctionDetail } from './components/FunctionDetail'
+import { ViewToggle, type ViewMode } from './components/ViewToggle'
 import { PackageFilter } from './components/PackageFilter'
 import { ModuleView } from './components/ModuleView'
 import { useSearch } from './hooks/useSearch'
@@ -13,12 +16,13 @@ type ViewState = { view: 'search' } | { view: 'module'; moduleName: string }
 function App() {
   const [query, setQuery] = useState('')
   const [selectedFunction, setSelectedFunction] = useState<FunctionEntry | null>(null)
+  const [viewMode, setViewMode] = useState<ViewMode>('flat')
   const [selectedPackages, setSelectedPackages] = useState<Set<string>>(
     new Set(['effect', '@effect/platform', '@effect/experimental'])
   )
   const [isFilterOpen, setIsFilterOpen] = useState(false)
   const [viewState, setViewState] = useState<ViewState>({ view: 'search' })
-  const { results, isLoading, error, indexStats, availablePackages } = useSearch(query, {
+  const { results, allFunctions, isLoading, error, indexStats, availablePackages } = useSearch(query, {
     packages: selectedPackages,
   })
   const { functions: moduleFunctions, module: selectedModule } = useModuleFunctions(
@@ -67,11 +71,14 @@ function App() {
                 packageCounts={indexStats?.packageCounts}
               />
 
-              {indexStats && (
-                <div className="mt-3 text-sm text-gray-500">
-                  {indexStats.totalFunctions} functions indexed from Effect {indexStats.effectVersion}
-                </div>
-              )}
+              <div className="mt-3 flex items-center justify-between">
+                {indexStats && (
+                  <div className="text-sm text-gray-500">
+                    {indexStats.totalFunctions} functions indexed from Effect {indexStats.effectVersion}
+                  </div>
+                )}
+                <ViewToggle mode={viewMode} onChange={setViewMode} />
+              </div>
             </>
           ) : (
             <div className="text-sm text-gray-500">
@@ -99,13 +106,35 @@ function App() {
             {/* Results list or Module view */}
             <div>
               {viewState.view === 'search' ? (
-                <ResultsList
-                  results={results}
-                  query={query}
-                  selectedId={selectedFunction?.id}
-                  onSelect={setSelectedFunction}
-                  onModuleClick={handleModuleClick}
-                />
+                <>
+                  {viewMode === 'flat' && (
+                    <ResultsList
+                      results={results}
+                      query={query}
+                      selectedId={selectedFunction?.id}
+                      onSelect={setSelectedFunction}
+                      onModuleClick={handleModuleClick}
+                    />
+                  )}
+                  {viewMode === 'tree' && (
+                    <TreeView
+                      results={results}
+                      allFunctions={allFunctions}
+                      query={query}
+                      selectedId={selectedFunction?.id}
+                      onSelect={setSelectedFunction}
+                    />
+                  )}
+                  {viewMode === 'list' && (
+                    <ListView
+                      results={results}
+                      allFunctions={allFunctions}
+                      query={query}
+                      selectedId={selectedFunction?.id}
+                      onSelect={setSelectedFunction}
+                    />
+                  )}
+                </>
               ) : (
                 <ModuleView
                   module={selectedModule}
