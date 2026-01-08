@@ -1,14 +1,18 @@
 import { useState } from 'react'
 import { SearchBar } from './components/SearchBar'
 import { ResultsList } from './components/ResultsList'
+import { TreeView } from './components/TreeView'
+import { ListView } from './components/ListView'
 import { FunctionDetail } from './components/FunctionDetail'
+import { ViewToggle, type ViewMode } from './components/ViewToggle'
 import { useSearch } from './hooks/useSearch'
 import type { FunctionEntry } from '@hoogle-effect/api'
 
 function App() {
   const [query, setQuery] = useState('')
   const [selectedFunction, setSelectedFunction] = useState<FunctionEntry | null>(null)
-  const { results, isLoading, error, indexStats } = useSearch(query)
+  const [viewMode, setViewMode] = useState<ViewMode>('flat')
+  const { results, allFunctions, isLoading, error, indexStats } = useSearch(query)
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -31,11 +35,14 @@ function App() {
             placeholder="Search by name, type, or description... (e.g., map, Effect<A, E, R>, retry)"
           />
 
-          {indexStats && (
-            <div className="mt-3 text-sm text-gray-500">
-              {indexStats.totalFunctions} functions indexed from Effect {indexStats.effectVersion}
-            </div>
-          )}
+          <div className="mt-3 flex items-center justify-between">
+            {indexStats && (
+              <div className="text-sm text-gray-500">
+                {indexStats.totalFunctions} functions indexed from Effect {indexStats.effectVersion}
+              </div>
+            )}
+            <ViewToggle mode={viewMode} onChange={setViewMode} />
+          </div>
         </div>
       </header>
 
@@ -56,12 +63,32 @@ function App() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Results list */}
             <div>
-              <ResultsList
-                results={results}
-                query={query}
-                selectedId={selectedFunction?.id}
-                onSelect={setSelectedFunction}
-              />
+              {viewMode === 'flat' && (
+                <ResultsList
+                  results={results}
+                  query={query}
+                  selectedId={selectedFunction?.id}
+                  onSelect={setSelectedFunction}
+                />
+              )}
+              {viewMode === 'tree' && (
+                <TreeView
+                  results={results}
+                  allFunctions={allFunctions}
+                  query={query}
+                  selectedId={selectedFunction?.id}
+                  onSelect={setSelectedFunction}
+                />
+              )}
+              {viewMode === 'list' && (
+                <ListView
+                  results={results}
+                  allFunctions={allFunctions}
+                  query={query}
+                  selectedId={selectedFunction?.id}
+                  onSelect={setSelectedFunction}
+                />
+              )}
             </div>
 
             {/* Detail panel */}

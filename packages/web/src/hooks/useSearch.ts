@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import Fuse from 'fuse.js'
-import type { FunctionEntry, SearchIndex } from '@hoogle-effect/api'
+import type { FunctionEntry, ModuleEntry, SearchIndex } from '@hoogle-effect/api'
 
 interface IndexStats {
   totalFunctions: number
@@ -10,6 +10,8 @@ interface IndexStats {
 
 interface UseSearchResult {
   results: FunctionEntry[]
+  allFunctions: FunctionEntry[]
+  modules: ModuleEntry[]
   isLoading: boolean
   error: string | null
   indexStats: IndexStats | null
@@ -90,6 +92,8 @@ export function useSearch(query: string): UseSearchResult {
 
   return {
     results,
+    allFunctions: index?.functions ?? [],
+    modules: index?.modules ?? [],
     isLoading,
     error,
     indexStats,
