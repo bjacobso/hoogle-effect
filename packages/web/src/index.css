@@ -45,3 +45,12 @@ code, pre, .font-mono {
 .type-arrow {
   @apply text-gray-500;
 }
+
+/* Shiki syntax highlighting overrides */
+.shiki {
+  background-color: transparent !important;
+}
+
+.shiki code {
+  background-color: transparent !important;
+}
