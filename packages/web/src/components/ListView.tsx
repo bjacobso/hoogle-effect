@@ -90,7 +90,7 @@ export function ListView({ results, allFunctions, query, selectedId, onSelect }:
 
   if (functions.length === 0) {
     return (
-      <div className="bg-white rounded-lg border border-gray-200 p-8 text-center text-gray-500">
+      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8 text-center text-gray-500 dark:text-gray-400">
         <p>No functions to display</p>
       </div>
     )
@@ -98,7 +98,7 @@ export function ListView({ results, allFunctions, query, selectedId, onSelect }:
 
   return (
     <div className="space-y-2">
-      <div className="text-sm text-gray-500 mb-3">
+      <div className="text-sm text-gray-500 dark:text-gray-400 mb-3">
         {groupedResults.length} module{groupedResults.length !== 1 ? 's' : ''} &middot;{' '}
         {functions.length} function{functions.length !== 1 ? 's' : ''}
         {query.trim() && ` matching "${query}"`}
@@ -132,25 +132,25 @@ function ModuleSection({
   onSelect: (func: FunctionEntry) => void
 }) {
   return (
-    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+    <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors"
+        className="w-full flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
       >
         <div className="flex items-center gap-3">
           <ChevronIcon expanded={isExpanded} />
           <div className="text-left">
-            <span className="font-semibold text-gray-900">{group.moduleName}</span>
-            <span className="text-sm text-gray-500 ml-2">({group.packageName})</span>
+            <span className="font-semibold text-gray-900 dark:text-gray-100">{group.moduleName}</span>
+            <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">({group.packageName})</span>
           </div>
         </div>
-        <span className="text-sm px-2.5 py-1 bg-purple-100 text-purple-700 rounded-full">
+        <span className="text-sm px-2.5 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full">
           {group.functions.length} function{group.functions.length !== 1 ? 's' : ''}
         </span>
       </button>
 
       {isExpanded && (
-        <div className="border-t border-gray-200">
+        <div className="border-t border-gray-200 dark:border-gray-700">
           {group.functions.map((func) => (
             <FunctionRow
               key={func.id}
@@ -177,24 +177,24 @@ function FunctionRow({
   return (
     <button
       onClick={() => onSelect(func)}
-      className={`w-full text-left px-4 py-3 border-b border-gray-100 last:border-b-0 transition-all ${
+      className={`w-full text-left px-4 py-3 border-b border-gray-100 dark:border-gray-700 last:border-b-0 transition-all ${
         isSelected
-          ? 'bg-purple-50 border-l-4 border-l-purple-500'
-          : 'hover:bg-gray-50 border-l-4 border-l-transparent'
+          ? 'bg-purple-50 dark:bg-purple-900/30 border-l-4 border-l-purple-500'
+          : 'hover:bg-gray-50 dark:hover:bg-gray-700/50 border-l-4 border-l-transparent'
       }`}
     >
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-2 min-w-0">
-          <span className={`font-semibold ${isSelected ? 'text-purple-700' : 'text-purple-600'}`}>
+          <span className={`font-semibold ${isSelected ? 'text-purple-700 dark:text-purple-400' : 'text-purple-600 dark:text-purple-400'}`}>
             {func.name}
           </span>
           {func.since && (
-            <span className="text-xs px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded">
+            <span className="text-xs px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded">
               v{func.since}
             </span>
           )}
           {func.deprecated && (
-            <span className="text-xs px-1.5 py-0.5 bg-yellow-100 text-yellow-700 rounded">
+            <span className="text-xs px-1.5 py-0.5 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-400 rounded">
               deprecated
             </span>
           )}
@@ -205,7 +205,7 @@ function FunctionRow({
             {func.tags.slice(0, 2).map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full"
+                className="text-xs px-2 py-0.5 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full"
               >
                 {tag}
               </span>
@@ -214,12 +214,12 @@ function FunctionRow({
         )}
       </div>
 
-      <div className="text-sm text-gray-600 font-mono truncate mt-1">
+      <div className="text-sm text-gray-600 dark:text-gray-400 font-mono truncate mt-1">
         <SignatureDisplay signature={func.signature} compact />
       </div>
 
       {func.description && (
-        <p className="text-sm text-gray-500 mt-1 line-clamp-1">{func.description}</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">{func.description}</p>
       )}
     </button>
   )

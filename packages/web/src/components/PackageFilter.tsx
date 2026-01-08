@@ -39,7 +39,7 @@ export function PackageFilter({
       {/* Toggle button */}
       <button
         onClick={onToggleOpen}
-        className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+        className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors"
         aria-expanded={isOpen}
       >
         <svg
@@ -57,7 +57,7 @@ export function PackageFilter({
         </svg>
         <span>Filter by package</span>
         {isFiltered && (
-          <span className="px-1.5 py-0.5 text-xs bg-purple-100 text-purple-700 rounded-full">
+          <span className="px-1.5 py-0.5 text-xs bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full">
             {selectedPackages.size}/{packages.length}
           </span>
         )}
@@ -65,7 +65,7 @@ export function PackageFilter({
 
       {/* Collapsible panel */}
       {isOpen && (
-        <div className="mt-2 p-3 bg-white border border-gray-200 rounded-lg">
+        <div className="mt-2 p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
           <div className="flex flex-wrap gap-4">
             {packages.map((pkg) => (
               <label key={pkg} className="flex items-center gap-2 cursor-pointer">
@@ -73,11 +73,11 @@ export function PackageFilter({
                   type="checkbox"
                   checked={selectedPackages.has(pkg)}
                   onChange={() => togglePackage(pkg)}
-                  className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
+                  className="w-4 h-4 text-purple-600 border-gray-300 dark:border-gray-600 rounded focus:ring-purple-500 dark:bg-gray-700"
                 />
-                <span className="text-sm text-gray-700">{pkg}</span>
+                <span className="text-sm text-gray-700 dark:text-gray-300">{pkg}</span>
                 {packageCounts?.[pkg] !== undefined && (
-                  <span className="text-xs text-gray-400">
+                  <span className="text-xs text-gray-400 dark:text-gray-500">
                     ({packageCounts[pkg]})
                   </span>
                 )}

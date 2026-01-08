@@ -12,15 +12,15 @@ interface ResultsListProps {
 export function ResultsList({ results, query, selectedId, onSelect, onModuleClick }: ResultsListProps) {
   if (!query) {
     return (
-      <div className="bg-white rounded-lg border border-gray-200 p-8 text-center">
-        <p className="text-gray-500 mb-4">Start typing to search Effect functions</p>
-        <div className="text-sm text-gray-400 space-y-2">
+      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8 text-center">
+        <p className="text-gray-500 dark:text-gray-400 mb-4">Start typing to search Effect functions</p>
+        <div className="text-sm text-gray-400 dark:text-gray-500 space-y-2">
           <p>Try searching for:</p>
           <div className="flex flex-wrap gap-2 justify-center">
             {['map', 'flatMap', 'retry', 'Effect<A, E, R>', 'forEach'].map((term) => (
               <code
                 key={term}
-                className="px-2 py-1 bg-gray-100 rounded text-gray-600 cursor-default"
+                className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-gray-600 dark:text-gray-300 cursor-default"
               >
                 {term}
               </code>
@@ -33,7 +33,7 @@ export function ResultsList({ results, query, selectedId, onSelect, onModuleClic
 
   if (results.length === 0) {
     return (
-      <div className="bg-white rounded-lg border border-gray-200 p-8 text-center text-gray-500">
+      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8 text-center text-gray-500 dark:text-gray-400">
         <p>No results found for "{query}"</p>
         <p className="text-sm mt-2">Try a different search term</p>
       </div>
@@ -42,7 +42,7 @@ export function ResultsList({ results, query, selectedId, onSelect, onModuleClic
 
   return (
     <div className="space-y-2">
-      <div className="text-sm text-gray-500 mb-3">
+      <div className="text-sm text-gray-500 dark:text-gray-400 mb-3">
         {results.length} result{results.length !== 1 ? 's' : ''}
       </div>
 
@@ -52,8 +52,8 @@ export function ResultsList({ results, query, selectedId, onSelect, onModuleClic
           onClick={() => onSelect(func)}
           className={`w-full text-left p-4 rounded-lg border transition-all ${
             selectedId === func.id
-              ? 'bg-purple-50 border-purple-300 ring-2 ring-purple-200'
-              : 'bg-white border-gray-200 hover:border-purple-200 hover:bg-purple-50/50'
+              ? 'bg-purple-50 dark:bg-purple-900/30 border-purple-300 dark:border-purple-700 ring-2 ring-purple-200 dark:ring-purple-800'
+              : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-700 hover:bg-purple-50/50 dark:hover:bg-purple-900/20'
           }`}
         >
           <div className="flex items-start justify-between gap-2">
@@ -65,17 +65,17 @@ export function ResultsList({ results, query, selectedId, onSelect, onModuleClic
                       e.stopPropagation()
                       onModuleClick(func.module)
                     }}
-                    className="font-semibold text-gray-900 hover:text-purple-600 hover:underline transition-colors"
+                    className="font-semibold text-gray-900 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400 hover:underline transition-colors"
                   >
                     {func.module}
                   </button>
                 ) : (
-                  <span className="font-semibold text-gray-900">{func.module}</span>
+                  <span className="font-semibold text-gray-900 dark:text-gray-100">{func.module}</span>
                 )}
-                <span className="text-gray-400">.</span>
-                <span className="font-semibold text-purple-600">{func.name}</span>
+                <span className="text-gray-400 dark:text-gray-500">.</span>
+                <span className="font-semibold text-purple-600 dark:text-purple-400">{func.name}</span>
                 {func.since && (
-                  <span className="text-xs px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded">
+                  <span className="text-xs px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded">
                     v{func.since}
                   </span>
                 )}
@@ -85,7 +85,7 @@ export function ResultsList({ results, query, selectedId, onSelect, onModuleClic
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="text-gray-400 hover:text-purple-600 transition-colors"
+                    className="text-gray-400 dark:text-gray-500 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                     title="View on GitHub"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -95,12 +95,12 @@ export function ResultsList({ results, query, selectedId, onSelect, onModuleClic
                 )}
               </div>
 
-              <div className="text-sm text-gray-600 font-mono truncate mb-2">
+              <div className="text-sm text-gray-600 dark:text-gray-400 font-mono truncate mb-2">
                 <SignatureDisplay signature={func.signature} compact />
               </div>
 
               {func.description && (
-                <p className="text-sm text-gray-500 line-clamp-2">{func.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{func.description}</p>
               )}
             </div>
 
@@ -109,7 +109,7 @@ export function ResultsList({ results, query, selectedId, onSelect, onModuleClic
                 {func.tags.slice(0, 2).map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full"
+                    className="text-xs px-2 py-0.5 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full"
                   >
                     {tag}
                   </span>
