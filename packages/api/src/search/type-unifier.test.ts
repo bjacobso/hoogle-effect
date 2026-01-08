@@ -129,4 +129,86 @@ describe("unifyTypes", () => {
       expect(result.matches).toBe(false);
     });
   });
+
+  describe("type alias expansion", () => {
+    it("generic query matches union type alias (Option)", () => {
+      // Query is a generic type like Option<A>
+      const query = parse("Option<A>");
+
+      // Target is what ts-morph produces: a union with text "Option<A>"
+      // This simulates how real Option<A> is stored in the index
+      const target: TypeNode = {
+        kind: "union",
+        text: "Option<A>",
+        children: [
+          {
+            kind: "generic",
+            text: "None<A>",
+            typeName: "None",
+            typeArguments: [{ kind: "typeVariable", text: "A", isTypeVariable: true }]
+          },
+          {
+            kind: "generic",
+            text: "Some<A>",
+            typeName: "Some",
+            typeArguments: [{ kind: "typeVariable", text: "A", isTypeVariable: true }]
+          }
+        ]
+      };
+
+      const result = unifyTypes(query, target);
+      expect(result.matches).toBe(true);
+      expect(result.score).toBeGreaterThan(0);
+    });
+
+    it("generic query matches union type alias (Either)", () => {
+      const query = parse("Either<E, A>");
+
+      // Either expands to Left<E, A> | Right<E, A>
+      const target: TypeNode = {
+        kind: "union",
+        text: "Either<E, A>",
+        children: [
+          {
+            kind: "generic",
+            text: "Left<E, A>",
+            typeName: "Left",
+            typeArguments: [
+              { kind: "typeVariable", text: "E", isTypeVariable: true },
+              { kind: "typeVariable", text: "A", isTypeVariable: true }
+            ]
+          },
+          {
+            kind: "generic",
+            text: "Right<E, A>",
+            typeName: "Right",
+            typeArguments: [
+              { kind: "typeVariable", text: "E", isTypeVariable: true },
+              { kind: "typeVariable", text: "A", isTypeVariable: true }
+            ]
+          }
+        ]
+      };
+
+      const result = unifyTypes(query, target);
+      expect(result.matches).toBe(true);
+    });
+
+    it("different type constructor does not match union alias", () => {
+      const query = parse("Effect<A>");
+
+      // Target is Option union - should NOT match Effect query
+      const target: TypeNode = {
+        kind: "union",
+        text: "Option<A>",
+        children: [
+          { kind: "generic", text: "None<A>", typeName: "None", typeArguments: [] },
+          { kind: "generic", text: "Some<A>", typeName: "Some", typeArguments: [] }
+        ]
+      };
+
+      const result = unifyTypes(query, target);
+      expect(result.matches).toBe(false);
+    });
+  });
 });

@@ -75,6 +75,17 @@ export function unifyTypes(
 
   // For non-function types, kinds must match (with some flexibility)
   if (!kindsCompatible(query.kind, target.kind)) {
+    // Special case: Generic query vs union target (type alias expansion)
+    // e.g., query "Option<A>" should match target union with text "Option<A>"
+    // ts-morph expands type aliases like Option<A> to None<A> | Some<A>
+    if ((query.kind === "generic" || query.kind === "effect") && target.kind === "union") {
+      // Extract type name from union's text (e.g., "Option" from "Option<A>")
+      const unionTypeName = target.text.match(/^(\w+)</)?.[1];
+      if (unionTypeName && query.typeName?.toLowerCase() === unionTypeName.toLowerCase()) {
+        // Type names match - this is likely the same type alias
+        return match(75, context.bindings, [target.text]);
+      }
+    }
     return noMatch();
   }
 
