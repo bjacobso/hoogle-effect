@@ -12,6 +12,7 @@ import { Project, SourceFile, FunctionDeclaration, VariableDeclaration, Node, JS
 import * as fs from "node:fs";
 import * as path from "node:path";
 import type { SearchIndex, FunctionEntry, ModuleEntry, Example } from "../types/index.js";
+import { parseSignature } from "../search/signature-parser.js";
 
 // GitHub repository configuration for source links
 const GITHUB_REPOS: Record<string, { repo: string; packageDir: string }> = {
@@ -394,6 +395,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
 
     const { description, fullDescription, examples, tags } = extractJSDoc(func);
     const signature = extractSignature(func);
+    const signatureParsed = parseSignature(func, signature);
 
     const filePath = sourceFile.getFilePath();
     const lineNumber = func.getStartLineNumber();
@@ -404,6 +406,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
       module: moduleName,
       package: packageName,
       signature,
+      signatureParsed,
       description,
       documentation: fullDescription,
       examples,
@@ -424,6 +427,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
       const name = decl.getName();
       const { description, fullDescription, examples, tags } = extractJSDoc(statement);
       const signature = extractSignature(decl);
+      const signatureParsed = parseSignature(decl, signature);
 
       const filePath = sourceFile.getFilePath();
       const lineNumber = decl.getStartLineNumber();
@@ -434,6 +438,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
         module: moduleName,
         package: packageName,
         signature,
+        signatureParsed,
         description,
         documentation: fullDescription,
         examples,
@@ -460,6 +465,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
 
       const { description, fullDescription, examples, tags } = extractJSDoc(func);
       const signature = extractSignature(func);
+      const signatureParsed = parseSignature(func, signature);
 
       const filePath = sourceFile.getFilePath();
       const lineNumber = func.getStartLineNumber();
@@ -470,6 +476,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
         module: nsName,
         package: packageName,
         signature,
+        signatureParsed,
         description,
         documentation: fullDescription,
         examples,
@@ -488,6 +495,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
         const name = decl.getName();
         const { description, fullDescription, examples, tags } = extractJSDoc(statement);
         const signature = extractSignature(decl);
+        const signatureParsed = parseSignature(decl, signature);
 
         const filePath = sourceFile.getFilePath();
         const lineNumber = decl.getStartLineNumber();
@@ -498,6 +506,7 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
           module: nsName,
           package: packageName,
           signature,
+          signatureParsed,
           description,
           documentation: fullDescription,
           examples,
