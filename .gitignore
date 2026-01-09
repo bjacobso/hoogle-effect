@@ -22,6 +22,12 @@ Thumbs.db
 # Turbo
 .turbo/
 
+# Alchemy state
+.alchemy/
+
+# Wrangler
+.wrangler/
+
 # Environment
 .env
 .env.local

@@ -1,0 +1,6 @@
+# Wrangler build artifacts
+.wrangler/
+dist/
+
+# Alchemy state
+.alchemy/
