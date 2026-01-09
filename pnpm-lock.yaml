@@ -20,6 +20,9 @@ importers:
       '@hoogle-effect/api':
         specifier: workspace:*
         version: link:../../packages/api
+      '@hoogle-effect/data':
+        specifier: workspace:*
+        version: link:../../packages/data
       fuse.js:
         specifier: ^7.0.0
         version: 7.1.0
@@ -48,6 +51,9 @@ importers:
       '@hoogle-effect/api':
         specifier: workspace:*
         version: link:../../packages/api
+      '@hoogle-effect/data':
+        specifier: workspace:*
+        version: link:../../packages/data
       fuse.js:
         specifier: ^7.0.0
         version: 7.1.0
@@ -91,6 +97,9 @@ importers:
       effect:
         specifier: ^3.12.0
         version: 3.19.14
+      ts-morph:
+        specifier: ^24.0.0
+        version: 24.0.0
     devDependencies:
       '@effect-atom/atom':
         specifier: ^0.4.11
@@ -101,18 +110,28 @@ importers:
       '@types/node':
         specifier: ^22.0.0
         version: 22.19.3
-      ts-morph:
-        specifier: ^24.0.0
-        version: 24.0.0
-      tsx:
-        specifier: ^4.19.0
-        version: 4.21.0
       typescript:
         specifier: ^5.7.0
         version: 5.9.3
       vitest:
         specifier: ^2.1.0
         version: 2.1.9(@types/node@22.19.3)
+
+  packages/data:
+    dependencies:
+      '@hoogle-effect/api':
+        specifier: workspace:*
+        version: link:../api
+    devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.19.3
+      tsx:
+        specifier: ^4.19.0
+        version: 4.21.0
+      typescript:
+        specifier: ^5.7.0
+        version: 5.9.3
 
 packages:
 

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@hoogle-effect/api": "workspace:*",
+    "@hoogle-effect/data": "workspace:*",
     "fuse.js": "^7.0.0"
   },
   "devDependencies": {
