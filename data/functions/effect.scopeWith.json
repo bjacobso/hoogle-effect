@@ -1,0 +1,17 @@
+{
+  "id": "Effect.scopeWith",
+  "name": "scopeWith",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(f: (scope: Scope) => Effect<A, E, R>) => Effect<A, E, Scope | R>",
+  "description": "Accesses the current scope and uses it to perform the specified effect.",
+  "documentation": "Accesses the current scope and uses it to perform the specified effect.",
+  "examples": [],
+  "tags": [
+    "Scoping, Resources & Finalization"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 11016,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L11016"
+}

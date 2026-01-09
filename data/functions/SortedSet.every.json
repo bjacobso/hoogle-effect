@@ -1,0 +1,17 @@
+{
+  "id": "SortedSet.every",
+  "name": "every",
+  "module": "SortedSet",
+  "package": "effect",
+  "signature": "{ <A>(predicate: Predicate<A>): (self: SortedSet<A>) => boolean; <A>(self: SortedSet<A>, predicate: Predicate<A>): boolean; }",
+  "description": "Check if a predicate holds true for every `SortedSet` element.",
+  "documentation": "Check if a predicate holds true for every `SortedSet` element.",
+  "examples": [],
+  "tags": [
+    "elements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/SortedSet.d.ts",
+  "sourceLine": 109,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/SortedSet.ts#L109"
+}

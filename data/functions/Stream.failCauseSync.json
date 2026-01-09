@@ -1,0 +1,17 @@
+{
+  "id": "Stream.failCauseSync",
+  "name": "failCauseSync",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<E>(evaluate: LazyArg<Cause<E>>) => Stream<never, E, never>",
+  "description": "The stream that always fails with the specified lazily evaluated `Cause`.",
+  "documentation": "The stream that always fails with the specified lazily evaluated `Cause`.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 2469,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L2469"
+}

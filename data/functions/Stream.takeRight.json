@@ -1,0 +1,21 @@
+{
+  "id": "Stream.takeRight",
+  "name": "takeRight",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ (n: number): <A, E, R>(self: Stream<A, E, R>) => Stream<A, E, R>; <A, E, R>(self: Stream<A, E, R>, n: number): Stream<A, E, R>; }",
+  "description": "Takes the last specified number of elements from this stream.",
+  "documentation": "Takes the last specified number of elements from this stream.",
+  "examples": [
+    {
+      "code": "import { Effect, Stream } from \"effect\"\n\nconst stream = Stream.takeRight(Stream.make(1, 2, 3, 4, 5, 6), 3)\n\nEffect.runPromise(Stream.runCollect(stream)).then(console.log)\n// { _id: 'Chunk', values: [ 4, 5, 6 ] }"
+    }
+  ],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 8110,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L8110"
+}

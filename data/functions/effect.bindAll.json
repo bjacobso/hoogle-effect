@@ -1,0 +1,21 @@
+{
+  "id": "Effect.bindAll",
+  "name": "bindAll",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A extends object, X extends Record<string, Effect<any, any, any>>, O extends NoExcessProperties<{ readonly concurrency?: Concurrency | undefined; readonly batching?: boolean | \"inherit\" | undefined; readonly mode?: \"default\" | \"validate\" | \"either\" | undefined; readonly concurrentFinalizers?: boolean | undefined; }, O>>(f: (a: NoInfer<A>) => [Extract<keyof X, keyof A>] extends [never] ? X : \"Duplicate keys\", options?: O): <E1, R1>(self: Effect<A, E1, R1>) => [All.ReturnObject<X, false, All.ExtractMode<O>>] extends [Effect<infer Success, infer Error, infer Context>] ? Effect<{ [K in keyof A | keyof Success]: K extends keyof A ? A[K] : K extends keyof Success ? Success[K] : never; }, E1 | Error, R1 | Context> : never; <A extends object, X extends Record<string, Effect<any, any, any>>, O extends NoExcessProperties<{ readonly concurrency?: Concurrency | undefined; readonly batching?: boolean | \"inherit\" | undefined; readonly mode?: \"default\" | \"validate\" | \"either\" | undefined; readonly concurrentFinalizers?: boolean | undefined; }, O>, E1, R1>(self: Effect<A, E1, R1>, f: (a: NoInfer<A>) => [Extract<keyof X, keyof A>] extends [never] ? X : \"Duplicate keys\", options?: { readonly concurrency?: Concurrency; readonly batching?: boolean | \"inherit\"; readonly mode?: \"default\" | \"validate\" | \"either\"; readonly concurrentFinalizers?: boolean; }): [All.ReturnObject<X, false, All.ExtractMode<O>>] extends [Effect<infer Success, infer Error, infer Context>] ? Effect<{ [K in keyof A | keyof Success]: K extends keyof A ? A[K] : K extends keyof Success ? Success[K] : never; }, E1 | Error, R1 | Context> : never; }",
+  "description": "`bindAll` combines `all` with `bind`. It is useful\nwhen you want to concurrently run multiple effects and then combine their\nresults in a Do notation pipeline.\n*Example",
+  "documentation": "`bindAll` combines `all` with `bind`. It is useful\nwhen you want to concurrently run multiple effects and then combine their\nresults in a Do notation pipeline.\n*Example**\n\n```ts\nimport * as assert from \"node:assert\"\nimport { Effect, Either, pipe } from \"effect\"\n\nconst result = pipe(\nEffect.Do,\nEffect.bind(\"x\", () => Effect.succeed(2)),\nEffect.bindAll(({ x }) => ({\na: Effect.succeed(x),\nb: Effect.fail(\"oops\"),\n}), { concurrency: 2, mode: \"either\" })\n)\nassert.deepStrictEqual(Effect.runSync(result), { x: 2, a: Either.right(2), b: Either.left(\"oops\") })\n```",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { Effect, Either, pipe } from \"effect\"\n\nconst result = pipe(\nEffect.Do,\nEffect.bind(\"x\", () => Effect.succeed(2)),\nEffect.bindAll(({ x }) => ({\na: Effect.succeed(x),\nb: Effect.fail(\"oops\"),\n}), { concurrency: 2, mode: \"either\" })\n)\nassert.deepStrictEqual(Effect.runSync(result), { x: 2, a: Either.right(2), b: Either.left(\"oops\") })"
+    }
+  ],
+  "tags": [
+    "Do notation"
+  ],
+  "since": "3.7.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 14966,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L14966"
+}

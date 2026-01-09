@@ -1,0 +1,17 @@
+{
+  "id": "Multipart.withFieldMimeTypes",
+  "name": "withFieldMimeTypes",
+  "module": "Multipart",
+  "package": "@effect/platform",
+  "signature": "{ (mimeTypes: readonly string[]): <A, E, R>(effect: Effect<A, E, R>) => Effect<A, E, R>; <A, E, R>(effect: Effect<A, E, R>, mimeTypes: readonly string[]): Effect<A, E, R>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "fiber refs"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Multipart.d.ts",
+  "sourceLine": 333,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Multipart.ts#L333"
+}

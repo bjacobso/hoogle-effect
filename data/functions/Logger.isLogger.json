@@ -1,0 +1,17 @@
+{
+  "id": "Logger.isLogger",
+  "name": "isLogger",
+  "module": "Logger",
+  "package": "effect",
+  "signature": "(u: unknown) => u is Logger<unknown, unknown>",
+  "description": "Returns `true` if the specified value is a `Logger`, otherwise returns `false`.",
+  "documentation": "Returns `true` if the specified value is a `Logger`, otherwise returns `false`.",
+  "examples": [],
+  "tags": [
+    "guards"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Logger.d.ts",
+  "sourceLine": 794,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Logger.ts#L794"
+}

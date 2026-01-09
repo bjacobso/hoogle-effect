@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.driver",
+  "name": "driver",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "<Out, In, R>(self: Schedule<Out, In, R>) => Effect<ScheduleDriver<Out, In, R>, never, never>",
+  "description": "Creates a driver to manually control the execution of a schedule.\n*Details This function returns a `ScheduleDriver`, which allows stepping through a\nschedule manually while handling delays and sleeping appropriately. A driver\nis useful when you need fine-grained control over how a schedule progresses,\nrather than relying on automatic execution. The returned driver exposes methods for retrieving the current state,\nexecuting the next step, and resetting the schedule when needed.",
+  "documentation": "Creates a driver to manually control the execution of a schedule.\n*Details**\n\nThis function returns a `ScheduleDriver`, which allows stepping through a\nschedule manually while handling delays and sleeping appropriately. A driver\nis useful when you need fine-grained control over how a schedule progresses,\nrather than relying on automatic execution.\n\nThe returned driver exposes methods for retrieving the current state,\nexecuting the next step, and resetting the schedule when needed.",
+  "examples": [],
+  "tags": [
+    "getter"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 1361,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L1361"
+}

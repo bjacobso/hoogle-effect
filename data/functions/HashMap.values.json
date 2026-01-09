@@ -1,0 +1,17 @@
+{
+  "id": "HashMap.values",
+  "name": "values",
+  "module": "HashMap",
+  "package": "effect",
+  "signature": "<K, V>(self: HashMap<K, V>) => IterableIterator<V>",
+  "description": "Returns an `IterableIterator` of the values within the `HashMap`.",
+  "documentation": "Returns an `IterableIterator` of the values within the `HashMap`.",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashMap.d.ts",
+  "sourceLine": 341,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashMap.ts#L341"
+}

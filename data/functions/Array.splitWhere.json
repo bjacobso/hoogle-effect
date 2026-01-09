@@ -1,0 +1,17 @@
+{
+  "id": "Array.splitWhere",
+  "name": "splitWhere",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <A>(predicate: (a: NoInfer<A>, i: number) => boolean): (self: Iterable<A>) => [beforeMatch: A[], fromMatch: A[]]; <A>(self: Iterable<A>, predicate: (a: A, i: number) => boolean): [beforeMatch: A[], fromMatch: A[]]; }",
+  "description": "Splits this iterable on the first element that matches this predicate.\nReturns a tuple containing two arrays: the first one is before the match, and the second one is from the match onward.\n*Example",
+  "documentation": "Splits this iterable on the first element that matches this predicate.\nReturns a tuple containing two arrays: the first one is before the match, and the second one is from the match onward.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.splitWhere([1, 2, 3, 4, 5], n => n > 3)\nconsole.log(result) // [[1, 2, 3], [4, 5]]\n```",
+  "examples": [],
+  "tags": [
+    "splitting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 3433,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L3433"
+}

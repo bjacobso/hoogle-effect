@@ -1,0 +1,17 @@
+{
+  "id": "Effect.consoleWith",
+  "name": "consoleWith",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(f: (console: Console) => Effect<A, E, R>) => Effect<A, E, R>",
+  "description": "Retreives the `Console` service from the context and provides it to the\nspecified effectful function.",
+  "documentation": "Retreives the `Console` service from the context and provides it to the\nspecified effectful function.",
+  "examples": [],
+  "tags": [
+    "Console"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 12279,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L12279"
+}

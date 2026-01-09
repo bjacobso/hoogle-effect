@@ -1,0 +1,21 @@
+{
+  "id": "Effect.validate",
+  "name": "validate",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <B, E1, R1>(that: Effect<B, E1, R1>, options?: { readonly concurrent?: boolean; readonly batching?: boolean | \"inherit\"; readonly concurrentFinalizers?: boolean; }): <A, E, R>(self: Effect<A, E, R>) => Effect<[A, B], E1 | E, R1 | R>; <A, E, R, B, E1, R1>(self: Effect<A, E, R>, that: Effect<B, E1, R1>, options?: { readonly concurrent?: boolean; readonly batching?: boolean | \"inherit\"; readonly concurrentFinalizers?: boolean; }): Effect<[A, B], E | E1, R | R1>; }",
+  "description": "Combines multiple effects and accumulates both successes and failures.\n*Details This function allows you to combine multiple effects, continuing through all\neffects even if some of them fail. Unlike other functions that stop execution\nupon encountering an error, this function collects all errors into a `Cause`.\nThe final result includes all successes and the accumulated failures. By default, effects are executed sequentially, but you can control\nconcurrency and batching behavior using the `options` parameter. This\nprovides flexibility in scenarios where you want to maximize performance or\nensure specific ordering.\n*Example",
+  "documentation": "Combines multiple effects and accumulates both successes and failures.\n*Details**\n\nThis function allows you to combine multiple effects, continuing through all\neffects even if some of them fail. Unlike other functions that stop execution\nupon encountering an error, this function collects all errors into a `Cause`.\nThe final result includes all successes and the accumulated failures.\n\nBy default, effects are executed sequentially, but you can control\nconcurrency and batching behavior using the `options` parameter. This\nprovides flexibility in scenarios where you want to maximize performance or\nensure specific ordering.\n*Example**\n\n```ts\nimport { Effect, Console } from \"effect\"\n\nconst task1 = Console.log(\"task1\").pipe(Effect.as(1))\nconst task2 = Effect.fail(\"Oh uh!\").pipe(Effect.as(2))\nconst task3 = Console.log(\"task2\").pipe(Effect.as(3))\nconst task4 = Effect.fail(\"Oh no!\").pipe(Effect.as(4))\n\nconst program = task1.pipe(\nEffect.validate(task2),\nEffect.validate(task3),\nEffect.validate(task4)\n)\n\nEffect.runPromiseExit(program).then(console.log)\n// Output:\n// task1\n// task2\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: {\n// _id: 'Cause',\n// _tag: 'Sequential',\n// left: { _id: 'Cause', _tag: 'Fail', failure: 'Oh uh!' },\n// right: { _id: 'Cause', _tag: 'Fail', failure: 'Oh no!' }\n// }\n// }\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Console } from \"effect\"\n\nconst task1 = Console.log(\"task1\").pipe(Effect.as(1))\nconst task2 = Effect.fail(\"Oh uh!\").pipe(Effect.as(2))\nconst task3 = Console.log(\"task2\").pipe(Effect.as(3))\nconst task4 = Effect.fail(\"Oh no!\").pipe(Effect.as(4))\n\nconst program = task1.pipe(\nEffect.validate(task2),\nEffect.validate(task3),\nEffect.validate(task4)\n)\n\nEffect.runPromiseExit(program).then(console.log)\n// Output:\n// task1\n// task2\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: {\n// _id: 'Cause',\n// _tag: 'Sequential',\n// left: { _id: 'Cause', _tag: 'Fail', failure: 'Oh uh!' },\n// right: { _id: 'Cause', _tag: 'Fail', failure: 'Oh no!' }\n// }\n// }"
+    }
+  ],
+  "tags": [
+    "Error Accumulation"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 24691,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L24691"
+}

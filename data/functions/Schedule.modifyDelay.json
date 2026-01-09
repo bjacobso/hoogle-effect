@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.modifyDelay",
+  "name": "modifyDelay",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <Out>(f: (out: Out, duration: Duration) => DurationInput): <In, R>(self: Schedule<Out, In, R>) => Schedule<Out, In, R>; <Out, In, R>(self: Schedule<Out, In, R>, f: (out: Out, duration: Duration) => DurationInput): Schedule<Out, In, R>; }",
+  "description": "Returns a new schedule that modifies the delay between executions using a\ncustom function.\n*Details This function transforms an existing schedule by applying `f` to modify the\ndelay before each execution. The function receives both the schedule's output\n(`out`) and the originally computed delay (`duration`), and returns a new\nadjusted delay.",
+  "documentation": "Returns a new schedule that modifies the delay between executions using a\ncustom function.\n*Details**\n\nThis function transforms an existing schedule by applying `f` to modify the\ndelay before each execution. The function receives both the schedule's output\n(`out`) and the originally computed delay (`duration`), and returns a new\nadjusted delay.",
+  "examples": [],
+  "tags": [
+    "Timing & Delay"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2019,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2019"
+}

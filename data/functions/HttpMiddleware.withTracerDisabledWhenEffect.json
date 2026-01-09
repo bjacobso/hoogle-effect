@@ -1,0 +1,17 @@
+{
+  "id": "HttpMiddleware.withTracerDisabledWhenEffect",
+  "name": "withTracerDisabledWhenEffect",
+  "module": "HttpMiddleware",
+  "package": "@effect/platform",
+  "signature": "{ (predicate: Predicate<HttpServerRequest>): <A, E, R>(effect: Effect<A, E, R>) => Effect<A, E, R>; <A, E, R>(effect: Effect<A, E, R>, predicate: Predicate<HttpServerRequest>): Effect<A, E, R>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "fiber refs"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpMiddleware.d.ts",
+  "sourceLine": 74,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpMiddleware.ts#L74"
+}

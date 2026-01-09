@@ -1,0 +1,21 @@
+{
+  "id": "Effect.mergeAll",
+  "name": "mergeAll",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <Z, Eff extends Effect<any, any, any>>(zero: Z, f: (z: Z, a: Effect.Success<Eff>, i: number) => Z, options?: { readonly concurrency?: Concurrency; readonly batching?: boolean | \"inherit\"; readonly concurrentFinalizers?: boolean; }): (elements: Iterable<Eff>) => Effect<Z, Effect.Error<Eff>, Effect.Context<Eff>>; <Eff extends Effect<any, any, any>, Z>(elements: Iterable<Eff>, zero: Z, f: (z: Z, a: Effect.Success<Eff>, i: number) => Z, options?: { readonly concurrency?: Concurrency; readonly batching?: boolean | \"inherit\"; readonly concurrentFinalizers?: boolean; }): Effect<Z, Effect.Error<Eff>, Effect.Context<Eff>>; }",
+  "description": "Merges an `Iterable<Effect<A, E, R>>` to a single effect.\n*Details This function takes an iterable of effects and combines them into a single\neffect. It does this by iterating over each effect in the collection and\napplying a function that accumulates results into a \"zero\" value, which\nstarts with an initial value and is updated with each effect's success. The provided function `f` is called for each element in the iterable,\nallowing you to specify how to combine the results.\n*Options The function also allows you to customize how the effects are handled by\nspecifying options such as concurrency, batching, and how finalizers behave.\nThese options provide flexibility in running the effects concurrently or\nadjusting other execution details.\n*Example",
+  "documentation": "Merges an `Iterable<Effect<A, E, R>>` to a single effect.\n*Details**\n\nThis function takes an iterable of effects and combines them into a single\neffect. It does this by iterating over each effect in the collection and\napplying a function that accumulates results into a \"zero\" value, which\nstarts with an initial value and is updated with each effect's success.\n\nThe provided function `f` is called for each element in the iterable,\nallowing you to specify how to combine the results.\n*Options**\n\nThe function also allows you to customize how the effects are handled by\nspecifying options such as concurrency, batching, and how finalizers behave.\nThese options provide flexibility in running the effects concurrently or\nadjusting other execution details.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\nconst numbers = [Effect.succeed(1), Effect.succeed(2), Effect.succeed(3)]\nconst add = (sum: number, value: number, i: number) => sum + value\nconst zero = 0\n\nconst program = Effect.gen(function*() {\nconst total = yield* Effect.mergeAll(numbers, zero, add)\nconsole.log(total)\n})\n\nEffect.runFork(program)\n// Output: 6\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst numbers = [Effect.succeed(1), Effect.succeed(2), Effect.succeed(3)]\nconst add = (sum: number, value: number, i: number) => sum + value\nconst zero = 0\n\nconst program = Effect.gen(function*() {\nconst total = yield* Effect.mergeAll(numbers, zero, add)\nconsole.log(total)\n})\n\nEffect.runFork(program)\n// Output: 6"
+    }
+  ],
+  "tags": [
+    "Collecting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 2879,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L2879"
+}

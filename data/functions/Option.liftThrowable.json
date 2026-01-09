@@ -1,0 +1,21 @@
+{
+  "id": "Option.liftThrowable",
+  "name": "liftThrowable",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<A extends ReadonlyArray<unknown>, B>(f: (...a: A) => B) => (...a: A) => Option<B>",
+  "description": "Lifts a function that throws exceptions into a function that returns an\n`Option`.\n*Details This utility function takes a function `f` that might throw an exception and\ntransforms it into a safer function that returns an `Option`. If the original\nfunction executes successfully, the result is wrapped in a `Some`. If an\nexception is thrown, the result is `None`, allowing the developer to handle\nerrors in a functional, type-safe way.",
+  "documentation": "Lifts a function that throws exceptions into a function that returns an\n`Option`.\n*Details**\n\nThis utility function takes a function `f` that might throw an exception and\ntransforms it into a safer function that returns an `Option`. If the original\nfunction executes successfully, the result is wrapped in a `Some`. If an\nexception is thrown, the result is `None`, allowing the developer to handle\nerrors in a functional, type-safe way.",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\nconst parse = Option.liftThrowable(JSON.parse)\n\nconsole.log(parse(\"1\"))\n// Output: { _id: 'Option', _tag: 'Some', value: 1 }\n\nconsole.log(parse(\"\"))\n// Output: { _id: 'Option', _tag: 'None' }"
+    }
+  ],
+  "tags": [
+    "Conversions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 1061,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L1061"
+}

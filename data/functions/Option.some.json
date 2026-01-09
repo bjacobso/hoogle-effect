@@ -1,0 +1,17 @@
+{
+  "id": "Option.some",
+  "name": "some",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<A>(value: A) => Option<A>",
+  "description": "Wraps the given value into an `Option` to represent its presence.\n*Example (Creating an Option with a Value)",
+  "documentation": "Wraps the given value into an `Option` to represent its presence.\n*Example** (Creating an Option with a Value)\n\n```ts\nimport { Option } from \"effect\"\n\n// An Option holding the number 1\n//\n// ┌─── Option<number>\n// ▼\nconst value = Option.some(1)\n\nconsole.log(value)\n// Output: { _id: 'Option', _tag: 'Some', value: 1 }\n```",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 173,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L173"
+}

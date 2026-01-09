@@ -1,0 +1,15 @@
+{
+  "id": "Chunk.difference",
+  "name": "difference",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <A>(that: Chunk<A>): (self: Chunk<A>) => Chunk<A>; <A>(self: Chunk<A>, that: Chunk<A>): Chunk<A>; }",
+  "description": "Creates a `Chunk` of values not included in the other given `Chunk`.\nThe order and references of result values are determined by the first `Chunk`.",
+  "documentation": "Creates a `Chunk` of values not included in the other given `Chunk`.\nThe order and references of result values are determined by the first `Chunk`.",
+  "examples": [],
+  "tags": [],
+  "since": "3.2.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 1692,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L1692"
+}

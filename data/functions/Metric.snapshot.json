@@ -1,0 +1,17 @@
+{
+  "id": "Metric.snapshot",
+  "name": "snapshot",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "Effect<MetricPair.Untyped[], never, never>",
+  "description": "Captures a snapshot of all metrics recorded by the application.",
+  "documentation": "Captures a snapshot of all metrics recorded by the application.",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 536,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L536"
+}

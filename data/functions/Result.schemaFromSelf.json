@@ -1,0 +1,17 @@
+{
+  "id": "Result.schemaFromSelf",
+  "name": "schemaFromSelf",
+  "module": "Result",
+  "package": "@effect-atom/atom",
+  "signature": "Schema<Result<any, any>, Result<any, any>, never>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Schemas"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Result.d.ts",
+  "sourceLine": 370,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Result.ts#L370"
+}

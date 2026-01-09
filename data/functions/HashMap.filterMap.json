@@ -1,0 +1,17 @@
+{
+  "id": "HashMap.filterMap",
+  "name": "filterMap",
+  "module": "HashMap",
+  "package": "effect",
+  "signature": "{ <A, K, B>(f: (value: A, key: K) => Option<B>): (self: HashMap<K, A>) => HashMap<K, B>; <K, A, B>(self: HashMap<K, A>, f: (value: A, key: K) => Option<B>): HashMap<K, B>; }",
+  "description": "Maps over the entries of the `HashMap` using the specified partial function\nand filters out `None` values.",
+  "documentation": "Maps over the entries of the `HashMap` using the specified partial function\nand filters out `None` values.",
+  "examples": [],
+  "tags": [
+    "filtering"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashMap.d.ts",
+  "sourceLine": 750,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashMap.ts#L750"
+}

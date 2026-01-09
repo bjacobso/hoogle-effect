@@ -1,0 +1,17 @@
+{
+  "id": "Stream.provideSomeContext",
+  "name": "provideSomeContext",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <R2>(context: Context<R2>): <A, E, R>(self: Stream<A, E, R>) => Stream<A, E, Exclude<R, R2>>; <A, E, R, R2>(self: Stream<A, E, R>, context: Context<R2>): Stream<A, E, Exclude<R, R2>>; }",
+  "description": "Provides the stream with some of its required context, which eliminates its\ndependency on `R`.",
+  "documentation": "Provides the stream with some of its required context, which eliminates its\ndependency on `R`.",
+  "examples": [],
+  "tags": [
+    "context"
+  ],
+  "since": "3.16.9",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 6206,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L6206"
+}

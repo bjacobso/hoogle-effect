@@ -1,0 +1,17 @@
+{
+  "id": "Array.isEmptyReadonlyArray",
+  "name": "isEmptyReadonlyArray",
+  "module": "Array",
+  "package": "effect",
+  "signature": "<A>(self: readonly A[]) => self is readonly []",
+  "description": "Determine if a `ReadonlyArray` is empty narrowing down the type to `readonly []`.\n*Example",
+  "documentation": "Determine if a `ReadonlyArray` is empty narrowing down the type to `readonly []`.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconsole.log(Array.isEmptyReadonlyArray([])) // true\nconsole.log(Array.isEmptyReadonlyArray([1, 2, 3])) // false\n```",
+  "examples": [],
+  "tags": [
+    "guards"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 891,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L891"
+}

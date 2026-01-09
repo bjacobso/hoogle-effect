@@ -1,0 +1,17 @@
+{
+  "id": "Scope.close",
+  "name": "close",
+  "module": "Scope",
+  "package": "effect",
+  "signature": "(self: CloseableScope, exit: Exit<unknown, unknown>) => Effect<void, never, never>",
+  "description": "Closes this scope with the specified exit value, running all finalizers that\nhave been added to the scope.",
+  "documentation": "Closes this scope with the specified exit value, running all finalizers that\nhave been added to the scope.",
+  "examples": [],
+  "tags": [
+    "destructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Scope.d.ts",
+  "sourceLine": 114,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Scope.ts#L114"
+}

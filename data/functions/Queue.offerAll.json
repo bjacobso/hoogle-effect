@@ -1,0 +1,17 @@
+{
+  "id": "Queue.offerAll",
+  "name": "offerAll",
+  "module": "Queue",
+  "package": "effect",
+  "signature": "{ <A>(iterable: Iterable<A>): (self: Enqueue<A>) => Effect<boolean, never, never>; <A>(self: Enqueue<A>, iterable: Iterable<A>): Effect<boolean, never, never>; }",
+  "description": "For Bounded Queue: uses the `BackPressure` Strategy, places the values in\nthe queue and always returns true. If the queue has reached capacity, then\nthe fiber performing the `offerAll` will be suspended until there is room\nin the queue. For Unbounded Queue: Places all values in the queue and returns true. For Sliding Queue: uses `Sliding` Strategy If there is room in the queue,\nit places the values otherwise it removes the old elements and enqueues the\nnew ones. Always returns true. For Dropping Queue: uses `Dropping` Strategy, It places the values in the\nqueue but if there is no room it will not enqueue them and return false.",
+  "documentation": "For Bounded Queue: uses the `BackPressure` Strategy, places the values in\nthe queue and always returns true. If the queue has reached capacity, then\nthe fiber performing the `offerAll` will be suspended until there is room\nin the queue.\n\nFor Unbounded Queue: Places all values in the queue and returns true.\n\nFor Sliding Queue: uses `Sliding` Strategy If there is room in the queue,\nit places the values otherwise it removes the old elements and enqueues the\nnew ones. Always returns true.\n\nFor Dropping Queue: uses `Dropping` Strategy, It places the values in the\nqueue but if there is no room it will not enqueue them and return false.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Queue.d.ts",
+  "sourceLine": 522,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Queue.ts#L522"
+}

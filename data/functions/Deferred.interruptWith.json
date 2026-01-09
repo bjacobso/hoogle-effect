@@ -1,0 +1,17 @@
+{
+  "id": "Deferred.interruptWith",
+  "name": "interruptWith",
+  "module": "Deferred",
+  "package": "effect",
+  "signature": "{ (fiberId: FiberId): <A, E>(self: Deferred<A, E>) => Effect<boolean, never, never>; <A, E>(self: Deferred<A, E>, fiberId: FiberId): Effect<boolean, never, never>; }",
+  "description": "Completes the `Deferred` with interruption. This will interrupt all fibers\nwaiting on the value of the `Deferred` with the specified `FiberId`.",
+  "documentation": "Completes the `Deferred` with interruption. This will interrupt all fibers\nwaiting on the value of the `Deferred` with the specified `FiberId`.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Deferred.d.ts",
+  "sourceLine": 344,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Deferred.ts#L344"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Stream.as",
+  "name": "as",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <B>(value: B): <A, E, R>(self: Stream<A, E, R>) => Stream<B, E, R>; <A, E, R, B>(self: Stream<A, E, R>, value: B): Stream<B, E, R>; }",
+  "description": "Maps the success values of this stream to the specified constant value.",
+  "documentation": "Maps the success values of this stream to the specified constant value.",
+  "examples": [
+    {
+      "code": "import { Effect, Stream } from \"effect\"\n\nconst stream = Stream.range(1, 5).pipe(Stream.as(null))\n\nEffect.runPromise(Stream.runCollect(stream)).then(console.log)\n// { _id: 'Chunk', values: [ null, null, null, null, null ] }"
+    }
+  ],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 345,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L345"
+}

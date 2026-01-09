@@ -1,0 +1,17 @@
+{
+  "id": "Layer.project",
+  "name": "project",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "{ <I1, S1, I2, S2>(tagA: Tag<I1, S1>, tagB: Tag<I2, S2>, f: (a: NoInfer<S1>) => NoInfer<S2>): <RIn, E>(self: Layer<I1, E, RIn>) => Layer<I2, E, RIn>; <RIn, E, I1, S1, I2, S2>(self: Layer<I1, E, RIn>, tagA: Tag<I1, S1>, tagB: Tag<I2, S2>, f: (a: NoInfer<S1>) => NoInfer<S2>): Layer<I2, E, RIn>; }",
+  "description": "Projects out part of one of the services output by this layer using the\nspecified function.",
+  "documentation": "Projects out part of one of the services output by this layer using the\nspecified function.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 753,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L753"
+}

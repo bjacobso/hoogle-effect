@@ -1,0 +1,17 @@
+{
+  "id": "Option.none",
+  "name": "none",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<A = never>() => Option<A>",
+  "description": "Represents the absence of a value by creating an empty `Option`. `Option.none` returns an `Option<never>`, which is a subtype of `Option<A>`.\nThis means you can use it in place of any `Option<A>` regardless of the type\n`A`.\n*Example (Creating an Option with No Value)",
+  "documentation": "Represents the absence of a value by creating an empty `Option`.\n\n`Option.none` returns an `Option<never>`, which is a subtype of `Option<A>`.\nThis means you can use it in place of any `Option<A>` regardless of the type\n`A`.\n*Example** (Creating an Option with No Value)\n\n```ts\nimport { Option } from \"effect\"\n\n// An Option holding no value\n//\n// ┌─── Option<never>\n// ▼\nconst noValue = Option.none()\n\nconsole.log(noValue)\n// Output: { _id: 'Option', _tag: 'None' }\n```",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 149,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L149"
+}

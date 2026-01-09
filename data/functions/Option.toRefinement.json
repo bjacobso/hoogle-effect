@@ -1,0 +1,21 @@
+{
+  "id": "Option.toRefinement",
+  "name": "toRefinement",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<A, B extends A>(f: (a: A) => Option<B>) => (a: A) => a is B",
+  "description": "Converts an `Option`-returning function into a type guard.\n*Details This function transforms a function that returns an `Option` into a type\nguard, ensuring type safety when validating or narrowing types. The returned\ntype guard function checks whether the input satisfies the condition defined\nin the original `Option`-returning function. If the original function returns `Option.some`, the type guard evaluates to\n`true`, confirming the input is of the desired type. If the function returns\n`Option.none`, the type guard evaluates to `false`. This utility is especially useful for validating types in union types,\nfiltering arrays, or ensuring safe handling of specific subtypes.",
+  "documentation": "Converts an `Option`-returning function into a type guard.\n*Details**\n\nThis function transforms a function that returns an `Option` into a type\nguard, ensuring type safety when validating or narrowing types. The returned\ntype guard function checks whether the input satisfies the condition defined\nin the original `Option`-returning function.\n\nIf the original function returns `Option.some`, the type guard evaluates to\n`true`, confirming the input is of the desired type. If the function returns\n`Option.none`, the type guard evaluates to `false`.\n\nThis utility is especially useful for validating types in union types,\nfiltering arrays, or ensuring safe handling of specific subtypes.",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\ntype MyData = string | number\n\nconst parseString = (data: MyData): Option.Option<string> =>\ntypeof data === \"string\" ? Option.some(data) : Option.none()\n\n// ┌─── (a: MyData) => a is string\n// ▼\nconst isString = Option.toRefinement(parseString)\n\nconsole.log(isString(\"a\"))\n// Output: true\n\nconsole.log(isString(1))\n// Output: false"
+    }
+  ],
+  "tags": [
+    "Conversions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 409,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L409"
+}

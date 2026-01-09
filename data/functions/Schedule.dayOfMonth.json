@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.dayOfMonth",
+  "name": "dayOfMonth",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "(day: number) => Schedule<number, unknown, never>",
+  "description": "Creates a schedule that recurs on a specific day of the month.\n*Details This schedule triggers at midnight on the specified day of each month. It\nwill not execute in months that have fewer days than the given day. For\nexample, if the schedule is set to run on the 31st, it will not execute in\nmonths with only 30 days. The schedule produces a count of executions, starting at 0 and incrementing\nwith each recurrence. The `day` parameter is validated lazily, meaning errors may only be detected\nwhen the schedule is executed.",
+  "documentation": "Creates a schedule that recurs on a specific day of the month.\n*Details**\n\nThis schedule triggers at midnight on the specified day of each month. It\nwill not execute in months that have fewer days than the given day. For\nexample, if the schedule is set to run on the 31st, it will not execute in\nmonths with only 30 days.\n\nThe schedule produces a count of executions, starting at 0 and incrementing\nwith each recurrence.\n\nThe `day` parameter is validated lazily, meaning errors may only be detected\nwhen the schedule is executed.",
+  "examples": [],
+  "tags": [
+    "Cron"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 1067,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L1067"
+}

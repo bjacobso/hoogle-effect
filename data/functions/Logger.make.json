@@ -1,0 +1,21 @@
+{
+  "id": "Logger.make",
+  "name": "make",
+  "module": "Logger",
+  "package": "effect",
+  "signature": "<Message, Output>(log: (options: Logger.Options<Message>) => Output) => Logger<Message, Output>",
+  "description": "Creates a custom logger that formats log messages according to the provided\nfunction.",
+  "documentation": "Creates a custom logger that formats log messages according to the provided\nfunction.",
+  "examples": [
+    {
+      "code": "import { Effect, Logger, LogLevel } from \"effect\"\n\nconst logger = Logger.make(({ logLevel, message }) => {\nglobalThis.console.log(`[${logLevel.label}] ${message}`)\n})\n\nconst task1 = Effect.logDebug(\"task1 done\")\nconst task2 = Effect.logDebug(\"task2 done\")\n\nconst program = Effect.gen(function*() {\nyield* Effect.log(\"start\")\nyield* task1\nyield* task2\nyield* Effect.log(\"done\")\n}).pipe(\nLogger.withMinimumLogLevel(LogLevel.Debug),\nEffect.provide(Logger.replace(Logger.defaultLogger, logger))\n)\n\nEffect.runFork(program)\n// [INFO] start\n// [DEBUG] task1 done\n// [DEBUG] task2 done\n// [INFO] done"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Logger.d.ts",
+  "sourceLine": 100,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Logger.ts#L100"
+}

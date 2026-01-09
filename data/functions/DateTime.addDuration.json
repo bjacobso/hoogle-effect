@@ -1,0 +1,21 @@
+{
+  "id": "DateTime.addDuration",
+  "name": "addDuration",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "{ (duration: DurationInput): <A extends DateTime>(self: A) => A; <A extends DateTime>(self: A, duration: DurationInput): A; }",
+  "description": "Add the given `Duration` to a `DateTime`.",
+  "documentation": "Add the given `Duration` to a `DateTime`.",
+  "examples": [
+    {
+      "code": "import { DateTime } from \"effect\"\n\n// add 5 minutes\nDateTime.unsafeMake(0).pipe(\nDateTime.addDuration(\"5 minutes\")\n)"
+    }
+  ],
+  "tags": [
+    "math"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 1839,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L1839"
+}

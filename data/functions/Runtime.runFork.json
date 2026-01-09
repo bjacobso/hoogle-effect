@@ -1,0 +1,17 @@
+{
+  "id": "Runtime.runFork",
+  "name": "runFork",
+  "module": "Runtime",
+  "package": "effect",
+  "signature": "{ <R>(runtime: Runtime<R>): <A, E>(effect: Effect<A, E, R>, options?: RunForkOptions) => RuntimeFiber<A, E>; <R, A, E>(runtime: Runtime<R>, effect: Effect<A, E, R>, options?: RunForkOptions): RuntimeFiber<A, E>; }",
+  "description": "Executes the effect using the provided Scheduler or using the global\nScheduler if not provided",
+  "documentation": "Executes the effect using the provided Scheduler or using the global\nScheduler if not provided",
+  "examples": [],
+  "tags": [
+    "execution"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Runtime.d.ts",
+  "sourceLine": 77,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Runtime.ts#L77"
+}

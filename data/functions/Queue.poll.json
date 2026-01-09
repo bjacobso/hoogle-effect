@@ -1,0 +1,17 @@
+{
+  "id": "Queue.poll",
+  "name": "poll",
+  "module": "Queue",
+  "package": "effect",
+  "signature": "<A>(self: Dequeue<A>) => Effect<Option<A>, never, never>",
+  "description": "Returns the first value in the `Queue` as a `Some<A>`, or `None` if the queue\nis empty.",
+  "documentation": "Returns the first value in the `Queue` as a `Some<A>`, or `None` if the queue\nis empty.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Queue.d.ts",
+  "sourceLine": 569,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Queue.ts#L569"
+}

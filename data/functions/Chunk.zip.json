@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.zip",
+  "name": "zip",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <B>(that: Chunk<B>): <A>(self: Chunk<A>) => Chunk<[A, B]>; <A, B>(self: Chunk<A>, that: Chunk<B>): Chunk<[A, B]>; }",
+  "description": "Zips this chunk pointwise with the specified chunk.",
+  "documentation": "Zips this chunk pointwise with the specified chunk.",
+  "examples": [],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 1258,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L1258"
+}

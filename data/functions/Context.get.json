@@ -1,0 +1,21 @@
+{
+  "id": "Context.get",
+  "name": "get",
+  "module": "Context",
+  "package": "effect",
+  "signature": "{ <I, S>(tag: Reference<I, S>): <Services>(self: Context<Services>) => S; <Services, I extends Services, S>(tag: Tag<I, S>): (self: Context<Services>) => S; <Services, I, S>(self: Context<Services>, tag: Reference<I, S>): S; <Services, I extends Services, S>(self: Context<Services>, tag: Tag<I, S>): S; }",
+  "description": "Get a service from the context that corresponds to the given tag.",
+  "documentation": "Get a service from the context that corresponds to the given tag.",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { pipe, Context } from \"effect\"\n\nconst Port = Context.GenericTag<{ PORT: number }>(\"Port\")\nconst Timeout = Context.GenericTag<{ TIMEOUT: number }>(\"Timeout\")\n\nconst Services = pipe(\nContext.make(Port, { PORT: 8080 }),\nContext.add(Timeout, { TIMEOUT: 5000 })\n)\n\nassert.deepStrictEqual(Context.get(Services, Timeout), { TIMEOUT: 5000 })"
+    }
+  ],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Context.d.ts",
+  "sourceLine": 359,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Context.ts#L359"
+}

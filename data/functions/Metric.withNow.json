@@ -1,0 +1,17 @@
+{
+  "id": "Metric.withNow",
+  "name": "withNow",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "<Type, In, Out>(self: Metric<Type, readonly [In, number], Out>) => Metric<Type, In, Out>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 983,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L983"
+}

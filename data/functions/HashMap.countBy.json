@@ -1,0 +1,17 @@
+{
+  "id": "HashMap.countBy",
+  "name": "countBy",
+  "module": "HashMap",
+  "package": "effect",
+  "signature": "{ <K, V>(predicate: (value: NoInfer<V>, key: NoInfer<K>) => boolean): (self: HashMap<K, V>) => number; <K, V>(self: HashMap<K, V>, predicate: (value: NoInfer<V>, key: NoInfer<K>) => boolean): number; }",
+  "description": "Counts all the element of the given HashMap that pass the given predicate\n*Example",
+  "documentation": "Counts all the element of the given HashMap that pass the given predicate\n*Example**\n\n```ts\nimport { HashMap } from \"effect\"\n\nconst map = HashMap.make([1, \"a\"], [2, \"b\"], [3, \"c\"])\nconst result = HashMap.countBy(map, (_v, key) => key % 2 === 1)\nconsole.log(result) // 2\n```",
+  "examples": [],
+  "tags": [
+    "folding"
+  ],
+  "since": "3.17.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashMap.d.ts",
+  "sourceLine": 386,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashMap.ts#L386"
+}

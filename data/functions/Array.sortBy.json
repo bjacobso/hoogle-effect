@@ -1,0 +1,17 @@
+{
+  "id": "Array.sortBy",
+  "name": "sortBy",
+  "module": "Array",
+  "package": "effect",
+  "signature": "<S extends Iterable<any>>(...orders: readonly Order<ReadonlyArray.Infer<S>>[]) => (self: S) => S extends readonly [infer A, ...(infer A)[]] ? [A, ...A[]] : S extends Iterable<infer A> ? A[] : never",
+  "description": "Sorts the elements of an `Iterable` in increasing order based on the provided\norders. The elements are compared using the first order in `orders`, then the\nsecond order if the first comparison is equal, and so on.\n*Example",
+  "documentation": "Sorts the elements of an `Iterable` in increasing order based on the provided\norders. The elements are compared using the first order in `orders`, then the\nsecond order if the first comparison is equal, and so on.\n*Example**\n\n```ts\nimport { Array, Order, pipe } from \"effect\"\n\nconst users = [\n{ name: \"Alice\", age: 30 },\n{ name: \"Bob\", age: 25 },\n{ name: \"Charlie\", age: 30 }\n]\n\nconst result = pipe(\nusers,\nArray.sortBy(\nOrder.mapInput(Order.number, (user: (typeof users)[number]) => user.age),\nOrder.mapInput(Order.string, (user: (typeof users)[number]) => user.name)\n)\n)\n\nconsole.log(result)\n// [\n// { name: \"Bob\", age: 25 },\n// { name: \"Alice\", age: 30 },\n// { name: \"Charlie\", age: 30 }\n// ]\n\n// Explanation:\n// The array of users is sorted first by age in ascending order. When ages are equal,\n// the users are further sorted by name in ascending order.\n```",
+  "examples": [],
+  "tags": [
+    "sorting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 2598,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L2598"
+}

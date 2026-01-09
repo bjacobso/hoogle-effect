@@ -1,0 +1,17 @@
+{
+  "id": "Stream.mergeAll",
+  "name": "mergeAll",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ (options: { readonly concurrency: number | \"unbounded\"; readonly bufferSize?: number; }): <A, E, R>(streams: Iterable<Stream<A, E, R>>) => Stream<A, E, R>; <A, E, R>(streams: Iterable<Stream<A, E, R>>, options: { readonly concurrency: number | \"unbounded\"; readonly bufferSize?: number; }): Stream<A, E, R>; }",
+  "description": "Merges a variable list of streams in a non-deterministic fashion. Up to `n`\nstreams may be consumed in parallel and up to `outputBuffer` chunks may be\nbuffered by this operator.",
+  "documentation": "Merges a variable list of streams in a non-deterministic fashion. Up to `n`\nstreams may be consumed in parallel and up to `outputBuffer` chunks may be\nbuffered by this operator.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 4943,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L4943"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Effect.when",
+  "name": "when",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ (condition: LazyArg<boolean>): <A, E, R>(self: Effect<A, E, R>) => Effect<Option<A>, E, R>; <A, E, R>(self: Effect<A, E, R>, condition: LazyArg<boolean>): Effect<Option<A>, E, R>; }",
+  "description": "Conditionally executes an effect based on a boolean condition.\n*Details This function allows you to run an effect only if a given condition evaluates\nto `true`. If the condition is `true`, the effect is executed, and its result\nis wrapped in an `Option.some`. If the condition is `false`, the effect is\nskipped, and the result is `Option.none`.\n*When to Use This function is useful for scenarios where you need to dynamically decide\nwhether to execute an effect based on runtime logic, while also representing\nthe skipped case explicitly.\n*Example (Conditional Effect Execution)",
+  "documentation": "Conditionally executes an effect based on a boolean condition.\n*Details**\n\nThis function allows you to run an effect only if a given condition evaluates\nto `true`. If the condition is `true`, the effect is executed, and its result\nis wrapped in an `Option.some`. If the condition is `false`, the effect is\nskipped, and the result is `Option.none`.\n*When to Use**\n\nThis function is useful for scenarios where you need to dynamically decide\nwhether to execute an effect based on runtime logic, while also representing\nthe skipped case explicitly.\n*Example** (Conditional Effect Execution)\n\n```ts\nimport { Effect, Option } from \"effect\"\n\nconst validateWeightOption = (\nweight: number\n): Effect.Effect<Option.Option<number>> =>\n// Conditionally execute the effect if the weight is non-negative\nEffect.succeed(weight).pipe(Effect.when(() => weight >= 0))\n\n// Run with a valid weight\nEffect.runPromise(validateWeightOption(100)).then(console.log)\n// Output:\n// {\n// _id: \"Option\",\n// _tag: \"Some\",\n// value: 100\n// }\n\n// Run with an invalid weight\nEffect.runPromise(validateWeightOption(-5)).then(console.log)\n// Output:\n// {\n// _id: \"Option\",\n// _tag: \"None\"\n// }\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Option } from \"effect\"\n\nconst validateWeightOption = (\nweight: number\n): Effect.Effect<Option.Option<number>> =>\n// Conditionally execute the effect if the weight is non-negative\nEffect.succeed(weight).pipe(Effect.when(() => weight >= 0))\n\n// Run with a valid weight\nEffect.runPromise(validateWeightOption(100)).then(console.log)\n// Output:\n// {\n// _id: \"Option\",\n// _tag: \"Some\",\n// value: 100\n// }\n\n// Run with an invalid weight\nEffect.runPromise(validateWeightOption(-5)).then(console.log)\n// Output:\n// {\n// _id: \"Option\",\n// _tag: \"None\"\n// }"
+    }
+  ],
+  "tags": [
+    "Conditional Operators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 16590,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L16590"
+}

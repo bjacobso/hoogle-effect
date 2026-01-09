@@ -1,0 +1,17 @@
+{
+  "id": "Fiber.isRuntimeFiber",
+  "name": "isRuntimeFiber",
+  "module": "Fiber",
+  "package": "effect",
+  "signature": "<A, E>(self: Fiber<A, E>) => self is RuntimeFiber<A, E>",
+  "description": "Returns `true` if the specified `Fiber` is a `RuntimeFiber`, `false`\notherwise.",
+  "documentation": "Returns `true` if the specified `Fiber` is a `RuntimeFiber`, `false`\notherwise.",
+  "examples": [],
+  "tags": [
+    "refinements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Fiber.d.ts",
+  "sourceLine": 284,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Fiber.ts#L284"
+}

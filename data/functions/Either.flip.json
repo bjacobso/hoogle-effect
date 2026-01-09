@@ -1,0 +1,17 @@
+{
+  "id": "Either.flip",
+  "name": "flip",
+  "module": "Either",
+  "package": "effect",
+  "signature": "<A, E>(self: Either<A, E>) => Either<E, A>",
+  "description": "Returns an `Either` that swaps the error/success cases. This allows you to\nuse all methods on the error channel, possibly before flipping back.",
+  "documentation": "Returns an `Either` that swaps the error/success cases. This allows you to\nuse all methods on the error channel, possibly before flipping back.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Either.d.ts",
+  "sourceLine": 1085,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Either.ts#L1085"
+}

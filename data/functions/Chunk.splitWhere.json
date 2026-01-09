@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.splitWhere",
+  "name": "splitWhere",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <A>(predicate: Predicate<NoInfer<A>>): (self: Chunk<A>) => [beforeMatch: Chunk<A>, fromMatch: Chunk<A>]; <A>(self: Chunk<A>, predicate: Predicate<A>): [beforeMatch: Chunk<A>, fromMatch: Chunk<A>]; }",
+  "description": "Splits this chunk on the first element that matches this predicate.\nReturns a tuple containing two chunks: the first one is before the match, and the second one is from the match onward.",
+  "documentation": "Splits this chunk on the first element that matches this predicate.\nReturns a tuple containing two chunks: the first one is before the match, and the second one is from the match onward.",
+  "examples": [],
+  "tags": [
+    "splitting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 1095,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L1095"
+}

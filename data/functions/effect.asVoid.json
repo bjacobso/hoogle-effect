@@ -1,0 +1,17 @@
+{
+  "id": "Effect.asVoid",
+  "name": "asVoid",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, E, R>) => Effect<void, E, R>",
+  "description": "This function maps the success value of an `Effect` value to `void`. If the\noriginal `Effect` value succeeds, the returned `Effect` value will also\nsucceed. If the original `Effect` value fails, the returned `Effect` value\nwill fail with the same error.",
+  "documentation": "This function maps the success value of an `Effect` value to `void`. If the\noriginal `Effect` value succeeds, the returned `Effect` value will also\nsucceed. If the original `Effect` value fails, the returned `Effect` value\nwill fail with the same error.",
+  "examples": [],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 9044,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L9044"
+}

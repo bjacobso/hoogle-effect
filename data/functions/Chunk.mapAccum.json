@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.mapAccum",
+  "name": "mapAccum",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <S, A, B>(s: S, f: (s: S, a: A) => readonly [S, B]): (self: Chunk<A>) => [S, Chunk<B>]; <S, A, B>(self: Chunk<A>, s: S, f: (s: S, a: A) => readonly [S, B]): [S, Chunk<B>]; }",
+  "description": "Statefully maps over the chunk, producing new elements of type `B`.",
+  "documentation": "Statefully maps over the chunk, producing new elements of type `B`.",
+  "examples": [],
+  "tags": [
+    "folding"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 893,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L893"
+}

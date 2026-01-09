@@ -1,0 +1,17 @@
+{
+  "id": "Config.map",
+  "name": "map",
+  "module": "Config",
+  "package": "effect",
+  "signature": "{ <A, B>(f: (a: A) => B): (self: Config<A>) => Config<B>; <A, B>(self: Config<A>, f: (a: A) => B): Config<B>; }",
+  "description": "Returns a config whose structure is the same as this one, but which produces\na different value, constructed using the specified function.",
+  "documentation": "Returns a config whose structure is the same as this one, but which produces\na different value, constructed using the specified function.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Config.d.ts",
+  "sourceLine": 208,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Config.ts#L208"
+}

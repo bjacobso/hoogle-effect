@@ -1,0 +1,17 @@
+{
+  "id": "Layer.fresh",
+  "name": "fresh",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Layer<A, E, R>) => Layer<A, E, R>",
+  "description": "Creates a fresh version of this layer that will not be shared.",
+  "documentation": "Creates a fresh version of this layer that will not be shared.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 441,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L441"
+}

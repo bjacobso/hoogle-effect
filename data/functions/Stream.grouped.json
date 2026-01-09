@@ -1,0 +1,21 @@
+{
+  "id": "Stream.grouped",
+  "name": "grouped",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ (chunkSize: number): <A, E, R>(self: Stream<A, E, R>) => Stream<Chunk<A>, E, R>; <A, E, R>(self: Stream<A, E, R>, chunkSize: number): Stream<Chunk<A>, E, R>; }",
+  "description": "Partitions the stream with specified `chunkSize`.",
+  "documentation": "Partitions the stream with specified `chunkSize`.",
+  "examples": [
+    {
+      "code": "import { Effect, Stream } from \"effect\"\n\nconst stream = Stream.range(0, 8).pipe(Stream.grouped(3))\n\nEffect.runPromise(Stream.runCollect(stream)).then((chunks) => console.log(\"%o\", chunks))\n// {\n// _id: 'Chunk',\n// values: [\n// { _id: 'Chunk', values: [ 0, 1, 2, [length]: 3 ] },\n// { _id: 'Chunk', values: [ 3, 4, 5, [length]: 3 ] },\n// { _id: 'Chunk', values: [ 6, 7, 8, [length]: 3 ] },\n// [length]: 3\n// ]\n// }"
+    }
+  ],
+  "tags": [
+    "grouping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 3562,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L3562"
+}

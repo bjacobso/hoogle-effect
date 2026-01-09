@@ -1,0 +1,17 @@
+{
+  "id": "List.tail",
+  "name": "tail",
+  "module": "List",
+  "package": "effect",
+  "signature": "<A>(self: List<A>) => Option<List<A>>",
+  "description": "Returns the tail of the specified list, or `None` if the list is empty.",
+  "documentation": "Returns the tail of the specified list, or `None` if the list is empty.",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 883,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L883"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Option.getOrThrow",
+  "name": "getOrThrow",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<A>(self: Option<A>) => A",
+  "description": "Extracts the value of an `Option` or throws a default error if the `Option`\nis `None`.\n*Details This function extracts the value from an `Option` if it is `Some`. If the\n`Option` is `None`, it throws a default error. It is useful for fail-fast\nscenarios where the absence of a value is treated as an exceptional case and\na default error is sufficient.",
+  "documentation": "Extracts the value of an `Option` or throws a default error if the `Option`\nis `None`.\n*Details**\n\nThis function extracts the value from an `Option` if it is `Some`. If the\n`Option` is `None`, it throws a default error. It is useful for fail-fast\nscenarios where the absence of a value is treated as an exceptional case and\na default error is sufficient.",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { Option } from \"effect\"\n\nassert.deepStrictEqual(Option.getOrThrow(Option.some(1)), 1)\nassert.throws(() => Option.getOrThrow(Option.none()))"
+    }
+  ],
+  "tags": [
+    "Conversions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 1178,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L1178"
+}

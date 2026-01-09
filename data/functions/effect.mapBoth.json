@@ -1,0 +1,21 @@
+{
+  "id": "Effect.mapBoth",
+  "name": "mapBoth",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E, E2, A, A2>(options: { readonly onFailure: (e: E) => E2; readonly onSuccess: (a: A) => A2; }): <R>(self: Effect<A, E, R>) => Effect<A2, E2, R>; <A, E, R, E2, A2>(self: Effect<A, E, R>, options: { readonly onFailure: (e: E) => E2; readonly onSuccess: (a: A) => A2; }): Effect<A2, E2, R>; }",
+  "description": "Applies transformations to both the success and error channels of an effect.\n*Details This function takes two map functions as arguments: one for the error channel\nand one for the success channel. You can use it when you want to modify both\nthe error and the success values without altering the overall success or\nfailure status of the effect.\n*Example",
+  "documentation": "Applies transformations to both the success and error channels of an effect.\n*Details**\n\nThis function takes two map functions as arguments: one for the error channel\nand one for the success channel. You can use it when you want to modify both\nthe error and the success values without altering the overall success or\nfailure status of the effect.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\n// ┌─── Effect<number, string, never>\n// ▼\nconst simulatedTask = Effect.fail(\"Oh no!\").pipe(Effect.as(1))\n\n// ┌─── Effect<boolean, Error, never>\n// ▼\nconst modified = Effect.mapBoth(simulatedTask, {\nonFailure: (message) => new Error(message),\nonSuccess: (n) => n > 0\n})\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\n// ┌─── Effect<number, string, never>\n// ▼\nconst simulatedTask = Effect.fail(\"Oh no!\").pipe(Effect.as(1))\n\n// ┌─── Effect<boolean, Error, never>\n// ▼\nconst modified = Effect.mapBoth(simulatedTask, {\nonFailure: (message) => new Error(message),\nonSuccess: (n) => n > 0\n})"
+    }
+  ],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 9414,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L9414"
+}

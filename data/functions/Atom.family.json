@@ -1,0 +1,17 @@
+{
+  "id": "Atom.family",
+  "name": "family",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "<Arg, T extends object>(f: (arg: Arg) => T) => (arg: Arg) => T",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 403,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L403"
+}

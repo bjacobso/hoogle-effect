@@ -1,0 +1,21 @@
+{
+  "id": "Stream.map",
+  "name": "map",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A, B>(f: (a: A) => B): <E, R>(self: Stream<A, E, R>) => Stream<B, E, R>; <A, E, R, B>(self: Stream<A, E, R>, f: (a: A) => B): Stream<B, E, R>; }",
+  "description": "Transforms the elements of this stream using the supplied function.",
+  "documentation": "Transforms the elements of this stream using the supplied function.",
+  "examples": [
+    {
+      "code": "import { Effect, Stream } from \"effect\"\n\nconst stream = Stream.make(1, 2, 3).pipe(Stream.map((n) => n + 1))\n\nEffect.runPromise(Stream.runCollect(stream)).then(console.log)\n// { _id: 'Chunk', values: [ 2, 3, 4 ] }"
+    }
+  ],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 4358,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L4358"
+}

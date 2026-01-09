@@ -1,0 +1,17 @@
+{
+  "id": "HttpServerRespondable.symbol",
+  "name": "symbol",
+  "module": "HttpServerRespondable",
+  "package": "@effect/platform",
+  "signature": "typeof symbol",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "symbols"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpServerRespondable.d.ts",
+  "sourceLine": 7,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpServerRespondable.ts#L7"
+}

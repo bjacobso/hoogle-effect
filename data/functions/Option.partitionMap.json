@@ -1,0 +1,17 @@
+{
+  "id": "Option.partitionMap",
+  "name": "partitionMap",
+  "module": "Option",
+  "package": "effect",
+  "signature": "{ <A, B, C>(f: (a: A) => Either<C, B>): (self: Option<A>) => [left: Option<B>, right: Option<C>]; <A, B, C>(self: Option<A>, f: (a: A) => Either<C, B>): [left: Option<B>, right: Option<C>]; }",
+  "description": "Splits an `Option` into two `Option`s based on the result of a mapping\nfunction that produces an `Either`.\n*Details This function takes an `Option` and a mapping function `f` that converts its\nvalue into an `Either`. It returns a tuple of two `Option`s: - The first `Option` (`left`) contains the value from the `Left` side of the\n`Either` if it exists, otherwise `None`.\n- The second `Option` (`right`) contains the value from the `Right` side of\nthe `Either` if it exists, otherwise `None`. If the input `Option` is `None`, both returned `Option`s are `None`. This utility is useful for filtering and categorizing the contents of an\n`Option` based on a bifurcating computation.",
+  "documentation": "Splits an `Option` into two `Option`s based on the result of a mapping\nfunction that produces an `Either`.\n*Details**\n\nThis function takes an `Option` and a mapping function `f` that converts its\nvalue into an `Either`. It returns a tuple of two `Option`s:\n\n- The first `Option` (`left`) contains the value from the `Left` side of the\n`Either` if it exists, otherwise `None`.\n- The second `Option` (`right`) contains the value from the `Right` side of\nthe `Either` if it exists, otherwise `None`.\n\nIf the input `Option` is `None`, both returned `Option`s are `None`.\n\nThis utility is useful for filtering and categorizing the contents of an\n`Option` based on a bifurcating computation.",
+  "examples": [],
+  "tags": [
+    "Filtering"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 2629,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L2629"
+}

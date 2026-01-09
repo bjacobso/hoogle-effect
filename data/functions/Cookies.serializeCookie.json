@@ -1,0 +1,17 @@
+{
+  "id": "Cookies.serializeCookie",
+  "name": "serializeCookie",
+  "module": "Cookies",
+  "package": "@effect/platform",
+  "signature": "(self: Cookie) => string",
+  "description": "Serialize a cookie into a string Adapted from https://github.com/fastify/fastify-cookie under MIT License",
+  "documentation": "Serialize a cookie into a string\n\nAdapted from https://github.com/fastify/fastify-cookie under MIT License",
+  "examples": [],
+  "tags": [
+    "encoding"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Cookies.d.ts",
+  "sourceLine": 362,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Cookies.ts#L362"
+}

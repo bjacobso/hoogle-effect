@@ -1,0 +1,17 @@
+{
+  "id": "ConfigProvider.upperCase",
+  "name": "upperCase",
+  "module": "ConfigProvider",
+  "package": "effect",
+  "signature": "(self: ConfigProvider) => ConfigProvider",
+  "description": "Returns a new config provider that will automatically convert all property\nnames to upper case. This can be utilized to adapt the names of\nconfiguration properties from the default naming convention of camel case\nto the naming convention of a config provider.",
+  "documentation": "Returns a new config provider that will automatically convert all property\nnames to upper case. This can be utilized to adapt the names of\nconfiguration properties from the default naming convention of camel case\nto the naming convention of a config provider.",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/ConfigProvider.d.ts",
+  "sourceLine": 346,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/ConfigProvider.ts#L346"
+}

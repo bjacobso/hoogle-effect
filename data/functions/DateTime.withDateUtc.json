@@ -1,0 +1,21 @@
+{
+  "id": "DateTime.withDateUtc",
+  "name": "withDateUtc",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "{ <A>(f: (date: Date) => A): (self: DateTime) => A; <A>(self: DateTime, f: (date: Date) => A): A; }",
+  "description": "Using the time zone adjusted `Date`, apply a function to the `Date` and\nreturn the result.",
+  "documentation": "Using the time zone adjusted `Date`, apply a function to the `Date` and\nreturn the result.",
+  "examples": [
+    {
+      "code": "import { DateTime } from \"effect\"\n\n// get the date in milliseconds\nDateTime.unsafeMake(0).pipe(\nDateTime.withDateUtc((date) => date.getTime())\n)"
+    }
+  ],
+  "tags": [
+    "mapping"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 1766,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L1766"
+}

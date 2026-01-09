@@ -1,0 +1,17 @@
+{
+  "id": "WorkerRunner.layerSerialized",
+  "name": "layerSerialized",
+  "module": "WorkerRunner",
+  "package": "@effect/platform",
+  "signature": "<R, I, A extends Schema.TaggedRequest.All, const Handlers extends SerializedRunner.Handlers<A>>(schema: Schema<A, I, R>, handlers: Handlers) => Layer<never, WorkerError, PlatformRunner | R | SerializedRunner.HandlersContext<Handlers>>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "layers"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/WorkerRunner.d.ts",
+  "sourceLine": 141,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/WorkerRunner.ts#L141"
+}

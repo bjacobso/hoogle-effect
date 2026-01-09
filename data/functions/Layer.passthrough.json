@@ -1,0 +1,17 @@
+{
+  "id": "Layer.passthrough",
+  "name": "passthrough",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "<RIn, E, ROut>(self: Layer<ROut, E, RIn>) => Layer<RIn | ROut, E, RIn>",
+  "description": "Returns a new layer that produces the outputs of this layer but also\npasses through the inputs.",
+  "documentation": "Returns a new layer that produces the outputs of this layer but also\npasses through the inputs.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 745,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L745"
+}

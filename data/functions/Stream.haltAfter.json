@@ -1,0 +1,17 @@
+{
+  "id": "Stream.haltAfter",
+  "name": "haltAfter",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ (duration: DurationInput): <A, E, R>(self: Stream<A, E, R>) => Stream<A, E, R>; <A, E, R>(self: Stream<A, E, R>, duration: DurationInput): Stream<A, E, R>; }",
+  "description": "Specialized version of haltWhen which halts the evaluation of this stream\nafter the given duration. An element in the process of being pulled will not be interrupted when the\ngiven duration completes. See `interruptAfter` for this behavior.",
+  "documentation": "Specialized version of haltWhen which halts the evaluation of this stream\nafter the given duration.\n\nAn element in the process of being pulled will not be interrupted when the\ngiven duration completes. See `interruptAfter` for this behavior.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 3766,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L3766"
+}

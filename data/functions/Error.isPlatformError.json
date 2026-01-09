@@ -1,0 +1,17 @@
+{
+  "id": "Error.isPlatformError",
+  "name": "isPlatformError",
+  "module": "Error",
+  "package": "@effect/platform",
+  "signature": "(u: unknown) => u is PlatformError",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "refinements"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Error.d.ts",
+  "sourceLine": 21,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Error.ts#L21"
+}

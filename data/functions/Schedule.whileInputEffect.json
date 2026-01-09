@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.whileInputEffect",
+  "name": "whileInputEffect",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <In, R2>(f: (input: In) => Effect<boolean, never, R2>): <Out, R>(self: Schedule<Out, In, R>) => Schedule<Out, In, R2 | R>; <Out, In, R, R2>(self: Schedule<Out, In, R>, f: (input: In) => Effect<boolean, never, R2>): Schedule<Out, In, R | R2>; }",
+  "description": "Returns a new schedule that continues execution for as long as the given\neffectful predicate on the input evaluates to `true`.\n*Details This function modifies an existing schedule so that it only continues\nexecution while an effectful predicate holds true for its input. If the\npredicate evaluates to `false` at any step, the schedule stops.",
+  "documentation": "Returns a new schedule that continues execution for as long as the given\neffectful predicate on the input evaluates to `true`.\n*Details**\n\nThis function modifies an existing schedule so that it only continues\nexecution while an effectful predicate holds true for its input. If the\npredicate evaluates to `false` at any step, the schedule stops.",
+  "examples": [],
+  "tags": [
+    "Recurrence Conditions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 3262,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L3262"
+}

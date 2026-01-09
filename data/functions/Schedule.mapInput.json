@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.mapInput",
+  "name": "mapInput",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <In, In2>(f: (in2: In2) => In): <Out, R>(self: Schedule<Out, In, R>) => Schedule<Out, In2, R>; <Out, In, R, In2>(self: Schedule<Out, In, R>, f: (in2: In2) => In): Schedule<Out, In2, R>; }",
+  "description": "Transforms the input type of a schedule.\n*Details This function modifies a given schedule by applying a transformation function\nto its inputs. Instead of directly receiving values of type `In`, the\nschedule will now accept values of type `In2`, which are converted to `In`\nusing the provided mapping function `f`. This is useful when you have a schedule that expects a specific input type\nbut you need to adapt it to work with a different type.",
+  "documentation": "Transforms the input type of a schedule.\n*Details**\n\nThis function modifies a given schedule by applying a transformation function\nto its inputs. Instead of directly receiving values of type `In`, the\nschedule will now accept values of type `In2`, which are converted to `In`\nusing the provided mapping function `f`.\n\nThis is useful when you have a schedule that expects a specific input type\nbut you need to adapt it to work with a different type.",
+  "examples": [],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 789,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L789"
+}

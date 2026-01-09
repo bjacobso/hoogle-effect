@@ -1,0 +1,21 @@
+{
+  "id": "Effect.tapErrorTag",
+  "name": "tapErrorTag",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <K extends E extends { _tag: string; } ? E[\"_tag\"] : never, E, A1, E1, R1>(k: K, f: (e: NoInfer<Extract<E, { _tag: K; }>>) => Effect<A1, E1, R1>): <A, R>(self: Effect<A, E, R>) => Effect<A, E | E1, R1 | R>; <A, E, R, K extends E extends { _tag: string; } ? E[\"_tag\"] : never, A1, E1, R1>(self: Effect<A, E, R>, k: K, f: (e: Extract<E, { _tag: K; }>) => Effect<A1, E1, R1>): Effect<A, E | E1, R | R1>; }",
+  "description": "Inspect errors matching a specific tag without altering the original effect.\n*Details This function allows you to inspect and handle specific error types based on\ntheir `_tag` property. It is particularly useful in applications where errors\nare modeled with tagged types (e.g., union types with discriminating tags).\nBy targeting errors with a specific `_tag`, you can log or perform actions on\nthem while leaving the error channel and overall effect unchanged. If the error doesn't match the specified tag, this function does nothing, and\nthe effect proceeds as usual.\n*Example",
+  "documentation": "Inspect errors matching a specific tag without altering the original effect.\n*Details**\n\nThis function allows you to inspect and handle specific error types based on\ntheir `_tag` property. It is particularly useful in applications where errors\nare modeled with tagged types (e.g., union types with discriminating tags).\nBy targeting errors with a specific `_tag`, you can log or perform actions on\nthem while leaving the error channel and overall effect unchanged.\n\nIf the error doesn't match the specified tag, this function does nothing, and\nthe effect proceeds as usual.\n*Example**\n\n```ts\nimport { Effect, Console } from \"effect\"\n\nclass NetworkError {\nreadonly _tag = \"NetworkError\"\nconstructor(readonly statusCode: number) {}\n}\n\nclass ValidationError {\nreadonly _tag = \"ValidationError\"\nconstructor(readonly field: string) {}\n}\n\n// Create a task that fails with a NetworkError\nconst task: Effect.Effect<number, NetworkError | ValidationError> =\nEffect.fail(new NetworkError(504))\n\n// Use tapErrorTag to inspect only NetworkError types and log the status code\nconst tapping = Effect.tapErrorTag(task, \"NetworkError\", (error) =>\nConsole.log(`expected error: ${error.statusCode}`)\n)\n\nEffect.runFork(tapping)\n// Output:\n// expected error: 504\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Console } from \"effect\"\n\nclass NetworkError {\nreadonly _tag = \"NetworkError\"\nconstructor(readonly statusCode: number) {}\n}\n\nclass ValidationError {\nreadonly _tag = \"ValidationError\"\nconstructor(readonly field: string) {}\n}\n\n// Create a task that fails with a NetworkError\nconst task: Effect.Effect<number, NetworkError | ValidationError> =\nEffect.fail(new NetworkError(504))\n\n// Use tapErrorTag to inspect only NetworkError types and log the status code\nconst tapping = Effect.tapErrorTag(task, \"NetworkError\", (error) =>\nConsole.log(`expected error: ${error.statusCode}`)\n)\n\nEffect.runFork(tapping)\n// Output:\n// expected error: 504"
+    }
+  ],
+  "tags": [
+    "Sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 19622,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L19622"
+}

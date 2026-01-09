@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.flatten",
+  "name": "flatten",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "<S extends Chunk<Chunk<any>>>(self: S) => Chunk.Flatten<S>",
+  "description": "Flattens a chunk of chunks into a single chunk by concatenating all chunks.",
+  "documentation": "Flattens a chunk of chunks into a single chunk by concatenating all chunks.",
+  "examples": [],
+  "tags": [
+    "sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 674,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L674"
+}

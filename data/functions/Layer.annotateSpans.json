@@ -1,0 +1,17 @@
+{
+  "id": "Layer.annotateSpans",
+  "name": "annotateSpans",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "{ (key: string, value: unknown): <A, E, R>(self: Layer<A, E, R>) => Layer<A, E, R>; (values: Record<string, unknown>): <A, E, R>(self: Layer<A, E, R>) => Layer<A, E, R>; <A, E, R>(self: Layer<A, E, R>, key: string, value: unknown): Layer<A, E, R>; <A, E, R>(self: Layer<A, E, R>, values: Record<string, unknown>): Layer<A, E, R>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "tracing"
+  ],
+  "since": "3.3.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 172,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L172"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Stream.dropRight",
+  "name": "dropRight",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ (n: number): <A, E, R>(self: Stream<A, E, R>) => Stream<A, E, R>; <A, E, R>(self: Stream<A, E, R>, n: number): Stream<A, E, R>; }",
+  "description": "Drops the last specified number of elements from this stream.",
+  "documentation": "Drops the last specified number of elements from this stream.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 2147,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L2147"
+}

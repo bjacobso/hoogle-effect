@@ -1,0 +1,21 @@
+{
+  "id": "Metric.histogram",
+  "name": "histogram",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "(name: string, boundaries: MetricBoundaries, description?: string) => Metric<MetricKeyType.Histogram, number, MetricState.Histogram>",
+  "description": "Represents a Histogram metric that records observations in specified value boundaries.\nHistogram metrics are useful for measuring the distribution of values within a range.",
+  "documentation": "Represents a Histogram metric that records observations in specified value boundaries.\nHistogram metrics are useful for measuring the distribution of values within a range.",
+  "examples": [
+    {
+      "code": "import { Metric, MetricBoundaries } from \"effect\"\n\nconst latencyHistogram = Metric.histogram(\"latency_histogram\",\nMetricBoundaries.linear({ start: 0, width: 10, count: 11 }),\n\"Measures the distribution of request latency.\"\n);"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 400,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L400"
+}

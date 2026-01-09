@@ -1,0 +1,21 @@
+{
+  "id": "Stream.mergeWith",
+  "name": "mergeWith",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A2, E2, R2, A, A3, A4>(other: Stream<A2, E2, R2>, options: { readonly onSelf: (a: A) => A3; readonly onOther: (a2: A2) => A4; readonly haltStrategy?: HaltStrategyInput; }): <E, R>(self: Stream<A, E, R>) => Stream<A3 | A4, E2 | E, R2 | R>; <A, E, R, A2, E2, R2, A3, A4>(self: Stream<A, E, R>, other: Stream<A2, E2, R2>, options: { readonly onSelf: (a: A) => A3; readonly onOther: (a2: A2) => A4; readonly haltStrategy?: HaltStrategyInput; }): Stream<A3 | A4, E | E2, R | R2>; }",
+  "description": "Merges this stream and the specified stream together to a common element\ntype with the specified mapping functions. New produced stream will terminate when both specified stream terminate if\nno termination strategy is specified.",
+  "documentation": "Merges this stream and the specified stream together to a common element\ntype with the specified mapping functions.\n\nNew produced stream will terminate when both specified stream terminate if\nno termination strategy is specified.",
+  "examples": [
+    {
+      "code": "import { Effect, Schedule, Stream } from \"effect\"\n\nconst s1 = Stream.make(\"1\", \"2\", \"3\").pipe(\nStream.schedule(Schedule.spaced(\"100 millis\"))\n)\nconst s2 = Stream.make(4.1, 5.3, 6.2).pipe(\nStream.schedule(Schedule.spaced(\"200 millis\"))\n)\n\nconst stream = Stream.mergeWith(s1, s2, {\nonSelf: (s) => parseInt(s),\nonOther: (n) => Math.floor(n)\n})\n\nEffect.runPromise(Stream.runCollect(stream)).then(console.log)\n// { _id: 'Chunk', values: [ 1, 4, 2, 3, 5, 6 ] }"
+    }
+  ],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 5068,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L5068"
+}

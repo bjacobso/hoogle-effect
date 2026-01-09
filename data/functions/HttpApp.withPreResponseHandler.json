@@ -1,0 +1,17 @@
+{
+  "id": "HttpApp.withPreResponseHandler",
+  "name": "withPreResponseHandler",
+  "module": "HttpApp",
+  "package": "@effect/platform",
+  "signature": "((handler: PreResponseHandler) => <A, E, R>(self: HttpApp<A, E, R>) => HttpApp<A, E, R>) & (<A, E, R>(self: HttpApp<A, E, R>, handler: PreResponseHandler) => HttpApp<A, E, R>)",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "fiber refs"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpApp.d.ts",
+  "sourceLine": 59,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpApp.ts#L59"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Stream.scopedWith",
+  "name": "scopedWith",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(f: (scope: Scope) => Effect<A, E, R>) => Stream<A, E, R>",
+  "description": "Use a function that receives a scope and returns an effect to emit an output\nelement. The output element will be the result of the returned effect, if\nsuccessful.",
+  "documentation": "Use a function that receives a scope and returns an effect to emit an output\nelement. The output element will be the result of the returned effect, if\nsuccessful.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "3.11.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 7760,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L7760"
+}

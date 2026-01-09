@@ -1,0 +1,17 @@
+{
+  "id": "Stream.fromTPubSub",
+  "name": "fromTPubSub",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A>(pubsub: TPubSub<A>) => Stream<A, never, never>",
+  "description": "Creates a stream from a subscription to a `TPubSub`.",
+  "documentation": "Creates a stream from a subscription to a `TPubSub`.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "3.10.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 3106,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L3106"
+}

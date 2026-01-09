@@ -1,0 +1,19 @@
+{
+  "id": "Context.mergeAll",
+  "name": "mergeAll",
+  "module": "Context",
+  "package": "effect",
+  "signature": "<T extends Array<unknown>>(...ctxs: { [K in keyof T]: Context<T[K]>; }) => Context<T[number]>",
+  "description": "Merges any number of `Context`s, returning a new `Context` containing the services of all.",
+  "documentation": "Merges any number of `Context`s, returning a new `Context` containing the services of all.",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { Context } from \"effect\"\n\nconst Port = Context.GenericTag<{ PORT: number }>(\"Port\")\nconst Timeout = Context.GenericTag<{ TIMEOUT: number }>(\"Timeout\")\nconst Host = Context.GenericTag<{ HOST: string }>(\"Host\")\n\nconst firstContext = Context.make(Port, { PORT: 8080 })\nconst secondContext = Context.make(Timeout, { TIMEOUT: 5000 })\nconst thirdContext = Context.make(Host, { HOST: \"localhost\" })\n\nconst Services = Context.mergeAll(firstContext, secondContext, thirdContext)\n\nassert.deepStrictEqual(Context.get(Services, Port), { PORT: 8080 })\nassert.deepStrictEqual(Context.get(Services, Timeout), { TIMEOUT: 5000 })\nassert.deepStrictEqual(Context.get(Services, Host), { HOST: \"localhost\" })"
+    }
+  ],
+  "tags": [],
+  "since": "3.12.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Context.d.ts",
+  "sourceLine": 713,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Context.ts#L713"
+}

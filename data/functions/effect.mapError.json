@@ -1,0 +1,21 @@
+{
+  "id": "Effect.mapError",
+  "name": "mapError",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E, E2>(f: (e: E) => E2): <A, R>(self: Effect<A, E, R>) => Effect<A, E2, R>; <A, E, R, E2>(self: Effect<A, E, R>, f: (e: E) => E2): Effect<A, E2, R>; }",
+  "description": "Transforms or modifies the error produced by an effect without affecting its\nsuccess value.\n*When to Use This function is helpful when you want to enhance the error with additional\ninformation, change the error type, or apply custom error handling while\nkeeping the original behavior of the effect's success values intact. It only\noperates on the error channel and leaves the success channel unchanged.\n*Example",
+  "documentation": "Transforms or modifies the error produced by an effect without affecting its\nsuccess value.\n*When to Use**\n\nThis function is helpful when you want to enhance the error with additional\ninformation, change the error type, or apply custom error handling while\nkeeping the original behavior of the effect's success values intact. It only\noperates on the error channel and leaves the success channel unchanged.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\n// ┌─── Effect<number, string, never>\n// ▼\nconst simulatedTask = Effect.fail(\"Oh no!\").pipe(Effect.as(1))\n\n// ┌─── Effect<number, Error, never>\n// ▼\nconst mapped = Effect.mapError(\nsimulatedTask,\n(message) => new Error(message)\n)\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\n// ┌─── Effect<number, string, never>\n// ▼\nconst simulatedTask = Effect.fail(\"Oh no!\").pipe(Effect.as(1))\n\n// ┌─── Effect<number, Error, never>\n// ▼\nconst mapped = Effect.mapError(\nsimulatedTask,\n(message) => new Error(message)\n)"
+    }
+  ],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 9525,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L9525"
+}

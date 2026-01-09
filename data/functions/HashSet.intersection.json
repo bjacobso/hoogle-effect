@@ -1,0 +1,19 @@
+{
+  "id": "HashSet.intersection",
+  "name": "intersection",
+  "module": "HashSet",
+  "package": "effect",
+  "signature": "{ <A>(that: Iterable<A>): (self: HashSet<A>) => HashSet<A>; <A>(self: HashSet<A>, that: Iterable<A>): HashSet<A>; }",
+  "description": "Returns a `HashSet` of values which are present in both this set and that\n`Iterable<A>`. Computes set intersection (A ∩ B) Time complexity: `O(n)` where n is the number of elements in the smaller\nset\n*NOTE: the hash and equal of the values in both the set and the iterable\nmust be the same.",
+  "documentation": "Returns a `HashSet` of values which are present in both this set and that\n`Iterable<A>`. Computes set intersection (A ∩ B)\n\nTime complexity: **`O(n)`** where n is the number of elements in the smaller\nset\n*NOTE**: the hash and equal of the values in both the set and the iterable\nmust be the same.",
+  "examples": [
+    {
+      "code": "// Syntax\nimport { HashSet, pipe } from \"effect\"\n\n// with data-last, a.k.a. pipeable API\npipe(HashSet.make(1, 2, 3), HashSet.intersection(HashSet.make(2, 3, 4)))\n\n// or piped with the pipe function\nHashSet.make(1, 2, 3).pipe(HashSet.intersection(HashSet.make(2, 3, 4)))\n\n// or with data-first API\nHashSet.intersection(HashSet.make(1, 2, 3), HashSet.make(2, 3, 4))"
+    }
+  ],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashSet.d.ts",
+  "sourceLine": 1458,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashSet.ts#L1458"
+}

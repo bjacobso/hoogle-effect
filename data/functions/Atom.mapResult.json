@@ -1,0 +1,17 @@
+{
+  "id": "Atom.mapResult",
+  "name": "mapResult",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "{ <R extends Atom<Result.Result<any, any>>, B>(f: (_: Result.Success<Type<R>>) => B): (self: R) => [R] extends [Writable<infer _, infer RW>] ? Writable<Result<B, Result.Failure<Type<R>>>, RW> : Atom<Result<B, Result.Failure<Type<R>>>>; <R extends Atom<Result.Result<any, any>>, B>(self: R, f: (_: Result.Success<Type<R>>) => B): [R] extends [Writable<infer _, infer RW>] ? Writable<Result<B, Result.Failure<Type<R>>>, RW> : Atom<Result<B, Result.Failure<Type<R>>>>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 471,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L471"
+}

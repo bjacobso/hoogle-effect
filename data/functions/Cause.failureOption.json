@@ -1,0 +1,17 @@
+{
+  "id": "Cause.failureOption",
+  "name": "failureOption",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E>(self: Cause<E>) => Option<E>",
+  "description": "Retrieves the first `Fail` error in a `Cause`, if present.\n*Details This function returns an `Option` containing the first recoverable error\n(`E`) from the cause. It's often used to quickly check if there's a primary\nerror to handle or display.",
+  "documentation": "Retrieves the first `Fail` error in a `Cause`, if present.\n*Details**\n\nThis function returns an `Option` containing the first recoverable error\n(`E`) from the cause. It's often used to quickly check if there's a primary\nerror to handle or display.",
+  "examples": [],
+  "tags": [
+    "Getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 792,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L792"
+}

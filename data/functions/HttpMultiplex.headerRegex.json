@@ -1,0 +1,17 @@
+{
+  "id": "HttpMultiplex.headerRegex",
+  "name": "headerRegex",
+  "module": "HttpMultiplex",
+  "package": "@effect/platform",
+  "signature": "{ <E2, R2>(header: string, regex: RegExp, app: Default<E2, R2>): <E, R>(self: HttpMultiplex<E, R>) => HttpMultiplex<E2 | E, R2 | R>; <E, R, E2, R2>(self: HttpMultiplex<E, R>, header: string, regex: RegExp, app: Default<E2, R2>): HttpMultiplex<E | E2, R | R2>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpMultiplex.d.ts",
+  "sourceLine": 79,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpMultiplex.ts#L79"
+}

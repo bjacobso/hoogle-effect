@@ -1,0 +1,21 @@
+{
+  "id": "Effect.flip",
+  "name": "flip",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, E, R>) => Effect<E, A, R>",
+  "description": "Swaps the success and error channels of an effect.\n*Details This function reverses the flow of an effect by swapping its success and\nerror channels. The success value becomes an error, and the error value\nbecomes a success.\n*Example",
+  "documentation": "Swaps the success and error channels of an effect.\n*Details**\n\nThis function reverses the flow of an effect by swapping its success and\nerror channels. The success value becomes an error, and the error value\nbecomes a success.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\n// ┌─── Effect<number, string, never>\n// ▼\nconst program = Effect.fail(\"Oh uh!\").pipe(Effect.as(2))\n\n// ┌─── Effect<string, number, never>\n// ▼\nconst flipped = Effect.flip(program)\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\n// ┌─── Effect<number, string, never>\n// ▼\nconst program = Effect.fail(\"Oh uh!\").pipe(Effect.as(2))\n\n// ┌─── Effect<string, number, never>\n// ▼\nconst flipped = Effect.flip(program)"
+    }
+  ],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 9071,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L9071"
+}

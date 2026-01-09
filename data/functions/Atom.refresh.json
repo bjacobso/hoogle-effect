@@ -1,0 +1,17 @@
+{
+  "id": "Atom.refresh",
+  "name": "refresh",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "<A>(self: Atom<A>) => Effect<void, never, AtomRegistry>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Conversions"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 593,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L593"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Stream.toPull",
+  "name": "toPull",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Stream<A, E, R>) => Effect<Effect<Chunk<A>, Option<E>, R>, never, Scope | R>",
+  "description": "Returns in a scope a ZIO effect that can be used to repeatedly pull chunks\nfrom the stream. The pull effect fails with None when the stream is\nfinished, or with Some error if it fails, otherwise it returns a chunk of\nthe stream's output.",
+  "documentation": "Returns in a scope a ZIO effect that can be used to repeatedly pull chunks\nfrom the stream. The pull effect fails with None when the stream is\nfinished, or with Some error if it fails, otherwise it returns a chunk of\nthe stream's output.",
+  "examples": [
+    {
+      "code": "import { Effect, Stream } from \"effect\"\n\n// Simulate a chunked stream\nconst stream = Stream.fromIterable([1, 2, 3, 4, 5]).pipe(Stream.rechunk(2))\n\nconst program = Effect.gen(function*() {\n// Create an effect to get data chunks from the stream\nconst getChunk = yield* Stream.toPull(stream)\n\n// Continuously fetch and process chunks\nwhile (true) {\nconst chunk = yield* getChunk\nconsole.log(chunk)\n}\n})\n\nEffect.runPromise(Effect.scoped(program)).then(console.log, console.error)\n// { _id: 'Chunk', values: [ 1, 2 ] }\n// { _id: 'Chunk', values: [ 3, 4 ] }\n// { _id: 'Chunk', values: [ 5 ] }\n// (FiberFailure) Error: {\n// \"_id\": \"Option\",\n// \"_tag\": \"None\"\n// }"
+    }
+  ],
+  "tags": [
+    "destructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 8950,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L8950"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Array.map",
+  "name": "map",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <S extends ReadonlyArray<any>, B>(f: (a: ReadonlyArray.Infer<S>, i: number) => B): (self: S) => ReadonlyArray.With<S, B>; <S extends ReadonlyArray<any>, B>(self: S, f: (a: ReadonlyArray.Infer<S>, i: number) => B): ReadonlyArray.With<S, B>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 4230,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L4230"
+}

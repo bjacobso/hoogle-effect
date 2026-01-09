@@ -1,0 +1,17 @@
+{
+  "id": "Layer.orDie",
+  "name": "orDie",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Layer<A, E, R>) => Layer<A, never, R>",
+  "description": "Translates effect failure into death of the fiber, making all failures\nunchecked and not a part of the type of the layer.",
+  "documentation": "Translates effect failure into death of the fiber, making all failures\nunchecked and not a part of the type of the layer.",
+  "examples": [],
+  "tags": [
+    "error handling"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 712,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L712"
+}

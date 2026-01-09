@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.get",
+  "name": "get",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ (index: number): <A>(self: Chunk<A>) => Option<A>; <A>(self: Chunk<A>, index: number): Option<A>; }",
+  "description": "This function provides a safe way to read a value at a particular index from a `Chunk`.",
+  "documentation": "This function provides a safe way to read a value at a particular index from a `Chunk`.",
+  "examples": [],
+  "tags": [
+    "elements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 145,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L145"
+}

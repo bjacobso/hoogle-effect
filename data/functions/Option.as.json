@@ -1,0 +1,21 @@
+{
+  "id": "Option.as",
+  "name": "as",
+  "module": "Option",
+  "package": "effect",
+  "signature": "{ <B>(b: B): <X>(self: Option<X>) => Option<B>; <X, B>(self: Option<X>, b: B): Option<B>; }",
+  "description": "Replaces the value inside a `Some` with the specified constant value, leaving\n`None` unchanged.\n*Details This function transforms an `Option` by replacing the value inside a `Some`\nwith the given constant value `b`. If the `Option` is `None`, it remains\nunchanged. This is useful when you want to preserve the presence of a value (`Some`) but\nreplace its content with a fixed value.",
+  "documentation": "Replaces the value inside a `Some` with the specified constant value, leaving\n`None` unchanged.\n*Details**\n\nThis function transforms an `Option` by replacing the value inside a `Some`\nwith the given constant value `b`. If the `Option` is `None`, it remains\nunchanged.\n\nThis is useful when you want to preserve the presence of a value (`Some`) but\nreplace its content with a fixed value.",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\n// Replacing the value of a `Some`\nconst someValue = Option.some(42)\n\nconsole.log(Option.as(someValue, \"new value\"))\n// Output: { _id: 'Option', _tag: 'Some', value: 'new value' }\n\n// Replacing a `None` (no effect)\nconst noneValue = Option.none<number>()\n\nconsole.log(Option.as(noneValue, \"new value\"))\n// Output: { _id: 'Option', _tag: 'None' }"
+    }
+  ],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 1318,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L1318"
+}

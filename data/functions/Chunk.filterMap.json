@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.filterMap",
+  "name": "filterMap",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <A, B>(f: (a: A, i: number) => Option<B>): (self: Chunk<A>) => Chunk<B>; <A, B>(self: Chunk<A>, f: (a: A, i: number) => Option<B>): Chunk<B>; }",
+  "description": "Returns a filtered and mapped subset of the elements.",
+  "documentation": "Returns a filtered and mapped subset of the elements.",
+  "examples": [],
+  "tags": [
+    "filtering"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 515,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L515"
+}

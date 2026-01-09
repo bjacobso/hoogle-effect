@@ -1,0 +1,17 @@
+{
+  "id": "Array.scan",
+  "name": "scan",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <B, A>(b: B, f: (b: B, a: A) => B): (self: Iterable<A>) => [B, ...B[]]; <A, B>(self: Iterable<A>, b: B, f: (b: B, a: A) => B): [B, ...B[]]; }",
+  "description": "Accumulates values from an `Iterable` starting from the left, storing\neach intermediate result in an array. Useful for tracking the progression of\na value through a series of transformations.\n*Example",
+  "documentation": "Accumulates values from an `Iterable` starting from the left, storing\neach intermediate result in an array. Useful for tracking the progression of\na value through a series of transformations.\n*Example**\n\n```ts\nimport { Array } from \"effect\";\n\nconst result = Array.scan([1, 2, 3, 4], 0, (acc, value) => acc + value)\nconsole.log(result) // [0, 1, 3, 6, 10]\n\n// Explanation:\n// This function starts with the initial value (0 in this case)\n// and adds each element of the array to this accumulator one by one,\n// keeping track of the cumulative sum after each addition.\n// Each of these sums is captured in the resulting array.\n```",
+  "examples": [],
+  "tags": [
+    "folding"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 706,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L706"
+}

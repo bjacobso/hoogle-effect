@@ -1,0 +1,17 @@
+{
+  "id": "Array.flatMap",
+  "name": "flatMap",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <S extends ReadonlyArray<any>, T extends ReadonlyArray<any>>(f: (a: ReadonlyArray.Infer<S>, i: number) => T): (self: S) => ReadonlyArray.AndNonEmpty<S, T, ReadonlyArray.Infer<T>>; <A, B>(self: readonly [A, ...A[]], f: (a: A, i: number) => readonly [B, ...B[]]): [B, ...B[]]; <A, B>(self: readonly A[], f: (a: A, i: number) => readonly B[]): B[]; }",
+  "description": "Applies a function to each element in an array and returns a new array containing the concatenated mapped elements.",
+  "documentation": "Applies a function to each element in an array and returns a new array containing the concatenated mapped elements.",
+  "examples": [],
+  "tags": [
+    "sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 4248,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L4248"
+}

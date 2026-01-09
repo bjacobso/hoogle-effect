@@ -1,0 +1,17 @@
+{
+  "id": "Effect.locallyScopedWith",
+  "name": "locallyScopedWith",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A>(f: (a: A) => A): (self: FiberRef<A>) => Effect<void, never, Scope>; <A>(self: FiberRef<A>, f: (a: A) => A): Effect<void, never, Scope>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Fiber Refs"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 21483,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L21483"
+}

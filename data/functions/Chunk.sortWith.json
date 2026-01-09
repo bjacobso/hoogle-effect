@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.sortWith",
+  "name": "sortWith",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <A, B>(f: (a: A) => B, order: Order<B>): (self: Chunk<A>) => Chunk<A>; <A, B>(self: Chunk<A>, f: (a: A) => B, order: Order<B>): Chunk<A>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "sorting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 1007,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L1007"
+}

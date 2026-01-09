@@ -1,0 +1,17 @@
+{
+  "id": "HttpRouter.provideServiceEffect",
+  "name": "provideServiceEffect",
+  "module": "HttpRouter",
+  "package": "@effect/platform",
+  "signature": "{ <T extends Context.Tag<any, any>, R1, E1>(tag: T, effect: Effect<Tag.Service<T>, E1, R1>): <E, R>(self: HttpRouter<E, R>) => HttpRouter<E1 | E, Exclude<R, Tag.Identifier<T>> | Exclude<Exclude<R1, HttpRouter.Provided>, Tag.Identifier<T>>>; <E, R, T extends Context.Tag<any, any>, R1, E1>(self: HttpRouter<E, R>, tag: T, effect: Effect<Tag.Service<T>, E1, R1>): HttpRouter<E | E1, Exclude<R, Tag.Identifier<T>> | Exclude<Exclude<R1, HttpRouter.Provided>, Tag.Identifier<T>>>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpRouter.d.ts",
+  "sourceLine": 695,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpRouter.ts#L695"
+}

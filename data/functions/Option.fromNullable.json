@@ -1,0 +1,21 @@
+{
+  "id": "Option.fromNullable",
+  "name": "fromNullable",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<A>(nullableValue: A) => Option<NonNullable<A>>",
+  "description": "Converts a nullable value into an `Option`. Returns `None` if the value is\n`null` or `undefined`, otherwise wraps the value in a `Some`.",
+  "documentation": "Converts a nullable value into an `Option`. Returns `None` if the value is\n`null` or `undefined`, otherwise wraps the value in a `Some`.",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\nconsole.log(Option.fromNullable(undefined))\n// Output: { _id: 'Option', _tag: 'None' }\n\nconsole.log(Option.fromNullable(null))\n// Output: { _id: 'Option', _tag: 'None' }\n\nconsole.log(Option.fromNullable(1))\n// Output: { _id: 'Option', _tag: 'Some', value: 1 }"
+    }
+  ],
+  "tags": [
+    "Conversions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 942,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L942"
+}

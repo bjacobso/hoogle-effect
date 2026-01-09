@@ -1,0 +1,17 @@
+{
+  "id": "Stream.paginateEffect",
+  "name": "paginateEffect",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<S, A, E, R>(s: S, f: (s: S) => Effect<readonly [A, Option<S>], E, R>) => Stream<A, E, R>",
+  "description": "Like `Stream.unfoldEffect` but allows the emission of values to end one step\nfurther than the unfolding of the state. This is useful for embedding\npaginated APIs, hence the name.",
+  "documentation": "Like `Stream.unfoldEffect` but allows the emission of values to end one step\nfurther than the unfolding of the state. This is useful for embedding\npaginated APIs, hence the name.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 5691,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L5691"
+}

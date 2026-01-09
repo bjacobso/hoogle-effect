@@ -1,0 +1,17 @@
+{
+  "id": "Layer.effect",
+  "name": "effect",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "{ <I, S>(tag: Tag<I, S>): <E, R>(effect: Effect<NoInfer<S>, E, R>) => Layer<I, E, R>; <I, S, E, R>(tag: Tag<I, S>, effect: Effect<NoInfer<S>, E, R>): Layer<I, E, R>; }",
+  "description": "Constructs a layer from the specified effect.",
+  "documentation": "Constructs a layer from the specified effect.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 315,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L315"
+}

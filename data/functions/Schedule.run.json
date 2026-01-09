@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.run",
+  "name": "run",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <In>(now: number, input: Iterable<In>): <Out, R>(self: Schedule<Out, In, R>) => Effect<Chunk<Out>, never, R>; <Out, In, R>(self: Schedule<Out, In, R>, now: number, input: Iterable<In>): Effect<Chunk<Out>, never, R>; }",
+  "description": "Runs a schedule using the provided inputs and collects all outputs.\n*Details This function executes a given schedule with a sequence of input values and\naccumulates all outputs into a `Chunk`. The schedule starts execution at the\nspecified `now` timestamp and proceeds according to its defined behavior. This is useful for batch processing, simulating execution, or testing\nschedules with predefined input sequences.",
+  "documentation": "Runs a schedule using the provided inputs and collects all outputs.\n*Details**\n\nThis function executes a given schedule with a sequence of input values and\naccumulates all outputs into a `Chunk`. The schedule starts execution at the\nspecified `now` timestamp and proceeds according to its defined behavior.\n\nThis is useful for batch processing, simulating execution, or testing\nschedules with predefined input sequences.",
+  "examples": [],
+  "tags": [
+    "Execution"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2631,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2631"
+}

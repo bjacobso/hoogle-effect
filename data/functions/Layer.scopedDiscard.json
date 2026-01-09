@@ -1,0 +1,17 @@
+{
+  "id": "Layer.scopedDiscard",
+  "name": "scopedDiscard",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "<X, E, R>(effect: Effect<X, E, R>) => Layer<never, E, Exclude<R, Scope>>",
+  "description": "Constructs a layer from the specified scoped effect.",
+  "documentation": "Constructs a layer from the specified scoped effect.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 889,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L889"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Effect.flatten",
+  "name": "flatten",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E1, R1, E, R>(self: Effect<Effect<A, E1, R1>, E, R>) => Effect<A, E1 | E, R1 | R>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 17490,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L17490"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "Effect.replicate",
+  "name": "replicate",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ (n: number): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E, R>[]; <A, E, R>(self: Effect<A, E, R>, n: number): Effect<A, E, R>[]; }",
+  "description": "Replicates the given effect `n` times.\n*Details This function takes an effect and replicates it a specified number of times\n(`n`). The result is an array of `n` effects, each of which is identical to\nthe original effect.\n*Example",
+  "documentation": "Replicates the given effect `n` times.\n*Details**\n\nThis function takes an effect and replicates it a specified number of times\n(`n`). The result is an array of `n` effects, each of which is identical to\nthe original effect.\n*Example**\n\n```ts\nimport { Console, Effect } from \"effect\"\n\nconst task = Effect.succeed(\"Hello, World!\").pipe(\nEffect.tap(Console.log)\n)\n\nconst program = Effect.gen(function*() {\n// Replicate the task 3 times\nconst tasks = Effect.replicate(task, 3)\nfor (const t of tasks) {\n// Run each task\nyield* t\n}\n})\n\nEffect.runFork(program)\n// Output:\n// Hello, World!\n// Hello, World!\n// Hello, World!\n```",
+  "examples": [
+    {
+      "code": "import { Console, Effect } from \"effect\"\n\nconst task = Effect.succeed(\"Hello, World!\").pipe(\nEffect.tap(Console.log)\n)\n\nconst program = Effect.gen(function*() {\n// Replicate the task 3 times\nconst tasks = Effect.replicate(task, 3)\nfor (const t of tasks) {\n// Run each task\nyield* t\n}\n})\n\nEffect.runFork(program)\n// Output:\n// Hello, World!\n// Hello, World!\n// Hello, World!"
+    }
+  ],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 3786,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L3786"
+}

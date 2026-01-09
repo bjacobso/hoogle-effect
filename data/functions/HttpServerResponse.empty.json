@@ -1,0 +1,17 @@
+{
+  "id": "HttpServerResponse.empty",
+  "name": "empty",
+  "module": "HttpServerResponse",
+  "package": "@effect/platform",
+  "signature": "(options?: Options.WithContent) => HttpServerResponse",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpServerResponse.d.ts",
+  "sourceLine": 79,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpServerResponse.ts#L79"
+}

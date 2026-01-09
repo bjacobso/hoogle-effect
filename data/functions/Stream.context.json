@@ -1,0 +1,17 @@
+{
+  "id": "Stream.context",
+  "name": "context",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<R>() => Stream<Context<R>, never, R>",
+  "description": "Accesses the whole context of the stream.",
+  "documentation": "Accesses the whole context of the stream.",
+  "examples": [],
+  "tags": [
+    "context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 2399,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L2399"
+}

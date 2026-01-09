@@ -1,0 +1,17 @@
+{
+  "id": "Stream.runFoldWhileScopedEffect",
+  "name": "runFoldWhileScopedEffect",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <S, A, E2, R2>(s: S, cont: Predicate<S>, f: (s: S, a: A) => Effect<S, E2, R2>): <E, R>(self: Stream<A, E, R>) => Effect<S, E2 | E, Scope | R2 | R>; <A, E, R, S, E2, R2>(self: Stream<A, E, R>, s: S, cont: Predicate<S>, f: (s: S, a: A) => Effect<S, E2, R2>): Effect<S, E | E2, Scope | R | R2>; }",
+  "description": "Executes an effectful fold over the stream of values. Returns a scoped\nvalue that represents the scope of the stream. Stops the fold early when\nthe condition is not fulfilled.",
+  "documentation": "Executes an effectful fold over the stream of values. Returns a scoped\nvalue that represents the scope of the stream. Stops the fold early when\nthe condition is not fulfilled.",
+  "examples": [],
+  "tags": [
+    "destructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 7192,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L7192"
+}

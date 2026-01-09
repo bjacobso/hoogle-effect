@@ -1,0 +1,21 @@
+{
+  "id": "Effect.dropUntil",
+  "name": "dropUntil",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A, E, R>(predicate: (a: NoInfer<A>, i: number) => Effect<boolean, E, R>): (elements: Iterable<A>) => Effect<A[], E, R>; <A, E, R>(elements: Iterable<A>, predicate: (a: A, i: number) => Effect<boolean, E, R>): Effect<A[], E, R>; }",
+  "description": "Drops elements until the effectful predicate returns `true`.\n*Details This function processes a collection of elements and uses an effectful\npredicate to determine when to stop dropping elements. It drops elements from\nthe beginning of the collection until the predicate returns `true`. The predicate is a function that takes an element and its index in the\ncollection and returns an effect that evaluates to a boolean. Once the predicate returns `true`, the remaining elements of the collection\nare returned.\n*Note: The first element for which the predicate returns `true` is also\ndropped.\n*When to Use This function allows you to conditionally skip over a part of the collection\nbased on some criteria defined in the predicate.\n*Example",
+  "documentation": "Drops elements until the effectful predicate returns `true`.\n*Details**\n\nThis function processes a collection of elements and uses an effectful\npredicate to determine when to stop dropping elements. It drops elements from\nthe beginning of the collection until the predicate returns `true`.\n\nThe predicate is a function that takes an element and its index in the\ncollection and returns an effect that evaluates to a boolean.\n\nOnce the predicate returns `true`, the remaining elements of the collection\nare returned.\n*Note**: The first element for which the predicate returns `true` is also\ndropped.\n*When to Use**\n\nThis function allows you to conditionally skip over a part of the collection\nbased on some criteria defined in the predicate.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\nconst numbers = [1, 2, 3, 4, 5, 6]\nconst predicate = (n: number, i: number) => Effect.succeed(n > 3)\n\nconst program = Effect.gen(function*() {\nconst result = yield* Effect.dropUntil(numbers, predicate)\nconsole.log(result)\n})\n\nEffect.runFork(program)\n// Output: [5, 6]\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst numbers = [1, 2, 3, 4, 5, 6]\nconst predicate = (n: number, i: number) => Effect.succeed(n > 3)\n\nconst program = Effect.gen(function*() {\nconst result = yield* Effect.dropUntil(numbers, predicate)\nconsole.log(result)\n})\n\nEffect.runFork(program)\n// Output: [5, 6]"
+    }
+  ],
+  "tags": [
+    "Collecting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 1266,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L1266"
+}

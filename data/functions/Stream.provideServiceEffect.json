@@ -1,0 +1,17 @@
+{
+  "id": "Stream.provideServiceEffect",
+  "name": "provideServiceEffect",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <I, S, E2, R2>(tag: Tag<I, S>, effect: Effect<NoInfer<S>, E2, R2>): <A, E, R>(self: Stream<A, E, R>) => Stream<A, E2 | E, R2 | Exclude<R, I>>; <A, E, R, I, S, E2, R2>(self: Stream<A, E, R>, tag: Tag<I, S>, effect: Effect<NoInfer<S>, E2, R2>): Stream<A, E | E2, R2 | Exclude<R, I>>; }",
+  "description": "Provides the stream with the single service it requires. If the stream\nrequires more than one service use `Stream.provideContext` instead.",
+  "documentation": "Provides the stream with the single service it requires. If the stream\nrequires more than one service use `Stream.provideContext` instead.",
+  "examples": [],
+  "tags": [
+    "context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 6278,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L6278"
+}

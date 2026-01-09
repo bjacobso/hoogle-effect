@@ -1,0 +1,17 @@
+{
+  "id": "Stream.flattenExitOption",
+  "name": "flattenExitOption",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E2, E, R>(self: Stream<Exit<A, Option<E2>>, E, R>) => Stream<A, E2 | E, R>",
+  "description": "Unwraps `Exit` values that also signify end-of-stream by failing with `None`.",
+  "documentation": "Unwraps `Exit` values that also signify end-of-stream by failing with `None`.",
+  "examples": [],
+  "tags": [
+    "sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 2880,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L2880"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Duration.Order",
+  "name": "Order",
+  "module": "Duration",
+  "package": "effect",
+  "signature": "Order<Duration>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "instances"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Duration.d.ts",
+  "sourceLine": 221,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Duration.ts#L221"
+}

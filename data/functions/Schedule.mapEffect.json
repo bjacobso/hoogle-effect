@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.mapEffect",
+  "name": "mapEffect",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <Out, Out2, R2>(f: (out: Out) => Effect<Out2, never, R2>): <In, R>(self: Schedule<Out, In, R>) => Schedule<Out2, In, R2 | R>; <Out, In, R, Out2, R2>(self: Schedule<Out, In, R>, f: (out: Out) => Effect<Out2, never, R2>): Schedule<Out2, In, R | R2>; }",
+  "description": "Returns a new schedule that applies an effectful transformation to its\noutput.\n*Details This function modifies an existing schedule by applying an effectful function\n`f` to its output values. The timing and recurrence behavior of the schedule\nremain unchanged, but each output is mapped to a new value within an\n`Effect`. This is useful when you need to perform side effects or asynchronous\ntransformations before passing the output forward.",
+  "documentation": "Returns a new schedule that applies an effectful transformation to its\noutput.\n*Details**\n\nThis function modifies an existing schedule by applying an effectful function\n`f` to its output values. The timing and recurrence behavior of the schedule\nremain unchanged, but each output is mapped to a new value within an\n`Effect`.\n\nThis is useful when you need to perform side effects or asynchronous\ntransformations before passing the output forward.",
+  "examples": [],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 1961,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L1961"
+}

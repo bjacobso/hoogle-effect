@@ -1,0 +1,17 @@
+{
+  "id": "Effect.mapErrorCause",
+  "name": "mapErrorCause",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E, E2>(f: (cause: Cause<E>) => Cause<E2>): <A, R>(self: Effect<A, E, R>) => Effect<A, E2, R>; <A, E, R, E2>(self: Effect<A, E, R>, f: (cause: Cause<E>) => Cause<E2>): Effect<A, E2, R>; }",
+  "description": "Maps the cause of failure of an effect using a specified function.",
+  "documentation": "Maps the cause of failure of an effect using a specified function.",
+  "examples": [],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 9608,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L9608"
+}

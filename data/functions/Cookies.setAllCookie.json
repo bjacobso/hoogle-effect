@@ -1,0 +1,17 @@
+{
+  "id": "Cookies.setAllCookie",
+  "name": "setAllCookie",
+  "module": "Cookies",
+  "package": "@effect/platform",
+  "signature": "{ (cookies: Iterable<Cookie>): (self: Cookies) => Cookies; (self: Cookies, cookies: Iterable<Cookie>): Cookies; }",
+  "description": "Add multiple cookies to a Cookies object",
+  "documentation": "Add multiple cookies to a Cookies object",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Cookies.d.ts",
+  "sourceLine": 162,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Cookies.ts#L162"
+}

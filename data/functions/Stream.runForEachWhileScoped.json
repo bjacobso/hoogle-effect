@@ -1,0 +1,17 @@
+{
+  "id": "Stream.runForEachWhileScoped",
+  "name": "runForEachWhileScoped",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A, E2, R2>(f: (a: A) => Effect<boolean, E2, R2>): <E, R>(self: Stream<A, E, R>) => Effect<void, E2 | E, Scope | R2 | R>; <A, E, R, E2, R2>(self: Stream<A, E, R>, f: (a: A) => Effect<boolean, E2, R2>): Effect<void, E | E2, Scope | R | R2>; }",
+  "description": "Like `Stream.runForEachWhile`, but returns a scoped effect so the\nfinalization order can be controlled.",
+  "documentation": "Like `Stream.runForEachWhile`, but returns a scoped effect so the\nfinalization order can be controlled.",
+  "examples": [],
+  "tags": [
+    "destructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 7344,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L7344"
+}

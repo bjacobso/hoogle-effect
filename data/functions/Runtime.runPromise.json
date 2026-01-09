@@ -1,0 +1,17 @@
+{
+  "id": "Runtime.runPromise",
+  "name": "runPromise",
+  "module": "Runtime",
+  "package": "effect",
+  "signature": "{ <R>(runtime: Runtime<R>): <A, E>(effect: Effect<A, E, R>, options?: { readonly signal?: AbortSignal; }) => Promise<A>; <R, A, E>(runtime: Runtime<R>, effect: Effect<A, E, R>, options?: { readonly signal?: AbortSignal; }): Promise<A>; }",
+  "description": "Runs the `Effect`, returning a JavaScript `Promise` that will be resolved\nwith the value of the effect once the effect has been executed, or will be\nrejected with the first error or exception throw by the effect. This method is effectful and should only be used at the edges of your\nprogram.",
+  "documentation": "Runs the `Effect`, returning a JavaScript `Promise` that will be resolved\nwith the value of the effect once the effect has been executed, or will be\nrejected with the first error or exception throw by the effect.\n\nThis method is effectful and should only be used at the edges of your\nprogram.",
+  "examples": [],
+  "tags": [
+    "execution"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Runtime.d.ts",
+  "sourceLine": 209,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Runtime.ts#L209"
+}

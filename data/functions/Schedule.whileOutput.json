@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.whileOutput",
+  "name": "whileOutput",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <Out>(f: Predicate<Out>): <In, R>(self: Schedule<Out, In, R>) => Schedule<Out, In, R>; <Out, In, R>(self: Schedule<Out, In, R>, f: Predicate<Out>): Schedule<Out, In, R>; }",
+  "description": "Returns a new schedule that continues execution for as long as the given\npredicate on the output evaluates to `true`.\n*Details This function modifies an existing schedule so that it only continues\nexecution while a provided condition holds true for its output. If the\npredicate returns `false`, the schedule stops.",
+  "documentation": "Returns a new schedule that continues execution for as long as the given\npredicate on the output evaluates to `true`.\n*Details**\n\nThis function modifies an existing schedule so that it only continues\nexecution while a provided condition holds true for its output. If the\npredicate returns `false`, the schedule stops.",
+  "examples": [],
+  "tags": [
+    "Recurrence Conditions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 3311,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L3311"
+}

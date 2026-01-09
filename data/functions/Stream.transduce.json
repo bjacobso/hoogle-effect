@@ -1,0 +1,17 @@
+{
+  "id": "Stream.transduce",
+  "name": "transduce",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A2, A, E2, R2>(sink: Sink<A2, A, A, E2, R2>): <E, R>(self: Stream<A, E, R>) => Stream<A2, E2 | E, R2 | R>; <A, E, R, A2, E2, R2>(self: Stream<A, E, R>, sink: Sink<A2, A, A, E2, R2>): Stream<A2, E | E2, R | R2>; }",
+  "description": "Applies the transducer to the stream and emits its outputs.",
+  "documentation": "Applies the transducer to the stream and emits its outputs.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 9165,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L9165"
+}

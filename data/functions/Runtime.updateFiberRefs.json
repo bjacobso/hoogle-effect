@@ -1,0 +1,17 @@
+{
+  "id": "Runtime.updateFiberRefs",
+  "name": "updateFiberRefs",
+  "module": "Runtime",
+  "package": "effect",
+  "signature": "{ (f: (fiberRefs: FiberRefs) => FiberRefs): <R>(self: Runtime<R>) => Runtime<R>; <R>(self: Runtime<R>, f: (fiberRefs: FiberRefs) => FiberRefs): Runtime<R>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "fiber refs"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Runtime.d.ts",
+  "sourceLine": 453,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Runtime.ts#L453"
+}

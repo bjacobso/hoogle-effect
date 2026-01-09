@@ -1,0 +1,17 @@
+{
+  "id": "HttpClient.mapRequestEffect",
+  "name": "mapRequestEffect",
+  "module": "HttpClient",
+  "package": "@effect/platform",
+  "signature": "{ <E2, R2>(f: (a: HttpClientRequest) => Effect<HttpClientRequest, E2, R2>): <E, R>(self: HttpClient.With<E, R>) => HttpClient.With<E2 | E, R2 | R>; <E, R, E2, R2>(self: HttpClient.With<E, R>, f: (a: HttpClientRequest) => Effect<HttpClientRequest, E2, R2>): HttpClient.With<E | E2, R | R2>; }",
+  "description": "Appends an effectful transformation of the request object before sending it.",
+  "documentation": "Appends an effectful transformation of the request object before sending it.",
+  "examples": [],
+  "tags": [
+    "mapping & sequencing"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpClient.d.ts",
+  "sourceLine": 348,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpClient.ts#L348"
+}

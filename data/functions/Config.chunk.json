@@ -1,0 +1,17 @@
+{
+  "id": "Config.chunk",
+  "name": "chunk",
+  "module": "Config",
+  "package": "effect",
+  "signature": "<A>(config: Config<A>, name?: string) => Config<Chunk<A>>",
+  "description": "Constructs a config for a sequence of values.",
+  "documentation": "Constructs a config for a sequence of values.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Config.d.ts",
+  "sourceLine": 130,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Config.ts#L130"
+}

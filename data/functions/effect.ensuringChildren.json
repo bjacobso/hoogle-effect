@@ -1,0 +1,17 @@
+{
+  "id": "Effect.ensuringChildren",
+  "name": "ensuringChildren",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <X, R2>(children: (fibers: readonly RuntimeFiber<any, any>[]) => Effect<X, never, R2>): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E, R2 | R>; <A, E, R, X, R2>(self: Effect<A, E, R>, children: (fibers: readonly RuntimeFiber<any, any>[]) => Effect<X, never, R2>): Effect<A, E, R | R2>; }",
+  "description": "Acts on the children of this fiber, guaranteeing the specified callback\nwill be invoked, whether or not this effect succeeds.",
+  "documentation": "Acts on the children of this fiber, guaranteeing the specified callback\nwill be invoked, whether or not this effect succeeds.",
+  "examples": [],
+  "tags": [
+    "Supervision & Fibers"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 11262,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L11262"
+}

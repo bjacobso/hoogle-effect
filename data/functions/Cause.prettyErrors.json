@@ -1,0 +1,17 @@
+{
+  "id": "Cause.prettyErrors",
+  "name": "prettyErrors",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E>(cause: Cause<E>) => PrettyError[]",
+  "description": "Returns a list of prettified errors (`PrettyError`) from a `Cause`.\n*Details This function inspects the entire `Cause` and produces an array of\n`PrettyError` objects. Each object may include additional metadata, such as a\n`Span`, to provide deeper insights into where and how the error occurred.",
+  "documentation": "Returns a list of prettified errors (`PrettyError`) from a `Cause`.\n*Details**\n\nThis function inspects the entire `Cause` and produces an array of\n`PrettyError` objects. Each object may include additional metadata, such as a\n`Span`, to provide deeper insights into where and how the error occurred.",
+  "examples": [],
+  "tags": [
+    "Formatting"
+  ],
+  "since": "3.2.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 1912,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L1912"
+}

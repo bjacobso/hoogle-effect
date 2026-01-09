@@ -1,0 +1,17 @@
+{
+  "id": "Atom.subscribable",
+  "name": "subscribable",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "{ <A, E>(ref: Subscribable<A, E, never> | ((get: Context) => Subscribable<A, E, never>)): Atom<A>; <A, E, E1>(effect: Effect<Subscribable<A, E1, never>, E, Scope | AtomRegistry> | ((get: Context) => Effect<Subscribable<A, E1, never>, E, Scope | AtomRegistry>)): Atom<Result<A, E | E1>>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 286,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L286"
+}

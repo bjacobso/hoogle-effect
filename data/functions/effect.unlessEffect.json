@@ -1,0 +1,17 @@
+{
+  "id": "Effect.unlessEffect",
+  "name": "unlessEffect",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E2, R2>(condition: Effect<boolean, E2, R2>): <A, E, R>(self: Effect<A, E, R>) => Effect<Option<A>, E2 | E, R2 | R>; <A, E, R, E2, R2>(self: Effect<A, E, R>, condition: Effect<boolean, E2, R2>): Effect<Option<A>, E | E2, R | R2>; }",
+  "description": "Conditionally execute an effect based on the result of another effect.",
+  "documentation": "Conditionally execute an effect based on the result of another effect.",
+  "examples": [],
+  "tags": [
+    "Conditional Operators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 16517,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L16517"
+}

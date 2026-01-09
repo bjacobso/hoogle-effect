@@ -1,0 +1,17 @@
+{
+  "id": "Effect.uninterruptibleMask",
+  "name": "uninterruptibleMask",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(f: (restore: <AX, EX, RX>(effect: Effect<AX, EX, RX>) => Effect<AX, EX, RX>) => Effect<A, E, R>) => Effect<A, E, R>",
+  "description": "This function behaves like {@link uninterruptible}, but it also provides a\n`restore` function. This function can be used to restore the interruptibility\nof any specific region of code.",
+  "documentation": "This function behaves like {@link uninterruptible}, but it also provides a\n`restore` function. This function can be used to restore the interruptibility\nof any specific region of code.",
+  "examples": [],
+  "tags": [
+    "Interruption"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 8855,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L8855"
+}

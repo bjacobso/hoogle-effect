@@ -1,0 +1,17 @@
+{
+  "id": "Option.productMany",
+  "name": "productMany",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<A>(self: Option<A>, collection: Iterable<Option<A>>) => Option<[A, ...A[]]>",
+  "description": "Combines an `Option` with a collection of `Option`s into a single `Option`\ncontaining a tuple of their values if all are `Some`.\n*Details This function takes a primary `Option` and a collection of `Option`s and\ncombines their values into a tuple `[A, ...Array<A>]` if all are `Some`. If\nthe primary `Option` or any `Option` in the collection is `None`, the result\nis `None`.",
+  "documentation": "Combines an `Option` with a collection of `Option`s into a single `Option`\ncontaining a tuple of their values if all are `Some`.\n*Details**\n\nThis function takes a primary `Option` and a collection of `Option`s and\ncombines their values into a tuple `[A, ...Array<A>]` if all are `Some`. If\nthe primary `Option` or any `Option` in the collection is `None`, the result\nis `None`.",
+  "examples": [],
+  "tags": [
+    "Combining"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 2297,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L2297"
+}

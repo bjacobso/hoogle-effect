@@ -1,0 +1,17 @@
+{
+  "id": "Logger.filterLogLevel",
+  "name": "filterLogLevel",
+  "module": "Logger",
+  "package": "effect",
+  "signature": "{ (f: (logLevel: LogLevel) => boolean): <Message, Output>(self: Logger<Message, Output>) => Logger<Message, Option<Output>>; <Message, Output>(self: Logger<Message, Output>, f: (logLevel: LogLevel) => boolean): Logger<Message, Option<Output>>; }",
+  "description": "Returns a version of this logger that only logs messages when the log level\nsatisfies the specified predicate.",
+  "documentation": "Returns a version of this logger that only logs messages when the log level\nsatisfies the specified predicate.",
+  "examples": [],
+  "tags": [
+    "filtering"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Logger.d.ts",
+  "sourceLine": 155,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Logger.ts#L155"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.count",
+  "name": "count",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "Schedule<number, unknown, never>",
+  "description": "A schedule that recurs indefinitely, counting the number of recurrences.\n*Details This schedule never stops and simply counts how many times it has executed.\nEach recurrence increases the count, starting from `0`. This is useful when tracking the number of attempts in retry policies,\nmeasuring execution loops, or implementing infinite polling scenarios.",
+  "documentation": "A schedule that recurs indefinitely, counting the number of recurrences.\n*Details**\n\nThis schedule never stops and simply counts how many times it has executed.\nEach recurrence increases the count, starting from `0`.\n\nThis is useful when tracking the number of attempts in retry policies,\nmeasuring execution loops, or implementing infinite polling scenarios.",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 947,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L947"
+}

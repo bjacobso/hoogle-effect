@@ -1,0 +1,17 @@
+{
+  "id": "Registry.toStreamResult",
+  "name": "toStreamResult",
+  "module": "Registry",
+  "package": "@effect-atom/atom",
+  "signature": "{ <A, E>(atom: Atom<Result<A, E>>): (self: Registry) => Stream<A, E, never>; <A, E>(self: Registry, atom: Atom<Result<A, E>>): Stream<A, E, never>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Conversions"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Registry.d.ts",
+  "sourceLine": 98,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Registry.ts#L98"
+}

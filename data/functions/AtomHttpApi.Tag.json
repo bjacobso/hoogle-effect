@@ -1,0 +1,17 @@
+{
+  "id": "AtomHttpApi.Tag",
+  "name": "Tag",
+  "module": "AtomHttpApi",
+  "package": "@effect-atom/atom",
+  "signature": "<Self>() => <const Id extends string, ApiId extends string, Groups extends HttpApiGroup.HttpApiGroup.Any, ApiE, E, R>(id: Id, options: { readonly api: HttpApi<ApiId, Groups, ApiE, R>; readonly httpClient: Layer<Exclude<NoInfer<R>, HttpApiMiddleware.AnyId> | Exclude<HttpApiGroup.ClientContext<NoInfer<Groups>>, HttpApiMiddleware.AnyId> | HttpClient, E, never>; readonly transformClient?: (client: HttpClient) => HttpClient; readonly transformResponse?: (effect: Effect<unknown, unknown, never>) => Effect<unknown, unknown, never>; readonly baseUrl?: string | URL; }) => AtomHttpApiClient<Self, Id, Groups, ApiE, E>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/AtomHttpApi.d.ts",
+  "sourceLine": 51,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/AtomHttpApi.ts#L51"
+}

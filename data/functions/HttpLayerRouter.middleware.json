@@ -1,0 +1,21 @@
+{
+  "id": "HttpLayerRouter.middleware",
+  "name": "middleware",
+  "module": "HttpLayerRouter",
+  "package": "@effect/platform",
+  "signature": "middleware.Make<never, never> & (<Config extends { provides?: any; handles?: any; } = {}>() => middleware.Make<Config extends { provides: infer R; } ? R : never, Config extends { handles: infer E; } ? E : never>)",
+  "description": "Create a middleware layer that can be used to modify requests and responses. By default, the middleware only affects the routes that it is provided to. If you want to create a middleware that applies globally to all routes, pass\nthe `global` option as `true`.",
+  "documentation": "Create a middleware layer that can be used to modify requests and responses.\n\nBy default, the middleware only affects the routes that it is provided to.\n\nIf you want to create a middleware that applies globally to all routes, pass\nthe `global` option as `true`.\n\n```ts\nimport * as HttpLayerRouter from \"@effect/platform/HttpLayerRouter\"\nimport * as HttpMiddleware from \"@effect/platform/HttpMiddleware\"\nimport * as HttpServerResponse from \"@effect/platform/HttpServerResponse\"\nimport * as Context from \"effect/Context\"\nimport * as Effect from \"effect/Effect\"\nimport * as Layer from \"effect/Layer\"\n\n// Here we are defining a CORS middleware\nconst CorsMiddleware = HttpLayerRouter.middleware(HttpMiddleware.cors()).layer\n// You can also use HttpLayerRouter.cors() to create a CORS middleware\n\nclass CurrentSession extends Context.Tag(\"CurrentSession\")<CurrentSession, {\nreadonly token: string\n}>() {}\n\n// You can create middleware that provides a service to the HTTP requests.\nconst SessionMiddleware = HttpLayerRouter.middleware<{\nprovides: CurrentSession\n}>()(\nEffect.gen(function*() {\nyield* Effect.log(\"SessionMiddleware initialized\")\n\nreturn (httpEffect) =>\nEffect.provideService(httpEffect, CurrentSession, {\ntoken: \"dummy-token\"\n})\n})\n).layer\n\nEffect.gen(function*() {\nconst router = yield* HttpLayerRouter.HttpRouter\nyield* router.add(\n\"GET\",\n\"/hello\",\nEffect.gen(function*() {\n// Requests can now access the current session\nconst session = yield* CurrentSession\nreturn HttpServerResponse.text(`Hello, World! Your token is ${session.token}`)\n})\n)\n}).pipe(\nLayer.effectDiscard,\n// Provide the SessionMiddleware & CorsMiddleware to some routes\nLayer.provide([SessionMiddleware, CorsMiddleware])\n)\n```",
+  "examples": [
+    {
+      "code": "import * as HttpLayerRouter from \"@effect/platform/HttpLayerRouter\"\nimport * as HttpMiddleware from \"@effect/platform/HttpMiddleware\"\nimport * as HttpServerResponse from \"@effect/platform/HttpServerResponse\"\nimport * as Context from \"effect/Context\"\nimport * as Effect from \"effect/Effect\"\nimport * as Layer from \"effect/Layer\"\n\n// Here we are defining a CORS middleware\nconst CorsMiddleware = HttpLayerRouter.middleware(HttpMiddleware.cors()).layer\n// You can also use HttpLayerRouter.cors() to create a CORS middleware\n\nclass CurrentSession extends Context.Tag(\"CurrentSession\")<CurrentSession, {\nreadonly token: string\n}>() {}\n\n// You can create middleware that provides a service to the HTTP requests.\nconst SessionMiddleware = HttpLayerRouter.middleware<{\nprovides: CurrentSession\n}>()(\nEffect.gen(function*() {\nyield* Effect.log(\"SessionMiddleware initialized\")\n\nreturn (httpEffect) =>\nEffect.provideService(httpEffect, CurrentSession, {\ntoken: \"dummy-token\"\n})\n})\n).layer\n\nEffect.gen(function*() {\nconst router = yield* HttpLayerRouter.HttpRouter\nyield* router.add(\n\"GET\",\n\"/hello\",\nEffect.gen(function*() {\n// Requests can now access the current session\nconst session = yield* CurrentSession\nreturn HttpServerResponse.text(`Hello, World! Your token is ${session.token}`)\n})\n)\n}).pipe(\nLayer.effectDiscard,\n// Provide the SessionMiddleware & CorsMiddleware to some routes\nLayer.provide([SessionMiddleware, CorsMiddleware])\n)"
+    }
+  ],
+  "tags": [
+    "Middleware"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpLayerRouter.d.ts",
+  "sourceLine": 403,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpLayerRouter.ts#L403"
+}

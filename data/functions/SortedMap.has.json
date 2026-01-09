@@ -1,0 +1,17 @@
+{
+  "id": "SortedMap.has",
+  "name": "has",
+  "module": "SortedMap",
+  "package": "effect",
+  "signature": "{ <K>(key: K): <V>(self: SortedMap<K, V>) => boolean; <K, V>(self: SortedMap<K, V>, key: K): boolean; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "elements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/SortedMap.d.ts",
+  "sourceLine": 111,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/SortedMap.ts#L111"
+}

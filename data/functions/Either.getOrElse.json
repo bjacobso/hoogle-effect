@@ -1,0 +1,21 @@
+{
+  "id": "Either.getOrElse",
+  "name": "getOrElse",
+  "module": "Either",
+  "package": "effect",
+  "signature": "{ <E, A2>(onLeft: (left: E) => A2): <A>(self: Either<A, E>) => A2 | A; <A, E, A2>(self: Either<A, E>, onLeft: (left: E) => A2): A | A2; }",
+  "description": "Returns the wrapped value if it's a `Right` or a default value if is a `Left`.",
+  "documentation": "Returns the wrapped value if it's a `Right` or a default value if is a `Left`.",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { Either } from \"effect\"\n\nassert.deepStrictEqual(Either.getOrElse(Either.right(1), (error) => error + \"!\"), 1)\nassert.deepStrictEqual(Either.getOrElse(Either.left(\"not a number\"), (error) => error + \"!\"), \"not a number!\")"
+    }
+  ],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Either.d.ts",
+  "sourceLine": 773,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Either.ts#L773"
+}

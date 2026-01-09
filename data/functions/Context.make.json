@@ -1,0 +1,21 @@
+{
+  "id": "Context.make",
+  "name": "make",
+  "module": "Context",
+  "package": "effect",
+  "signature": "<I, S>(tag: Tag<I, S>, service: NoInfer<S>) => Context<I>",
+  "description": "Creates a new `Context` with a single service associated to the tag.",
+  "documentation": "Creates a new `Context` with a single service associated to the tag.",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { Context } from \"effect\"\n\nconst Port = Context.GenericTag<{ PORT: number }>(\"Port\")\n\nconst Services = Context.make(Port, { PORT: 8080 })\n\nassert.deepStrictEqual(Context.get(Services, Port), { PORT: 8080 })"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Context.d.ts",
+  "sourceLine": 260,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Context.ts#L260"
+}

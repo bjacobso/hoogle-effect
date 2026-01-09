@@ -1,0 +1,17 @@
+{
+  "id": "Atom.pull",
+  "name": "pull",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "<A, E>(create: ((get: Context) => Stream<A, E, AtomRegistry>) | Stream<A, E, AtomRegistry>, options?: { readonly disableAccumulation?: boolean; }) => Writable<PullResult<A, E>, void>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 396,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L396"
+}

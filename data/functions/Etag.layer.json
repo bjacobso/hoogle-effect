@@ -1,0 +1,17 @@
+{
+  "id": "Etag.layer",
+  "name": "layer",
+  "module": "Etag",
+  "package": "@effect/platform",
+  "signature": "Layer<Generator, never, never>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "layers"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Etag.d.ts",
+  "sourceLine": 63,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Etag.ts#L63"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "List.reduce",
+  "name": "reduce",
+  "module": "List",
+  "package": "effect",
+  "signature": "{ <Z, A>(zero: Z, f: (b: Z, a: A) => Z): (self: List<A>) => Z; <A, Z>(self: List<A>, zero: Z, f: (b: Z, a: A) => Z): Z; }",
+  "description": "Folds over the elements of the list using the specified function, using the\nspecified initial value.",
+  "documentation": "Folds over the elements of the list using the specified function, using the\nspecified initial value.",
+  "examples": [],
+  "tags": [
+    "folding"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 805,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L805"
+}

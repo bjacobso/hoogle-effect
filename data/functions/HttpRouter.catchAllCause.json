@@ -1,0 +1,17 @@
+{
+  "id": "HttpRouter.catchAllCause",
+  "name": "catchAllCause",
+  "module": "HttpRouter",
+  "package": "@effect/platform",
+  "signature": "{ <E, E2, R2>(f: (e: Cause<E>) => Route.Handler<E2, R2>): <R>(self: HttpRouter<E, R>) => HttpRouter<E2, R | Exclude<R2, HttpRouter.Provided>>; <E, R, E2, R2>(self: HttpRouter<E, R>, f: (e: Cause<E>) => Route.Handler<E2, R2>): HttpRouter<E2, R | Exclude<R2, HttpRouter.Provided>>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpRouter.d.ts",
+  "sourceLine": 595,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpRouter.ts#L595"
+}

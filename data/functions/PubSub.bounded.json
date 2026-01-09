@@ -1,0 +1,17 @@
+{
+  "id": "PubSub.bounded",
+  "name": "bounded",
+  "module": "PubSub",
+  "package": "effect",
+  "signature": "<A>(capacity: number | { readonly capacity: number; readonly replay?: number; }) => Effect<PubSub<A>, never, never>",
+  "description": "Creates a bounded `PubSub` with the back pressure strategy. The `PubSub` will retain\nmessages until they have been taken by all subscribers, applying back\npressure to publishers if the `PubSub` is at capacity. For best performance use capacities that are powers of two.",
+  "documentation": "Creates a bounded `PubSub` with the back pressure strategy. The `PubSub` will retain\nmessages until they have been taken by all subscribers, applying back\npressure to publishers if the `PubSub` is at capacity.\n\nFor best performance use capacities that are powers of two.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/PubSub.d.ts",
+  "sourceLine": 44,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/PubSub.ts#L44"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.intersection",
+  "name": "intersection",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <A>(that: Chunk<A>): <B>(self: Chunk<B>) => Chunk<A & B>; <A, B>(self: Chunk<A>, that: Chunk<B>): Chunk<A & B>; }",
+  "description": "Creates a Chunk of unique values that are included in all given Chunks. The order and references of result values are determined by the Chunk.",
+  "documentation": "Creates a Chunk of unique values that are included in all given Chunks.\n\nThe order and references of result values are determined by the Chunk.",
+  "examples": [],
+  "tags": [
+    "elements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 705,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L705"
+}

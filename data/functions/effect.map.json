@@ -1,0 +1,21 @@
+{
+  "id": "Effect.map",
+  "name": "map",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A, B>(f: (a: A) => B): <E, R>(self: Effect<A, E, R>) => Effect<B, E, R>; <A, E, R, B>(self: Effect<A, E, R>, f: (a: A) => B): Effect<B, E, R>; }",
+  "description": "Transforms the value inside an effect by applying a function to it.\n*Syntax *Details `map` takes a function and applies it to the value contained within an\neffect, creating a new effect with the transformed value. It's important to note that effects are immutable, meaning that the original\neffect is not modified. Instead, a new effect is returned with the updated\nvalue.\n*Example (Adding a Service Charge)",
+  "documentation": "Transforms the value inside an effect by applying a function to it.\n*Syntax**\n\n```ts skip-type-checking\nconst mappedEffect = pipe(myEffect, Effect.map(transformation))\n// or\nconst mappedEffect = Effect.map(myEffect, transformation)\n// or\nconst mappedEffect = myEffect.pipe(Effect.map(transformation))\n```\n*Details**\n\n`map` takes a function and applies it to the value contained within an\neffect, creating a new effect with the transformed value.\n\nIt's important to note that effects are immutable, meaning that the original\neffect is not modified. Instead, a new effect is returned with the updated\nvalue.\n*Example** (Adding a Service Charge)\n\n```ts\nimport { pipe, Effect } from \"effect\"\n\nconst addServiceCharge = (amount: number) => amount + 1\n\nconst fetchTransactionAmount = Effect.promise(() => Promise.resolve(100))\n\nconst finalAmount = pipe(\nfetchTransactionAmount,\nEffect.map(addServiceCharge)\n)\n\nEffect.runPromise(finalAmount).then(console.log)\n// Output: 101\n```",
+  "examples": [
+    {
+      "code": "import { pipe, Effect } from \"effect\"\n\nconst addServiceCharge = (amount: number) => amount + 1\n\nconst fetchTransactionAmount = Effect.promise(() => Promise.resolve(100))\n\nconst finalAmount = pipe(\nfetchTransactionAmount,\nEffect.map(addServiceCharge)\n)\n\nEffect.runPromise(finalAmount).then(console.log)\n// Output: 101"
+    }
+  ],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 9144,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L9144"
+}

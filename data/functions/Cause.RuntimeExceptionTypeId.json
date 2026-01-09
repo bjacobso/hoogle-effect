@@ -1,0 +1,17 @@
+{
+  "id": "Cause.RuntimeExceptionTypeId",
+  "name": "RuntimeExceptionTypeId",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "typeof RuntimeExceptionTypeId",
+  "description": "A unique symbol identifying the `RuntimeException` type.\n*Details This provides a symbol that identifies a `RuntimeException`. This is\ntypically used internally by the library to recognize checked exceptions that\noccur during runtime.",
+  "documentation": "A unique symbol identifying the `RuntimeException` type.\n*Details**\n\nThis provides a symbol that identifies a `RuntimeException`. This is\ntypically used internally by the library to recognize checked exceptions that\noccur during runtime.",
+  "examples": [],
+  "tags": [
+    "Symbols"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 73,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L73"
+}

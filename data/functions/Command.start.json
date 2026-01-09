@@ -1,0 +1,17 @@
+{
+  "id": "Command.start",
+  "name": "start",
+  "module": "Command",
+  "package": "@effect/platform",
+  "signature": "(command: Command) => Effect<Process, PlatformError, CommandExecutor | Scope>",
+  "description": "Start running the command and return a handle to the running process.",
+  "documentation": "Start running the command and return a handle to the running process.",
+  "examples": [],
+  "tags": [
+    "execution"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Command.d.ts",
+  "sourceLine": 261,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Command.ts#L261"
+}

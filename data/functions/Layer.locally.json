@@ -1,0 +1,17 @@
+{
+  "id": "Layer.locally",
+  "name": "locally",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "{ <X>(ref: FiberRef<X>, value: X): <A, E, R>(self: Layer<A, E, R>) => Layer<A, E, R>; <A, E, R, X>(self: Layer<A, E, R>, ref: FiberRef<X>, value: X): Layer<A, E, R>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 791,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L791"
+}

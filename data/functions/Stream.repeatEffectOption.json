@@ -1,0 +1,21 @@
+{
+  "id": "Stream.repeatEffectOption",
+  "name": "repeatEffectOption",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(effect: Effect<A, Option<E>, R>) => Stream<A, E, R>",
+  "description": "Creates a stream from an effect producing values of type `A` until it fails\nwith `None`.",
+  "documentation": "Creates a stream from an effect producing values of type `A` until it fails\nwith `None`.",
+  "examples": [
+    {
+      "code": "// In this example, we're draining an Iterator to create a stream from it\nimport { Stream, Effect, Option } from \"effect\"\n\nconst drainIterator = <A>(it: Iterator<A>): Stream.Stream<A> =>\nStream.repeatEffectOption(\nEffect.sync(() => it.next()).pipe(\nEffect.andThen((res) => {\nif (res.done) {\nreturn Effect.fail(Option.none())\n}\nreturn Effect.succeed(res.value)\n})\n)\n)"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 6692,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L6692"
+}

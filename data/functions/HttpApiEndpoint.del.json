@@ -1,0 +1,17 @@
+{
+  "id": "HttpApiEndpoint.del",
+  "name": "del",
+  "module": "HttpApiEndpoint",
+  "package": "@effect/platform",
+  "signature": "{ <const Name extends string>(name: Name): HttpApiEndpoint.Constructor<Name, \"DELETE\">; <const Name extends string>(name: Name, path: `/${string}`): HttpApiEndpoint<Name, \"DELETE\", never, never, never, never, void, never, never, never>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpApiEndpoint.d.ts",
+  "sourceLine": 430,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpApiEndpoint.ts#L430"
+}

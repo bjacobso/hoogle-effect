@@ -1,0 +1,17 @@
+{
+  "id": "Effect.timedWith",
+  "name": "timedWith",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E1, R1>(nanoseconds: Effect<bigint, E1, R1>): <A, E, R>(self: Effect<A, E, R>) => Effect<[Duration, A], E1 | E, R1 | R>; <A, E, R, E1, R1>(self: Effect<A, E, R>, nanoseconds: Effect<bigint, E1, R1>): Effect<[Duration, A], E | E1, R | R1>; }",
+  "description": "Executes an effect and measures its execution time using a custom clock.",
+  "documentation": "Executes an effect and measures its execution time using a custom clock.\n**Details**\nThis function extends the functionality of {@link timed}by allowing you to\nspecify a custom clock for measuring the execution duration. The provided\neffect (`nanoseconds`) represents the clock and should return the current\ntime in nanoseconds. The timing information is computed using this custom\nclock instead of the default system clock.",
+  "examples": [],
+  "tags": [
+    "Delays & Timeouts"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 12512,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L12512"
+}

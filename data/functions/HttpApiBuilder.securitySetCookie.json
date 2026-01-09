@@ -1,0 +1,17 @@
+{
+  "id": "HttpApiBuilder.securitySetCookie",
+  "name": "securitySetCookie",
+  "module": "HttpApiBuilder",
+  "package": "@effect/platform",
+  "signature": "(self: ApiKey, value: string | Redacted<string>, options?: { readonly domain?: string; readonly expires?: Date; readonly maxAge?: DurationInput; readonly path?: string; readonly priority?: \"low\" | \"medium\" | \"high\"; readonly httpOnly?: boolean; readonly secure?: boolean; readonly partitioned?: boolean; readonly sameSite?: \"strict\" | \"lax\" | \"none\"; }) => Effect<void, never, never>",
+  "description": "Set a cookie from an `HttpApiSecurity.HttpApiKey` instance. You can use this api before returning a response from an endpoint handler.",
+  "documentation": "Set a cookie from an `HttpApiSecurity.HttpApiKey` instance.\n\nYou can use this api before returning a response from an endpoint handler.\n\n```ts skip-type-checking\nhandlers.handle(\n\"authenticate\",\n(_) => HttpApiBuilder.securitySetCookie(security, \"secret123\")\n)\n```",
+  "examples": [],
+  "tags": [
+    "middleware"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpApiBuilder.d.ts",
+  "sourceLine": 305,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpApiBuilder.ts#L305"
+}

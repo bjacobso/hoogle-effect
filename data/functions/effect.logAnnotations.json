@@ -1,0 +1,17 @@
+{
+  "id": "Effect.logAnnotations",
+  "name": "logAnnotations",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "Effect<HashMap<string, unknown>, never, never>",
+  "description": "Retrieves the current log annotations for the current scope.\n*Details This function provides access to the log annotations associated with the\ncurrent scope. Log annotations are key-value pairs that provide additional\ncontext to log entries. They are often used to add metadata such as tags,\nidentifiers, or extra debugging information to logs. By using this function, you can inspect or utilize the annotations applied to\nthe current scope, making it easier to trace and debug specific sections of\nyour application.",
+  "documentation": "Retrieves the current log annotations for the current scope.\n*Details**\n\nThis function provides access to the log annotations associated with the\ncurrent scope. Log annotations are key-value pairs that provide additional\ncontext to log entries. They are often used to add metadata such as tags,\nidentifiers, or extra debugging information to logs.\n\nBy using this function, you can inspect or utilize the annotations applied to\nthe current scope, making it easier to trace and debug specific sections of\nyour application.",
+  "examples": [],
+  "tags": [
+    "Logging"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 22859,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L22859"
+}

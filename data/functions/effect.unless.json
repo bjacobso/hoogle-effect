@@ -1,0 +1,17 @@
+{
+  "id": "Effect.unless",
+  "name": "unless",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ (condition: LazyArg<boolean>): <A, E, R>(self: Effect<A, E, R>) => Effect<Option<A>, E, R>; <A, E, R>(self: Effect<A, E, R>, condition: LazyArg<boolean>): Effect<Option<A>, E, R>; }",
+  "description": "Executes an effect only if the condition is `false`.",
+  "documentation": "Executes an effect only if the condition is `false`.",
+  "examples": [],
+  "tags": [
+    "Conditional Operators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 16486,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L16486"
+}

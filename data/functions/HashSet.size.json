@@ -1,0 +1,21 @@
+{
+  "id": "HashSet.size",
+  "name": "size",
+  "module": "HashSet",
+  "package": "effect",
+  "signature": "<A>(self: HashSet<A>) => number",
+  "description": "Calculates the number of values in the `HashSet`. Time complexity: `O(1)`",
+  "documentation": "Calculates the number of values in the `HashSet`.\n\nTime complexity: **`O(1)`**",
+  "examples": [
+    {
+      "code": "import { HashSet, pipe } from \"effect\"\nimport assert from \"node:assert/strict\"\n\nassert.deepStrictEqual(pipe(HashSet.empty(), HashSet.size), 0)\n\nassert.deepStrictEqual(\npipe(HashSet.make(1, 2, 2, 3, 4, 3), HashSet.size),\n4\n)"
+    }
+  ],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashSet.d.ts",
+  "sourceLine": 992,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashSet.ts#L992"
+}

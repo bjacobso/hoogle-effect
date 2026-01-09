@@ -1,0 +1,17 @@
+{
+  "id": "Array.unsafeGet",
+  "name": "unsafeGet",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ (index: number): <A>(self: readonly A[]) => A; <A>(self: readonly A[], index: number): A; }",
+  "description": "Gets an element unsafely, will throw on out of bounds.",
+  "documentation": "Gets an element unsafely, will throw on out of bounds.",
+  "examples": [],
+  "tags": [
+    "unsafe"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 963,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L963"
+}

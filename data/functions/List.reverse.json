@@ -1,0 +1,17 @@
+{
+  "id": "List.reverse",
+  "name": "reverse",
+  "module": "List",
+  "package": "effect",
+  "signature": "<A>(self: List<A>) => List<A>",
+  "description": "Returns a new list with the elements of the specified list in reverse order.",
+  "documentation": "Returns a new list with the elements of the specified list in reverse order.",
+  "examples": [],
+  "tags": [
+    "elements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 854,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L854"
+}

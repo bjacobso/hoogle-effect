@@ -1,0 +1,17 @@
+{
+  "id": "WorkerRunner.launch",
+  "name": "launch",
+  "module": "WorkerRunner",
+  "package": "@effect/platform",
+  "signature": "<A, E, R>(layer: Layer<A, E, R>) => Effect<void, WorkerError | E, R>",
+  "description": "Launch the specified layer, interrupting the fiber when the CloseLatch is\ntriggered.",
+  "documentation": "Launch the specified layer, interrupting the fiber when the CloseLatch is\ntriggered.",
+  "examples": [],
+  "tags": [
+    "Execution"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/WorkerRunner.d.ts",
+  "sourceLine": 149,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/WorkerRunner.ts#L149"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.mapInputContext",
+  "name": "mapInputContext",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <R0, R>(f: (env0: Context<R0>) => Context<R>): <Out, In>(self: Schedule<Out, In, R>) => Schedule<Out, In, R0>; <Out, In, R, R0>(self: Schedule<Out, In, R>, f: (env0: Context<R0>) => Context<R>): Schedule<Out, In, R0>; }",
+  "description": "Transforms the required context of a schedule.\n*Details This function modifies a schedule by mapping its required context (`R`) into\na new context (`R0`) using the provided function `f`. This is useful when you need to adapt a schedule to work with a different\ndependency environment without changing its core logic.",
+  "documentation": "Transforms the required context of a schedule.\n*Details**\n\nThis function modifies a schedule by mapping its required context (`R`) into\na new context (`R0`) using the provided function `f`.\n\nThis is useful when you need to adapt a schedule to work with a different\ndependency environment without changing its core logic.",
+  "examples": [],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 901,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L901"
+}

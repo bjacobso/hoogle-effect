@@ -1,0 +1,17 @@
+{
+  "id": "PubSub.subscribe",
+  "name": "subscribe",
+  "module": "PubSub",
+  "package": "effect",
+  "signature": "<A>(self: PubSub<A>) => Effect<Dequeue<A>, never, Scope>",
+  "description": "Subscribes to receive messages from the `PubSub`. The resulting subscription can\nbe evaluated multiple times within the scope to take a message from the `PubSub`\neach time.",
+  "documentation": "Subscribes to receive messages from the `PubSub`. The resulting subscription can\nbe evaluated multiple times within the scope to take a message from the `PubSub`\neach time.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/PubSub.d.ts",
+  "sourceLine": 196,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/PubSub.ts#L196"
+}

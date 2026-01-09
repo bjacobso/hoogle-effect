@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.unsafeNow",
+  "name": "unsafeNow",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "LazyArg<Utc>",
+  "description": "Get the current time using `Date.now`.",
+  "documentation": "Get the current time using `Date.now`.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 448,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L448"
+}

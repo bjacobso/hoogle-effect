@@ -1,0 +1,21 @@
+{
+  "id": "Effect.using",
+  "name": "using",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A, A2, E2, R2>(use: (a: A) => Effect<A2, E2, R2>): <E, R>(self: Effect<A, E, R>) => Effect<A2, E2 | E, R2 | Exclude<R, Scope>>; <A, E, R, A2, E2, R2>(self: Effect<A, E, R>, use: (a: A) => Effect<A2, E2, R2>): Effect<A2, E | E2, R2 | Exclude<R, Scope>>; }",
+  "description": "Scopes all resources acquired by one effect to the lifetime of another\neffect.\n*Details This function allows you to scope the resources acquired by one effect\n(`self`) to the lifetime of another effect (`use`). This ensures that the\nresources are cleaned up as soon as the `use` effect completes, regardless of\nhow the `use` effect ends (success, failure, or interruption).\n*Example",
+  "documentation": "Scopes all resources acquired by one effect to the lifetime of another\neffect.\n*Details**\n\nThis function allows you to scope the resources acquired by one effect\n(`self`) to the lifetime of another effect (`use`). This ensures that the\nresources are cleaned up as soon as the `use` effect completes, regardless of\nhow the `use` effect ends (success, failure, or interruption).\n*Example**\n\n```ts\nimport { Console, Effect } from \"effect\"\n\nconst acquire = Console.log(\"Acquiring resource\").pipe(\nEffect.as(1),\nEffect.tap(Effect.addFinalizer(() => Console.log(\"Releasing resource\")))\n)\nconst use = (resource: number) => Console.log(`Using resource: ${resource}`)\n\nconst program = acquire.pipe(Effect.using(use))\n\nEffect.runFork(program)\n// Output:\n// Acquiring resource\n// Using resource: 1\n// Releasing resource\n```",
+  "examples": [
+    {
+      "code": "import { Console, Effect } from \"effect\"\n\nconst acquire = Console.log(\"Acquiring resource\").pipe(\nEffect.as(1),\nEffect.tap(Effect.addFinalizer(() => Console.log(\"Releasing resource\")))\n)\nconst use = (resource: number) => Console.log(`Using resource: ${resource}`)\n\nconst program = acquire.pipe(Effect.using(use))\n\nEffect.runFork(program)\n// Output:\n// Acquiring resource\n// Using resource: 1\n// Releasing resource"
+    }
+  ],
+  "tags": [
+    "Scoping, Resources & Finalization"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 11076,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L11076"
+}

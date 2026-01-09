@@ -1,0 +1,17 @@
+{
+  "id": "Fiber.zipRight",
+  "name": "zipRight",
+  "module": "Fiber",
+  "package": "effect",
+  "signature": "{ <A2, E2>(that: Fiber<A2, E2>): <A, E>(self: Fiber<A, E>) => Fiber<A2, E2 | E>; <A, E, A2, E2>(self: Fiber<A, E>, that: Fiber<A2, E2>): Fiber<A2, E | E2>; }",
+  "description": "Same as `zip` but discards the output of this `Fiber`.",
+  "documentation": "Same as `zip` but discards the output of this `Fiber`.",
+  "examples": [],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Fiber.d.ts",
+  "sourceLine": 787,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Fiber.ts#L787"
+}

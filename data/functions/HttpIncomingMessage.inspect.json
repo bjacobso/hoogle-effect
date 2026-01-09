@@ -1,0 +1,15 @@
+{
+  "id": "HttpIncomingMessage.inspect",
+  "name": "inspect",
+  "module": "HttpIncomingMessage",
+  "package": "@effect/platform",
+  "signature": "<E>(self: HttpIncomingMessage<E>, that: object) => object",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpIncomingMessage.d.ts",
+  "sourceLine": 69,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpIncomingMessage.ts#L69"
+}

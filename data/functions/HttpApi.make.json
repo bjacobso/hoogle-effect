@@ -1,0 +1,17 @@
+{
+  "id": "HttpApi.make",
+  "name": "make",
+  "module": "HttpApi",
+  "package": "@effect/platform",
+  "signature": "<const Id extends string>(identifier: Id) => HttpApi<Id, never, HttpApiDecodeError, never>",
+  "description": "An `HttpApi` is a collection of `HttpApiEndpoint`s. You can use an `HttpApi` to\nrepresent a portion of your domain. The endpoints can be implemented later using the `HttpApiBuilder.make` api.",
+  "documentation": "An `HttpApi` is a collection of `HttpApiEndpoint`s. You can use an `HttpApi` to\nrepresent a portion of your domain.\n\nThe endpoints can be implemented later using the `HttpApiBuilder.make` api.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpApi.d.ts",
+  "sourceLine": 118,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpApi.ts#L118"
+}

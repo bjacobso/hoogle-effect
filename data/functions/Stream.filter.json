@@ -1,0 +1,21 @@
+{
+  "id": "Stream.filter",
+  "name": "filter",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A, B extends A>(refinement: Refinement<NoInfer<A>, B>): <E, R>(self: Stream<A, E, R>) => Stream<B, E, R>; <A, B extends A>(predicate: Predicate<B>): <E, R>(self: Stream<A, E, R>) => Stream<A, E, R>; <A, E, R, B extends A>(self: Stream<A, E, R>, refinement: Refinement<A, B>): Stream<B, E, R>; <A, E, R>(self: Stream<A, E, R>, predicate: Predicate<A>): Stream<A, E, R>; }",
+  "description": "Filters the elements emitted by this stream using the provided function.",
+  "documentation": "Filters the elements emitted by this stream using the provided function.",
+  "examples": [
+    {
+      "code": "import { Effect, Stream } from \"effect\"\n\nconst stream = Stream.range(1, 11).pipe(Stream.filter((n) => n % 2 === 0))\n\nEffect.runPromise(Stream.runCollect(stream)).then(console.log)\n// { _id: 'Chunk', values: [ 2, 4, 6, 8, 10 ] }"
+    }
+  ],
+  "tags": [
+    "filtering"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 2486,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L2486"
+}

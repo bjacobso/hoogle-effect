@@ -1,0 +1,21 @@
+{
+  "id": "Either.fromOption",
+  "name": "fromOption",
+  "module": "Either",
+  "package": "effect",
+  "signature": "{ <E>(onNone: () => E): <A>(self: Option<A>) => Either<A, E>; <A, E>(self: Option<A>, onNone: () => E): Either<A, E>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { Either, Option } from \"effect\"\n\nassert.deepStrictEqual(Either.fromOption(Option.some(1), () => 'error'), Either.right(1))\nassert.deepStrictEqual(Either.fromOption(Option.none(), () => 'error'), Either.left('error'))"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Either.d.ts",
+  "sourceLine": 186,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Either.ts#L186"
+}

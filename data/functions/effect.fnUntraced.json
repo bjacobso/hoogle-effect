@@ -1,0 +1,17 @@
+{
+  "id": "Effect.fnUntraced",
+  "name": "fnUntraced",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "fn.Untraced",
+  "description": "Same as {@link fn}, but allows you to create a function that is not traced, for when performance is critical.",
+  "documentation": "Same as {@link fn}, but allows you to create a function that is not traced, for when performance is critical.",
+  "examples": [],
+  "tags": [
+    "Tracing"
+  ],
+  "since": "3.12.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 26943,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L26943"
+}

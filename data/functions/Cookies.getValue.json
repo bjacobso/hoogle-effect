@@ -1,0 +1,17 @@
+{
+  "id": "Cookies.getValue",
+  "name": "getValue",
+  "module": "Cookies",
+  "package": "@effect/platform",
+  "signature": "{ (name: string): (self: Cookies) => Option<string>; (self: Cookies, name: string): Option<string>; }",
+  "description": "Get a cookie from a Cookies object",
+  "documentation": "Get a cookie from a Cookies object",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Cookies.d.ts",
+  "sourceLine": 250,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Cookies.ts#L250"
+}

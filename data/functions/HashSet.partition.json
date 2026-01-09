@@ -1,0 +1,24 @@
+{
+  "id": "HashSet.partition",
+  "name": "partition",
+  "module": "HashSet",
+  "package": "effect",
+  "signature": "{ <A, B extends A>(refinement: Refinement<NoInfer<A>, B>): (self: HashSet<A>) => [excluded: HashSet<Exclude<A, B>>, satisfying: HashSet<B>]; <A>(predicate: Predicate<NoInfer<A>>): (self: HashSet<A>) => [excluded: HashSet<A>, satisfying: HashSet<A>]; <A, B extends A>(self: HashSet<A>, refinement: Refinement<A, B>): [excluded: HashSet<Exclude<A, B>>, satisfying: HashSet<B>]; <A>(self: HashSet<A>, predicate: Predicate<A>): [excluded: HashSet<A>, satisfying: HashSet<A>]; }",
+  "description": "Partition the values of a `HashSet` using the specified predicate. If a value matches the predicate, it will be placed into the `HashSet` on the\nright side of the resulting `Tuple`, otherwise the value will be placed into\nthe left side. Time complexity is of `O(n)`.",
+  "documentation": "Partition the values of a `HashSet` using the specified predicate.\n\nIf a value matches the predicate, it will be placed into the `HashSet` on the\nright side of the resulting `Tuple`, otherwise the value will be placed into\nthe left side.\n\nTime complexity is of **`O(n)`**.",
+  "examples": [
+    {
+      "code": "// Syntax with Predicate\nimport { HashSet, pipe, Predicate } from \"effect\"\n\n// with `data-last`, a.k.a. `pipeable` API\npipe(\nHashSet.make(0, 1, 2, 3, 4, 5),\nHashSet.partition((n) => n % 2 === 0)\n)\n\n// or with the pipe method\nHashSet.make(0, 1, 2, 3, 4, 5).pipe(\nHashSet.partition((n) => n % 2 === 0)\n)\n\n// or with `data-first` API\nHashSet.partition(HashSet.make(0, 1, 2, 3, 4, 5), (n) => n % 2 === 0)"
+    },
+    {
+      "code": "// Syntax with Refinement\nimport { HashSet, pipe, Predicate } from \"effect\"\n\nconst stringRefinement: Predicate.Refinement<string | number, string> = (\nvalue\n) => typeof value === \"string\"\n\n// with `data-last`, a.k.a. `pipeable` API\npipe(\nHashSet.make(1, \"unos\", 2, \"two\", 3, \"trois\", 4, \"vier\"),\nHashSet.partition(stringRefinement)\n)\n\n// or with the pipe method\nHashSet.make(1, \"unos\", 2, \"two\", 3, \"trois\", 4, \"vier\").pipe(\nHashSet.partition(stringRefinement)\n)\n\n// or with `data-first` API\nHashSet.partition(\nHashSet.make(1, \"unos\", 2, \"two\", 3, \"trois\", 4, \"vier\"),\nstringRefinement\n)"
+    }
+  ],
+  "tags": [
+    "partitioning"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashSet.d.ts",
+  "sourceLine": 2172,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashSet.ts#L2172"
+}

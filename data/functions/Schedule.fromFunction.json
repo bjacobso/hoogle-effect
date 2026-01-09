@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.fromFunction",
+  "name": "fromFunction",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "<A, B>(f: (a: A) => B) => Schedule<B, A, never>",
+  "description": "Creates a schedule that always recurs, transforming input values using the\nspecified function.\n*Details This schedule continuously executes and applies the given function `f` to\neach input value, producing a transformed output. The schedule itself does\nnot control delays or stopping conditions; it simply transforms the input\nvalues as they are processed. This is useful when defining schedules that map inputs to outputs, allowing\ndynamic transformations of incoming data.",
+  "documentation": "Creates a schedule that always recurs, transforming input values using the\nspecified function.\n*Details**\n\nThis schedule continuously executes and applies the given function `f` to\neach input value, producing a transformed output. The schedule itself does\nnot control delays or stopping conditions; it simply transforms the input\nvalues as they are processed.\n\nThis is useful when defining schedules that map inputs to outputs, allowing\ndynamic transformations of incoming data.",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 1607,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L1607"
+}

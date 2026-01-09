@@ -1,0 +1,17 @@
+{
+  "id": "Metric.timerWithBoundaries",
+  "name": "timerWithBoundaries",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "(name: string, boundaries: readonly number[], description?: string) => Metric<MetricKeyType.Histogram, Duration, MetricState.Histogram>",
+  "description": "Creates a timer metric, based on a histogram created from the provided\nboundaries, which keeps track of durations in milliseconds. The unit of time\nwill automatically be added to the metric as a tag (i.e.\n`\"time_unit: milliseconds\"`).",
+  "documentation": "Creates a timer metric, based on a histogram created from the provided\nboundaries, which keeps track of durations in milliseconds. The unit of time\nwill automatically be added to the metric as a tag (i.e.\n`\"time_unit: milliseconds\"`).",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 700,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L700"
+}

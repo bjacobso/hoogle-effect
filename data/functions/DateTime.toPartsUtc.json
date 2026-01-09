@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.toPartsUtc",
+  "name": "toPartsUtc",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "(self: DateTime) => DateTime.PartsWithWeekday",
+  "description": "Get the different parts of a `DateTime` as an object. The parts will be in UTC.",
+  "documentation": "Get the different parts of a `DateTime` as an object.\n\nThe parts will be in UTC.",
+  "examples": [],
+  "tags": [
+    "parts"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 1204,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L1204"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Context.GenericTag",
+  "name": "GenericTag",
+  "module": "Context",
+  "package": "effect",
+  "signature": "<Identifier, Service = Identifier>(key: string) => Tag<Identifier, Service>",
+  "description": "Creates a new `Tag` instance with an optional key parameter.",
+  "documentation": "Creates a new `Tag` instance with an optional key parameter.",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { Context } from \"effect\"\n\nassert.strictEqual(Context.GenericTag(\"PORT\").key === Context.GenericTag(\"PORT\").key, true)"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Context.d.ts",
+  "sourceLine": 162,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Context.ts#L162"
+}

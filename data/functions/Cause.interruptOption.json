@@ -1,0 +1,17 @@
+{
+  "id": "Cause.interruptOption",
+  "name": "interruptOption",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E>(self: Cause<E>) => Option<FiberId>",
+  "description": "Retrieves the first `Interrupt` in a `Cause`, if present.\n*Details This function returns an `Option` with the first fiber interruption\ndiscovered. This is particularly useful for concurrency analysis or debugging\ncancellations.",
+  "documentation": "Retrieves the first `Interrupt` in a `Cause`, if present.\n*Details**\n\nThis function returns an `Option` with the first fiber interruption\ndiscovered. This is particularly useful for concurrency analysis or debugging\ncancellations.",
+  "examples": [],
+  "tags": [
+    "Getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 846,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L846"
+}

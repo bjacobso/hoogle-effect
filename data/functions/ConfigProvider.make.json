@@ -1,0 +1,17 @@
+{
+  "id": "ConfigProvider.make",
+  "name": "make",
+  "module": "ConfigProvider",
+  "package": "effect",
+  "signature": "(options: { readonly load: <A>(config: Config<A>) => Effect<A, ConfigError, never>; readonly flattened: ConfigProvider.Flat; }) => ConfigProvider",
+  "description": "Creates a new config provider.",
+  "documentation": "Creates a new config provider.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/ConfigProvider.d.ts",
+  "sourceLine": 126,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/ConfigProvider.ts#L126"
+}

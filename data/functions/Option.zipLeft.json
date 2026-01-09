@@ -1,0 +1,17 @@
+{
+  "id": "Option.zipLeft",
+  "name": "zipLeft",
+  "module": "Option",
+  "package": "effect",
+  "signature": "{ <_>(that: Option<_>): <A>(self: Option<A>) => Option<A>; <A, X>(self: Option<A>, that: Option<X>): Option<A>; }",
+  "description": "Combines two `Option`s, keeping the value from the first `Option` if both are\n`Some`.\n*Details This function takes two `Option`s and returns the first one if it is `Some`.\nIf either the first `Option` or the second `Option` is `None`, the result\nwill be `None`. This operation \"zips\" the two `Option`s while discarding the\nvalue from the second `Option`. This is useful when sequencing computations where the second `Option`\nrepresents a dependency or condition that must hold, but its value is\nirrelevant.",
+  "documentation": "Combines two `Option`s, keeping the value from the first `Option` if both are\n`Some`.\n*Details**\n\nThis function takes two `Option`s and returns the first one if it is `Some`.\nIf either the first `Option` or the second `Option` is `None`, the result\nwill be `None`. This operation \"zips\" the two `Option`s while discarding the\nvalue from the second `Option`.\n\nThis is useful when sequencing computations where the second `Option`\nrepresents a dependency or condition that must hold, but its value is\nirrelevant.",
+  "examples": [],
+  "tags": [
+    "Zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 2016,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L2016"
+}

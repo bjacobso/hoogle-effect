@@ -1,0 +1,17 @@
+{
+  "id": "HttpServer.layerContext",
+  "name": "layerContext",
+  "module": "HttpServer",
+  "package": "@effect/platform",
+  "signature": "Layer<HttpPlatform | FileSystem | Generator | Path, never, never>",
+  "description": "A Layer providing the `HttpPlatform`, `FileSystem`, `Etag.Generator`, and `Path`\nservices. The `FileSystem` service is a no-op implementation, so this layer is only\nuseful for platforms that have no file system.",
+  "documentation": "A Layer providing the `HttpPlatform`, `FileSystem`, `Etag.Generator`, and `Path`\nservices.\n\nThe `FileSystem` service is a no-op implementation, so this layer is only\nuseful for platforms that have no file system.",
+  "examples": [],
+  "tags": [
+    "layers"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpServer.d.ts",
+  "sourceLine": 174,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpServer.ts#L174"
+}

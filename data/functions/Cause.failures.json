@@ -1,0 +1,17 @@
+{
+  "id": "Cause.failures",
+  "name": "failures",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E>(self: Cause<E>) => Chunk<E>",
+  "description": "Extracts all recoverable errors of type `E` from a `Cause`.\n*Details This function returns a chunk of errors, providing a list of all `Fail`\nvalues found in the cause. It's useful for collecting all known failures for\nlogging or combined error handling.",
+  "documentation": "Extracts all recoverable errors of type `E` from a `Cause`.\n*Details**\n\nThis function returns a chunk of errors, providing a list of all `Fail`\nvalues found in the cause. It's useful for collecting all known failures for\nlogging or combined error handling.",
+  "examples": [],
+  "tags": [
+    "Getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 753,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L753"
+}

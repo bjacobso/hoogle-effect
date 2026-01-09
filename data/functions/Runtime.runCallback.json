@@ -1,0 +1,17 @@
+{
+  "id": "Runtime.runCallback",
+  "name": "runCallback",
+  "module": "Runtime",
+  "package": "effect",
+  "signature": "{ <R>(runtime: Runtime<R>): <A, E>(effect: Effect<A, E, R>, options?: RunCallbackOptions<A, E>) => (fiberId?: FiberId, options?: RunCallbackOptions<A, E>) => void; <R, A, E>(runtime: Runtime<R>, effect: Effect<A, E, R>, options?: RunCallbackOptions<A, E>): (fiberId?: FiberId, options?: RunCallbackOptions<A, E>) => void; }",
+  "description": "Executes the effect asynchronously, eventually passing the exit value to\nthe specified callback. This method is effectful and should only be invoked at the edges of your\nprogram.",
+  "documentation": "Executes the effect asynchronously, eventually passing the exit value to\nthe specified callback.\n\nThis method is effectful and should only be invoked at the edges of your\nprogram.",
+  "examples": [],
+  "tags": [
+    "execution"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Runtime.d.ts",
+  "sourceLine": 174,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Runtime.ts#L174"
+}

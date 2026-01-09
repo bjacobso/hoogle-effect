@@ -1,0 +1,17 @@
+{
+  "id": "Effect.flipWith",
+  "name": "flipWith",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E, A, R, E2, A2, R2>(f: (effect: Effect<E, A, R>) => Effect<E2, A2, R2>): (self: Effect<A, E, R>) => Effect<A2, E2, R2>; <A, E, R, E2, A2, R2>(self: Effect<A, E, R>, f: (effect: Effect<E, A, R>) => Effect<E2, A2, R2>): Effect<A2, E2, R2>; }",
+  "description": "Swaps the error/value parameters, applies the function `f` and flips the\nparameters back",
+  "documentation": "Swaps the error/value parameters, applies the function `f` and flips the\nparameters back",
+  "examples": [],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 9079,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L9079"
+}

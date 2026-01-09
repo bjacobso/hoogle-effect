@@ -1,0 +1,17 @@
+{
+  "id": "Cause.isExceededCapacityException",
+  "name": "isExceededCapacityException",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "(u: unknown) => u is ExceededCapacityException",
+  "description": "Checks if a given unknown value is an `ExceededCapacityException`.",
+  "documentation": "Checks if a given unknown value is an `ExceededCapacityException`.",
+  "examples": [],
+  "tags": [
+    "Guards"
+  ],
+  "since": "3.5.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 1869,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L1869"
+}

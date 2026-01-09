@@ -1,0 +1,15 @@
+{
+  "id": "HttpMethod.hasBody",
+  "name": "hasBody",
+  "module": "HttpMethod",
+  "package": "@effect/platform",
+  "signature": "(method: HttpMethod) => boolean",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpMethod.d.ts",
+  "sourceLine": 25,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpMethod.ts#L25"
+}

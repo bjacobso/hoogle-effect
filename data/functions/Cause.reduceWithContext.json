@@ -1,0 +1,17 @@
+{
+  "id": "Cause.reduceWithContext",
+  "name": "reduceWithContext",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "{ <C, E, Z>(context: C, reducer: CauseReducer<C, E, Z>): (self: Cause<E>) => Z; <C, E, Z>(self: Cause<E>, context: C, reducer: CauseReducer<C, E, Z>): Z; }",
+  "description": "Combines all parts of a `Cause` into a single value using a custom reducer\nand a context.\n*Details This function allows you to reduce a `Cause` into a single value of type `Z`\nusing a custom `CauseReducer`. A `CauseReducer` provides methods to handle\nspecific parts of the `Cause`, such as failures, defects, or interruptions.\nAdditionally, this function provides access to a `context` value, which can\nbe used to carry information or maintain state during the reduction process. This is particularly useful when the reduction process needs additional\ncontext or configuration, such as:\n- Aggregating error details with dynamic formatting.\n- Collecting logs or statistics about the `Cause`.\n- Performing stateful transformations based on the `context`.",
+  "documentation": "Combines all parts of a `Cause` into a single value using a custom reducer\nand a context.\n*Details**\n\nThis function allows you to reduce a `Cause` into a single value of type `Z`\nusing a custom `CauseReducer`. A `CauseReducer` provides methods to handle\nspecific parts of the `Cause`, such as failures, defects, or interruptions.\nAdditionally, this function provides access to a `context` value, which can\nbe used to carry information or maintain state during the reduction process.\n\nThis is particularly useful when the reduction process needs additional\ncontext or configuration, such as:\n- Aggregating error details with dynamic formatting.\n- Collecting logs or statistics about the `Cause`.\n- Performing stateful transformations based on the `context`.",
+  "examples": [],
+  "tags": [
+    "Reducing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 1658,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L1658"
+}

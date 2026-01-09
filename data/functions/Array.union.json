@@ -1,0 +1,15 @@
+{
+  "id": "Array.union",
+  "name": "union",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <T extends Iterable<any>>(that: T): <S extends Iterable<any>>(self: S) => ReadonlyArray.OrNonEmpty<S, T, ReadonlyArray.Infer<S> | ReadonlyArray.Infer<T>>; <A, B>(self: readonly [A, ...A[]], that: readonly B[]): [A | B, ...(A | B)[]]; <A, B>(self: readonly A[], that: readonly [B, ...B[]]): [A | B, ...(A | B)[]]; <A, B>(self: Iterable<A>, that: Iterable<B>): (A | B)[]; }",
+  "description": "Creates a union of two arrays, removing duplicates.\n*Example",
+  "documentation": "Creates a union of two arrays, removing duplicates.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.union([1, 2], [2, 3])\nconsole.log(result) // [1, 2, 3]\n```",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 3986,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L3986"
+}

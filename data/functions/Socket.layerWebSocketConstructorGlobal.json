@@ -1,0 +1,17 @@
+{
+  "id": "Socket.layerWebSocketConstructorGlobal",
+  "name": "layerWebSocketConstructorGlobal",
+  "module": "Socket",
+  "package": "@effect/platform",
+  "signature": "Layer<WebSocketConstructor, never, never>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "layers"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Socket.d.ts",
+  "sourceLine": 201,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Socket.ts#L201"
+}

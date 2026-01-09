@@ -1,0 +1,17 @@
+{
+  "id": "Effect.unsandbox",
+  "name": "unsandbox",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, Cause<E>, R>) => Effect<A, E, R>",
+  "description": "The `unsandbox` function is used to revert an effect that has been\nsandboxed by {@link sandbox}. When you apply `unsandbox`, the\neffect's error channel is restored to its original state, without the\ndetailed `Cause<E>` information. This means that any underlying causes of\nerrors, defects, or fiber interruptions are no longer exposed in the error\nchannel.\nThis function is useful when you want to remove the detailed error tracking\nprovided by `sandbox` and return to the standard error handling for\nyour effect. Once unsandboxed, the effect behaves as if `sandbox` was\nnever applied.",
+  "documentation": "The `unsandbox` function is used to revert an effect that has been\nsandboxed by {@link sandbox}. When you apply `unsandbox`, the\neffect's error channel is restored to its original state, without the\ndetailed `Cause<E>` information. This means that any underlying causes of\nerrors, defects, or fiber interruptions are no longer exposed in the error\nchannel.\nThis function is useful when you want to remove the detailed error tracking\nprovided by `sandbox` and return to the standard error handling for\nyour effect. Once unsandboxed, the effect behaves as if `sandbox` was\nnever applied.",
+  "examples": [],
+  "tags": [
+    "Error handling"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 8523,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L8523"
+}

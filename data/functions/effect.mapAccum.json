@@ -1,0 +1,21 @@
+{
+  "id": "Effect.mapAccum",
+  "name": "mapAccum",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <S, A, B, E, R, I extends Iterable<A> = Iterable<A>>(initial: S, f: (state: S, a: ReadonlyArray.Infer<I>, i: number) => Effect<readonly [S, B], E, R>): (elements: I) => Effect<[S, ReadonlyArray.With<I, B>], E, R>; <A, S, B, E, R, I extends Iterable<A> = Iterable<A>>(elements: I, initial: S, f: (state: S, a: ReadonlyArray.Infer<I>, i: number) => Effect<readonly [S, B], E, R>): Effect<[S, ReadonlyArray.With<I, B>], E, R>; }",
+  "description": "Applies a stateful transformation to each element of a collection, producing\nnew elements along with an updated state.\n*When to Use Use `mapAccum` when you need to process each element of a collection while\nkeeping track of some state across iterations.\n*Details `mapAccum` takes an initial state (`initial`) and a function (`f`) that is\napplied to each element. This function returns a new state and a transformed\nelement. The final effect produces both the accumulated state and the\ntransformed collection. If the input collection is a non-empty array, the return type will match the\ninput collection type.\n*Example",
+  "documentation": "Applies a stateful transformation to each element of a collection, producing\nnew elements along with an updated state.\n*When to Use**\n\nUse `mapAccum` when you need to process each element of a collection while\nkeeping track of some state across iterations.\n*Details**\n\n`mapAccum` takes an initial state (`initial`) and a function (`f`) that is\napplied to each element. This function returns a new state and a transformed\nelement. The final effect produces both the accumulated state and the\ntransformed collection.\n\nIf the input collection is a non-empty array, the return type will match the\ninput collection type.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\n// Define an initial state and a transformation function\nconst initialState = 0\n\nconst transformation = (state: number, element: string) =>\nEffect.succeed<[number, string]>([state + element.length, element.toUpperCase()])\n\n// Apply mapAccum to transform an array of strings\nconst program = Effect.mapAccum([\"a\", \"bb\", \"ccc\"], initialState, transformation)\n\nEffect.runPromise(program).then(([finalState, transformedCollection]) => {\nconsole.log(finalState)\nconsole.log(transformedCollection)\n})\n// Output:\n// 6\n// [ 'A', 'BB', 'CCC' ]\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\n// Define an initial state and a transformation function\nconst initialState = 0\n\nconst transformation = (state: number, element: string) =>\nEffect.succeed<[number, string]>([state + element.length, element.toUpperCase()])\n\n// Apply mapAccum to transform an array of strings\nconst program = Effect.mapAccum([\"a\", \"bb\", \"ccc\"], initialState, transformation)\n\nEffect.runPromise(program).then(([finalState, transformedCollection]) => {\nconsole.log(finalState)\nconsole.log(transformedCollection)\n})\n// Output:\n// 6\n// [ 'A', 'BB', 'CCC' ]"
+    }
+  ],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 9287,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L9287"
+}

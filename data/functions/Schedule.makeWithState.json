@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.makeWithState",
+  "name": "makeWithState",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "<S, In, Out, R = never>(initial: S, step: (now: number, input: In, state: S) => Effect<readonly [S, Out, ScheduleDecision], never, R>) => Schedule<Out, In, R>",
+  "description": "Creates a new schedule with a custom state and step function.\n*Details This function constructs a `Schedule` by defining its initial state and a\nstep function, which determines how the schedule progresses over time. The\nstep function is called on each iteration with the current time, an input\nvalue, and the schedule's current state. It returns the next state, an output\nvalue, and a decision on whether the schedule should continue or stop. This function is useful for creating custom scheduling logic that goes beyond\npredefined schedules like fixed intervals or exponential backoff. It allows\nfull control over how the schedule behaves at each step.",
+  "documentation": "Creates a new schedule with a custom state and step function.\n*Details**\n\nThis function constructs a `Schedule` by defining its initial state and a\nstep function, which determines how the schedule progresses over time. The\nstep function is called on each iteration with the current time, an input\nvalue, and the schedule's current state. It returns the next state, an output\nvalue, and a decision on whether the schedule should continue or stop.\n\nThis function is useful for creating custom scheduling logic that goes beyond\npredefined schedules like fixed intervals or exponential backoff. It allows\nfull control over how the schedule behaves at each step.",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 154,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L154"
+}

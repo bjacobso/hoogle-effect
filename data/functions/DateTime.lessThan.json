@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.lessThan",
+  "name": "lessThan",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "{ (that: DateTime): (self: DateTime) => boolean; (self: DateTime, that: DateTime): boolean; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "comparisons"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 1059,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L1059"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Stream.zipWithIndex",
+  "name": "zipWithIndex",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Stream<A, E, R>) => Stream<[A, number], E, R>",
+  "description": "Zips this stream together with the index of elements.",
+  "documentation": "Zips this stream together with the index of elements.",
+  "examples": [
+    {
+      "code": "import { Effect, Stream } from \"effect\"\n\nconst stream = Stream.make(\"Mary\", \"James\", \"Robert\", \"Patricia\")\n\nconst indexedStream = Stream.zipWithIndex(stream)\n\nEffect.runPromise(Stream.runCollect(indexedStream)).then(console.log)\n// {\n// _id: 'Chunk',\n// values: [ [ 'Mary', 0 ], [ 'James', 1 ], [ 'Robert', 2 ], [ 'Patricia', 3 ] ]\n// }"
+    }
+  ],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 10412,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L10412"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Layer.orElse",
+  "name": "orElse",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "{ <A2, E2, R2>(that: LazyArg<Layer<A2, E2, R2>>): <A, E, R>(self: Layer<A, E, R>) => Layer<A & A2, E2 | E, R2 | R>; <A, E, R, A2, E2, R2>(self: Layer<A, E, R>, that: LazyArg<Layer<A2, E2, R2>>): Layer<A & A2, E | E2, R | R2>; }",
+  "description": "Executes this layer and returns its output, if it succeeds, but otherwise\nexecutes the specified layer.",
+  "documentation": "Executes this layer and returns its output, if it succeeds, but otherwise\nexecutes the specified layer.",
+  "examples": [],
+  "tags": [
+    "error handling"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 720,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L720"
+}

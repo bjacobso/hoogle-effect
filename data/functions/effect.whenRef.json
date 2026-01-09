@@ -1,0 +1,17 @@
+{
+  "id": "Effect.whenRef",
+  "name": "whenRef",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <S>(ref: Ref<S>, predicate: Predicate<S>): <A, E, R>(self: Effect<A, E, R>) => Effect<[S, Option<A>], E, R>; <A, E, R, S>(self: Effect<A, E, R>, ref: Ref<S>, predicate: Predicate<S>): Effect<[S, Option<A>], E, R>; }",
+  "description": "Executes an effect conditionally based on the value of a `Ref` that satisfies\na predicate.\n*Details This function allows you to execute an effect only when the value of a\nspecified `Ref` meets a condition defined by a predicate. If the value\nsatisfies the predicate, the effect is executed, and the result is wrapped in\nan `Option.some`. If the predicate is not satisfied, the effect is skipped,\nand the result is `Option.none`. In both cases, the current value of the\n`Ref` is included in the result.",
+  "documentation": "Executes an effect conditionally based on the value of a `Ref` that satisfies\na predicate.\n*Details**\n\nThis function allows you to execute an effect only when the value of a\nspecified `Ref` meets a condition defined by a predicate. If the value\nsatisfies the predicate, the effect is executed, and the result is wrapped in\nan `Option.some`. If the predicate is not satisfied, the effect is skipped,\nand the result is `Option.none`. In both cases, the current value of the\n`Ref` is included in the result.",
+  "examples": [],
+  "tags": [
+    "Conditional Operators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 16879,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L16879"
+}

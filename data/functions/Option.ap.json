@@ -1,0 +1,17 @@
+{
+  "id": "Option.ap",
+  "name": "ap",
+  "module": "Option",
+  "package": "effect",
+  "signature": "{ <A>(that: Option<A>): <B>(self: Option<(a: A) => B>) => Option<B>; <A, B>(self: Option<(a: A) => B>, that: Option<A>): Option<B>; }",
+  "description": "Applies a function inside a `Some` to a value inside another `Some`,\ncombining them into a new `Option`.\n*Details This function allows you to apply a function wrapped in an `Option` (`self`)\nto a value wrapped in another `Option` (`that`). If both `Option`s are\n`Some`, the function is applied to the value, and the result is wrapped in a\nnew `Some`. If either `Option` is `None`, the result is `None`.",
+  "documentation": "Applies a function inside a `Some` to a value inside another `Some`,\ncombining them into a new `Option`.\n*Details**\n\nThis function allows you to apply a function wrapped in an `Option` (`self`)\nto a value wrapped in another `Option` (`that`). If both `Option`s are\n`Some`, the function is applied to the value, and the result is wrapped in a\nnew `Some`. If either `Option` is `None`, the result is `None`.",
+  "examples": [],
+  "tags": [
+    "Combining"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 2470,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L2470"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Pool.make",
+  "name": "make",
+  "module": "Pool",
+  "package": "effect",
+  "signature": "<A, E, R>(options: { readonly acquire: Effect<A, E, R>; readonly size: number; readonly concurrency?: number; readonly targetUtilization?: number; }) => Effect<Pool<A, E>, never, R | Scope>",
+  "description": "Makes a new pool of the specified fixed size. The pool is returned in a\n`Scope`, which governs the lifetime of the pool. When the pool is shutdown\nbecause the `Scope` is closed, the individual items allocated by the pool\nwill be released in some unspecified order. By setting the `concurrency` parameter, you can control the level of concurrent\naccess per pool item. By default, the number of permits is set to `1`. `targetUtilization` determines when to create new pool items. It is a value\nbetween 0 and 1, where 1 means only create new pool items when all the existing\nitems are fully utilized. A `targetUtilization` of 0.5 will create new pool items when the existing items are\n50% utilized.",
+  "documentation": "Makes a new pool of the specified fixed size. The pool is returned in a\n`Scope`, which governs the lifetime of the pool. When the pool is shutdown\nbecause the `Scope` is closed, the individual items allocated by the pool\nwill be released in some unspecified order.\n\nBy setting the `concurrency` parameter, you can control the level of concurrent\naccess per pool item. By default, the number of permits is set to `1`.\n\n`targetUtilization` determines when to create new pool items. It is a value\nbetween 0 and 1, where 1 means only create new pool items when all the existing\nitems are fully utilized.\n\nA `targetUtilization` of 0.5 will create new pool items when the existing items are\n50% utilized.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Pool.d.ts",
+  "sourceLine": 102,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Pool.ts#L102"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Deferred.succeed",
+  "name": "succeed",
+  "module": "Deferred",
+  "package": "effect",
+  "signature": "{ <A>(value: A): <E>(self: Deferred<A, E>) => Effect<boolean, never, never>; <A, E>(self: Deferred<A, E>, value: A): Effect<boolean, never, never>; }",
+  "description": "Completes the `Deferred` with the specified value.",
+  "documentation": "Completes the `Deferred` with the specified value.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Deferred.d.ts",
+  "sourceLine": 384,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Deferred.ts#L384"
+}

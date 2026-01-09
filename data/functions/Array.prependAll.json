@@ -1,0 +1,17 @@
+{
+  "id": "Array.prependAll",
+  "name": "prependAll",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <S extends Iterable<any>, T extends Iterable<any>>(that: T): (self: S) => ReadonlyArray.OrNonEmpty<S, T, ReadonlyArray.Infer<S> | ReadonlyArray.Infer<T>>; <A, B>(self: Iterable<A>, that: readonly [B, ...B[]]): [A | B, ...(A | B)[]]; <A, B>(self: readonly [A, ...A[]], that: Iterable<B>): [A | B, ...(A | B)[]]; <A, B>(self: Iterable<A>, that: Iterable<B>): (A | B)[]; }",
+  "description": "Prepends the specified prefix array (or iterable) to the beginning of the specified array (or iterable).\nIf either array is non-empty, the result is also a non-empty array.\n*Example",
+  "documentation": "Prepends the specified prefix array (or iterable) to the beginning of the specified array (or iterable).\nIf either array is non-empty, the result is also a non-empty array.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.prependAll([2, 3], [0, 1])\nconsole.log(result) // [0, 1, 2, 3]\n```",
+  "examples": [],
+  "tags": [
+    "concatenating"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 523,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L523"
+}

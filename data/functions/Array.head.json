@@ -1,0 +1,17 @@
+{
+  "id": "Array.head",
+  "name": "head",
+  "module": "Array",
+  "package": "effect",
+  "signature": "<A>(self: readonly A[]) => Option<A>",
+  "description": "Get the first element of a `ReadonlyArray`, or `None` if the `ReadonlyArray` is empty.",
+  "documentation": "Get the first element of a `ReadonlyArray`, or `None` if the `ReadonlyArray` is empty.",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 1017,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L1017"
+}

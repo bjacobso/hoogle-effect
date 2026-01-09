@@ -1,0 +1,21 @@
+{
+  "id": "HttpMiddleware.cors",
+  "name": "cors",
+  "module": "HttpMiddleware",
+  "package": "@effect/platform",
+  "signature": "(options?: { readonly allowedOrigins?: readonly string[] | Predicate<string>; readonly allowedMethods?: readonly string[]; readonly allowedHeaders?: readonly string[]; readonly exposedHeaders?: readonly string[]; readonly maxAge?: number; readonly credentials?: boolean; }) => <E, R>(httpApp: Default<E, R>) => Default<E, R>",
+  "description": "Creates a CORS (Cross-Origin Resource Sharing) middleware for HTTP applications.",
+  "documentation": "Creates a CORS (Cross-Origin Resource Sharing) middleware for HTTP applications.",
+  "examples": [
+    {
+      "code": "import { HttpMiddleware, HttpRouter, HttpServerResponse } from \"@effect/platform\"\n\n// Allow all origins and reflect requested headers (default behavior)\nHttpRouter.empty.pipe(\nHttpRouter.get(\"/\", HttpServerResponse.empty()),\nHttpMiddleware.cors()\n)\n\n// Restrict to specific origins and headers\nHttpRouter.empty.pipe(\nHttpRouter.get(\"/\", HttpServerResponse.empty()),\nHttpMiddleware.cors({\nallowedOrigins: [\"https://example.com\"],\nallowedHeaders: [\"Content-Type\", \"Authorization\"],\ncredentials: true\n})\n)\n\n// Dynamic origin checking with predicate\nHttpRouter.empty.pipe(\nHttpRouter.get(\"/\", HttpServerResponse.empty()),\nHttpMiddleware.cors({\nallowedOrigins: (origin) => origin.endsWith(\".example.com\")\n})\n)"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpMiddleware.d.ts",
+  "sourceLine": 166,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpMiddleware.ts#L166"
+}

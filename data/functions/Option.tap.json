@@ -1,0 +1,21 @@
+{
+  "id": "Option.tap",
+  "name": "tap",
+  "module": "Option",
+  "package": "effect",
+  "signature": "{ <A, X>(f: (a: A) => Option<X>): (self: Option<A>) => Option<A>; <A, X>(self: Option<A>, f: (a: A) => Option<X>): Option<A>; }",
+  "description": "Applies the provided function `f` to the value of the `Option` if it is\n`Some` and returns the original `Option`, unless `f` returns `None`, in which\ncase it returns `None`.\n*Details This function allows you to perform additional computations on the value of\nan `Option` without modifying its original value. If the `Option` is `Some`,\nthe provided function `f` is executed with the value, and its result\ndetermines whether the original `Option` is returned (`Some`) or the result\nis `None` if `f` returns `None`. If the input `Option` is `None`, the\nfunction is not executed, and `None` is returned. This is particularly useful for applying side conditions or performing\nvalidation checks while retaining the original `Option`'s value.",
+  "documentation": "Applies the provided function `f` to the value of the `Option` if it is\n`Some` and returns the original `Option`, unless `f` returns `None`, in which\ncase it returns `None`.\n*Details**\n\nThis function allows you to perform additional computations on the value of\nan `Option` without modifying its original value. If the `Option` is `Some`,\nthe provided function `f` is executed with the value, and its result\ndetermines whether the original `Option` is returned (`Some`) or the result\nis `None` if `f` returns `None`. If the input `Option` is `None`, the\nfunction is not executed, and `None` is returned.\n\nThis is particularly useful for applying side conditions or performing\nvalidation checks while retaining the original `Option`'s value.",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\nconst getInteger = (n: number) => Number.isInteger(n) ? Option.some(n) : Option.none()\n\nconsole.log(Option.tap(Option.none(), getInteger))\n// Output: { _id: 'Option', _tag: 'None' }\n\nconsole.log(Option.tap(Option.some(1), getInteger))\n// Output: { _id: 'Option', _tag: 'Some', value: 1 }\n\nconsole.log(Option.tap(Option.some(1.14), getInteger))\n// Output: { _id: 'Option', _tag: 'None' }"
+    }
+  ],
+  "tags": [
+    "Sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 2192,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L2192"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Logger.succeed",
+  "name": "succeed",
+  "module": "Logger",
+  "package": "effect",
+  "signature": "<A>(value: A) => Logger<unknown, A>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Logger.d.ts",
+  "sourceLine": 391,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Logger.ts#L391"
+}

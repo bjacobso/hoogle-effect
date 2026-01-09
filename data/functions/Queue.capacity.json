@@ -1,0 +1,17 @@
+{
+  "id": "Queue.capacity",
+  "name": "capacity",
+  "module": "Queue",
+  "package": "effect",
+  "signature": "<A>(self: Dequeue<A> | Enqueue<A>) => number",
+  "description": "Returns the number of elements the queue can hold.",
+  "documentation": "Returns the number of elements the queue can hold.",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Queue.d.ts",
+  "sourceLine": 411,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Queue.ts#L411"
+}

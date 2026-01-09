@@ -1,0 +1,21 @@
+{
+  "id": "Layer.mock",
+  "name": "mock",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "{ <I, S extends object>(tag: Tag<I, S>): (service: Simplify<{ [K in keyof S as S[K] extends Effect<any, any, any> | Stream<any, any, any> | ((...args: any) => Effect<any, any, any> | Stream<any, any, any>) ? K : never]?: S[K]; } & { [K in keyof S as S[K] extends Effect<any, any, any> | Stream<any, any, any> | ((...args: any) => Effect<any, any, any> | Stream<any, any, any>) ? never : K]: S[K]; }>) => Layer<I, never, never>; <I, S extends object>(tag: Tag<I, S>, service: Simplify<{ [K in keyof S as S[K] extends Effect<any, any, any> | Stream<any, any, any> | ((...args: any) => Effect<any, any, any> | Stream<any, any, any>) ? K : never]?: S[K]; } & { [K in keyof S as S[K] extends Effect<any, any, any> | Stream<any, any, any> | ((...args: any) => Effect<any, any, any> | Stream<any, any, any>) ? never : K]: S[K]; }>): Layer<I, never, never>; }",
+  "description": "Creates a mock layer for testing purposes. You can provide a partial\nimplementation of the service, and any methods not provided will\nthrow an `UnimplementedError` defect when called.\n*Example",
+  "documentation": "Creates a mock layer for testing purposes. You can provide a partial\nimplementation of the service, and any methods not provided will\nthrow an `UnimplementedError` defect when called.\n*Example**\n\n```ts\nimport { Context, Effect, Layer } from \"effect\"\n\nclass MyService extends Context.Tag(\"MyService\")<\nMyService,\n{\none: Effect.Effect<number>\ntwo(): Effect.Effect<number>\n}\n>() {}\n\nconst MyServiceTest = Layer.mock(MyService, {\ntwo: () => Effect.succeed(2)\n})\n```",
+  "examples": [
+    {
+      "code": "import { Context, Effect, Layer } from \"effect\"\n\nclass MyService extends Context.Tag(\"MyService\")<\nMyService,\n{\none: Effect.Effect<number>\ntwo(): Effect.Effect<number>\n}\n>() {}\n\nconst MyServiceTest = Layer.mock(MyService, {\ntwo: () => Effect.succeed(2)\n})"
+    }
+  ],
+  "tags": [
+    "Testing"
+  ],
+  "since": "3.17.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 477,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L477"
+}

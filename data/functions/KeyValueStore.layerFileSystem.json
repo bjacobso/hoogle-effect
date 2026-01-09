@@ -1,0 +1,17 @@
+{
+  "id": "KeyValueStore.layerFileSystem",
+  "name": "layerFileSystem",
+  "module": "KeyValueStore",
+  "package": "@effect/platform",
+  "signature": "(directory: string) => Layer<KeyValueStore, PlatformError, FileSystem | Path>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "layers"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/KeyValueStore.d.ts",
+  "sourceLine": 126,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/KeyValueStore.ts#L126"
+}

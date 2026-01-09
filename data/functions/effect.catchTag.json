@@ -1,0 +1,21 @@
+{
+  "id": "Effect.catchTag",
+  "name": "catchTag",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E, const K extends RA.NonEmptyReadonlyArray<E extends { _tag: string; } ? E[\"_tag\"] : never>, A1, E1, R1>(...args: [...tags: K, f: (e: Extract<NoInfer<E>, { _tag: K[number]; }>) => Effect<A1, E1, R1>]): <A, R>(self: Effect<A, E, R>) => Effect<A1 | A, E1 | Exclude<E, { _tag: K[number]; }>, R1 | R>; <A, E, R, const K extends RA.NonEmptyReadonlyArray<E extends { _tag: string; } ? E[\"_tag\"] : never>, A1, E1, R1>(self: Effect<A, E, R>, ...args: [...tags: K, f: (e: Extract<NoInfer<E>, { _tag: K[number]; }>) => Effect<A1, E1, R1>]): Effect<A | A1, E1 | Exclude<E, { _tag: K[number]; }>, R | R1>; }",
+  "description": "Catches and handles specific errors by their `_tag` field, which is used as a\ndiscriminator.\n*When to Use `catchTag` is useful when your errors are tagged with a readonly `_tag` field\nthat identifies the error type. You can use this function to handle specific\nerror types by matching the `_tag` value. This allows for precise error\nhandling, ensuring that only specific errors are caught and handled. The error type must have a readonly `_tag` field to use `catchTag`. This\nfield is used to identify and match errors.\n*Example (Handling Errors by Tag)",
+  "documentation": "Catches and handles specific errors by their `_tag` field, which is used as a\ndiscriminator.\n*When to Use**\n\n`catchTag` is useful when your errors are tagged with a readonly `_tag` field\nthat identifies the error type. You can use this function to handle specific\nerror types by matching the `_tag` value. This allows for precise error\nhandling, ensuring that only specific errors are caught and handled.\n\nThe error type must have a readonly `_tag` field to use `catchTag`. This\nfield is used to identify and match errors.\n*Example** (Handling Errors by Tag)\n\n```ts\nimport { Effect, Random } from \"effect\"\n\nclass HttpError {\nreadonly _tag = \"HttpError\"\n}\n\nclass ValidationError {\nreadonly _tag = \"ValidationError\"\n}\n\n// ┌─── Effect<string, HttpError | ValidationError, never>\n// ▼\nconst program = Effect.gen(function* () {\nconst n1 = yield* Random.next\nconst n2 = yield* Random.next\nif (n1 < 0.5) {\nyield* Effect.fail(new HttpError())\n}\nif (n2 < 0.5) {\nyield* Effect.fail(new ValidationError())\n}\nreturn \"some result\"\n})\n\n// ┌─── Effect<string, ValidationError, never>\n// ▼\nconst recovered = program.pipe(\n// Only handle HttpError errors\nEffect.catchTag(\"HttpError\", (_HttpError) =>\nEffect.succeed(\"Recovering from HttpError\")\n)\n)\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Random } from \"effect\"\n\nclass HttpError {\nreadonly _tag = \"HttpError\"\n}\n\nclass ValidationError {\nreadonly _tag = \"ValidationError\"\n}\n\n// ┌─── Effect<string, HttpError | ValidationError, never>\n// ▼\nconst program = Effect.gen(function* () {\nconst n1 = yield* Random.next\nconst n2 = yield* Random.next\nif (n1 < 0.5) {\nyield* Effect.fail(new HttpError())\n}\nif (n2 < 0.5) {\nyield* Effect.fail(new ValidationError())\n}\nreturn \"some result\"\n})\n\n// ┌─── Effect<string, ValidationError, never>\n// ▼\nconst recovered = program.pipe(\n// Only handle HttpError errors\nEffect.catchTag(\"HttpError\", (_HttpError) =>\nEffect.succeed(\"Recovering from HttpError\")\n)\n)"
+    }
+  ],
+  "tags": [
+    "Error handling"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 6714,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L6714"
+}

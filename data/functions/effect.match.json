@@ -1,0 +1,21 @@
+{
+  "id": "Effect.match",
+  "name": "match",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E, A2, A, A3>(options: { readonly onFailure: (error: E) => A2; readonly onSuccess: (value: A) => A3; }): <R>(self: Effect<A, E, R>) => Effect<A2 | A3, never, R>; <A, E, R, A2, A3>(self: Effect<A, E, R>, options: { readonly onFailure: (error: E) => A2; readonly onSuccess: (value: A) => A3; }): Effect<A2 | A3, never, R>; }",
+  "description": "Handles both success and failure cases of an effect without performing side\neffects.\n*Details `match` lets you define custom handlers for both success and failure\nscenarios. You provide separate functions to handle each case, allowing you\nto process the result if the effect succeeds, or handle the error if the\neffect fails.\n*When to Use This is useful for structuring your code to respond differently to success or\nfailure without triggering side effects.\n*Example (Handling Both Success and Failure Cases)",
+  "documentation": "Handles both success and failure cases of an effect without performing side\neffects.\n*Details**\n\n`match` lets you define custom handlers for both success and failure\nscenarios. You provide separate functions to handle each case, allowing you\nto process the result if the effect succeeds, or handle the error if the\neffect fails.\n*When to Use**\n\nThis is useful for structuring your code to respond differently to success or\nfailure without triggering side effects.\n*Example** (Handling Both Success and Failure Cases)\n\n```ts\nimport { Effect } from \"effect\"\n\nconst success: Effect.Effect<number, Error> = Effect.succeed(42)\n\nconst program1 = Effect.match(success, {\nonFailure: (error) => `failure: ${error.message}`,\nonSuccess: (value) => `success: ${value}`\n})\n\n// Run and log the result of the successful effect\nEffect.runPromise(program1).then(console.log)\n// Output: \"success: 42\"\n\nconst failure: Effect.Effect<number, Error> = Effect.fail(\nnew Error(\"Uh oh!\")\n)\n\nconst program2 = Effect.match(failure, {\nonFailure: (error) => `failure: ${error.message}`,\nonSuccess: (value) => `success: ${value}`\n})\n\n// Run and log the result of the failed effect\nEffect.runPromise(program2).then(console.log)\n// Output: \"failure: Uh oh!\"\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst success: Effect.Effect<number, Error> = Effect.succeed(42)\n\nconst program1 = Effect.match(success, {\nonFailure: (error) => `failure: ${error.message}`,\nonSuccess: (value) => `success: ${value}`\n})\n\n// Run and log the result of the successful effect\nEffect.runPromise(program1).then(console.log)\n// Output: \"success: 42\"\n\nconst failure: Effect.Effect<number, Error> = Effect.fail(\nnew Error(\"Uh oh!\")\n)\n\nconst program2 = Effect.match(failure, {\nonFailure: (error) => `failure: ${error.message}`,\nonSuccess: (value) => `success: ${value}`\n})\n\n// Run and log the result of the failed effect\nEffect.runPromise(program2).then(console.log)\n// Output: \"failure: Uh oh!\""
+    }
+  ],
+  "tags": [
+    "Matching"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 21618,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L21618"
+}

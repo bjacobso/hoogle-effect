@@ -1,0 +1,17 @@
+{
+  "id": "Layer.buildWithScope",
+  "name": "buildWithScope",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "{ (scope: Scope): <RIn, E, ROut>(self: Layer<ROut, E, RIn>) => Effect<Context<ROut>, E, RIn>; <RIn, E, ROut>(self: Layer<ROut, E, RIn>, scope: Scope): Effect<Context<ROut>, E, RIn>; }",
+  "description": "Builds a layer into an `Effect` value. Any resources associated with this\nlayer will be released when the specified scope is closed unless their scope\nhas been extended. This allows building layers where the lifetime of some of\nthe services output by the layer exceed the lifetime of the effect the\nlayer is provided to.",
+  "documentation": "Builds a layer into an `Effect` value. Any resources associated with this\nlayer will be released when the specified scope is closed unless their scope\nhas been extended. This allows building layers where the lifetime of some of\nthe services output by the layer exceed the lifetime of the effect the\nlayer is provided to.",
+  "examples": [],
+  "tags": [
+    "destructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 211,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L211"
+}

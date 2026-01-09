@@ -1,0 +1,21 @@
+{
+  "id": "Option.getRight",
+  "name": "getRight",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<R, L>(self: Either<R, L>) => Option<R>",
+  "description": "Converts an `Either` into an `Option` by discarding the error and extracting\nthe right value.\n*Details This function takes an `Either` and returns an `Option` based on its value: - If the `Either` is a `Right`, its value is wrapped in a `Some` and\nreturned.\n- If the `Either` is a `Left`, the error is discarded, and `None` is\nreturned. This is particularly useful when you only care about the success case\n(`Right`) of an `Either` and want to handle the result using `Option`. By\nusing this function, you can convert `Either` into a simpler structure for\ncases where error handling is not required.",
+  "documentation": "Converts an `Either` into an `Option` by discarding the error and extracting\nthe right value.\n*Details**\n\nThis function takes an `Either` and returns an `Option` based on its value:\n\n- If the `Either` is a `Right`, its value is wrapped in a `Some` and\nreturned.\n- If the `Either` is a `Left`, the error is discarded, and `None` is\nreturned.\n\nThis is particularly useful when you only care about the success case\n(`Right`) of an `Either` and want to handle the result using `Option`. By\nusing this function, you can convert `Either` into a simpler structure for\ncases where error handling is not required.",
+  "examples": [
+    {
+      "code": "import { Either, Option } from \"effect\"\n\nconsole.log(Option.getRight(Either.right(\"ok\")))\n// Output: { _id: 'Option', _tag: 'Some', value: 'ok' }\n\nconsole.log(Option.getRight(Either.left(\"err\")))\n// Output: { _id: 'Option', _tag: 'None' }"
+    }
+  ],
+  "tags": [
+    "Conversions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 477,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L477"
+}

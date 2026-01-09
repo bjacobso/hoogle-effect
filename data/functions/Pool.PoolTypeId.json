@@ -1,0 +1,17 @@
+{
+  "id": "Pool.PoolTypeId",
+  "name": "PoolTypeId",
+  "module": "Pool",
+  "package": "effect",
+  "signature": "typeof PoolTypeId",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "symbols"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Pool.d.ts",
+  "sourceLine": 14,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Pool.ts#L14"
+}

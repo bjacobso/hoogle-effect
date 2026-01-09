@@ -1,0 +1,17 @@
+{
+  "id": "Effect.randomWith",
+  "name": "randomWith",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(f: (random: Random) => Effect<A, E, R>) => Effect<A, E, R>",
+  "description": "Retrieves the `Random` service from the context and uses it to run the\nspecified effect.",
+  "documentation": "Retrieves the `Random` service from the context and uses it to run the\nspecified effect.",
+  "examples": [],
+  "tags": [
+    "Random"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 23747,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L23747"
+}

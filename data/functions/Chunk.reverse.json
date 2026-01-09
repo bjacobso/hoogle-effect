@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.reverse",
+  "name": "reverse",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "<S extends Chunk<any>>(self: S) => Chunk.With<S, Chunk.Infer<S>>",
+  "description": "Reverses the order of elements in a `Chunk`.\nImportantly, if the input chunk is a `NonEmptyChunk`, the reversed chunk will also be a `NonEmptyChunk`.\n*Example",
+  "documentation": "Reverses the order of elements in a `Chunk`.\nImportantly, if the input chunk is a `NonEmptyChunk`, the reversed chunk will also be a `NonEmptyChunk`.\n*Example**\n\n```ts\nimport { Chunk } from \"effect\"\n\nconst chunk = Chunk.make(1, 2, 3)\nconst result = Chunk.reverse(chunk)\n\nconsole.log(result)\n// { _id: 'Chunk', values: [ 3, 2, 1 ] }\n```",
+  "examples": [],
+  "tags": [
+    "elements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 138,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L138"
+}

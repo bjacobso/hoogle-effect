@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.unsafeLast",
+  "name": "unsafeLast",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "<A>(self: Chunk<A>) => A",
+  "description": "Returns the last element of this chunk. It will throw an error if the chunk is empty.",
+  "documentation": "Returns the last element of this chunk.\n\nIt will throw an error if the chunk is empty.",
+  "examples": [],
+  "tags": [
+    "unsafe"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 777,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L777"
+}

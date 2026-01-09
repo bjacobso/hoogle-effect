@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.prependAll",
+  "name": "prependAll",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <S extends Chunk<any>, T extends Chunk<any>>(that: T): (self: S) => Chunk.OrNonEmpty<S, T, Chunk.Infer<S> | Chunk.Infer<T>>; <A, B>(self: Chunk<A>, that: NonEmptyChunk<B>): NonEmptyChunk<A | B>; <A, B>(self: NonEmptyChunk<A>, that: Chunk<B>): NonEmptyChunk<A | B>; <A, B>(self: Chunk<A>, that: Chunk<B>): Chunk<A | B>; }",
+  "description": "Prepends the specified prefix chunk to the beginning of the specified chunk.\nIf either chunk is non-empty, the result is also a non-empty chunk.\n*Example",
+  "documentation": "Prepends the specified prefix chunk to the beginning of the specified chunk.\nIf either chunk is non-empty, the result is also a non-empty chunk.\n*Example**\n\n```ts\nimport { Chunk } from \"effect\"\n\nconst result = Chunk.make(1, 2).pipe(Chunk.prependAll(Chunk.make(\"a\", \"b\")), Chunk.toArray)\n\nconsole.log(result)\n// [ \"a\", \"b\", 1, 2 ]\n```",
+  "examples": [],
+  "tags": [
+    "concatenating"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 335,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L335"
+}

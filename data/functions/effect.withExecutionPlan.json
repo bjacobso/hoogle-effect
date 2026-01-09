@@ -1,0 +1,17 @@
+{
+  "id": "Effect.withExecutionPlan",
+  "name": "withExecutionPlan",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <Input, Provides, PlanE, PlanR>(plan: ExecutionPlan<{ provides: Provides; input: Input; error: PlanE; requirements: PlanR; }>): <A, E extends Input, R>(effect: Effect<A, E, R>) => Effect<A, PlanE | E, PlanR | Exclude<R, Provides>>; <A, E extends Input, R, Provides, Input, PlanE, PlanR>(effect: Effect<A, E, R>, plan: ExecutionPlan<{ provides: Provides; input: Input; error: PlanE; requirements: PlanR; }>): Effect<A, E | PlanE, PlanR | Exclude<R, Provides>>; }",
+  "description": "Apply an `ExecutionPlan` to the effect, which allows you to fallback to\ndifferent resources in case of failure.",
+  "documentation": "Apply an `ExecutionPlan` to the effect, which allows you to fallback to\ndifferent resources in case of failure.",
+  "examples": [],
+  "tags": [
+    "Error handling"
+  ],
+  "since": "3.16.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 7935,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L7935"
+}

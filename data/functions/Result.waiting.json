@@ -1,0 +1,17 @@
+{
+  "id": "Result.waiting",
+  "name": "waiting",
+  "module": "Result",
+  "package": "@effect-atom/atom",
+  "signature": "<R extends Result<any, any>>(self: R, options?: { readonly touch?: boolean; }) => R",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Result.d.ts",
+  "sourceLine": 180,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Result.ts#L180"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "HttpServerResponse.removeCookie",
+  "name": "removeCookie",
+  "module": "HttpServerResponse",
+  "package": "@effect/platform",
+  "signature": "{ (name: string): (self: HttpServerResponse) => HttpServerResponse; (self: HttpServerResponse, name: string): HttpServerResponse; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpServerResponse.d.ts",
+  "sourceLine": 197,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpServerResponse.ts#L197"
+}

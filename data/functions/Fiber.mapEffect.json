@@ -1,0 +1,17 @@
+{
+  "id": "Fiber.mapEffect",
+  "name": "mapEffect",
+  "module": "Fiber",
+  "package": "effect",
+  "signature": "{ <A, A2, E2>(f: (a: A) => Effect<A2, E2, never>): <E>(self: Fiber<A, E>) => Fiber<A2, E2 | E>; <A, E, A2, E2>(self: Fiber<A, E>, f: (a: A) => Effect<A2, E2, never>): Fiber<A2, E | E2>; }",
+  "description": "Effectually maps over the value the fiber computes.",
+  "documentation": "Effectually maps over the value the fiber computes.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Fiber.d.ts",
+  "sourceLine": 542,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Fiber.ts#L542"
+}

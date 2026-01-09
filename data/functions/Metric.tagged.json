@@ -1,0 +1,17 @@
+{
+  "id": "Metric.tagged",
+  "name": "tagged",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "{ <Type, In, Out>(key: string, value: string): (self: Metric<Type, In, Out>) => Metric<Type, In, Out>; <Type, In, Out>(self: Metric<Type, In, Out>, key: string, value: string): Metric<Type, In, Out>; }",
+  "description": "Returns a new metric, which is identical in every way to this one, except\nthe specified tags have been added to the tags of this metric.",
+  "documentation": "Returns a new metric, which is identical in every way to this one, except\nthe specified tags have been added to the tags of this metric.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 608,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L608"
+}

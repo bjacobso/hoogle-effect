@@ -1,0 +1,17 @@
+{
+  "id": "Queue.takeBetween",
+  "name": "takeBetween",
+  "module": "Queue",
+  "package": "effect",
+  "signature": "{ (min: number, max: number): <A>(self: Dequeue<A>) => Effect<Chunk<A>, never, never>; <A>(self: Dequeue<A>, min: number, max: number): Effect<Chunk<A>, never, never>; }",
+  "description": "Takes a number of elements from the queue between the specified minimum and\nmaximum. If there are fewer than the minimum number of elements available,\nsuspends until at least the minimum number of elements have been collected.",
+  "documentation": "Takes a number of elements from the queue between the specified minimum and\nmaximum. If there are fewer than the minimum number of elements available,\nsuspends until at least the minimum number of elements have been collected.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Queue.d.ts",
+  "sourceLine": 616,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Queue.ts#L616"
+}

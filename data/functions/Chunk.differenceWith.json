@@ -1,0 +1,15 @@
+{
+  "id": "Chunk.differenceWith",
+  "name": "differenceWith",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "<A>(isEquivalent: (self: A, that: A) => boolean) => { (that: Chunk<A>): (self: Chunk<A>) => Chunk<A>; (self: Chunk<A>, that: Chunk<A>): Chunk<A>; }",
+  "description": "Creates a `Chunk` of values not included in the other given `Chunk` using the provided `isEquivalent` function.\nThe order and references of result values are determined by the first `Chunk`.",
+  "documentation": "Creates a `Chunk` of values not included in the other given `Chunk` using the provided `isEquivalent` function.\nThe order and references of result values are determined by the first `Chunk`.",
+  "examples": [],
+  "tags": [],
+  "since": "3.2.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 1682,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L1682"
+}

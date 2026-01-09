@@ -1,0 +1,17 @@
+{
+  "id": "Atom.Reset",
+  "name": "Reset",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "typeof Reset",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "symbols"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 346,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L346"
+}

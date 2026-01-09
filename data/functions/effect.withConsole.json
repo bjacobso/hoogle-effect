@@ -1,0 +1,17 @@
+{
+  "id": "Effect.withConsole",
+  "name": "withConsole",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <C extends Console>(console: C): <A, E, R>(effect: Effect<A, E, R>) => Effect<A, E, R>; <A, E, R, C extends Console>(effect: Effect<A, E, R>, console: C): Effect<A, E, R>; }",
+  "description": "Executes the specified workflow with the specified implementation of the\nconsole service.",
+  "documentation": "Executes the specified workflow with the specified implementation of the\nconsole service.",
+  "examples": [],
+  "tags": [
+    "Console"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 12295,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L12295"
+}

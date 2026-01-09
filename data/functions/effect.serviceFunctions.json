@@ -1,0 +1,17 @@
+{
+  "id": "Effect.serviceFunctions",
+  "name": "serviceFunctions",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<S, SE, SR>(getService: Effect<S, SE, SR>) => { [k in keyof S as S[k] extends (...args: any[]) => Effect<any, any, any> ? k : never]: S[k] extends (...args: infer Args) => Effect<infer A, infer E, infer R> ? (...args: Args) => Effect<A, SE | E, SR | R> : never; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 14679,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L14679"
+}

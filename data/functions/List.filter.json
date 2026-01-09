@@ -1,0 +1,17 @@
+{
+  "id": "List.filter",
+  "name": "filter",
+  "module": "List",
+  "package": "effect",
+  "signature": "{ <A, B extends A>(refinement: Refinement<NoInfer<A>, B>): (self: List<A>) => List<B>; <A>(predicate: Predicate<NoInfer<A>>): (self: List<A>) => List<A>; <A, B extends A>(self: List<A>, refinement: Refinement<A, B>): List<B>; <A>(self: List<A>, predicate: Predicate<A>): List<A>; }",
+  "description": "Filters a list using the specified predicate.",
+  "documentation": "Filters a list using the specified predicate.",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 508,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L508"
+}

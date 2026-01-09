@@ -1,0 +1,17 @@
+{
+  "id": "Stream.flattenEffect",
+  "name": "flattenEffect",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ (options?: { readonly concurrency?: number | \"unbounded\"; readonly unordered?: boolean; }): <A, E2, R2, E, R>(self: Stream<Effect<A, E2, R2>, E, R>) => Stream<A, E2 | E, R2 | R>; <A, E2, R2, E, R>(self: Stream<Effect<A, E2, R2>, E, R>, options?: { readonly concurrency?: number | \"unbounded\"; readonly unordered?: boolean; }): Stream<A, E2 | E, R2 | R>; }",
+  "description": "Flattens `Effect` values into the stream's structure, preserving all\ninformation about the effect.",
+  "documentation": "Flattens `Effect` values into the stream's structure, preserving all\ninformation about the effect.",
+  "examples": [],
+  "tags": [
+    "sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 2850,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L2850"
+}

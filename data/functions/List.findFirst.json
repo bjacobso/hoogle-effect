@@ -1,0 +1,17 @@
+{
+  "id": "List.findFirst",
+  "name": "findFirst",
+  "module": "List",
+  "package": "effect",
+  "signature": "{ <A, B extends A>(refinement: Refinement<NoInfer<A>, B>): (self: List<A>) => Option<B>; <A>(predicate: Predicate<NoInfer<A>>): (self: List<A>) => Option<A>; <A, B extends A>(self: List<A>, refinement: Refinement<A, B>): Option<B>; <A>(self: List<A>, predicate: Predicate<A>): Option<A>; }",
+  "description": "Returns the first element that satisfies the specified\npredicate, or `None` if no such element exists.",
+  "documentation": "Returns the first element that satisfies the specified\npredicate, or `None` if no such element exists.",
+  "examples": [],
+  "tags": [
+    "elements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 580,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L580"
+}

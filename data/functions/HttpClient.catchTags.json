@@ -1,0 +1,17 @@
+{
+  "id": "HttpClient.catchTags",
+  "name": "catchTags",
+  "module": "HttpClient",
+  "package": "@effect/platform",
+  "signature": "{ <E, Cases extends { [K in Extract<E, { _tag: string; }>[\"_tag\"]]+?: (error: Extract<E, { _tag: K; }>) => Effect.Effect<ClientResponse.HttpClientResponse, any, any>; } & (unknown extends E ? {} : { [K in Exclude<keyof Cases, Extract<E, { _tag: string; }>[\"_tag\"]>]: never; })>(cases: Cases): <R>(self: HttpClient.With<E, R>) => HttpClient.With<Exclude<E, { _tag: keyof Cases; }> | { [K in keyof Cases]: Cases[K] extends (...args: any[]) => Effect<any, infer E, any> ? E : never; }[keyof Cases], R | { [K in keyof Cases]: Cases[K] extends (...args: any[]) => Effect<any, any, infer R> ? R : never; }[keyof Cases]>; <E extends { _tag: string; }, R, Cases extends { [K in Extract<E, { _tag: string; }>[\"_tag\"]]+?: (error: Extract<E, { _tag: K; }>) => Effect.Effect<ClientResponse.HttpClientResponse, any, any>; } & (unknown extends E ? {} : { [K in Exclude<keyof Cases, Extract<E, { _tag: string; }>[\"_tag\"]>]: never; })>(self: HttpClient.With<E, R>, cases: Cases): HttpClient.With<Exclude<E, { _tag: keyof Cases; }> | { [K in keyof Cases]: Cases[K] extends (...args: any[]) => Effect<any, infer E, any> ? E : never; }[keyof Cases], R | { [K in keyof Cases]: Cases[K] extends (...args: any[]) => Effect<any, any, infer R> ? R : never; }[keyof Cases]>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "error handling"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpClient.d.ts",
+  "sourceLine": 159,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpClient.ts#L159"
+}

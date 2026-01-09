@@ -1,0 +1,15 @@
+{
+  "id": "HashMap.set",
+  "name": "set",
+  "module": "HashMap",
+  "package": "effect",
+  "signature": "{ <K, V>(key: K, value: V): (self: HashMap<K, V>) => HashMap<K, V>; <K, V>(self: HashMap<K, V>, key: K, value: V): HashMap<K, V>; }",
+  "description": "Sets the specified key to the specified value using the internal hashing\nfunction.",
+  "documentation": "Sets the specified key to the specified value using the internal hashing\nfunction.",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashMap.d.ts",
+  "sourceLine": 305,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashMap.ts#L305"
+}

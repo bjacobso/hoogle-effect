@@ -1,0 +1,17 @@
+{
+  "id": "Layer.mapError",
+  "name": "mapError",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "{ <E, E2>(f: (error: E) => E2): <A, R>(self: Layer<A, E, R>) => Layer<A, E2, R>; <A, E, R, E2>(self: Layer<A, E, R>, f: (error: E) => E2): Layer<A, E2, R>; }",
+  "description": "Returns a layer with its error channel mapped using the specified function.",
+  "documentation": "Returns a layer with its error channel mapped using the specified function.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 578,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L578"
+}

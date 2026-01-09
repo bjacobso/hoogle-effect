@@ -1,0 +1,17 @@
+{
+  "id": "Effect.finalizersMask",
+  "name": "finalizersMask",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "(strategy: ExecutionStrategy) => <A, E, R>(self: (restore: <A1, E1, R1>(self: Effect<A1, E1, R1>) => Effect<A1, E1, R1>) => Effect<A, E, R>) => Effect<A, E, R>",
+  "description": "Applies a custom execution strategy to finalizers within a scoped workflow.\n*Details This function allows you to control how finalizers are executed in a scope by\napplying a specified `ExecutionStrategy`. The `strategy` can dictate whether\nfinalizers run (e.g., sequentially or in parallel). Additionally, the function provides a `restore` operation, which ensures that\nthe effect passed to it is executed under the default execution strategy.",
+  "documentation": "Applies a custom execution strategy to finalizers within a scoped workflow.\n*Details**\n\nThis function allows you to control how finalizers are executed in a scope by\napplying a specified `ExecutionStrategy`. The `strategy` can dictate whether\nfinalizers run (e.g., sequentially or in parallel).\n\nAdditionally, the function provides a `restore` operation, which ensures that\nthe effect passed to it is executed under the default execution strategy.",
+  "examples": [],
+  "tags": [
+    "Scoping, Resources & Finalization"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 11002,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L11002"
+}

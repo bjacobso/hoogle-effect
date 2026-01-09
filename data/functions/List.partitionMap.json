@@ -1,0 +1,17 @@
+{
+  "id": "List.partitionMap",
+  "name": "partitionMap",
+  "module": "List",
+  "package": "effect",
+  "signature": "{ <A, B, C>(f: (a: A) => Either<C, B>): (self: List<A>) => [left: List<B>, right: List<C>]; <A, B, C>(self: List<A>, f: (a: A) => Either<C, B>): [left: List<B>, right: List<C>]; }",
+  "description": "Partition a list into two lists, where the first list contains all elements\nfor which the specified function returned a `Left`, and the second list\ncontains all elements for which the specified function returned a `Right`.",
+  "documentation": "Partition a list into two lists, where the first list contains all elements\nfor which the specified function returned a `Left`, and the second list\ncontains all elements for which the specified function returned a `Right`.",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 778,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L778"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.head",
+  "name": "head",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "<A>(self: Chunk<A>) => Option<A>",
+  "description": "Returns the first element of this chunk if it exists.",
+  "documentation": "Returns the first element of this chunk if it exists.",
+  "examples": [],
+  "tags": [
+    "elements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 745,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L745"
+}

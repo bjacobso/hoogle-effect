@@ -1,0 +1,17 @@
+{
+  "id": "Stream.broadcastedQueuesDynamic",
+  "name": "broadcastedQueuesDynamic",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ (maximumLag: number | { readonly capacity: \"unbounded\"; readonly replay?: number; } | { readonly capacity: number; readonly strategy?: \"dropping\" | \"sliding\" | \"suspend\"; readonly replay?: number; }): <A, E, R>(self: Stream<A, E, R>) => Effect<Effect<Dequeue<Take<A, E>>, never, Scope>, never, Scope | R>; <A, E, R>(self: Stream<A, E, R>, maximumLag: number | { readonly capacity: \"unbounded\"; readonly replay?: number; } | { readonly capacity: number; readonly strategy?: \"dropping\" | \"sliding\" | \"suspend\"; readonly replay?: number; }): Effect<Effect<Dequeue<Take<A, E>>, never, Scope>, never, Scope | R>; }",
+  "description": "Converts the stream to a scoped dynamic amount of queues. Every chunk will\nbe replicated to every queue with the slowest queue being allowed to buffer\n`maximumLag` chunks before the driver is back pressured. Queues can unsubscribe from upstream by shutting down.",
+  "documentation": "Converts the stream to a scoped dynamic amount of queues. Every chunk will\nbe replicated to every queue with the slowest queue being allowed to buffer\n`maximumLag` chunks before the driver is back pressured.\n\nQueues can unsubscribe from upstream by shutting down.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 924,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L924"
+}

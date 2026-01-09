@@ -1,0 +1,17 @@
+{
+  "id": "HashMap.filter",
+  "name": "filter",
+  "module": "HashMap",
+  "package": "effect",
+  "signature": "{ <K, A, B extends A>(f: (a: NoInfer<A>, k: K) => a is B): (self: HashMap<K, A>) => HashMap<K, B>; <K, A>(f: (a: NoInfer<A>, k: K) => boolean): (self: HashMap<K, A>) => HashMap<K, A>; <K, A, B extends A>(self: HashMap<K, A>, f: (a: A, k: K) => a is B): HashMap<K, B>; <K, A>(self: HashMap<K, A>, f: (a: A, k: K) => boolean): HashMap<K, A>; }",
+  "description": "Filters entries out of a `HashMap` using the specified predicate.",
+  "documentation": "Filters entries out of a `HashMap` using the specified predicate.",
+  "examples": [],
+  "tags": [
+    "filtering"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashMap.d.ts",
+  "sourceLine": 706,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashMap.ts#L706"
+}

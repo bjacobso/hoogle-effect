@@ -1,0 +1,17 @@
+{
+  "id": "Runtime.updateRuntimeFlags",
+  "name": "updateRuntimeFlags",
+  "module": "Runtime",
+  "package": "effect",
+  "signature": "{ (f: (flags: RuntimeFlags) => RuntimeFlags): <R>(self: Runtime<R>) => Runtime<R>; <R>(self: Runtime<R>, f: (flags: RuntimeFlags) => RuntimeFlags): Runtime<R>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "runtime flags"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Runtime.d.ts",
+  "sourceLine": 343,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Runtime.ts#L343"
+}

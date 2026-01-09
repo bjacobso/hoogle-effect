@@ -1,0 +1,17 @@
+{
+  "id": "Worker.makePoolSerializedLayer",
+  "name": "makePoolSerializedLayer",
+  "module": "Worker",
+  "package": "@effect/platform",
+  "signature": "<Tag, I extends Schema.TaggedRequest.All>(tag: Tag<Tag, SerializedWorkerPool<I>>, options: SerializedWorkerPool.Options<I>) => Layer<Tag, WorkerError, Spawner | WorkerManager>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "layers"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Worker.d.ts",
+  "sourceLine": 283,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Worker.ts#L283"
+}

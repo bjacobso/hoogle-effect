@@ -1,0 +1,17 @@
+{
+  "id": "HttpMiddleware.SpanNameGenerator",
+  "name": "SpanNameGenerator",
+  "module": "HttpMiddleware",
+  "package": "@effect/platform",
+  "signature": "Reference<SpanNameGenerator, (request: HttpServerRequest) => string>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Tracing"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpMiddleware.d.ts",
+  "sourceLine": 185,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpMiddleware.ts#L185"
+}

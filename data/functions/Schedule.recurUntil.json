@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.recurUntil",
+  "name": "recurUntil",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "<A>(f: Predicate<A>) => Schedule<A, A, never>",
+  "description": "A schedule that recurs until the given predicate evaluates to true.\n*Details This schedule will continue executing as long as the provided predicate `f`\nreturns `false` for the input value. Once `f` evaluates to `true`, the\nschedule stops recurring. This is useful for defining schedules that should stop when a certain\ncondition is met, such as detecting a success state, reaching a threshold, or\navoiding unnecessary retries.",
+  "documentation": "A schedule that recurs until the given predicate evaluates to true.\n*Details**\n\nThis schedule will continue executing as long as the provided predicate `f`\nreturns `false` for the input value. Once `f` evaluates to `true`, the\nschedule stops recurring.\n\nThis is useful for defining schedules that should stop when a certain\ncondition is met, such as detecting a success state, reaching a threshold, or\navoiding unnecessary retries.",
+  "examples": [],
+  "tags": [
+    "Recurrence Conditions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2293,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2293"
+}

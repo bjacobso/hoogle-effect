@@ -1,0 +1,17 @@
+{
+  "id": "HttpLayerRouter.cors",
+  "name": "cors",
+  "module": "HttpLayerRouter",
+  "package": "@effect/platform",
+  "signature": "(options?: { readonly allowedOrigins?: readonly string[] | Predicate<string>; readonly allowedMethods?: readonly string[]; readonly allowedHeaders?: readonly string[]; readonly exposedHeaders?: readonly string[]; readonly maxAge?: number; readonly credentials?: boolean; }) => Layer<never, never, HttpRouter>",
+  "description": "A middleware that applies CORS headers to the HTTP response.",
+  "documentation": "A middleware that applies CORS headers to the HTTP response.",
+  "examples": [],
+  "tags": [
+    "Middleware"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpLayerRouter.d.ts",
+  "sourceLine": 454,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpLayerRouter.ts#L454"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Layer.memoize",
+  "name": "memoize",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "<RIn, E, ROut>(self: Layer<ROut, E, RIn>) => Effect<Layer<ROut, E, RIn>, never, Scope>",
+  "description": "Returns a scoped effect that, if evaluated, will return the lazily computed\nresult of this layer.",
+  "documentation": "Returns a scoped effect that, if evaluated, will return the lazily computed\nresult of this layer.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 669,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L669"
+}

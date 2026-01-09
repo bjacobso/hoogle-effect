@@ -1,0 +1,17 @@
+{
+  "id": "HashMap.flatMap",
+  "name": "flatMap",
+  "module": "HashMap",
+  "package": "effect",
+  "signature": "{ <A, K, B>(f: (value: A, key: K) => HashMap<K, B>): (self: HashMap<K, A>) => HashMap<K, B>; <K, A, B>(self: HashMap<K, A>, f: (value: A, key: K) => HashMap<K, B>): HashMap<K, B>; }",
+  "description": "Chains over the entries of the `HashMap` using the specified function.\n*NOTE: the hash and equal of both maps have to be the same.",
+  "documentation": "Chains over the entries of the `HashMap` using the specified function.\n*NOTE**: the hash and equal of both maps have to be the same.",
+  "examples": [],
+  "tags": [
+    "sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashMap.d.ts",
+  "sourceLine": 636,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashMap.ts#L636"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "HttpClientResponse.schemaJson",
+  "name": "schemaJson",
+  "module": "HttpClientResponse",
+  "package": "@effect/platform",
+  "signature": "<R, I extends { readonly status?: number | undefined; readonly headers?: Readonly<Record<string, string>> | undefined; readonly body?: unknown; }, A>(schema: Schema<A, I, R>, options?: ParseOptions) => (self: HttpClientResponse) => Effect<A, ResponseError | ParseError, R>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "schema"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpClientResponse.d.ts",
+  "sourceLine": 60,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpClientResponse.ts#L60"
+}

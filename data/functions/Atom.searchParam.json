@@ -1,0 +1,17 @@
+{
+  "id": "Atom.searchParam",
+  "name": "searchParam",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "<A = never, I extends string = never>(name: string, options?: { readonly schema?: Schema<A, I, never>; }) => Writable<[A] extends [never] ? string : Option<A>, [A] extends [never] ? string : Option<A>>",
+  "description": "Create an Atom that reads and writes a URL search parameter. Note: If you pass a schema, it has to be synchronous and have no context.",
+  "documentation": "Create an Atom that reads and writes a URL search parameter.\n\nNote: If you pass a schema, it has to be synchronous and have no context.",
+  "examples": [],
+  "tags": [
+    "URL search params"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 540,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L540"
+}

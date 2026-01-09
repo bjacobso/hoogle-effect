@@ -1,0 +1,21 @@
+{
+  "id": "Effect.cause",
+  "name": "cause",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, E, R>) => Effect<Cause<E>, never, R>",
+  "description": "Retrieves the cause of a failure in an effect.\n*Details This function allows you to expose the detailed cause of an effect, which\nincludes a more precise representation of failures, such as error messages\nand defects.\n*When to Use This function is helpful when you need to inspect the cause of a failure in\nan effect, giving you more information than just the error message. It can be\nused to log, handle, or analyze failures in more detail, including\ndistinguishing between different types of defects (e.g., runtime exceptions,\ninterruptions, etc.).\n*Example",
+  "documentation": "Retrieves the cause of a failure in an effect.\n*Details**\n\nThis function allows you to expose the detailed cause of an effect, which\nincludes a more precise representation of failures, such as error messages\nand defects.\n*When to Use**\n\nThis function is helpful when you need to inspect the cause of a failure in\nan effect, giving you more information than just the error message. It can be\nused to log, handle, or analyze failures in more detail, including\ndistinguishing between different types of defects (e.g., runtime exceptions,\ninterruptions, etc.).\n*Example**\n\n```ts\nimport { Effect, Console } from \"effect\"\n\n// ┌─── Effect<number, string, never>\n// ▼\nconst program = Effect.fail(\"Oh uh!\").pipe(Effect.as(2))\n\n// ┌─── Effect<void, never, never>\n// ▼\nconst recovered = Effect.gen(function* () {\nconst cause = yield* Effect.cause(program)\nyield* Console.log(cause)\n})\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Console } from \"effect\"\n\n// ┌─── Effect<number, string, never>\n// ▼\nconst program = Effect.fail(\"Oh uh!\").pipe(Effect.as(2))\n\n// ┌─── Effect<void, never, never>\n// ▼\nconst recovered = Effect.gen(function* () {\nconst cause = yield* Effect.cause(program)\nyield* Console.log(cause)\n})"
+    }
+  ],
+  "tags": [
+    "Error handling"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 7089,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L7089"
+}

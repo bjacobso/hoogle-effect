@@ -1,0 +1,17 @@
+{
+  "id": "Stream.prepend",
+  "name": "prepend",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <B>(values: Chunk<B>): <A, E, R>(self: Stream<A, E, R>) => Stream<B | A, E, R>; <A, E, R, B>(self: Stream<A, E, R>, values: Chunk<B>): Stream<A | B, E, R>; }",
+  "description": "Emits the provided chunk before emitting any other value.",
+  "documentation": "Emits the provided chunk before emitting any other value.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 6158,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L6158"
+}

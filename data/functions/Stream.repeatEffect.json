@@ -1,0 +1,21 @@
+{
+  "id": "Stream.repeatEffect",
+  "name": "repeatEffect",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(effect: Effect<A, E, R>) => Stream<A, E, R>",
+  "description": "Creates a stream from an effect producing a value of type `A` which repeats\nforever.",
+  "documentation": "Creates a stream from an effect producing a value of type `A` which repeats\nforever.",
+  "examples": [
+    {
+      "code": "import { Effect, Random, Stream } from \"effect\"\n\nconst stream = Stream.repeatEffect(Random.nextInt)\n\nEffect.runPromise(Stream.runCollect(stream.pipe(Stream.take(5)))).then(console.log)\n// Example Output: { _id: 'Chunk', values: [ 3891571149, 4239494205, 2352981603, 2339111046, 1488052210 ] }"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 6650,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L6650"
+}

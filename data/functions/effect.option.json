@@ -1,0 +1,21 @@
+{
+  "id": "Effect.option",
+  "name": "option",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, E, R>) => Effect<Option<A>, never, R>",
+  "description": "Encapsulates the result of an effect in an `Option`.\n*Details This function wraps the outcome of an effect in an `Option` type. If the\noriginal effect succeeds, the success value is wrapped in `Option.some`. If\nthe effect fails, the failure is converted to `Option.none`. This is particularly useful for scenarios where you want to represent the\nabsence of a value explicitly, without causing the resulting effect to fail.\nThe resulting effect has an error type of `never`, meaning it cannot fail\ndirectly. However, unrecoverable errors, also referred to as defects, are\nnot captured and will still result in failure.\n*Example (Using Effect.option to Handle Errors)",
+  "documentation": "Encapsulates the result of an effect in an `Option`.\n*Details**\n\nThis function wraps the outcome of an effect in an `Option` type. If the\noriginal effect succeeds, the success value is wrapped in `Option.some`. If\nthe effect fails, the failure is converted to `Option.none`.\n\nThis is particularly useful for scenarios where you want to represent the\nabsence of a value explicitly, without causing the resulting effect to fail.\nThe resulting effect has an error type of `never`, meaning it cannot fail\ndirectly. However, unrecoverable errors, also referred to as defects, are\nnot captured and will still result in failure.\n*Example** (Using Effect.option to Handle Errors)\n\n```ts\nimport { Effect } from \"effect\"\n\nconst maybe1 = Effect.option(Effect.succeed(1))\n\nEffect.runPromiseExit(maybe1).then(console.log)\n// Output:\n// {\n// _id: 'Exit',\n// _tag: 'Success',\n// value: { _id: 'Option', _tag: 'Some', value: 1 }\n// }\n\nconst maybe2 = Effect.option(Effect.fail(\"Uh oh!\"))\n\nEffect.runPromiseExit(maybe2).then(console.log)\n// Output:\n// {\n// _id: 'Exit',\n// _tag: 'Success',\n// value: { _id: 'Option', _tag: 'None' }\n// }\n\nconst maybe3 = Effect.option(Effect.die(\"Boom!\"))\n\nEffect.runPromiseExit(maybe3).then(console.log)\n// Output:\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: { _id: 'Cause', _tag: 'Die', defect: 'Boom!' }\n// }\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst maybe1 = Effect.option(Effect.succeed(1))\n\nEffect.runPromiseExit(maybe1).then(console.log)\n// Output:\n// {\n// _id: 'Exit',\n// _tag: 'Success',\n// value: { _id: 'Option', _tag: 'Some', value: 1 }\n// }\n\nconst maybe2 = Effect.option(Effect.fail(\"Uh oh!\"))\n\nEffect.runPromiseExit(maybe2).then(console.log)\n// Output:\n// {\n// _id: 'Exit',\n// _tag: 'Success',\n// value: { _id: 'Option', _tag: 'None' }\n// }\n\nconst maybe3 = Effect.option(Effect.die(\"Boom!\"))\n\nEffect.runPromiseExit(maybe3).then(console.log)\n// Output:\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: { _id: 'Cause', _tag: 'Die', defect: 'Boom!' }\n// }"
+    }
+  ],
+  "tags": [
+    "Outcome Encapsulation"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 15243,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L15243"
+}

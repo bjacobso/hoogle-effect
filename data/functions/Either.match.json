@@ -1,0 +1,21 @@
+{
+  "id": "Either.match",
+  "name": "match",
+  "module": "Either",
+  "package": "effect",
+  "signature": "{ <E, B, A, C = B>(options: { readonly onLeft: (left: E) => B; readonly onRight: (right: A) => C; }): (self: Either<A, E>) => B | C; <A, E, B, C = B>(self: Either<A, E>, options: { readonly onLeft: (left: E) => B; readonly onRight: (right: A) => C; }): B | C; }",
+  "description": "Takes two functions and an `Either` value, if the value is a `Left` the inner value is applied to the `onLeft function,\nif the value is a `Right` the inner value is applied to the `onRight` function.",
+  "documentation": "Takes two functions and an `Either` value, if the value is a `Left` the inner value is applied to the `onLeft function,\nif the value is a `Right` the inner value is applied to the `onRight` function.",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { pipe, Either } from \"effect\"\n\nconst onLeft = (strings: ReadonlyArray<string>): string => `strings: ${strings.join(', ')}`\n\nconst onRight = (value: number): string => `Ok: ${value}`\n\nassert.deepStrictEqual(pipe(Either.right(1), Either.match({ onLeft, onRight })), 'Ok: 1')\nassert.deepStrictEqual(\npipe(Either.left(['string 1', 'string 2']), Either.match({ onLeft, onRight })),\n'strings: string 1, string 2'\n)"
+    }
+  ],
+  "tags": [
+    "pattern matching"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Either.d.ts",
+  "sourceLine": 410,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Either.ts#L410"
+}

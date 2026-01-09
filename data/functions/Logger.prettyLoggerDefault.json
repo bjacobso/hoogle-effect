@@ -1,0 +1,17 @@
+{
+  "id": "Logger.prettyLoggerDefault",
+  "name": "prettyLoggerDefault",
+  "module": "Logger",
+  "package": "effect",
+  "signature": "Logger<unknown, void>",
+  "description": "A default version of the pretty logger.",
+  "documentation": "A default version of the pretty logger.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "3.8.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Logger.d.ts",
+  "sourceLine": 621,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Logger.ts#L621"
+}

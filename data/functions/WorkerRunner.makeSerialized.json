@@ -1,0 +1,17 @@
+{
+  "id": "WorkerRunner.makeSerialized",
+  "name": "makeSerialized",
+  "module": "WorkerRunner",
+  "package": "@effect/platform",
+  "signature": "<R, I, A extends Schema.TaggedRequest.All, const Handlers extends SerializedRunner.Handlers<A>>(schema: Schema<A, I, R>, handlers: Handlers) => Effect<void, WorkerError, PlatformRunner | Scope | R | SerializedRunner.HandlersContext<Handlers>>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/WorkerRunner.d.ts",
+  "sourceLine": 136,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/WorkerRunner.ts#L136"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ConfigProvider.makeFlat",
+  "name": "makeFlat",
+  "module": "ConfigProvider",
+  "package": "effect",
+  "signature": "(options: { readonly load: <A>(path: readonly string[], config: Config.Primitive<A>, split: boolean) => Effect<A[], ConfigError, never>; readonly enumerateChildren: (path: readonly string[]) => Effect<HashSet<string>, ConfigError, never>; readonly patch: PathPatch; }) => ConfigProvider.Flat",
+  "description": "Creates a new flat config provider.",
+  "documentation": "Creates a new flat config provider.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/ConfigProvider.d.ts",
+  "sourceLine": 136,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/ConfigProvider.ts#L136"
+}

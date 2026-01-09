@@ -1,0 +1,17 @@
+{
+  "id": "Config.port",
+  "name": "port",
+  "module": "Config",
+  "package": "effect",
+  "signature": "(name?: string) => Config<number>",
+  "description": "Constructs a config for a network port [1, 65535].",
+  "documentation": "Constructs a config for a network port [1, 65535].",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "3.16.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Config.d.ts",
+  "sourceLine": 116,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Config.ts#L116"
+}

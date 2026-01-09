@@ -1,0 +1,17 @@
+{
+  "id": "Option.gen",
+  "name": "gen",
+  "module": "Option",
+  "package": "effect",
+  "signature": "Gen<OptionTypeLambda, Adapter<OptionTypeLambda>>",
+  "description": "Similar to `Effect.gen`, `Option.gen` provides a more readable,\ngenerator-based syntax for working with `Option` values, making code that\ninvolves `Option` easier to write and understand. This approach is similar to\nusing `async/await` but tailored for `Option`.\n*Example (Using `Option.gen` to Create a Combined Value)",
+  "documentation": "Similar to `Effect.gen`, `Option.gen` provides a more readable,\ngenerator-based syntax for working with `Option` values, making code that\ninvolves `Option` easier to write and understand. This approach is similar to\nusing `async/await` but tailored for `Option`.\n*Example** (Using `Option.gen` to Create a Combined Value)\n\n```ts\nimport { Option } from \"effect\"\n\nconst maybeName: Option.Option<string> = Option.some(\"John\")\nconst maybeAge: Option.Option<number> = Option.some(25)\n\nconst person = Option.gen(function* () {\nconst name = (yield* maybeName).toUpperCase()\nconst age = yield* maybeAge\nreturn { name, age }\n})\n\nconsole.log(person)\n// Output:\n// { _id: 'Option', _tag: 'Some', value: { name: 'JOHN', age: 25 } }\n```",
+  "examples": [],
+  "tags": [
+    "Generators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 3756,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L3756"
+}

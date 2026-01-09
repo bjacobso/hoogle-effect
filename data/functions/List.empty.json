@@ -1,0 +1,17 @@
+{
+  "id": "List.empty",
+  "name": "empty",
+  "module": "List",
+  "package": "effect",
+  "signature": "<A = never>() => List<A>",
+  "description": "Constructs a new empty `List<A>`.\nAlias of {@link nil}.",
+  "documentation": "Constructs a new empty `List<A>`.\nAlias of {@link nil}.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 139,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L139"
+}

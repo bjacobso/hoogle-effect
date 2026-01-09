@@ -1,0 +1,21 @@
+{
+  "id": "Effect.tapBoth",
+  "name": "tapBoth",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E, X, E2, R2, A, X1, E3, R3>(options: { readonly onFailure: (e: NoInfer<E>) => Effect<X, E2, R2>; readonly onSuccess: (a: NoInfer<A>) => Effect<X1, E3, R3>; }): <R>(self: Effect<A, E, R>) => Effect<A, E | E2 | E3, R2 | R3 | R>; <A, E, R, X, E2, R2, X1, E3, R3>(self: Effect<A, E, R>, options: { readonly onFailure: (e: E) => Effect<X, E2, R2>; readonly onSuccess: (a: A) => Effect<X1, E3, R3>; }): Effect<A, E | E2 | E3, R | R2 | R3>; }",
+  "description": "Allows you to inspect both success and failure outcomes of an effect and\nperform side effects for each.\n*Details This function enables you to handle both success and failure cases\nseparately, without modifying the main effect's result. It is particularly\nuseful for scenarios where you need to log, monitor, or perform additional\nactions depending on whether the effect succeeded or failed. When the effect succeeds, the `onSuccess` handler is executed with the\nsuccess value. When the effect fails, the `onFailure` handler is executed\nwith the failure value. Both handlers can include side effects such as\nlogging or analytics, and neither modifies the original effect's output. If either the success or failure handler fails, the overall effect will also\nfail.\n*Example",
+  "documentation": "Allows you to inspect both success and failure outcomes of an effect and\nperform side effects for each.\n*Details**\n\nThis function enables you to handle both success and failure cases\nseparately, without modifying the main effect's result. It is particularly\nuseful for scenarios where you need to log, monitor, or perform additional\nactions depending on whether the effect succeeded or failed.\n\nWhen the effect succeeds, the `onSuccess` handler is executed with the\nsuccess value. When the effect fails, the `onFailure` handler is executed\nwith the failure value. Both handlers can include side effects such as\nlogging or analytics, and neither modifies the original effect's output.\n\nIf either the success or failure handler fails, the overall effect will also\nfail.\n*Example**\n\n```ts\nimport { Effect, Random, Console } from \"effect\"\n\n// Simulate a task that might fail\nconst task = Effect.filterOrFail(\nRandom.nextRange(-1, 1),\n(n) => n >= 0,\n() => \"random number is negative\"\n)\n\n// Use tapBoth to log both success and failure outcomes\nconst tapping = Effect.tapBoth(task, {\nonFailure: (error) => Console.log(`failure: ${error}`),\nonSuccess: (randomNumber) =>\nConsole.log(`random number: ${randomNumber}`)\n})\n\nEffect.runFork(tapping)\n// Example Output:\n// failure: random number is negative\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Random, Console } from \"effect\"\n\n// Simulate a task that might fail\nconst task = Effect.filterOrFail(\nRandom.nextRange(-1, 1),\n(n) => n >= 0,\n() => \"random number is negative\"\n)\n\n// Use tapBoth to log both success and failure outcomes\nconst tapping = Effect.tapBoth(task, {\nonFailure: (error) => Console.log(`failure: ${error}`),\nonSuccess: (randomNumber) =>\nConsole.log(`random number: ${randomNumber}`)\n})\n\nEffect.runFork(tapping)\n// Example Output:\n// failure: random number is negative"
+    }
+  ],
+  "tags": [
+    "Sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 19205,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L19205"
+}

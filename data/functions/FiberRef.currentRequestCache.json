@@ -1,0 +1,17 @@
+{
+  "id": "FiberRef.currentRequestCache",
+  "name": "currentRequestCache",
+  "module": "FiberRef",
+  "package": "effect",
+  "signature": "FiberRef<Cache>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "fiberRefs"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/FiberRef.d.ts",
+  "sourceLine": 321,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/FiberRef.ts#L321"
+}

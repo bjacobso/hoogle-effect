@@ -1,0 +1,17 @@
+{
+  "id": "Fiber.inheritAll",
+  "name": "inheritAll",
+  "module": "Fiber",
+  "package": "effect",
+  "signature": "<A, E>(self: Fiber<A, E>) => Effect<void, never, never>",
+  "description": "Inherits values from all `FiberRef` instances into current fiber. This\nwill resume immediately.",
+  "documentation": "Inherits values from all `FiberRef` instances into current fiber. This\nwill resume immediately.",
+  "examples": [],
+  "tags": [
+    "destructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Fiber.d.ts",
+  "sourceLine": 380,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Fiber.ts#L380"
+}

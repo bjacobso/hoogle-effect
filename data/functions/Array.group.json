@@ -1,0 +1,17 @@
+{
+  "id": "Array.group",
+  "name": "group",
+  "module": "Array",
+  "package": "effect",
+  "signature": "<A>(self: readonly [A, ...A[]]) => [[A, ...A[]], ...[A, ...A[]][]]",
+  "description": "Group equal, consecutive elements of a `NonEmptyReadonlyArray` into `NonEmptyArray`s.\n*Example",
+  "documentation": "Group equal, consecutive elements of a `NonEmptyReadonlyArray` into `NonEmptyArray`s.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.group([1, 1, 2, 2, 2, 3, 1])\nconsole.log(result) // [[1, 1], [2, 2, 2], [3], [1]]\n```",
+  "examples": [],
+  "tags": [
+    "grouping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 3813,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L3813"
+}

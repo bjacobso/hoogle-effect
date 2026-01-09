@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.sync",
+  "name": "sync",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "<A>(evaluate: LazyArg<A>) => Schedule<A, unknown, never>",
+  "description": "Returns a schedule that recurs indefinitely, evaluating the given function to\nproduce a constant value.",
+  "documentation": "Returns a schedule that recurs indefinitely, evaluating the given function to\nproduce a constant value.",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2703,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2703"
+}

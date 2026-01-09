@@ -1,0 +1,21 @@
+{
+  "id": "Effect.takeWhile",
+  "name": "takeWhile",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A, E, R>(predicate: (a: NoInfer<A>, i: number) => Effect<boolean, E, R>): (elements: Iterable<A>) => Effect<A[], E, R>; <A, E, R>(elements: Iterable<A>, predicate: (a: NoInfer<A>, i: number) => Effect<boolean, E, R>): Effect<A[], E, R>; }",
+  "description": "Takes elements as long as the predicate returns `true`.\n*Details This function processes a collection of elements and uses a predicate to\ndecide whether to take an element. The predicate is a function that takes an element and its index, and it\nreturns an effect that evaluates to a boolean. As long as the predicate returns `true`, elements will continue to be taken\nfrom the collection. Once the predicate returns `false`, the remaining elements are discarded.\n*Example",
+  "documentation": "Takes elements as long as the predicate returns `true`.\n*Details**\n\nThis function processes a collection of elements and uses a predicate to\ndecide whether to take an element.\n\nThe predicate is a function that takes an element and its index, and it\nreturns an effect that evaluates to a boolean.\n\nAs long as the predicate returns `true`, elements will continue to be taken\nfrom the collection.\n\nOnce the predicate returns `false`, the remaining elements are discarded.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\nconst numbers = [1, 2, 3, 4, 5, 6]\nconst predicate = (n: number, i: number) => Effect.succeed(n <= 3)\n\nconst program = Effect.gen(function*() {\nconst result = yield* Effect.takeWhile(numbers, predicate)\nconsole.log(result)\n})\n\nEffect.runFork(program)\n// Output: [1, 2, 3]\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst numbers = [1, 2, 3, 4, 5, 6]\nconst predicate = (n: number, i: number) => Effect.succeed(n <= 3)\n\nconst program = Effect.gen(function*() {\nconst result = yield* Effect.takeWhile(numbers, predicate)\nconsole.log(result)\n})\n\nEffect.runFork(program)\n// Output: [1, 2, 3]"
+    }
+  ],
+  "tags": [
+    "Collecting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 1690,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L1690"
+}

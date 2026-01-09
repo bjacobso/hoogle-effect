@@ -1,0 +1,17 @@
+{
+  "id": "Layer.setScheduler",
+  "name": "setScheduler",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "(scheduler: Scheduler) => Layer<never, never, never>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "scheduler"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 1248,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L1248"
+}

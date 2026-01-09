@@ -1,0 +1,17 @@
+{
+  "id": "Scope.addFinalizerExit",
+  "name": "addFinalizerExit",
+  "module": "Scope",
+  "package": "effect",
+  "signature": "(self: Scope, finalizer: Scope.Finalizer) => Effect<void, never, never>",
+  "description": "Adds a finalizer to this scope. The finalizer receives the `Exit` value\nwhen the scope is closed, allowing it to perform different actions based\non the exit status.",
+  "documentation": "Adds a finalizer to this scope. The finalizer receives the `Exit` value\nwhen the scope is closed, allowing it to perform different actions based\non the exit status.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Scope.d.ts",
+  "sourceLine": 106,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Scope.ts#L106"
+}

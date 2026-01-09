@@ -1,0 +1,17 @@
+{
+  "id": "Atom.withReactivity",
+  "name": "withReactivity",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "(keys: readonly unknown[] | ReadonlyRecord<string, readonly unknown[]>) => <A extends Atom<any>>(atom: A) => A",
+  "description": "An alias to `Rx.runtime.withReactivity`, for refreshing an atom whenever the\nkeys change in the `Reactivity` service.",
+  "documentation": "An alias to `Rx.runtime.withReactivity`, for refreshing an atom whenever the\nkeys change in the `Reactivity` service.",
+  "examples": [],
+  "tags": [
+    "Reactivity"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 273,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L273"
+}

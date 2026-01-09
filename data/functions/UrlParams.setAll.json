@@ -1,0 +1,17 @@
+{
+  "id": "UrlParams.setAll",
+  "name": "setAll",
+  "module": "UrlParams",
+  "package": "@effect/platform",
+  "signature": "{ (input: Input): (self: UrlParams) => UrlParams; (self: UrlParams, input: Input): UrlParams; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/UrlParams.d.ts",
+  "sourceLine": 117,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/UrlParams.ts#L117"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "List.map",
+  "name": "map",
+  "module": "List",
+  "package": "effect",
+  "signature": "{ <S extends List<any>, B>(f: (a: List.Infer<S>, i: number) => B): (self: S) => List.With<S, B>; <S extends List<any>, B>(self: S, f: (a: List.Infer<S>, i: number) => B): List.With<S, B>; }",
+  "description": "Applies the specified mapping function to each element of the list.",
+  "documentation": "Applies the specified mapping function to each element of the list.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 708,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L708"
+}

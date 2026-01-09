@@ -1,0 +1,17 @@
+{
+  "id": "Exit.isExit",
+  "name": "isExit",
+  "module": "Exit",
+  "package": "effect",
+  "signature": "(u: unknown) => u is Exit<unknown, unknown>",
+  "description": "Returns `true` if the specified value is an `Exit`, `false` otherwise.",
+  "documentation": "Returns `true` if the specified value is an `Exit`, `false` otherwise.",
+  "examples": [],
+  "tags": [
+    "refinements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Exit.d.ts",
+  "sourceLine": 77,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Exit.ts#L77"
+}

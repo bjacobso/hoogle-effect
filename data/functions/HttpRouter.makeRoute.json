@@ -1,0 +1,17 @@
+{
+  "id": "HttpRouter.makeRoute",
+  "name": "makeRoute",
+  "module": "HttpRouter",
+  "package": "@effect/platform",
+  "signature": "<E, R>(method: HttpMethod | \"*\", path: PathInput, handler: Route.Handler<E, R>, options?: { readonly prefix?: string; readonly uninterruptible?: boolean; }) => Route<E, Exclude<R, HttpRouter.Provided>>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpRouter.d.ts",
+  "sourceLine": 262,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpRouter.ts#L262"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Layer.build",
+  "name": "build",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "<RIn, E, ROut>(self: Layer<ROut, E, RIn>) => Effect<Context<ROut>, E, Scope | RIn>",
+  "description": "Builds a layer into a scoped value.",
+  "documentation": "Builds a layer into a scoped value.",
+  "examples": [],
+  "tags": [
+    "destructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 200,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L200"
+}

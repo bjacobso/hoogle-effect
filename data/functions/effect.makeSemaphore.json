@@ -1,0 +1,21 @@
+{
+  "id": "Effect.makeSemaphore",
+  "name": "makeSemaphore",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "(permits: number) => Effect<Semaphore, never, never>",
+  "description": "Creates a new semaphore with the specified number of permits.\n*Details This function initializes a semaphore that controls concurrent access to a\nshared resource. The number of permits determines how many tasks can access\nthe resource concurrently.\n*Example",
+  "documentation": "Creates a new semaphore with the specified number of permits.\n*Details**\n\nThis function initializes a semaphore that controls concurrent access to a\nshared resource. The number of permits determines how many tasks can access\nthe resource concurrently.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\n// Create a semaphore with 3 permits\nconst mutex = Effect.makeSemaphore(3)\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\n// Create a semaphore with 3 permits\nconst mutex = Effect.makeSemaphore(3)"
+    }
+  ],
+  "tags": [
+    "Semaphore"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 24157,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L24157"
+}

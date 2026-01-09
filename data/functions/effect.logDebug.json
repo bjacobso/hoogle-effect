@@ -1,0 +1,21 @@
+{
+  "id": "Effect.logDebug",
+  "name": "logDebug",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "(...message: readonly any[]) => Effect<void, never, never>",
+  "description": "Logs messages at the DEBUG log level.\n*Details This function logs messages at the DEBUG level, which is typically used for\ndiagnosing application behavior during development. DEBUG messages provide\nless detailed information than TRACE logs but are still not shown by default.\nTo view these logs, adjust the log level using `Logger.withMinimumLogLevel`.\n*Example",
+  "documentation": "Logs messages at the DEBUG log level.\n*Details**\n\nThis function logs messages at the DEBUG level, which is typically used for\ndiagnosing application behavior during development. DEBUG messages provide\nless detailed information than TRACE logs but are still not shown by default.\nTo view these logs, adjust the log level using `Logger.withMinimumLogLevel`.\n*Example**\n\n```ts\nimport { Effect, Logger, LogLevel } from \"effect\"\n\nconst program = Effect.logDebug(\"message1\").pipe(Logger.withMinimumLogLevel(LogLevel.Debug))\n\nEffect.runFork(program)\n// timestamp=... level=DEBUG fiber=#0 message=message1\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Logger, LogLevel } from \"effect\"\n\nconst program = Effect.logDebug(\"message1\").pipe(Logger.withMinimumLogLevel(LogLevel.Debug))\n\nEffect.runFork(program)\n// timestamp=... level=DEBUG fiber=#0 message=message1"
+    }
+  ],
+  "tags": [
+    "Logging"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 22364,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L22364"
+}

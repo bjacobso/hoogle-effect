@@ -7,7 +7,8 @@ dist/
 *.tsbuildinfo
 
 # Generated data
-data/
+packages/data/generated/
+apps/web/public/data/
 
 # IDE
 .idea/

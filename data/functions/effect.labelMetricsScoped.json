@@ -1,0 +1,17 @@
+{
+  "id": "Effect.labelMetricsScoped",
+  "name": "labelMetricsScoped",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "(labels: readonly MetricLabel[]) => Effect<void, never, Scope>",
+  "description": "Adds labels to metrics within a scope using `MetricLabel` objects.\n*Details This function allows you to apply labels to all metrics generated within a\nspecific scope using an array of `MetricLabel` objects. These labels provide\nadditional metadata to metrics, which can be used for categorization,\nfiltering, or monitoring purposes. The labels are scoped and will be removed\nautomatically once the scope is closed, ensuring they are only applied\ntemporarily within the defined context.",
+  "documentation": "Adds labels to metrics within a scope using `MetricLabel` objects.\n*Details**\n\nThis function allows you to apply labels to all metrics generated within a\nspecific scope using an array of `MetricLabel` objects. These labels provide\nadditional metadata to metrics, which can be used for categorization,\nfiltering, or monitoring purposes. The labels are scoped and will be removed\nautomatically once the scope is closed, ensuring they are only applied\ntemporarily within the defined context.",
+  "examples": [],
+  "tags": [
+    "Metrics"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 24034,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L24034"
+}

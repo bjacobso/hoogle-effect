@@ -1,0 +1,21 @@
+{
+  "id": "Duration.fromIso",
+  "name": "fromIso",
+  "module": "Duration",
+  "package": "effect",
+  "signature": "(iso: string) => Option<Duration>",
+  "description": "Parses an ISO8601 duration string into a `Duration`. Months are assumed to be 30 days and years are assumed to be 365 days.",
+  "documentation": "Parses an ISO8601 duration string into a `Duration`.\n\nMonths are assumed to be 30 days and years are assumed to be 365 days.",
+  "examples": [
+    {
+      "code": "import { Duration, Option } from \"effect\"\n\nDuration.fromIso(\"P1D\") // => Option.some(Duration.days(1))\nDuration.fromIso(\"PT1H\") // => Option.some(Duration.hours(1))\nDuration.fromIso(\"PT1M\") // => Option.some(Duration.minutes(1))\nDuration.fromIso(\"PT1.5S\") // => Option.some(Duration.seconds(1.5))"
+    }
+  ],
+  "tags": [
+    "conversions"
+  ],
+  "since": "3.13.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Duration.d.ts",
+  "sourceLine": 555,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Duration.ts#L555"
+}

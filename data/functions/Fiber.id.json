@@ -1,0 +1,17 @@
+{
+  "id": "Fiber.id",
+  "name": "id",
+  "module": "Fiber",
+  "package": "effect",
+  "signature": "<A, E>(self: Fiber<A, E>) => FiberId",
+  "description": "The identity of the fiber.",
+  "documentation": "The identity of the fiber.",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Fiber.d.ts",
+  "sourceLine": 291,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Fiber.ts#L291"
+}

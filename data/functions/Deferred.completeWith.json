@@ -1,0 +1,17 @@
+{
+  "id": "Deferred.completeWith",
+  "name": "completeWith",
+  "module": "Deferred",
+  "package": "effect",
+  "signature": "{ <A, E>(effect: Effect<A, E, never>): (self: Deferred<A, E>) => Effect<boolean, never, never>; <A, E>(self: Deferred<A, E>, effect: Effect<A, E, never>): Effect<boolean, never, never>; }",
+  "description": "Completes the deferred with the result of the specified effect. If the\ndeferred has already been completed, the method will produce false.",
+  "documentation": "Completes the deferred with the result of the specified effect. If the\ndeferred has already been completed, the method will produce false.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Deferred.d.ts",
+  "sourceLine": 135,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Deferred.ts#L135"
+}

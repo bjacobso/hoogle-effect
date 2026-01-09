@@ -1,0 +1,17 @@
+{
+  "id": "Result.all",
+  "name": "all",
+  "module": "Result",
+  "package": "@effect-atom/atom",
+  "signature": "<const Arg extends Iterable<any> | Record<string, any>>(results: Arg) => Result<[Arg] extends [readonly any[]] ? { -readonly [K in keyof Arg]: [Arg[K]] extends [Result<infer _A, infer _E>] ? _A : Arg[K]; } : [Arg] extends [Iterable<infer _A>] ? _A extends Result<infer _AA, infer _E_1> ? _AA : _A : [Arg] extends [Record<string, any>] ? { -readonly [K in keyof Arg]: [Arg[K]] extends [Result<infer _A, infer _E_2>] ? _A : Arg[K]; } : never, [Arg] extends [readonly any[]] ? Result.Failure<Arg[number]> : [Arg] extends [Iterable<infer _A>] ? Result.Failure<_A> : [Arg] extends [Record<string, any>] ? Result.Failure<Arg[keyof Arg]> : never>",
+  "description": "Combines multiple results into a single result. Also works with non-result\nvalues.",
+  "documentation": "Combines multiple results into a single result. Also works with non-result\nvalues.",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Result.d.ts",
+  "sourceLine": 301,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Result.ts#L301"
+}

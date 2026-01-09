@@ -1,0 +1,21 @@
+{
+  "id": "HashMap.hasBy",
+  "name": "hasBy",
+  "module": "HashMap",
+  "package": "effect",
+  "signature": "{ <K, V>(predicate: (value: NoInfer<V>, key: NoInfer<K>) => boolean): (self: HashMap<K, V>) => boolean; <K, V>(self: HashMap<K, V>, predicate: (value: NoInfer<V>, key: NoInfer<K>) => boolean): boolean; }",
+  "description": "Checks if an element matching the given predicate exists in the given `HashMap`.",
+  "documentation": "Checks if an element matching the given predicate exists in the given `HashMap`.",
+  "examples": [
+    {
+      "code": "import { HashMap } from \"effect\"\n\nconst hm = HashMap.make([1, 'a'])\nHashMap.hasBy(hm, (value, key) => value === 'a' && key === 1); // -> true\nHashMap.hasBy(hm, (value) => value === 'b'); // -> false"
+    }
+  ],
+  "tags": [
+    "elements"
+  ],
+  "since": "3.16.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashMap.d.ts",
+  "sourceLine": 263,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashMap.ts#L263"
+}

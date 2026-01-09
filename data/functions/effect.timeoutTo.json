@@ -1,0 +1,21 @@
+{
+  "id": "Effect.timeoutTo",
+  "name": "timeoutTo",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A, B, B1>(options: { readonly onTimeout: LazyArg<B1>; readonly onSuccess: (a: A) => B; readonly duration: DurationInput; }): <E, R>(self: Effect<A, E, R>) => Effect<B | B1, E, R>; <A, E, R, B1, B>(self: Effect<A, E, R>, options: { readonly onTimeout: LazyArg<B1>; readonly onSuccess: (a: A) => B; readonly duration: DurationInput; }): Effect<B1 | B, E, R>; }",
+  "description": "Provides custom behavior for successful and timed-out operations.",
+  "documentation": "Provides custom behavior for successful and timed-out operations.\n**Details**\nThis function allows you to define distinct outcomes for an effect depending\non whether it completes within a specified time frame or exceeds the timeout\nduration. You can provide:\n- `onSuccess`: A handler for processing the result of the effect if it\ncompletes successfully within the time limit.\n- `onTimeout`: A handler for generating a result when the effect times out.\n- `duration`: The maximum allowed time for the effect to complete.\n**When to Use**\nUnlike {@link timeout}, which raises an exception for timeouts, this function\ngives you full control over the behavior for both success and timeout\nscenarios. It is particularly useful when you want to encapsulate timeouts\nand successes into a specific data structure, like an `Either` type, to\nrepresent these outcomes in a meaningful way.\n**Example**\n```ts\nimport { Effect, Either } from \"effect\"\nconst task = Effect.gen(function* () {\nconsole.log(\"Start processing...\")\nyield* Effect.sleep(\"2 seconds\") // Simulates a delay in processing\nconsole.log(\"Processing complete.\")\nreturn \"Result\"\n})\nconst program = task.pipe(\nEffect.timeoutTo({\nduration: \"1 second\",\nonSuccess: (result): Either.Either<string, string> =>\nEither.right(result),\nonTimeout: (): Either.Either<string, string> =>\nEither.left(\"Timed out!\")\n})\n)\nEffect.runPromise(program).then(console.log)\n// Output:\n// Start processing...\n// {\n// _id: \"Either\",\n// _tag: \"Left\",\n// left: \"Timed out!\"\n// }\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Either } from \"effect\"\nconst task = Effect.gen(function* () {\nconsole.log(\"Start processing...\")\nyield* Effect.sleep(\"2 seconds\") // Simulates a delay in processing\nconsole.log(\"Processing complete.\")\nreturn \"Result\"\n})\nconst program = task.pipe(\nEffect.timeoutTo({\nduration: \"1 second\",\nonSuccess: (result): Either.Either<string, string> =>\nEither.right(result),\nonTimeout: (): Either.Either<string, string> =>\nEither.left(\"Timed out!\")\n})\n)\nEffect.runPromise(program).then(console.log)\n// Output:\n// Start processing...\n// {\n// _id: \"Either\",\n// _tag: \"Left\",\n// left: \"Timed out!\"\n// }"
+    }
+  ],
+  "tags": [
+    "Delays & Timeouts"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 13337,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L13337"
+}

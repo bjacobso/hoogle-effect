@@ -1,0 +1,17 @@
+{
+  "id": "SortedSet.isSortedSet",
+  "name": "isSortedSet",
+  "module": "SortedSet",
+  "package": "effect",
+  "signature": "{ <A>(u: Iterable<A>): u is SortedSet<A>; (u: unknown): u is SortedSet<unknown>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "refinements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/SortedSet.d.ts",
+  "sourceLine": 30,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/SortedSet.ts#L30"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "PubSub.shutdown",
+  "name": "shutdown",
+  "module": "PubSub",
+  "package": "effect",
+  "signature": "<A>(self: PubSub<A>) => Effect<void, never, never>",
+  "description": "Interrupts any fibers that are suspended on `offer` or `take`. Future calls\nto `offer*` and `take*` will be interrupted immediately.",
+  "documentation": "Interrupts any fibers that are suspended on `offer` or `take`. Future calls\nto `offer*` and `take*` will be interrupted immediately.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/PubSub.d.ts",
+  "sourceLine": 121,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/PubSub.ts#L121"
+}

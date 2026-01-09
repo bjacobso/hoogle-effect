@@ -1,0 +1,21 @@
+{
+  "id": "Effect.succeed",
+  "name": "succeed",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A>(value: A) => Effect<A, never, never>",
+  "description": "Creates an `Effect` that always succeeds with a given value.\n*When to Use Use this function when you need an effect that completes successfully with a\nspecific value without any errors or external dependencies.\n*Example (Creating a Successful Effect)",
+  "documentation": "Creates an `Effect` that always succeeds with a given value.\n*When to Use**\n\nUse this function when you need an effect that completes successfully with a\nspecific value without any errors or external dependencies.\n*Example** (Creating a Successful Effect)\n\n```ts\nimport { Effect } from \"effect\"\n\n// Creating an effect that represents a successful scenario\n//\n// ┌─── Effect<number, never, never>\n// ▼\nconst success = Effect.succeed(42)\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\n// Creating an effect that represents a successful scenario\n//\n// ┌─── Effect<number, never, never>\n// ▼\nconst success = Effect.succeed(42)"
+    }
+  ],
+  "tags": [
+    "Creating Effects"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 5275,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L5275"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Stream.fromSchedule",
+  "name": "fromSchedule",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, R>(schedule: Schedule<A, unknown, R>) => Stream<A, never, R>",
+  "description": "Creates a stream from a `Schedule` that does not require any further\ninput. The stream will emit an element for each value output from the\nschedule, continuing for as long as the schedule continues.",
+  "documentation": "Creates a stream from a `Schedule` that does not require any further\ninput. The stream will emit an element for each value output from the\nschedule, continuing for as long as the schedule continues.",
+  "examples": [
+    {
+      "code": "import { Effect, Schedule, Stream } from \"effect\"\n\n// Emits values every 1 second for a total of 5 emissions\nconst schedule = Schedule.spaced(\"1 second\").pipe(\nSchedule.compose(Schedule.recurs(5))\n)\n\nconst stream = Stream.fromSchedule(schedule)\n\nEffect.runPromise(Stream.runCollect(stream)).then(console.log)\n// { _id: 'Chunk', values: [ 0, 1, 2, 3, 4 ] }"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 3280,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L3280"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Effect.either",
+  "name": "either",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, E, R>) => Effect<Either<A, E>, never, R>",
+  "description": "Encapsulates both success and failure of an `Effect` into an `Either` type.\n*Details This function converts an effect that may fail into an effect that always\nsucceeds, wrapping the outcome in an `Either` type. The result will be\n`Either.Left` if the effect fails, containing the recoverable error, or\n`Either.Right` if it succeeds, containing the result. Using this function, you can handle recoverable errors explicitly without\ncausing the effect to fail. This is particularly useful in scenarios where\nyou want to chain effects and manage both success and failure in the same\nlogical flow. It's important to note that unrecoverable errors, often referred to as\n\"defects,\" are still thrown and not captured within the `Either` type. Only\nfailures that are explicitly represented as recoverable errors in the effect\nare encapsulated. The resulting effect cannot fail directly because all recoverable failures\nare represented inside the `Either` type.\n*Example",
+  "documentation": "Encapsulates both success and failure of an `Effect` into an `Either` type.\n*Details**\n\nThis function converts an effect that may fail into an effect that always\nsucceeds, wrapping the outcome in an `Either` type. The result will be\n`Either.Left` if the effect fails, containing the recoverable error, or\n`Either.Right` if it succeeds, containing the result.\n\nUsing this function, you can handle recoverable errors explicitly without\ncausing the effect to fail. This is particularly useful in scenarios where\nyou want to chain effects and manage both success and failure in the same\nlogical flow.\n\nIt's important to note that unrecoverable errors, often referred to as\n\"defects,\" are still thrown and not captured within the `Either` type. Only\nfailures that are explicitly represented as recoverable errors in the effect\nare encapsulated.\n\nThe resulting effect cannot fail directly because all recoverable failures\nare represented inside the `Either` type.\n*Example**\n\n```ts\nimport { Effect, Either, Random } from \"effect\"\n\nclass HttpError {\nreadonly _tag = \"HttpError\"\n}\n\nclass ValidationError {\nreadonly _tag = \"ValidationError\"\n}\n\n// ┌─── Effect<string, HttpError | ValidationError, never>\n// ▼\nconst program = Effect.gen(function* () {\nconst n1 = yield* Random.next\nconst n2 = yield* Random.next\nif (n1 < 0.5) {\nyield* Effect.fail(new HttpError())\n}\nif (n2 < 0.5) {\nyield* Effect.fail(new ValidationError())\n}\nreturn \"some result\"\n})\n\n// ┌─── Effect<string, never, never>\n// ▼\nconst recovered = Effect.gen(function* () {\n// ┌─── Either<string, HttpError | ValidationError>\n// ▼\nconst failureOrSuccess = yield* Effect.either(program)\nreturn Either.match(failureOrSuccess, {\nonLeft: (error) => `Recovering from ${error._tag}`,\nonRight: (value) => value // Do nothing in case of success\n})\n})\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Either, Random } from \"effect\"\n\nclass HttpError {\nreadonly _tag = \"HttpError\"\n}\n\nclass ValidationError {\nreadonly _tag = \"ValidationError\"\n}\n\n// ┌─── Effect<string, HttpError | ValidationError, never>\n// ▼\nconst program = Effect.gen(function* () {\nconst n1 = yield* Random.next\nconst n2 = yield* Random.next\nif (n1 < 0.5) {\nyield* Effect.fail(new HttpError())\n}\nif (n2 < 0.5) {\nyield* Effect.fail(new ValidationError())\n}\nreturn \"some result\"\n})\n\n// ┌─── Effect<string, never, never>\n// ▼\nconst recovered = Effect.gen(function* () {\n// ┌─── Either<string, HttpError | ValidationError>\n// ▼\nconst failureOrSuccess = yield* Effect.either(program)\nreturn Either.match(failureOrSuccess, {\nonLeft: (error) => `Recovering from ${error._tag}`,\nonRight: (value) => value // Do nothing in case of success\n})\n})"
+    }
+  ],
+  "tags": [
+    "Outcome Encapsulation"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 15313,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L15313"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "List.appendAll",
+  "name": "appendAll",
+  "module": "List",
+  "package": "effect",
+  "signature": "{ <S extends List<any>, T extends List<any>>(that: T): (self: S) => List.OrNonEmpty<S, T, List.Infer<S> | List.Infer<T>>; <A, B>(self: List<A>, that: Cons<B>): Cons<A | B>; <A, B>(self: Cons<A>, that: List<B>): Cons<A | B>; <A, B>(self: List<A>, that: List<B>): List<A | B>; }",
+  "description": "Concatenates two lists, combining their elements.\nIf either list is non-empty, the result is also a non-empty list.",
+  "documentation": "Concatenates two lists, combining their elements.\nIf either list is non-empty, the result is also a non-empty list.",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { List } from \"effect\"\n\nassert.deepStrictEqual(\nList.make(1, 2).pipe(List.appendAll(List.make(\"a\", \"b\")), List.toArray),\n[1, 2, \"a\", \"b\"]\n)"
+    }
+  ],
+  "tags": [
+    "concatenating"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 201,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L201"
+}

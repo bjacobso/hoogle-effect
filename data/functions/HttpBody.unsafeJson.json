@@ -1,0 +1,17 @@
+{
+  "id": "HttpBody.unsafeJson",
+  "name": "unsafeJson",
+  "module": "HttpBody",
+  "package": "@effect/platform",
+  "signature": "(body: unknown) => Uint8Array",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpBody.d.ts",
+  "sourceLine": 145,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpBody.ts#L145"
+}

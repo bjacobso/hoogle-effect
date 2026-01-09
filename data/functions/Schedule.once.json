@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.once",
+  "name": "once",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "Schedule<void, unknown, never>",
+  "description": "A schedule that executes only once and then stops.\n*Details This schedule triggers a single execution and then terminates. It does not\nrepeat or apply any additional logic.",
+  "documentation": "A schedule that executes only once and then stops.\n*Details**\n\nThis schedule triggers a single execution and then terminates. It does not\nrepeat or apply any additional logic.",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2164,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2164"
+}

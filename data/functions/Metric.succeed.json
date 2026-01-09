@@ -1,0 +1,17 @@
+{
+  "id": "Metric.succeed",
+  "name": "succeed",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "<Out>(out: Out) => Metric<void, unknown, Out>",
+  "description": "Creates a metric that ignores input and produces constant output.",
+  "documentation": "Creates a metric that ignores input and produces constant output.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 543,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L543"
+}

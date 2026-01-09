@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.zoneUnsafeMakeNamed",
+  "name": "zoneUnsafeMakeNamed",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "(zoneId: string) => TimeZone.Named",
+  "description": "Attempt to create a named time zone from a IANA time zone identifier. If the time zone is invalid, an `IllegalArgumentException` will be thrown.",
+  "documentation": "Attempt to create a named time zone from a IANA time zone identifier.\n\nIf the time zone is invalid, an `IllegalArgumentException` will be thrown.",
+  "examples": [],
+  "tags": [
+    "time zones"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 604,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L604"
+}

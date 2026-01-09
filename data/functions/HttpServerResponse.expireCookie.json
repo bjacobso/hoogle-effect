@@ -1,0 +1,17 @@
+{
+  "id": "HttpServerResponse.expireCookie",
+  "name": "expireCookie",
+  "module": "HttpServerResponse",
+  "package": "@effect/platform",
+  "signature": "{ (name: string, options?: Omit<{ readonly domain?: string; readonly expires?: Date; readonly maxAge?: DurationInput; readonly path?: string; readonly priority?: \"low\" | \"medium\" | \"high\"; readonly httpOnly?: boolean; readonly secure?: boolean; readonly partitioned?: boolean; readonly sameSite?: \"lax\" | \"strict\" | \"none\"; }, \"expires\" | \"maxAge\">): (self: HttpServerResponse) => HttpServerResponse; (self: HttpServerResponse, name: string, options?: Omit<{ readonly domain?: string; readonly expires?: Date; readonly maxAge?: DurationInput; readonly path?: string; readonly priority?: \"low\" | \"medium\" | \"high\"; readonly httpOnly?: boolean; readonly secure?: boolean; readonly partitioned?: boolean; readonly sameSite?: \"lax\" | \"strict\" | \"none\"; }, \"expires\" | \"maxAge\">): HttpServerResponse; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpServerResponse.d.ts",
+  "sourceLine": 213,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpServerResponse.ts#L213"
+}

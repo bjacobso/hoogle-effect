@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.append",
+  "name": "append",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <A2>(a: A2): <A>(self: Chunk<A>) => NonEmptyChunk<A2 | A>; <A, A2>(self: Chunk<A>, a: A2): NonEmptyChunk<A | A2>; }",
+  "description": "Appends the specified element to the end of the `Chunk`.",
+  "documentation": "Appends the specified element to the end of the `Chunk`.",
+  "examples": [],
+  "tags": [
+    "concatenating"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 203,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L203"
+}

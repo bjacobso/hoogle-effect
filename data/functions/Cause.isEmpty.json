@@ -1,0 +1,17 @@
+{
+  "id": "Cause.isEmpty",
+  "name": "isEmpty",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E>(self: Cause<E>) => boolean",
+  "description": "Checks if a `Cause` is entirely empty.\n*Details This function returns `true` if the `Cause` contains no errors, defects, or\ninterruptions. It's helpful for verifying if a computation truly had no\nfailures.",
+  "documentation": "Checks if a `Cause` is entirely empty.\n*Details**\n\nThis function returns `true` if the `Cause` contains no errors, defects, or\ninterruptions. It's helpful for verifying if a computation truly had no\nfailures.",
+  "examples": [],
+  "tags": [
+    "Getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 690,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L690"
+}

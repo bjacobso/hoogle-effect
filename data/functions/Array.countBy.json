@@ -1,0 +1,17 @@
+{
+  "id": "Array.countBy",
+  "name": "countBy",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <A>(predicate: (a: NoInfer<A>, i: number) => boolean): (self: Iterable<A>) => number; <A>(self: Iterable<A>, predicate: (a: A, i: number) => boolean): number; }",
+  "description": "Counts all the element of the given array that pass the given predicate\n*Example",
+  "documentation": "Counts all the element of the given array that pass the given predicate\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.countBy([1, 2, 3, 4, 5], n => n % 2 === 0)\nconsole.log(result) // 2\n```",
+  "examples": [],
+  "tags": [
+    "folding"
+  ],
+  "since": "3.16.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 2007,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L2007"
+}

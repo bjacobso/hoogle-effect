@@ -1,0 +1,17 @@
+{
+  "id": "Cookies.unsafeSet",
+  "name": "unsafeSet",
+  "module": "Cookies",
+  "package": "@effect/platform",
+  "signature": "{ (name: string, value: string, options?: { readonly domain?: string; readonly expires?: Date; readonly maxAge?: DurationInput; readonly path?: string; readonly priority?: \"low\" | \"medium\" | \"high\"; readonly httpOnly?: boolean; readonly secure?: boolean; readonly partitioned?: boolean; readonly sameSite?: \"lax\" | \"strict\" | \"none\"; }): (self: Cookies) => Cookies; (self: Cookies, name: string, value: string, options?: { readonly domain?: string; readonly expires?: Date; readonly maxAge?: DurationInput; readonly path?: string; readonly priority?: \"low\" | \"medium\" | \"high\"; readonly httpOnly?: boolean; readonly secure?: boolean; readonly partitioned?: boolean; readonly sameSite?: \"lax\" | \"strict\" | \"none\"; }): Cookies; }",
+  "description": "Add a cookie to a Cookies object",
+  "documentation": "Add a cookie to a Cookies object",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Cookies.d.ts",
+  "sourceLine": 294,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Cookies.ts#L294"
+}

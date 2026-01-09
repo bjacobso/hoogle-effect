@@ -1,0 +1,21 @@
+{
+  "id": "Effect.matchCause",
+  "name": "matchCause",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E, A2, A, A3>(options: { readonly onFailure: (cause: Cause<E>) => A2; readonly onSuccess: (a: A) => A3; }): <R>(self: Effect<A, E, R>) => Effect<A2 | A3, never, R>; <A, E, R, A2, A3>(self: Effect<A, E, R>, options: { readonly onFailure: (cause: Cause<E>) => A2; readonly onSuccess: (a: A) => A3; }): Effect<A2 | A3, never, R>; }",
+  "description": "Handles failures by matching the cause of failure.\n*Details The `matchCause` function allows you to handle failures with access to the\nfull cause of the failure within a fiber.\n*When to Use This is useful for differentiating between different types of errors, such as\nregular failures, defects, or interruptions. You can provide specific\nhandling logic for each failure type based on the cause.\n*Example (Handling Different Failure Causes)",
+  "documentation": "Handles failures by matching the cause of failure.\n*Details**\n\nThe `matchCause` function allows you to handle failures with access to the\nfull cause of the failure within a fiber.\n*When to Use**\n\nThis is useful for differentiating between different types of errors, such as\nregular failures, defects, or interruptions. You can provide specific\nhandling logic for each failure type based on the cause.\n*Example** (Handling Different Failure Causes)\n\n```ts\nimport { Effect } from \"effect\"\n\nconst task: Effect.Effect<number, Error> = Effect.die(\"Uh oh!\")\n\nconst program = Effect.matchCause(task, {\nonFailure: (cause) => {\nswitch (cause._tag) {\ncase \"Fail\":\n// Handle standard failure\nreturn `Fail: ${cause.error.message}`\ncase \"Die\":\n// Handle defects (unexpected errors)\nreturn `Die: ${cause.defect}`\ncase \"Interrupt\":\n// Handle interruption\nreturn `${cause.fiberId} interrupted!`\n}\n// Fallback for other causes\nreturn \"failed due to other causes\"\n},\nonSuccess: (value) =>\n// task completes successfully\n`succeeded with ${value} value`\n})\n\nEffect.runPromise(program).then(console.log)\n// Output: \"Die: Uh oh!\"\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst task: Effect.Effect<number, Error> = Effect.die(\"Uh oh!\")\n\nconst program = Effect.matchCause(task, {\nonFailure: (cause) => {\nswitch (cause._tag) {\ncase \"Fail\":\n// Handle standard failure\nreturn `Fail: ${cause.error.message}`\ncase \"Die\":\n// Handle defects (unexpected errors)\nreturn `Die: ${cause.defect}`\ncase \"Interrupt\":\n// Handle interruption\nreturn `${cause.fiberId} interrupted!`\n}\n// Fallback for other causes\nreturn \"failed due to other causes\"\n},\nonSuccess: (value) =>\n// task completes successfully\n`succeeded with ${value} value`\n})\n\nEffect.runPromise(program).then(console.log)\n// Output: \"Die: Uh oh!\""
+    }
+  ],
+  "tags": [
+    "Matching"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 21783,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L21783"
+}

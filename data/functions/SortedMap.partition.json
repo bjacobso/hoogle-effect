@@ -1,0 +1,17 @@
+{
+  "id": "SortedMap.partition",
+  "name": "partition",
+  "module": "SortedMap",
+  "package": "effect",
+  "signature": "{ <K, V>(predicate: (a: NoInfer<K>) => boolean): (self: SortedMap<K, V>) => [excluded: SortedMap<K, V>, satisfying: SortedMap<K, V>]; <K, V>(self: SortedMap<K, V>, predicate: (a: K) => boolean): [excluded: SortedMap<K, V>, satisfying: SortedMap<K, V>]; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "filtering"
+  ],
+  "since": "3.1.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/SortedMap.d.ts",
+  "sourceLine": 221,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/SortedMap.ts#L221"
+}

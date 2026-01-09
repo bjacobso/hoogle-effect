@@ -1,0 +1,21 @@
+{
+  "id": "HashSet.has",
+  "name": "has",
+  "module": "HashSet",
+  "package": "effect",
+  "signature": "{ <A>(value: A): (self: HashSet<A>) => boolean; <A>(self: HashSet<A>, value: A): boolean; }",
+  "description": "Checks if the specified value exists in the `HashSet`. Time complexity: `O(1)` average",
+  "documentation": "Checks if the specified value exists in the `HashSet`.\n\nTime complexity: **`O(1)`** average",
+  "examples": [
+    {
+      "code": "// Syntax\nimport { HashSet, pipe } from \"effect\"\n\n// with `data-last`, a.k.a. `pipeable` API\npipe(HashSet.make(0, 1, 2), HashSet.has(3)) // false\n\n// or piped with the pipe function\nHashSet.make(0, 1, 2).pipe(HashSet.has(3)) // false\n\n// or with `data-first` API\nHashSet.has(HashSet.make(0, 1, 2), 3) // false"
+    }
+  ],
+  "tags": [
+    "elements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashSet.d.ts",
+  "sourceLine": 577,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashSet.ts#L577"
+}

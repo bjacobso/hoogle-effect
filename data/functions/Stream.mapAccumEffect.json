@@ -1,0 +1,17 @@
+{
+  "id": "Stream.mapAccumEffect",
+  "name": "mapAccumEffect",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <S, A, A2, E2, R2>(s: S, f: (s: S, a: A) => Effect<readonly [S, A2], E2, R2>): <E, R>(self: Stream<A, E, R>) => Stream<A2, E2 | E, R2 | R>; <A, E, R, S, A2, E2, R2>(self: Stream<A, E, R>, s: S, f: (s: S, a: A) => Effect<readonly [S, A2], E2, R2>): Stream<A2, E | E2, R | R2>; }",
+  "description": "Statefully and effectfully maps over the elements of this stream to produce\nnew elements.",
+  "documentation": "Statefully and effectfully maps over the elements of this stream to produce\nnew elements.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 4465,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L4465"
+}

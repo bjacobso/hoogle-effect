@@ -1,0 +1,17 @@
+{
+  "id": "ConfigProvider.fromJson",
+  "name": "fromJson",
+  "module": "ConfigProvider",
+  "package": "effect",
+  "signature": "(json: unknown) => ConfigProvider",
+  "description": "Constructs a new `ConfigProvider` from a JSON object.",
+  "documentation": "Constructs a new `ConfigProvider` from a JSON object.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/ConfigProvider.d.ts",
+  "sourceLine": 167,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/ConfigProvider.ts#L167"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "Multipart.collectUint8Array",
+  "name": "collectUint8Array",
+  "module": "Multipart",
+  "package": "@effect/platform",
+  "signature": "Channel<never, Chunk<any>, unknown, unknown, any, unknown, never>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Multipart.d.ts",
+  "sourceLine": 174,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Multipart.ts#L174"
+}

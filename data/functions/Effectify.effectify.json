@@ -1,0 +1,15 @@
+{
+  "id": "Effectify.effectify",
+  "name": "effectify",
+  "module": "Effectify",
+  "package": "@effect/platform",
+  "signature": "{ <F extends (...args: Array<any>) => any>(fn: F): Effectify<F, EffectifyError<F>>; <F extends (...args: Array<any>) => any, E>(fn: F, onError: (error: EffectifyError<F>, args: Parameters<F>) => E): Effectify<F, E>; <F extends (...args: Array<any>) => any, E, E2>(fn: F, onError: (error: EffectifyError<F>, args: Parameters<F>) => E, onSyncError: (error: unknown, args: Parameters<F>) => E2): Effectify<F, E | E2>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Effectify.d.ts",
+  "sourceLine": 219,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Effectify.ts#L219"
+}

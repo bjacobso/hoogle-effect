@@ -1,0 +1,17 @@
+{
+  "id": "HttpServerResponse.unsafeSetCookies",
+  "name": "unsafeSetCookies",
+  "module": "HttpServerResponse",
+  "package": "@effect/platform",
+  "signature": "{ (cookies: Iterable<readonly [name: string, value: string, options?: { readonly domain?: string; readonly expires?: Date; readonly maxAge?: DurationInput; readonly path?: string; readonly priority?: \"low\" | \"medium\" | \"high\"; readonly httpOnly?: boolean; readonly secure?: boolean; readonly partitioned?: boolean; readonly sameSite?: \"lax\" | \"strict\" | \"none\"; }]>): (self: HttpServerResponse) => HttpServerResponse; (self: HttpServerResponse, cookies: Iterable<readonly [name: string, value: string, options?: { readonly domain?: string; readonly expires?: Date; readonly maxAge?: DurationInput; readonly path?: string; readonly priority?: \"low\" | \"medium\" | \"high\"; readonly httpOnly?: boolean; readonly secure?: boolean; readonly partitioned?: boolean; readonly sameSite?: \"lax\" | \"strict\" | \"none\"; }]>): HttpServerResponse; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpServerResponse.d.ts",
+  "sourceLine": 333,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpServerResponse.ts#L333"
+}

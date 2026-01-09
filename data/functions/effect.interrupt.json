@@ -1,0 +1,21 @@
+{
+  "id": "Effect.interrupt",
+  "name": "interrupt",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "Effect<never, never, never>",
+  "description": "Represents an effect that interrupts the current fiber.",
+  "documentation": "Represents an effect that interrupts the current fiber.\n**Details**\nThis effect models the explicit interruption of the fiber in which it runs.\nWhen executed, it causes the fiber to stop its operation immediately,\ncapturing the interruption details such as the fiber's ID and its start time.\nThe resulting interruption can be observed in the `Exit` type if the effect\nis run with functions like {@link runPromiseExit}.\n**Example**\n```ts\nimport { Effect } from \"effect\"\nconst program = Effect.gen(function* () {\nconsole.log(\"start\")\nyield* Effect.sleep(\"2 seconds\")\nyield* Effect.interrupt\nconsole.log(\"done\")\nreturn \"some result\"\n})\nEffect.runPromiseExit(program).then(console.log)\n// Output:\n// start\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: {\n// _id: 'Cause',\n// _tag: 'Interrupt',\n// fiberId: {\n// _id: 'FiberId',\n// _tag: 'Runtime',\n// id: 0,\n// startTimeMillis: ...\n// }\n// }\n// }\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\nconst program = Effect.gen(function* () {\nconsole.log(\"start\")\nyield* Effect.sleep(\"2 seconds\")\nyield* Effect.interrupt\nconsole.log(\"done\")\nreturn \"some result\"\n})\nEffect.runPromiseExit(program).then(console.log)\n// Output:\n// start\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: {\n// _id: 'Cause',\n// _tag: 'Interrupt',\n// fiberId: {\n// _id: 'FiberId',\n// _tag: 'Runtime',\n// id: 0,\n// startTimeMillis: ...\n// }\n// }\n// }"
+    }
+  ],
+  "tags": [
+    "Interruption"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 8694,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L8694"
+}

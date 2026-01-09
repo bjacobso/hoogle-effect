@@ -1,0 +1,17 @@
+{
+  "id": "HttpApiBuilder.api",
+  "name": "api",
+  "module": "HttpApiBuilder",
+  "package": "@effect/platform",
+  "signature": "<Id extends string, Groups extends HttpApiGroup.HttpApiGroup.Any, E, R>(api: HttpApi<Id, Groups, E, R>) => Layer<Api, never, R | HttpApiGroup.ToService<Id, Groups> | HttpApiGroup.ErrorContext<Groups>>",
+  "description": "Create a top-level `HttpApi` layer.",
+  "documentation": "Create a top-level `HttpApi` layer.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpApiBuilder.d.ts",
+  "sourceLine": 38,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpApiBuilder.ts#L38"
+}

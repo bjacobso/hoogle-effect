@@ -1,0 +1,17 @@
+{
+  "id": "Error.TypeIdError",
+  "name": "TypeIdError",
+  "module": "Error",
+  "package": "@effect/platform",
+  "signature": "<const TypeId extends symbol, const Tag extends string>(typeId: TypeId, tag: Tag) => new <A extends Record<string, any>>(args: Simplify<A>) => YieldableError & Record<TypeId, TypeId> & { readonly _tag: Tag; } & Readonly<A>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "error"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Error.d.ts",
+  "sourceLine": 26,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Error.ts#L26"
+}

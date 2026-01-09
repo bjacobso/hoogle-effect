@@ -1,0 +1,21 @@
+{
+  "id": "Effect.replicateEffect",
+  "name": "replicateEffect",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ (n: number, options?: { readonly concurrency?: Concurrency; readonly batching?: boolean | \"inherit\"; readonly discard?: false; readonly concurrentFinalizers?: boolean; }): <A, E, R>(self: Effect<A, E, R>) => Effect<A[], E, R>; (n: number, options: { readonly concurrency?: Concurrency; readonly batching?: boolean | \"inherit\"; readonly discard: true; readonly concurrentFinalizers?: boolean; }): <A, E, R>(self: Effect<A, E, R>) => Effect<void, E, R>; <A, E, R>(self: Effect<A, E, R>, n: number, options?: { readonly concurrency?: Concurrency; readonly batching?: boolean | \"inherit\"; readonly discard?: false; readonly concurrentFinalizers?: boolean; }): Effect<A[], E, R>; <A, E, R>(self: Effect<A, E, R>, n: number, options: { readonly concurrency?: Concurrency; readonly batching?: boolean | \"inherit\"; readonly discard: true; readonly concurrentFinalizers?: boolean; }): Effect<void, E, R>; }",
+  "description": "Performs this effect the specified number of times and collects the results.\n*Details This function repeats an effect multiple times and collects the results into\nan array. You specify how many times to execute the effect, and it runs that\nmany times, either in sequence or concurrently depending on the provided\noptions.\n*Options If the `discard` option is set to `true`, the intermediate results are not\ncollected, and the final result of the operation is `void`. The function also allows you to customize how the effects are handled by\nspecifying options such as concurrency, batching, and how finalizers behave.\nThese options provide flexibility in running the effects concurrently or\nadjusting other execution details.\n*Example",
+  "documentation": "Performs this effect the specified number of times and collects the results.\n*Details**\n\nThis function repeats an effect multiple times and collects the results into\nan array. You specify how many times to execute the effect, and it runs that\nmany times, either in sequence or concurrently depending on the provided\noptions.\n*Options**\n\nIf the `discard` option is set to `true`, the intermediate results are not\ncollected, and the final result of the operation is `void`.\n\nThe function also allows you to customize how the effects are handled by\nspecifying options such as concurrency, batching, and how finalizers behave.\nThese options provide flexibility in running the effects concurrently or\nadjusting other execution details.\n*Example**\n\n```ts\nimport { Console, Effect } from \"effect\"\n\nlet counter = 0\n\nconst task = Effect.sync(() => ++counter).pipe(\nEffect.tap(() => Console.log(`Task completed`))\n)\n\nconst program = Effect.gen(function*() {\n// Replicate the task 3 times and collect the results\nconst results = yield* Effect.replicateEffect(task, 3)\nyield* Console.log(`Results: ${results.join(\", \")}`)\n})\n\nEffect.runFork(program)\n// Output:\n// Task completed\n// Task completed\n// Task completed\n// Results: 1, 2, 3\n```",
+  "examples": [
+    {
+      "code": "import { Console, Effect } from \"effect\"\n\nlet counter = 0\n\nconst task = Effect.sync(() => ++counter).pipe(\nEffect.tap(() => Console.log(`Task completed`))\n)\n\nconst program = Effect.gen(function*() {\n// Replicate the task 3 times and collect the results\nconst results = yield* Effect.replicateEffect(task, 3)\nyield* Console.log(`Results: ${results.join(\", \")}`)\n})\n\nEffect.runFork(program)\n// Output:\n// Task completed\n// Task completed\n// Task completed\n// Results: 1, 2, 3"
+    }
+  ],
+  "tags": [
+    "Collecting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 3910,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L3910"
+}

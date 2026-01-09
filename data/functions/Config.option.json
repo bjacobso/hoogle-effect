@@ -1,0 +1,17 @@
+{
+  "id": "Config.option",
+  "name": "option",
+  "module": "Config",
+  "package": "effect",
+  "signature": "<A>(self: Config<A>) => Config<Option<A>>",
+  "description": "Returns an optional version of this config, which will be `None` if the\ndata is missing from configuration, and `Some` otherwise.",
+  "documentation": "Returns an optional version of this config, which will be `None` if the\ndata is missing from configuration, and `Some` otherwise.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Config.d.ts",
+  "sourceLine": 376,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Config.ts#L376"
+}

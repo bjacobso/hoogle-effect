@@ -1,0 +1,17 @@
+{
+  "id": "SortedMap.fromIterable",
+  "name": "fromIterable",
+  "module": "SortedMap",
+  "package": "effect",
+  "signature": "{ <B>(ord: Order<B>): <K extends B, V>(iterable: Iterable<readonly [K, V]>) => SortedMap<K, V>; <K extends B, V, B>(iterable: Iterable<readonly [K, V]>, ord: Order<B>): SortedMap<K, V>; }",
+  "description": "Creates a new `SortedMap` from an iterable collection of key/value pairs.",
+  "documentation": "Creates a new `SortedMap` from an iterable collection of key/value pairs.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/SortedMap.d.ts",
+  "sourceLine": 53,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/SortedMap.ts#L53"
+}

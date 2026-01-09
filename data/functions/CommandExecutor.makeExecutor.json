@@ -1,0 +1,17 @@
+{
+  "id": "CommandExecutor.makeExecutor",
+  "name": "makeExecutor",
+  "module": "CommandExecutor",
+  "package": "@effect/platform",
+  "signature": "(start: (command: Command) => Effect<Process, PlatformError, Scope>) => CommandExecutor",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/CommandExecutor.d.ts",
+  "sourceLine": 152,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/CommandExecutor.ts#L152"
+}

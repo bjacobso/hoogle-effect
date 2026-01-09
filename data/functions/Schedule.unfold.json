@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.unfold",
+  "name": "unfold",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "<A>(initial: A, f: (a: A) => A) => Schedule<A, unknown, never>",
+  "description": "Creates a schedule that repeatedly applies a function to transform a state\nvalue, producing a sequence of values.\n*Details This function starts with an `initial` value and applies `f` recursively to\ngenerate the next state at each step. The schedule continues indefinitely,\nproducing a stream of values by unfolding the state over time.",
+  "documentation": "Creates a schedule that repeatedly applies a function to transform a state\nvalue, producing a sequence of values.\n*Details**\n\nThis function starts with an `initial` value and applies `f` recursively to\ngenerate the next state at each step. The schedule continues indefinitely,\nproducing a stream of values by unfolding the state over time.",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2803,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2803"
+}

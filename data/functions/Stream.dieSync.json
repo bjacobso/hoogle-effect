@@ -1,0 +1,17 @@
+{
+  "id": "Stream.dieSync",
+  "name": "dieSync",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "(evaluate: LazyArg<unknown>) => Stream<never, never, never>",
+  "description": "The stream that dies with the specified lazily evaluated defect.",
+  "documentation": "The stream that dies with the specified lazily evaluated defect.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 1983,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L1983"
+}

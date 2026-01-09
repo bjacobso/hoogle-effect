@@ -1,0 +1,17 @@
+{
+  "id": "Multipart.makeChannel",
+  "name": "makeChannel",
+  "module": "Multipart",
+  "package": "@effect/platform",
+  "signature": "<IE>(headers: Record<string, string>, bufferSize?: number) => Channel<Chunk<Part>, Chunk<Uint8Array>, IE | MultipartError, IE, unknown, unknown, never>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Parsers"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Multipart.d.ts",
+  "sourceLine": 170,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Multipart.ts#L170"
+}

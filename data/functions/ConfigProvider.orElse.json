@@ -1,0 +1,17 @@
+{
+  "id": "ConfigProvider.orElse",
+  "name": "orElse",
+  "module": "ConfigProvider",
+  "package": "effect",
+  "signature": "{ (that: LazyArg<ConfigProvider>): (self: ConfigProvider) => ConfigProvider; (self: ConfigProvider, that: LazyArg<ConfigProvider>): ConfigProvider; }",
+  "description": "Returns a new config provider that preferentially loads configuration data\nfrom this one, but which will fall back to the specified alternate provider\nif there are any issues loading the configuration from this provider.",
+  "documentation": "Returns a new config provider that preferentially loads configuration data\nfrom this one, but which will fall back to the specified alternate provider\nif there are any issues loading the configuration from this provider.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/ConfigProvider.d.ts",
+  "sourceLine": 276,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/ConfigProvider.ts#L276"
+}

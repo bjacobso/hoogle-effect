@@ -1,0 +1,17 @@
+{
+  "id": "SocketServer.ErrorTypeId",
+  "name": "ErrorTypeId",
+  "module": "SocketServer",
+  "package": "@effect/platform",
+  "signature": "typeof ErrorTypeId",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "errors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/SocketServer.d.ts",
+  "sourceLine": 21,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/SocketServer.ts#L21"
+}

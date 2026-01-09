@@ -1,0 +1,21 @@
+{
+  "id": "Stream.asyncPush",
+  "name": "asyncPush",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E = never, R = never>(register: (emit: EmitOpsPush<E, A>) => Effect<unknown, E, Scope | R>, options?: { readonly bufferSize: \"unbounded\"; } | { readonly bufferSize?: number; readonly strategy?: \"dropping\" | \"sliding\"; }) => Stream<A, E, Exclude<R, Scope>>",
+  "description": "Creates a stream from an external push-based resource. You can use the `emit` helper to emit values to the stream. The `emit` helper\nreturns a boolean indicating whether the value was emitted or not. You can also use the `emit` helper to signal the end of the stream by\nusing apis such as `emit.end` or `emit.fail`. By default it uses an \"unbounded\" buffer size.\nYou can customize the buffer size and strategy by passing an object as the\nsecond argument with the `bufferSize` and `strategy` fields.",
+  "documentation": "Creates a stream from an external push-based resource.\n\nYou can use the `emit` helper to emit values to the stream. The `emit` helper\nreturns a boolean indicating whether the value was emitted or not.\n\nYou can also use the `emit` helper to signal the end of the stream by\nusing apis such as `emit.end` or `emit.fail`.\n\nBy default it uses an \"unbounded\" buffer size.\nYou can customize the buffer size and strategy by passing an object as the\nsecond argument with the `bufferSize` and `strategy` fields.",
+  "examples": [
+    {
+      "code": "import { Effect, Stream } from \"effect\"\n\nStream.asyncPush<string>((emit) =>\nEffect.acquireRelease(\nEffect.gen(function*() {\nyield* Effect.log(\"subscribing\")\nreturn setInterval(() => emit.single(\"tick\"), 1000)\n}),\n(handle) =>\nEffect.gen(function*() {\nyield* Effect.log(\"unsubscribing\")\nclearInterval(handle)\n})\n), { bufferSize: 16, strategy: \"dropping\" })"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 470,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L470"
+}

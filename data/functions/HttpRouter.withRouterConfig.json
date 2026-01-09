@@ -1,0 +1,17 @@
+{
+  "id": "HttpRouter.withRouterConfig",
+  "name": "withRouterConfig",
+  "module": "HttpRouter",
+  "package": "@effect/platform",
+  "signature": "{ (config: RouterConfig): <A, E, R>(effect: Effect<A, E, R>) => Effect<A, E, R>; <A, E, R>(effect: Effect<A, E, R>, config: RouterConfig): Effect<A, E, R>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "router config"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpRouter.d.ts",
+  "sourceLine": 231,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpRouter.ts#L231"
+}

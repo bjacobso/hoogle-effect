@@ -1,0 +1,15 @@
+{
+  "id": "HashMap.modify",
+  "name": "modify",
+  "module": "HashMap",
+  "package": "effect",
+  "signature": "{ <K, V>(key: K, f: (v: V) => V): (self: HashMap<K, V>) => HashMap<K, V>; <K, V>(self: HashMap<K, V>, key: K, f: (v: V) => V): HashMap<K, V>; }",
+  "description": "Updates the value of the specified key within the `HashMap` if it exists.",
+  "documentation": "Updates the value of the specified key within the `HashMap` if it exists.",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashMap.d.ts",
+  "sourceLine": 532,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashMap.ts#L532"
+}

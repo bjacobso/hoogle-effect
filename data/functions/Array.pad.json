@@ -1,0 +1,15 @@
+{
+  "id": "Array.pad",
+  "name": "pad",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <A, T>(n: number, fill: T): (self: A[]) => (A | T)[]; <A, T>(self: A[], n: number, fill: T): (A | T)[]; }",
+  "description": "Pads an array.\nReturns a new array of length `n` with the elements of `array` followed by `fill` elements if `array` is shorter than `n`.\nIf `array` is longer than `n`, the returned array will be a slice of `array` containing the `n` first elements of `array`.\nIf `n` is less than or equal to 0, the returned array will be an empty array.\n*Example",
+  "documentation": "Pads an array.\nReturns a new array of length `n` with the elements of `array` followed by `fill` elements if `array` is shorter than `n`.\nIf `array` is longer than `n`, the returned array will be a slice of `array` containing the `n` first elements of `array`.\nIf `n` is less than or equal to 0, the returned array will be an empty array.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.pad([1, 2, 3], 6, 0)\nconsole.log(result) // [1, 2, 3, 0, 0, 0]\n```",
+  "examples": [],
+  "tags": [],
+  "since": "3.8.4",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 3532,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L3532"
+}

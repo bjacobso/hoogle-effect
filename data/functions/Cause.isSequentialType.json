@@ -1,0 +1,17 @@
+{
+  "id": "Cause.isSequentialType",
+  "name": "isSequentialType",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E>(self: Cause<E>) => self is Sequential<E>",
+  "description": "Checks if a `Cause` is a `Sequential` type.",
+  "documentation": "Checks if a `Cause` is a `Sequential` type.",
+  "examples": [],
+  "tags": [
+    "Guards"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 656,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L656"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Option.lift2",
+  "name": "lift2",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<A, B, C>(f: (a: A, b: B) => C) => { (that: Option<B>): (self: Option<A>) => Option<C>; (self: Option<A>, that: Option<B>): Option<C>; }",
+  "description": "Lifts a binary function to work with `Option` values, allowing the function\nto operate on two `Option`s.\n*Details This function takes a binary function `f` and returns a new function that\napplies `f` to the values of two `Option`s (`self` and `that`). If both\n`Option`s are `Some`, the binary function `f` is applied to their values, and\nthe result is wrapped in a new `Some`. If either `Option` is `None`, the\nresult is `None`.",
+  "documentation": "Lifts a binary function to work with `Option` values, allowing the function\nto operate on two `Option`s.\n*Details**\n\nThis function takes a binary function `f` and returns a new function that\napplies `f` to the values of two `Option`s (`self` and `that`). If both\n`Option`s are `Some`, the binary function `f` is applied to their values, and\nthe result is wrapped in a new `Some`. If either `Option` is `None`, the\nresult is `None`.",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\n// A binary function to add two numbers\nconst add = (a: number, b: number): number => a + b\n\n// Lift the `add` function to work with `Option` values\nconst addOptions = Option.lift2(add)\n\n// Both `Option`s are `Some`\nconsole.log(addOptions(Option.some(2), Option.some(3)))\n// Output: { _id: 'Option', _tag: 'Some', value: 5 }\n\n// One `Option` is `None`\nconsole.log(addOptions(Option.some(2), Option.none()))\n// Output: { _id: 'Option', _tag: 'None' }"
+    }
+  ],
+  "tags": [
+    "Lifting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 2999,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L2999"
+}

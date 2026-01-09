@@ -1,0 +1,17 @@
+{
+  "id": "Cause.interruptors",
+  "name": "interruptors",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E>(self: Cause<E>) => HashSet<FiberId>",
+  "description": "Collects all `FiberId`s responsible for interrupting a fiber.\n*Details This function returns a set of IDs indicating which fibers caused\ninterruptions within this `Cause`. It's useful for debugging concurrency\nissues or tracing cancellations.",
+  "documentation": "Collects all `FiberId`s responsible for interrupting a fiber.\n*Details**\n\nThis function returns a set of IDs indicating which fibers caused\ninterruptions within this `Cause`. It's useful for debugging concurrency\nissues or tracing cancellations.",
+  "examples": [],
+  "tags": [
+    "Getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 779,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L779"
+}

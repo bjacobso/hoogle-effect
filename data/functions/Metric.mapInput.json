@@ -1,0 +1,17 @@
+{
+  "id": "Metric.mapInput",
+  "name": "mapInput",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "{ <In, In2>(f: (input: In2) => In): <Type, Out>(self: Metric<Type, In, Out>) => Metric<Type, In2, Out>; <Type, In, Out, In2>(self: Metric<Type, In, Out>, f: (input: In2) => In): Metric<Type, In2, Out>; }",
+  "description": "Returns a new metric that is powered by this one, but which accepts updates\nof the specified new type, which must be transformable to the input type of\nthis metric.",
+  "documentation": "Returns a new metric that is powered by this one, but which accepts updates\nof the specified new type, which must be transformable to the input type of\nthis metric.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 129,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L129"
+}

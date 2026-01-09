@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.andThen",
+  "name": "andThen",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <Out2, In2, R2>(that: Schedule<Out2, In2, R2>): <Out, In, R>(self: Schedule<Out, In, R>) => Schedule<Out2 | Out, In & In2, R2 | R>; <Out, In, R, Out2, In2, R2>(self: Schedule<Out, In, R>, that: Schedule<Out2, In2, R2>): Schedule<Out | Out2, In & In2, R | R2>; }",
+  "description": "Runs two schedules sequentially, merging their outputs.",
+  "documentation": "Runs two schedules sequentially, merging their outputs.\n**Details**\nThis function executes two schedules one after the other. The first schedule\nruns to completion, and then the second schedule begins execution. Unlike\n{@link andThenEither}, this function merges the outputs instead of wrapping\nthem in `Either`, allowing both schedules to contribute their results\ndirectly.\nThis is useful when a workflow consists of two phases where the second phase\nshould start only after the first one has fully completed.",
+  "examples": [],
+  "tags": [
+    "Sequential Composition"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 277,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L277"
+}

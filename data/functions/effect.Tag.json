@@ -1,0 +1,21 @@
+{
+  "id": "Effect.Tag",
+  "name": "Tag",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<const Id extends string>(id: Id) => <Self, Type extends Tag.AllowedType>() => TagClass<Self, Id, Type> & (Type extends Record<PropertyKey, any> ? Tag.Proxy<Self, Type> : {}) & { use: <X>(body: (_: Type) => X) => [X] extends [Effect<infer A, infer E, infer R>] ? Effect<A, E, Self | R> : [X] extends [PromiseLike<infer A>] ? Effect<A, UnknownException, Self> : Effect<X, never, Self>; }",
+  "description": "Creates a unique tag for a dependency, embedding the service's methods as\nstatic properties.\n*Details This function allows you to define a `Tag` for a service or dependency in\nyour application. The `Tag` not only acts as an identifier but also provides\ndirect access to the service's methods via static properties. This makes it\neasier to access and use the service in your code without manually managing\ncontexts. In the example below, the fields of the service (in this case, the `notify`\nmethod) are turned into static properties of the Notifications class, making\nit easier to access them.\n*Example",
+  "documentation": "Creates a unique tag for a dependency, embedding the service's methods as\nstatic properties.\n*Details**\n\nThis function allows you to define a `Tag` for a service or dependency in\nyour application. The `Tag` not only acts as an identifier but also provides\ndirect access to the service's methods via static properties. This makes it\neasier to access and use the service in your code without manually managing\ncontexts.\n\nIn the example below, the fields of the service (in this case, the `notify`\nmethod) are turned into static properties of the Notifications class, making\nit easier to access them.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\nclass Notifications extends Effect.Tag(\"Notifications\")<\nNotifications,\n{ readonly notify: (message: string) => Effect.Effect<void> }\n>() {}\n\n// Create an effect that depends on the Notifications service\nconst action = Notifications.notify(\"Hello, world!\")\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nclass Notifications extends Effect.Tag(\"Notifications\")<\nNotifications,\n{ readonly notify: (message: string) => Effect.Effect<void> }\n>() {}\n\n// Create an effect that depends on the Notifications service\nconst action = Notifications.notify(\"Hello, world!\")"
+    }
+  ],
+  "tags": [
+    "Context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 26430,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L26430"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Stream.updateService",
+  "name": "updateService",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <I, S>(tag: Tag<I, S>, f: (service: NoInfer<S>) => NoInfer<S>): <A, E, R>(self: Stream<A, E, R>) => Stream<A, E, I | R>; <A, E, R, I, S>(self: Stream<A, E, R>, tag: Tag<I, S>, f: (service: NoInfer<S>) => NoInfer<S>): Stream<A, E, R | I>; }",
+  "description": "Updates the specified service within the context of the `Stream`.",
+  "documentation": "Updates the specified service within the context of the `Stream`.",
+  "examples": [],
+  "tags": [
+    "context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 9282,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L9282"
+}

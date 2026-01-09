@@ -1,0 +1,17 @@
+{
+  "id": "SortedMap.isSortedMap",
+  "name": "isSortedMap",
+  "module": "SortedMap",
+  "package": "effect",
+  "signature": "{ <K, V>(u: Iterable<readonly [K, V]>): u is SortedMap<K, V>; (u: unknown): u is SortedMap<unknown, unknown>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "refinements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/SortedMap.d.ts",
+  "sourceLine": 30,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/SortedMap.ts#L30"
+}

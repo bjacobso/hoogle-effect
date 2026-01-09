@@ -1,0 +1,17 @@
+{
+  "id": "Exit.causeOption",
+  "name": "causeOption",
+  "module": "Exit",
+  "package": "effect",
+  "signature": "<A, E>(self: Exit<A, E>) => Option<Cause<E>>",
+  "description": "Returns a `Some<Cause<E>>` if the specified exit is a `Failure`, `None`\notherwise.",
+  "documentation": "Returns a `Some<Cause<E>>` if the specified exit is a `Failure`, `None`\notherwise.",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Exit.d.ts",
+  "sourceLine": 139,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Exit.ts#L139"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Cookies.toRecord",
+  "name": "toRecord",
+  "module": "Cookies",
+  "package": "@effect/platform",
+  "signature": "(self: Cookies) => Record<string, string>",
+  "description": "To record",
+  "documentation": "To record",
+  "examples": [],
+  "tags": [
+    "encoding"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Cookies.d.ts",
+  "sourceLine": 376,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Cookies.ts#L376"
+}

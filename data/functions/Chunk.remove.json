@@ -1,0 +1,15 @@
+{
+  "id": "Chunk.remove",
+  "name": "remove",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ (i: number): <A>(self: Chunk<A>) => Chunk<A>; <A>(self: Chunk<A>, i: number): Chunk<A>; }",
+  "description": "Delete the element at the specified index, creating a new `Chunk`.",
+  "documentation": "Delete the element at the specified index, creating a new `Chunk`.",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 1279,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L1279"
+}

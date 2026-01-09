@@ -1,0 +1,17 @@
+{
+  "id": "Effect.scheduleForked",
+  "name": "scheduleForked",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <Out, R2>(schedule: Schedule<Out, unknown, R2>): <A, E, R>(self: Effect<A, E, R>) => Effect<RuntimeFiber<Out, E>, never, Scope | R2 | R>; <A, E, R, Out, R2>(self: Effect<A, E, R>, schedule: Schedule<Out, unknown, R2>): Effect<RuntimeFiber<Out, E>, never, Scope | R | R2>; }",
+  "description": "Runs an effect repeatedly on a new fiber according to a given schedule.\n*Details This function starts the provided effect on a new fiber and runs it\nrepeatedly based on the specified schedule. The repetitions are managed by\nthe schedule's rules, which define the timing and number of iterations. The\nfiber is attached to the current scope, meaning it is automatically managed\nand cleaned up when the scope is closed. The function returns a `RuntimeFiber` that allows you to monitor or interact\nwith the running fiber.\n*When to Use This is particularly useful for concurrent execution of scheduled tasks or\nwhen you want to continue processing without waiting for the repetitions to\ncomplete.",
+  "documentation": "Runs an effect repeatedly on a new fiber according to a given schedule.\n*Details**\n\nThis function starts the provided effect on a new fiber and runs it\nrepeatedly based on the specified schedule. The repetitions are managed by\nthe schedule's rules, which define the timing and number of iterations. The\nfiber is attached to the current scope, meaning it is automatically managed\nand cleaned up when the scope is closed.\n\nThe function returns a `RuntimeFiber` that allows you to monitor or interact\nwith the running fiber.\n*When to Use**\n\nThis is particularly useful for concurrent execution of scheduled tasks or\nwhen you want to continue processing without waiting for the repetitions to\ncomplete.",
+  "examples": [],
+  "tags": [
+    "Repetition / Recursion"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 21299,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L21299"
+}

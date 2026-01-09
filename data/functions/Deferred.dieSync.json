@@ -1,0 +1,17 @@
+{
+  "id": "Deferred.dieSync",
+  "name": "dieSync",
+  "module": "Deferred",
+  "package": "effect",
+  "signature": "{ (evaluate: LazyArg<unknown>): <A, E>(self: Deferred<A, E>) => Effect<boolean, never, never>; <A, E>(self: Deferred<A, E>, evaluate: LazyArg<unknown>): Effect<boolean, never, never>; }",
+  "description": "Kills the `Deferred` with the specified defect, which will be propagated to\nall fibers waiting on the value of the `Deferred`.",
+  "documentation": "Kills the `Deferred` with the specified defect, which will be propagated to\nall fibers waiting on the value of the `Deferred`.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Deferred.d.ts",
+  "sourceLine": 310,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Deferred.ts#L310"
+}

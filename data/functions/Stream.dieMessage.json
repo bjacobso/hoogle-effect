@@ -1,0 +1,17 @@
+{
+  "id": "Stream.dieMessage",
+  "name": "dieMessage",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "(message: string) => Stream<never, never, never>",
+  "description": "The stream that dies with an exception described by `message`.",
+  "documentation": "The stream that dies with an exception described by `message`.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 1990,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L1990"
+}

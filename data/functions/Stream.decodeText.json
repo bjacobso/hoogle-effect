@@ -1,0 +1,17 @@
+{
+  "id": "Stream.decodeText",
+  "name": "decodeText",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ (encoding?: string): <E, R>(self: Stream<Uint8Array, E, R>) => Stream<string, E, R>; <E, R>(self: Stream<Uint8Array, E, R>, encoding?: string): Stream<string, E, R>; }",
+  "description": "Decode Uint8Array chunks into a stream of strings using the specified encoding.",
+  "documentation": "Decode Uint8Array chunks into a stream of strings using the specified encoding.",
+  "examples": [],
+  "tags": [
+    "encoding"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 10755,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L10755"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.of",
+  "name": "of",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "<A>(a: A) => NonEmptyChunk<A>",
+  "description": "Builds a `NonEmptyChunk` from a single element.",
+  "documentation": "Builds a `NonEmptyChunk` from a single element.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 93,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L93"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Effect.diffFiberRefs",
+  "name": "diffFiberRefs",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, E, R>) => Effect<[FiberRefsPatch, A], E, R>",
+  "description": "Returns a new workflow that executes this one and captures the changes in\n`FiberRef` values.",
+  "documentation": "Returns a new workflow that executes this one and captures the changes in\n`FiberRef` values.",
+  "examples": [],
+  "tags": [
+    "Supervision & Fibers"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 11226,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L11226"
+}

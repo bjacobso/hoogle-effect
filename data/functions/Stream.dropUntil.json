@@ -1,0 +1,17 @@
+{
+  "id": "Stream.dropUntil",
+  "name": "dropUntil",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A>(predicate: Predicate<NoInfer<A>>): <E, R>(self: Stream<A, E, R>) => Stream<A, E, R>; <A, E, R>(self: Stream<A, E, R>, predicate: Predicate<A>): Stream<A, E, R>; }",
+  "description": "Drops all elements of the stream until the specified predicate evaluates to\n`true`.",
+  "documentation": "Drops all elements of the stream until the specified predicate evaluates to\n`true`.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 2174,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L2174"
+}

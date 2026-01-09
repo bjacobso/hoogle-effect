@@ -1,0 +1,21 @@
+{
+  "id": "DateTime.withCurrentZone",
+  "name": "withCurrentZone",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "{ (zone: TimeZone): <A, E, R>(effect: Effect<A, E, R>) => Effect<A, E, Exclude<R, CurrentTimeZone>>; <A, E, R>(effect: Effect<A, E, R>, zone: TimeZone): Effect<A, E, Exclude<R, CurrentTimeZone>>; }",
+  "description": "Provide the `CurrentTimeZone` to an effect.",
+  "documentation": "Provide the `CurrentTimeZone` to an effect.",
+  "examples": [
+    {
+      "code": "import { DateTime, Effect } from \"effect\"\n\nconst zone = DateTime.zoneUnsafeMakeNamed(\"Europe/London\")\n\nEffect.gen(function* () {\nconst now = yield* DateTime.nowInCurrentZone\n}).pipe(DateTime.withCurrentZone(zone))"
+    }
+  ],
+  "tags": [
+    "current time zone"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 1407,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L1407"
+}

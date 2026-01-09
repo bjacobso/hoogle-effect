@@ -1,0 +1,21 @@
+{
+  "id": "Effect.cachedInvalidateWithTTL",
+  "name": "cachedInvalidateWithTTL",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ (timeToLive: DurationInput): <A, E, R>(self: Effect<A, E, R>) => Effect<[Effect<A, E, never>, Effect<void, never, never>], never, R>; <A, E, R>(self: Effect<A, E, R>, timeToLive: DurationInput): Effect<[Effect<A, E, never>, Effect<void, never, never>], never, R>; }",
+  "description": "Caches an effect's result for a specified duration and allows manual\ninvalidation before expiration.",
+  "documentation": "Caches an effect's result for a specified duration and allows manual\ninvalidation before expiration.\n**Details**\nThis function behaves similarly to {@link cachedWithTTL}by caching the\nresult of an effect for a specified period of time. However, it introduces an\nadditional feature: it provides an effect that allows you to manually\ninvalidate the cached result before it naturally expires.\nThis gives you more control over the cache, allowing you to refresh the\nresult when needed, even if the original cache has not yet expired.\nOnce the cache is invalidated, the next time the effect is evaluated, the\nresult will be recomputed, and the cache will be refreshed.\n**When to Use**\nUse this function when you have an effect whose result needs to be cached for\na certain period, but you also want the option to refresh the cache manually\nbefore the expiration time.\nThis is useful when you need to ensure that the cached data remains valid for\na certain period but still want to invalidate it if the underlying data\nchanges or if you want to force a recomputation.\n**Example**\n```ts\nimport { Effect, Console } from \"effect\"\nlet i = 1\nconst expensiveTask = Effect.promise<string>(() => {\nconsole.log(\"expensive task...\")\nreturn new Promise((resolve) => {\nsetTimeout(() => {\nresolve(`result ${i++}`)\n}, 100)\n})\n})\nconst program = Effect.gen(function* () {\nconst [cached, invalidate] = yield* Effect.cachedInvalidateWithTTL(\nexpensiveTask,\n\"1 hour\"\n)\nyield* cached.pipe(Effect.andThen(Console.log))\nyield* cached.pipe(Effect.andThen(Console.log))\nyield* invalidate\nyield* cached.pipe(Effect.andThen(Console.log))\n})\nEffect.runFork(program)\n// Output:\n// expensive task...\n// result 1\n// result 1\n// expensive task...\n// result 2\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Console } from \"effect\"\nlet i = 1\nconst expensiveTask = Effect.promise<string>(() => {\nconsole.log(\"expensive task...\")\nreturn new Promise((resolve) => {\nsetTimeout(() => {\nresolve(`result ${i++}`)\n}, 100)\n})\n})\nconst program = Effect.gen(function* () {\nconst [cached, invalidate] = yield* Effect.cachedInvalidateWithTTL(\nexpensiveTask,\n\"1 hour\"\n)\nyield* cached.pipe(Effect.andThen(Console.log))\nyield* cached.pipe(Effect.andThen(Console.log))\nyield* invalidate\nyield* cached.pipe(Effect.andThen(Console.log))\n})\nEffect.runFork(program)\n// Output:\n// expensive task...\n// result 1\n// result 1\n// expensive task...\n// result 2"
+    }
+  ],
+  "tags": [
+    "Caching"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 517,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L517"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Fiber.status",
+  "name": "status",
+  "module": "Fiber",
+  "package": "effect",
+  "signature": "<A, E>(self: RuntimeFiber<A, E>) => Effect<FiberStatus, never, never>",
+  "description": "Returns the `FiberStatus` of a `RuntimeFiber`.",
+  "documentation": "Returns the `FiberStatus` of a `RuntimeFiber`.",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Fiber.d.ts",
+  "sourceLine": 717,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Fiber.ts#L717"
+}

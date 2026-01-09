@@ -1,0 +1,15 @@
+{
+  "id": "Chunk.dropWhile",
+  "name": "dropWhile",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <A>(predicate: Predicate<NoInfer<A>>): (self: Chunk<A>) => Chunk<A>; <A>(self: Chunk<A>, predicate: Predicate<A>): Chunk<A>; }",
+  "description": "Drops all elements so long as the predicate returns true.",
+  "documentation": "Drops all elements so long as the predicate returns true.",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 303,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L303"
+}

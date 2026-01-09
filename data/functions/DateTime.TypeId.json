@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.TypeId",
+  "name": "TypeId",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "typeof TypeId",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "type ids"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 20,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L20"
+}

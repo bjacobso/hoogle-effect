@@ -1,0 +1,17 @@
+{
+  "id": "HttpApp.toWebHandlerLayer",
+  "name": "toWebHandlerLayer",
+  "module": "HttpApp",
+  "package": "@effect/platform",
+  "signature": "<E, R, RE>(self: Default<E, Scope | R>, layer: Layer<R, RE, never>, options?: { readonly memoMap?: MemoMap; readonly middleware?: HttpMiddleware; }) => { readonly dispose: () => Promise<void>; readonly handler: (request: Request, context?: Context<never>) => Promise<Response>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "conversions"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpApp.d.ts",
+  "sourceLine": 86,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpApp.ts#L86"
+}

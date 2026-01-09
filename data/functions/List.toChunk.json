@@ -1,0 +1,17 @@
+{
+  "id": "List.toChunk",
+  "name": "toChunk",
+  "module": "List",
+  "package": "effect",
+  "signature": "<A>(self: List<A>) => Chunk<A>",
+  "description": "Converts the specified `List` to a `Chunk`.",
+  "documentation": "Converts the specified `List` to a `Chunk`.",
+  "examples": [],
+  "tags": [
+    "conversions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 915,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L915"
+}

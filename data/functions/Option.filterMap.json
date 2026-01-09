@@ -1,0 +1,21 @@
+{
+  "id": "Option.filterMap",
+  "name": "filterMap",
+  "module": "Option",
+  "package": "effect",
+  "signature": "{ <A, B>(f: (a: A) => Option<B>): (self: Option<A>) => Option<B>; <A, B>(self: Option<A>, f: (a: A) => Option<B>): Option<B>; }",
+  "description": "Alias of {@link flatMap}.",
+  "documentation": "Alias of {@link flatMap}.",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\n// Transform and filter numbers\nconst transformEven = (n: Option.Option<number>): Option.Option<string> =>\nOption.filterMap(n, (n) => (n % 2 === 0 ? Option.some(`Even: ${n}`) : Option.none()))\n\nconsole.log(transformEven(Option.none()))\n// Output: { _id: 'Option', _tag: 'None' }\n\nconsole.log(transformEven(Option.some(1)))\n// Output: { _id: 'Option', _tag: 'None' }\n\nconsole.log(transformEven(Option.some(2)))\n// Output: { _id: 'Option', _tag: 'Some', value: 'Even: 2' }"
+    }
+  ],
+  "tags": [
+    "Filtering"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 2701,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L2701"
+}

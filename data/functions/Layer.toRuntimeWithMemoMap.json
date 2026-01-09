@@ -1,0 +1,17 @@
+{
+  "id": "Layer.toRuntimeWithMemoMap",
+  "name": "toRuntimeWithMemoMap",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "{ (memoMap: MemoMap): <RIn, E, ROut>(self: Layer<ROut, E, RIn>) => Effect<Runtime<ROut>, E, Scope | RIn>; <RIn, E, ROut>(self: Layer<ROut, E, RIn>, memoMap: MemoMap): Effect<Runtime<ROut>, E, Scope | RIn>; }",
+  "description": "Converts a layer that requires no services into a scoped runtime, which can\nbe used to execute effects.",
+  "documentation": "Converts a layer that requires no services into a scoped runtime, which can\nbe used to execute effects.",
+  "examples": [],
+  "tags": [
+    "conversions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 1055,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L1055"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Effect.once",
+  "name": "once",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, E, R>) => Effect<Effect<void, E, R>, never, never>",
+  "description": "Returns an effect that executes only once, regardless of how many times it's\ncalled.\n*Details This function ensures that a specific effect is executed only a single time,\nno matter how many times it is invoked. The result of the effect will be\ncached, and subsequent calls to the effect will immediately return the cached\nresult without re-executing the original logic.\n*When to Use Use this function when you need to perform a task only once, regardless of\nhow many times the effect is triggered. It's particularly useful when you\nhave initialization tasks, logging, or other one-time actions that should not\nbe repeated. This can help optimize performance and avoid redundant actions.\n*Example",
+  "documentation": "Returns an effect that executes only once, regardless of how many times it's\ncalled.\n*Details**\n\nThis function ensures that a specific effect is executed only a single time,\nno matter how many times it is invoked. The result of the effect will be\ncached, and subsequent calls to the effect will immediately return the cached\nresult without re-executing the original logic.\n*When to Use**\n\nUse this function when you need to perform a task only once, regardless of\nhow many times the effect is triggered. It's particularly useful when you\nhave initialization tasks, logging, or other one-time actions that should not\nbe repeated. This can help optimize performance and avoid redundant actions.\n*Example**\n\n```ts\nimport { Effect, Console } from \"effect\"\n\nconst program = Effect.gen(function* () {\nconst task1 = Console.log(\"task1\")\nyield* Effect.repeatN(task1, 2)\nconst task2 = yield* Effect.once(Console.log(\"task2\"))\nyield* Effect.repeatN(task2, 2)\n})\n\nEffect.runFork(program)\n// Output:\n// task1\n// task1\n// task1\n// task2\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Console } from \"effect\"\n\nconst program = Effect.gen(function* () {\nconst task1 = Console.log(\"task1\")\nyield* Effect.repeatN(task1, 2)\nconst task2 = yield* Effect.once(Console.log(\"task2\"))\nyield* Effect.repeatN(task2, 2)\n})\n\nEffect.runFork(program)\n// Output:\n// task1\n// task1\n// task1\n// task2"
+    }
+  ],
+  "tags": [
+    "Caching"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 824,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L824"
+}

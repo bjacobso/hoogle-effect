@@ -1,0 +1,17 @@
+{
+  "id": "Fiber.unsafeRoots",
+  "name": "unsafeRoots",
+  "module": "Fiber",
+  "package": "effect",
+  "signature": "(_: void) => RuntimeFiber<any, any>[]",
+  "description": "Returns a chunk containing all root fibers.",
+  "documentation": "Returns a chunk containing all root fibers.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Fiber.d.ts",
+  "sourceLine": 702,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Fiber.ts#L702"
+}

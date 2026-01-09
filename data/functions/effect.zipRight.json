@@ -1,0 +1,21 @@
+{
+  "id": "Effect.zipRight",
+  "name": "zipRight",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A2, E2, R2>(that: Effect<A2, E2, R2>, options?: { readonly concurrent?: boolean; readonly batching?: boolean | \"inherit\"; readonly concurrentFinalizers?: boolean; }): <A, E, R>(self: Effect<A, E, R>) => Effect<A2, E2 | E, R2 | R>; <A, E, R, A2, E2, R2>(self: Effect<A, E, R>, that: Effect<A2, E2, R2>, options?: { readonly concurrent?: boolean; readonly batching?: boolean | \"inherit\"; readonly concurrentFinalizers?: boolean; }): Effect<A2, E | E2, R | R2>; }",
+  "description": "Executes two effects sequentially, returning the result of the second effect\nwhile ignoring the result of the first.\n*Details This function allows you to run two effects in sequence, keeping the result\nof the second effect and discarding the result of the first. By default, the\ntwo effects are executed sequentially. If you need them to run concurrently,\nyou can pass the `{ concurrent: true }` option. The first effect will always be executed, even though its result is ignored.\nThis makes it useful for scenarios where the first effect is needed for its\nside effects, but only the result of the second effect is important.\n*When to Use Use this function when you are only interested in the result of the second\neffect but still need to run the first effect for its side effects, such as\ninitialization or setup tasks.\n*Example",
+  "documentation": "Executes two effects sequentially, returning the result of the second effect\nwhile ignoring the result of the first.\n*Details**\n\nThis function allows you to run two effects in sequence, keeping the result\nof the second effect and discarding the result of the first. By default, the\ntwo effects are executed sequentially. If you need them to run concurrently,\nyou can pass the `{ concurrent: true }` option.\n\nThe first effect will always be executed, even though its result is ignored.\nThis makes it useful for scenarios where the first effect is needed for its\nside effects, but only the result of the second effect is important.\n*When to Use**\n\nUse this function when you are only interested in the result of the second\neffect but still need to run the first effect for its side effects, such as\ninitialization or setup tasks.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\nconst task1 = Effect.succeed(1).pipe(\nEffect.delay(\"200 millis\"),\nEffect.tap(Effect.log(\"task1 done\"))\n)\nconst task2 = Effect.succeed(\"hello\").pipe(\nEffect.delay(\"100 millis\"),\nEffect.tap(Effect.log(\"task2 done\"))\n)\n\nconst program = Effect.zipRight(task1, task2)\n\nEffect.runPromise(program).then(console.log)\n// Output:\n// timestamp=... level=INFO fiber=#0 message=\"task1 done\"\n// timestamp=... level=INFO fiber=#0 message=\"task2 done\"\n// hello\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst task1 = Effect.succeed(1).pipe(\nEffect.delay(\"200 millis\"),\nEffect.tap(Effect.log(\"task1 done\"))\n)\nconst task2 = Effect.succeed(\"hello\").pipe(\nEffect.delay(\"100 millis\"),\nEffect.tap(Effect.log(\"task2 done\"))\n)\n\nconst program = Effect.zipRight(task1, task2)\n\nEffect.runPromise(program).then(console.log)\n// Output:\n// timestamp=... level=INFO fiber=#0 message=\"task1 done\"\n// timestamp=... level=INFO fiber=#0 message=\"task2 done\"\n// hello"
+    }
+  ],
+  "tags": [
+    "Zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 25319,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L25319"
+}

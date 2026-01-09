@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.linear",
+  "name": "linear",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "(base: DurationInput) => Schedule<Duration, unknown, never>",
+  "description": "Creates a schedule that recurs indefinitely, increasing the delay linearly.\n*Details This schedule starts with an initial delay of `base` and increases the delay\non each recurrence in a linear fashion, following the formula: `delay = base * n` where `n` is the number of times the schedule has executed so far. This\nresults in increasing intervals between executions. This is useful for implementing linear backoff strategies where the wait time\nbetween retries increases at a steady rate.",
+  "documentation": "Creates a schedule that recurs indefinitely, increasing the delay linearly.\n*Details**\n\nThis schedule starts with an initial delay of `base` and increases the delay\non each recurrence in a linear fashion, following the formula:\n\n`delay = base * n`\n\nwhere `n` is the number of times the schedule has executed so far. This\nresults in increasing intervals between executions.\n\nThis is useful for implementing linear backoff strategies where the wait time\nbetween retries increases at a steady rate.",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 1877,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L1877"
+}

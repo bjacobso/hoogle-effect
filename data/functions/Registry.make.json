@@ -1,0 +1,17 @@
+{
+  "id": "Registry.make",
+  "name": "make",
+  "module": "Registry",
+  "package": "@effect-atom/atom",
+  "signature": "(options?: { readonly initialValues?: Iterable<readonly [Atom<any>, any]>; readonly scheduleTask?: (f: () => void) => void; readonly timeoutResolution?: number; readonly defaultIdleTTL?: number; }) => Registry",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Registry.d.ts",
+  "sourceLine": 58,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Registry.ts#L58"
+}

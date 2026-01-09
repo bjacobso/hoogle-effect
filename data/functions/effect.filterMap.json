@@ -1,0 +1,21 @@
+{
+  "id": "Effect.filterMap",
+  "name": "filterMap",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <Eff extends Effect<any, any, any>, B>(pf: (a: Effect.Success<Eff>) => Option<B>): (elements: Iterable<Eff>) => Effect<B[], Effect.Error<Eff>, Effect.Context<Eff>>; <Eff extends Effect<any, any, any>, B>(elements: Iterable<Eff>, pf: (a: Effect.Success<Eff>) => Option<B>): Effect<B[], Effect.Error<Eff>, Effect.Context<Eff>>; }",
+  "description": "Filters and maps elements sequentially in one operation. This function processes each element one by one. It applies a function that\nreturns an `Option` to each element. If the function returns `Some`, the\nelement is kept; if it returns `None`, the element is removed. The operation\nis done sequentially for each element.\n*Example",
+  "documentation": "Filters and maps elements sequentially in one operation.\n\nThis function processes each element one by one. It applies a function that\nreturns an `Option` to each element. If the function returns `Some`, the\nelement is kept; if it returns `None`, the element is removed. The operation\nis done sequentially for each element.\n*Example**\n\n```ts\nimport { Console, Effect, Option } from \"effect\"\n\nconst task = (n: number) =>\nEffect.succeed(n).pipe(\nEffect.delay(1000 - (n * 100)),\nEffect.tap(Console.log(`task${n} done`))\n)\n\nconst program = Effect.filterMap(\n[task(1), task(2), task(3), task(4)],\n(n) => n % 2 === 0 ? Option.some(n) : Option.none()\n)\n\nEffect.runPromise(program).then(console.log)\n// Output:\n// task1 done\n// task2 done\n// task3 done\n// task4 done\n// [ 2, 4 ]\n```",
+  "examples": [
+    {
+      "code": "import { Console, Effect, Option } from \"effect\"\n\nconst task = (n: number) =>\nEffect.succeed(n).pipe(\nEffect.delay(1000 - (n * 100)),\nEffect.tap(Console.log(`task${n} done`))\n)\n\nconst program = Effect.filterMap(\n[task(1), task(2), task(3), task(4)],\n(n) => n % 2 === 0 ? Option.some(n) : Option.none()\n)\n\nEffect.runPromise(program).then(console.log)\n// Output:\n// task1 done\n// task2 done\n// task3 done\n// task4 done\n// [ 2, 4 ]"
+    }
+  ],
+  "tags": [
+    "Filtering"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 2235,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L2235"
+}

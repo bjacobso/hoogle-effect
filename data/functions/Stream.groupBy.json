@@ -1,0 +1,21 @@
+{
+  "id": "Stream.groupBy",
+  "name": "groupBy",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A, K, V, E2, R2>(f: (a: A) => Effect<readonly [K, V], E2, R2>, options?: { readonly bufferSize?: number; }): <E, R>(self: Stream<A, E, R>) => GroupBy<K, V, E2 | E, R2 | R>; <A, E, R, K, V, E2, R2>(self: Stream<A, E, R>, f: (a: A) => Effect<readonly [K, V], E2, R2>, options?: { readonly bufferSize?: number; }): GroupBy<K, V, E | E2, R | R2>; }",
+  "description": "More powerful version of `Stream.groupByKey`.",
+  "documentation": "More powerful version of `Stream.groupByKey`.",
+  "examples": [
+    {
+      "code": "import { Chunk, Effect, GroupBy, Stream } from \"effect\"\n\nconst groupByKeyResult = Stream.fromIterable([\n\"Mary\",\n\"James\",\n\"Robert\",\n\"Patricia\",\n\"John\",\n\"Jennifer\",\n\"Rebecca\",\n\"Peter\"\n]).pipe(\nStream.groupBy((name) => Effect.succeed([name.substring(0, 1), name]))\n)\n\nconst stream = GroupBy.evaluate(groupByKeyResult, (key, stream) =>\nStream.fromEffect(\nStream.runCollect(stream).pipe(\nEffect.andThen((chunk) => [key, Chunk.size(chunk)] as const)\n)\n))\n\nEffect.runPromise(Stream.runCollect(stream)).then(console.log)\n// {\n// _id: 'Chunk',\n// values: [ [ 'M', 1 ], [ 'J', 3 ], [ 'R', 2 ], [ 'P', 2 ] ]\n// }"
+    }
+  ],
+  "tags": [
+    "grouping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 3343,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L3343"
+}

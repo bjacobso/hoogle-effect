@@ -1,0 +1,21 @@
+{
+  "id": "Effect.withTracerEnabled",
+  "name": "withTracerEnabled",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ (enabled: boolean): <A, E, R>(effect: Effect<A, E, R>) => Effect<A, E, R>; <A, E, R>(effect: Effect<A, E, R>, enabled: boolean): Effect<A, E, R>; }",
+  "description": "Disable the tracer for the given Effect.\n*Example",
+  "documentation": "Disable the tracer for the given Effect.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\nEffect.succeed(42).pipe(\nEffect.withSpan(\"my-span\"),\n// the span will not be registered with the tracer\nEffect.withTracerEnabled(false)\n)\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nEffect.succeed(42).pipe(\nEffect.withSpan(\"my-span\"),\n// the span will not be registered with the tracer\nEffect.withTracerEnabled(false)\n)"
+    }
+  ],
+  "tags": [
+    "Tracing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 25752,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L25752"
+}

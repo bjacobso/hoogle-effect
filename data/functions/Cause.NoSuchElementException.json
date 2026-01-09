@@ -1,0 +1,17 @@
+{
+  "id": "Cause.NoSuchElementException",
+  "name": "NoSuchElementException",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "new (message?: string) => NoSuchElementException",
+  "description": "Creates an error indicating a missing element.\n*Details This function constructs a `NoSuchElementException`. It helps you clearly\ncommunicate that a required element is unavailable.",
+  "documentation": "Creates an error indicating a missing element.\n*Details**\n\nThis function constructs a `NoSuchElementException`. It helps you clearly\ncommunicate that a required element is unavailable.",
+  "examples": [],
+  "tags": [
+    "Errors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 1761,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L1761"
+}

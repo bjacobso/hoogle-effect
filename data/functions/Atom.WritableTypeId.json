@@ -1,0 +1,17 @@
+{
+  "id": "Atom.WritableTypeId",
+  "name": "WritableTypeId",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "\"~effect-atom/atom/Atom/Writable\"",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "type ids"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 79,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L79"
+}

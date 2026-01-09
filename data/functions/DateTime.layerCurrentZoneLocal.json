@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.layerCurrentZoneLocal",
+  "name": "layerCurrentZoneLocal",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "Layer<CurrentTimeZone, never, never>",
+  "description": "Create a Layer from the systems local time zone.",
+  "documentation": "Create a Layer from the systems local time zone.",
+  "examples": [],
+  "tags": [
+    "current time zone"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 2415,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L2415"
+}

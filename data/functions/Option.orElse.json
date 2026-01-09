@@ -1,0 +1,21 @@
+{
+  "id": "Option.orElse",
+  "name": "orElse",
+  "module": "Option",
+  "package": "effect",
+  "signature": "{ <B>(that: LazyArg<Option<B>>): <A>(self: Option<A>) => Option<B | A>; <A, B>(self: Option<A>, that: LazyArg<Option<B>>): Option<A | B>; }",
+  "description": "Returns the provided `Option` `that` if the current `Option` (`self`) is\n`None`; otherwise, it returns `self`.\n*Details This function provides a fallback mechanism for `Option` values. If the\ncurrent `Option` is `None` (i.e., it contains no value), the `that` function\nis evaluated, and its resulting `Option` is returned. If the current `Option`\nis `Some` (i.e., it contains a value), the original `Option` is returned\nunchanged. This is particularly useful for chaining fallback values or computations,\nallowing you to provide alternative `Option` values when the first one is\nempty.",
+  "documentation": "Returns the provided `Option` `that` if the current `Option` (`self`) is\n`None`; otherwise, it returns `self`.\n*Details**\n\nThis function provides a fallback mechanism for `Option` values. If the\ncurrent `Option` is `None` (i.e., it contains no value), the `that` function\nis evaluated, and its resulting `Option` is returned. If the current `Option`\nis `Some` (i.e., it contains a value), the original `Option` is returned\nunchanged.\n\nThis is particularly useful for chaining fallback values or computations,\nallowing you to provide alternative `Option` values when the first one is\nempty.",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\nconsole.log(Option.none().pipe(Option.orElse(() => Option.none())))\n// Output: { _id: 'Option', _tag: 'None' }\n\nconsole.log(Option.some(\"a\").pipe(Option.orElse(() => Option.none())))\n// Output: { _id: 'Option', _tag: 'Some', value: 'a' }\n\nconsole.log(Option.none().pipe(Option.orElse(() => Option.some(\"b\"))))\n// Output: { _id: 'Option', _tag: 'Some', value: 'b' }\n\nconsole.log(Option.some(\"a\").pipe(Option.orElse(() => Option.some(\"b\"))))\n// Output: { _id: 'Option', _tag: 'Some', value: 'a' }"
+    }
+  ],
+  "tags": [
+    "Error handling"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 650,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L650"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "Effect.ensuring",
+  "name": "ensuring",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <X, R1>(finalizer: Effect<X, never, R1>): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E, R1 | R>; <A, E, R, X, R1>(self: Effect<A, E, R>, finalizer: Effect<X, never, R1>): Effect<A, E, R | R1>; }",
+  "description": "Guarantees the execution of a finalizer when an effect starts execution.",
+  "documentation": "Guarantees the execution of a finalizer when an effect starts execution.\n**Details**\nThis function allows you to specify a `finalizer` effect that will always be\nrun once the effect starts execution, regardless of whether the effect\nsucceeds, fails, or is interrupted.\n**When to Use**\nThis is useful when you need to ensure that certain cleanup or final steps\nare executed in all cases, such as releasing resources or performing\nnecessary logging.\nWhile this function provides strong guarantees about executing the finalizer,\nit is considered a low-level tool, which may not be ideal for more complex\nresource management. For higher-level resource management with automatic\nacquisition and release, see the {@link acquireRelease}family of functions.\nFor use cases where you need access to the result of an effect, consider\nusing {@link onExit}.\n**Example** (Running a Finalizer in All Outcomes)\n```ts\nimport { Console, Effect } from \"effect\"\n// Define a cleanup effect\nconst handler = Effect.ensuring(Console.log(\"Cleanup completed\"))\n// Define a successful effect\nconst success = Console.log(\"Task completed\").pipe(\nEffect.as(\"some result\"),\nhandler\n)\nEffect.runFork(success)\n// Output:\n// Task completed\n// Cleanup completed\n// Define a failing effect\nconst failure = Console.log(\"Task failed\").pipe(\nEffect.andThen(Effect.fail(\"some error\")),\nhandler\n)\nEffect.runFork(failure)\n// Output:\n// Task failed\n// Cleanup completed\n// Define an interrupted effect\nconst interruption = Console.log(\"Task interrupted\").pipe(\nEffect.andThen(Effect.interrupt),\nhandler\n)\nEffect.runFork(interruption)\n// Output:\n// Task interrupted\n// Cleanup completed\n```",
+  "examples": [
+    {
+      "title": "Running a Finalizer in All Outcomes",
+      "code": "import { Console, Effect } from \"effect\"\n// Define a cleanup effect\nconst handler = Effect.ensuring(Console.log(\"Cleanup completed\"))\n// Define a successful effect\nconst success = Console.log(\"Task completed\").pipe(\nEffect.as(\"some result\"),\nhandler\n)\nEffect.runFork(success)\n// Output:\n// Task completed\n// Cleanup completed\n// Define a failing effect\nconst failure = Console.log(\"Task failed\").pipe(\nEffect.andThen(Effect.fail(\"some error\")),\nhandler\n)\nEffect.runFork(failure)\n// Output:\n// Task failed\n// Cleanup completed\n// Define an interrupted effect\nconst interruption = Console.log(\"Task interrupted\").pipe(\nEffect.andThen(Effect.interrupt),\nhandler\n)\nEffect.runFork(interruption)\n// Output:\n// Task interrupted\n// Cleanup completed"
+    }
+  ],
+  "tags": [
+    "Scoping, Resources & Finalization"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 10349,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L10349"
+}

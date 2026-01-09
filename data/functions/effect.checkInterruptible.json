@@ -1,0 +1,21 @@
+{
+  "id": "Effect.checkInterruptible",
+  "name": "checkInterruptible",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(f: (isInterruptible: boolean) => Effect<A, E, R>) => Effect<A, E, R>",
+  "description": "Checks if interruption is allowed and executes a callback accordingly.\n*Details This function checks the current interrupt status of the running fiber. It\nthen calls the provided callback, passing a boolean indicating whether\ninterruption is allowed.\n*When to Use This is useful for handling specific logic based on whether the current\noperation can be interrupted, such as when performing asynchronous operations\nor handling cancellation.\n*Example",
+  "documentation": "Checks if interruption is allowed and executes a callback accordingly.\n*Details**\n\nThis function checks the current interrupt status of the running fiber. It\nthen calls the provided callback, passing a boolean indicating whether\ninterruption is allowed.\n*When to Use**\n\nThis is useful for handling specific logic based on whether the current\noperation can be interrupted, such as when performing asynchronous operations\nor handling cancellation.\n*Example**\n\n```ts\nimport { Console, Effect } from \"effect\"\n\nconst program = Effect.gen(function*() {\nyield* Effect.checkInterruptible((isInterruptible) => {\nif (isInterruptible) {\nreturn Console.log(\"You can interrupt this operation.\")\n} else {\nreturn Console.log(\"This operation cannot be interrupted.\")\n}\n})\n})\n\nEffect.runPromise(program)\n// Output: You can interrupt this operation.\n\nEffect.runPromise(program.pipe(Effect.uninterruptible))\n// Output: This operation cannot be interrupted.\n\n```",
+  "examples": [
+    {
+      "code": "import { Console, Effect } from \"effect\"\n\nconst program = Effect.gen(function*() {\nyield* Effect.checkInterruptible((isInterruptible) => {\nif (isInterruptible) {\nreturn Console.log(\"You can interrupt this operation.\")\n} else {\nreturn Console.log(\"This operation cannot be interrupted.\")\n}\n})\n})\n\nEffect.runPromise(program)\n// Output: You can interrupt this operation.\n\nEffect.runPromise(program.pipe(Effect.uninterruptible))\n// Output: This operation cannot be interrupted."
+    }
+  ],
+  "tags": [
+    "Interruption"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 8583,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L8583"
+}

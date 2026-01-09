@@ -1,0 +1,17 @@
+{
+  "id": "Array.containsWith",
+  "name": "containsWith",
+  "module": "Array",
+  "package": "effect",
+  "signature": "<A>(isEquivalent: (self: A, that: A) => boolean) => { (a: A): (self: Iterable<A>) => boolean; (self: Iterable<A>, a: A): boolean; }",
+  "description": "Returns a function that checks if a `ReadonlyArray` contains a given value using a provided `isEquivalent` function.\n*Example",
+  "documentation": "Returns a function that checks if a `ReadonlyArray` contains a given value using a provided `isEquivalent` function.\n*Example**\n\n```ts\nimport { Array, pipe } from \"effect\"\n\nconst isEquivalent = (a: number, b: number) => a === b\nconst containsNumber = Array.containsWith(isEquivalent)\nconst result = pipe([1, 2, 3, 4], containsNumber(3))\nconsole.log(result) // true\n```",
+  "examples": [],
+  "tags": [
+    "elements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 3122,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L3122"
+}

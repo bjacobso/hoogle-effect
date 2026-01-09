@@ -1,0 +1,17 @@
+{
+  "id": "Stream.some",
+  "name": "some",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Stream<Option<A>, E, R>) => Stream<A, Option<E>, R>",
+  "description": "Converts an option on values into an option on errors.",
+  "documentation": "Converts an option on values into an option on errors.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 7844,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L7844"
+}

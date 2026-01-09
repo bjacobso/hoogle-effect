@@ -1,0 +1,17 @@
+{
+  "id": "Stream.rechunk",
+  "name": "rechunk",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ (n: number): <A, E, R>(self: Stream<A, E, R>) => Stream<A, E, R>; <A, E, R>(self: Stream<A, E, R>, n: number): Stream<A, E, R>; }",
+  "description": "Re-chunks the elements of the stream into chunks of `n` elements each. The\nlast chunk might contain less than `n` elements.",
+  "documentation": "Re-chunks the elements of the stream into chunks of `n` elements each. The\nlast chunk might contain less than `n` elements.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 6513,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L6513"
+}

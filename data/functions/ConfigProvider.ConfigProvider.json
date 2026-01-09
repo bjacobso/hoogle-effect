@@ -1,0 +1,17 @@
+{
+  "id": "ConfigProvider.ConfigProvider",
+  "name": "ConfigProvider",
+  "module": "ConfigProvider",
+  "package": "effect",
+  "signature": "Tag<ConfigProvider, ConfigProvider>",
+  "description": "The service tag for `ConfigProvider`.",
+  "documentation": "The service tag for `ConfigProvider`.",
+  "examples": [],
+  "tags": [
+    "context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/ConfigProvider.d.ts",
+  "sourceLine": 119,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/ConfigProvider.ts#L119"
+}

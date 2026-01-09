@@ -1,0 +1,17 @@
+{
+  "id": "Scope.addFinalizer",
+  "name": "addFinalizer",
+  "module": "Scope",
+  "package": "effect",
+  "signature": "(self: Scope, finalizer: Effect<unknown, never, never>) => Effect<void, never, never>",
+  "description": "Adds a finalizer to this scope. The finalizer is guaranteed to be run when\nthe scope is closed. Use this when the finalizer does not need to know the\n`Exit` value that the scope is closed with.",
+  "documentation": "Adds a finalizer to this scope. The finalizer is guaranteed to be run when\nthe scope is closed. Use this when the finalizer does not need to know the\n`Exit` value that the scope is closed with.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Scope.d.ts",
+  "sourceLine": 95,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Scope.ts#L95"
+}

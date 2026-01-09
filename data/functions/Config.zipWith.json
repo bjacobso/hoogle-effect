@@ -1,0 +1,17 @@
+{
+  "id": "Config.zipWith",
+  "name": "zipWith",
+  "module": "Config",
+  "package": "effect",
+  "signature": "{ <B, A, C>(that: Config<B>, f: (a: A, b: B) => C): (self: Config<A>) => Config<C>; <A, B, C>(self: Config<A>, that: Config<B>, f: (a: A, b: B) => C): Config<C>; }",
+  "description": "Returns a config that is the composes this config and the specified config\nusing the provided function.",
+  "documentation": "Returns a config that is the composes this config and the specified config\nusing the provided function.",
+  "examples": [],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Config.d.ts",
+  "sourceLine": 649,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Config.ts#L649"
+}

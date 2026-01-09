@@ -1,0 +1,17 @@
+{
+  "id": "Pool.isPool",
+  "name": "isPool",
+  "module": "Pool",
+  "package": "effect",
+  "signature": "(u: unknown) => u is Pool<unknown, unknown>",
+  "description": "Returns `true` if the specified value is a `Pool`, `false` otherwise.",
+  "documentation": "Returns `true` if the specified value is a `Pool`, `false` otherwise.",
+  "examples": [],
+  "tags": [
+    "refinements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Pool.d.ts",
+  "sourceLine": 82,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Pool.ts#L82"
+}

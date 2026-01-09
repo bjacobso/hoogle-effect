@@ -1,0 +1,21 @@
+{
+  "id": "Effect.withEarlyRelease",
+  "name": "withEarlyRelease",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, E, R>) => Effect<[finalizer: Effect<void, never, never>, result: A], E, Scope | R>",
+  "description": "Returns the result of the effect and a finalizer to close its scope.\n*Details This function allows you to retrieve both the result of an effect and a\nfinalizer that can be used to manually close its scope. This is useful for\nworkflows where you need early access to the result while retaining control\nover the resource cleanup process.\n*Example",
+  "documentation": "Returns the result of the effect and a finalizer to close its scope.\n*Details**\n\nThis function allows you to retrieve both the result of an effect and a\nfinalizer that can be used to manually close its scope. This is useful for\nworkflows where you need early access to the result while retaining control\nover the resource cleanup process.\n*Example**\n\n```ts\nimport { Console, Effect } from \"effect\"\n\nconst acquire = Console.log(\"Acquiring resource\").pipe(\nEffect.as(1),\nEffect.tap(Effect.addFinalizer(() => Console.log(\"Releasing resource\")))\n)\nconst program = Effect.gen(function*() {\nconst [finalizer, resource] = yield* Effect.withEarlyRelease(acquire)\nconsole.log(`Using resource: ${resource}`)\nyield* Effect.sleep(\"1 second\")\nyield* finalizer\n})\n\nEffect.runFork(program.pipe(Effect.scoped))\n// Output:\n// Acquiring resource\n// Using resource: 1\n// Releasing resource\n```",
+  "examples": [
+    {
+      "code": "import { Console, Effect } from \"effect\"\n\nconst acquire = Console.log(\"Acquiring resource\").pipe(\nEffect.as(1),\nEffect.tap(Effect.addFinalizer(() => Console.log(\"Releasing resource\")))\n)\nconst program = Effect.gen(function*() {\nconst [finalizer, resource] = yield* Effect.withEarlyRelease(acquire)\nconsole.log(`Using resource: ${resource}`)\nyield* Effect.sleep(\"1 second\")\nyield* finalizer\n})\n\nEffect.runFork(program.pipe(Effect.scoped))\n// Output:\n// Acquiring resource\n// Using resource: 1\n// Releasing resource"
+    }
+  ],
+  "tags": [
+    "Scoping, Resources & Finalization"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 11188,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L11188"
+}

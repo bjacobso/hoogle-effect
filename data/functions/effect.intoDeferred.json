@@ -1,0 +1,21 @@
+{
+  "id": "Effect.intoDeferred",
+  "name": "intoDeferred",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A, E>(deferred: Deferred<A, E>): <R>(self: Effect<A, E, R>) => Effect<boolean, never, R>; <A, E, R>(self: Effect<A, E, R>, deferred: Deferred<A, E>): Effect<boolean, never, R>; }",
+  "description": "Converts an `Effect` into an operation that completes a `Deferred` with its result.\n*Details The `intoDeferred` function takes an effect and a `Deferred` and ensures that the `Deferred`\nis completed based on the outcome of the effect. If the effect succeeds, the `Deferred` is\ncompleted with the success value. If the effect fails, the `Deferred` is completed with the\nfailure. Additionally, if the effect is interrupted, the `Deferred` will also be interrupted.\n*Example",
+  "documentation": "Converts an `Effect` into an operation that completes a `Deferred` with its result.\n*Details**\n\nThe `intoDeferred` function takes an effect and a `Deferred` and ensures that the `Deferred`\nis completed based on the outcome of the effect. If the effect succeeds, the `Deferred` is\ncompleted with the success value. If the effect fails, the `Deferred` is completed with the\nfailure. Additionally, if the effect is interrupted, the `Deferred` will also be interrupted.\n*Example**\n\n```ts\nimport { Deferred, Effect } from \"effect\"\n\n// Define an effect that succeeds\nconst successEffect = Effect.succeed(42)\n\nconst program = Effect.gen(function*() {\n// Create a deferred\nconst deferred = yield* Deferred.make<number, string>()\n\n// Complete the deferred using the successEffect\nconst isCompleted = yield* Effect.intoDeferred(successEffect, deferred)\n\n// Access the value of the deferred\nconst value = yield* Deferred.await(deferred)\nconsole.log(value)\n\nreturn isCompleted\n})\n\nEffect.runPromise(program).then(console.log)\n// Output:\n// 42\n// true\n```",
+  "examples": [
+    {
+      "code": "import { Deferred, Effect } from \"effect\"\n\n// Define an effect that succeeds\nconst successEffect = Effect.succeed(42)\n\nconst program = Effect.gen(function*() {\n// Create a deferred\nconst deferred = yield* Deferred.make<number, string>()\n\n// Complete the deferred using the successEffect\nconst isCompleted = yield* Effect.intoDeferred(successEffect, deferred)\n\n// Access the value of the deferred\nconst value = yield* Deferred.await(deferred)\nconsole.log(value)\n\nreturn isCompleted\n})\n\nEffect.runPromise(program).then(console.log)\n// Output:\n// 42\n// true"
+    }
+  ],
+  "tags": [
+    "Synchronization Utilities"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 15417,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L15417"
+}

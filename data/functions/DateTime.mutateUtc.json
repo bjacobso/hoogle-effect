@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.mutateUtc",
+  "name": "mutateUtc",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "{ (f: (date: Date) => void): <A extends DateTime>(self: A) => A; <A extends DateTime>(self: A, f: (date: Date) => void): A; }",
+  "description": "Modify a `DateTime` by applying a function to a cloned UTC `Date` instance.",
+  "documentation": "Modify a `DateTime` by applying a function to a cloned UTC `Date` instance.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 1630,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L1630"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.splitAt",
+  "name": "splitAt",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ (n: number): <A>(self: Chunk<A>) => [beforeIndex: Chunk<A>, fromIndex: Chunk<A>]; <A>(self: Chunk<A>, n: number): [beforeIndex: Chunk<A>, fromIndex: Chunk<A>]; }",
+  "description": "Returns two splits of this chunk at the specified index.",
+  "documentation": "Returns two splits of this chunk at the specified index.",
+  "examples": [],
+  "tags": [
+    "splitting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 1025,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L1025"
+}

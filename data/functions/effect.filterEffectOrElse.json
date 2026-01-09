@@ -1,0 +1,21 @@
+{
+  "id": "Effect.filterEffectOrElse",
+  "name": "filterEffectOrElse",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A, E2, R2, A2, E3, R3>(options: { readonly predicate: (a: NoInfer<A>) => Effect<boolean, E2, R2>; readonly orElse: (a: NoInfer<A>) => Effect<A2, E3, R3>; }): <E, R>(self: Effect<A, E, R>) => Effect<A | A2, E2 | E3 | E, R2 | R3 | R>; <A, E, R, E2, R2, A2, E3, R3>(self: Effect<A, E, R>, options: { readonly predicate: (a: A) => Effect<boolean, E2, R2>; readonly orElse: (a: A) => Effect<A2, E3, R3>; }): Effect<A | A2, E | E2 | E3, R | R2 | R3>; }",
+  "description": "Filters an effect with an effectful predicate, falling back to an alternative\neffect if the predicate fails.\n*Details This function applies a predicate to the result of an effect. If the\npredicate evaluates to `false`, the effect falls back to the `orElse`\neffect. The `orElse` effect can produce an alternative value or perform\nadditional computations.\n*Example",
+  "documentation": "Filters an effect with an effectful predicate, falling back to an alternative\neffect if the predicate fails.\n*Details**\n\nThis function applies a predicate to the result of an effect. If the\npredicate evaluates to `false`, the effect falls back to the `orElse`\neffect. The `orElse` effect can produce an alternative value or perform\nadditional computations.\n*Example**\n\n```ts\nimport { Effect, pipe } from \"effect\"\n\n// Define a user interface\ninterface User {\nreadonly name: string\n}\n\n// Simulate an asynchronous authentication function\ndeclare const auth: () => Promise<User | null>\n\nconst program = pipe(\nEffect.promise(() => auth()),\n// Use filterEffectOrElse with an effectful predicate\nEffect.filterEffectOrElse({\npredicate: (user) => Effect.succeed(user !== null),\norElse: (user) => Effect.fail(new Error(`Unauthorized user: ${user}`))\n}),\n)\n```",
+  "examples": [
+    {
+      "code": "import { Effect, pipe } from \"effect\"\n\n// Define a user interface\ninterface User {\nreadonly name: string\n}\n\n// Simulate an asynchronous authentication function\ndeclare const auth: () => Promise<User | null>\n\nconst program = pipe(\nEffect.promise(() => auth()),\n// Use filterEffectOrElse with an effectful predicate\nEffect.filterEffectOrElse({\npredicate: (user) => Effect.succeed(user !== null),\norElse: (user) => Effect.fail(new Error(`Unauthorized user: ${user}`))\n}),\n)"
+    }
+  ],
+  "tags": [
+    "Filtering"
+  ],
+  "since": "3.13.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 16263,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L16263"
+}

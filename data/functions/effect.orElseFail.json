@@ -1,0 +1,21 @@
+{
+  "id": "Effect.orElseFail",
+  "name": "orElseFail",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E2>(evaluate: LazyArg<E2>): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E2, R>; <A, E, R, E2>(self: Effect<A, E, R>, evaluate: LazyArg<E2>): Effect<A, E2, R>; }",
+  "description": "Replaces the failure of an effect with a custom failure value.\n*Details This function allows you to handle the failure of an effect by replacing it\nwith a predefined failure value. If the effect fails, the new failure value\nprovided by the `evaluate` function will be returned instead of the original\nfailure. If the effect succeeds, the original success value is returned\nunchanged.\n*When to Use This is particularly useful when you want to standardize error handling or\nprovide a consistent failure value for specific operations. It simplifies\nerror management by ensuring that all failures are replaced with a controlled\nalternative.\n*Example",
+  "documentation": "Replaces the failure of an effect with a custom failure value.\n*Details**\n\nThis function allows you to handle the failure of an effect by replacing it\nwith a predefined failure value. If the effect fails, the new failure value\nprovided by the `evaluate` function will be returned instead of the original\nfailure. If the effect succeeds, the original success value is returned\nunchanged.\n*When to Use**\n\nThis is particularly useful when you want to standardize error handling or\nprovide a consistent failure value for specific operations. It simplifies\nerror management by ensuring that all failures are replaced with a controlled\nalternative.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\nconst validate = (age: number): Effect.Effect<number, string> => {\nif (age < 0) {\nreturn Effect.fail(\"NegativeAgeError\")\n} else if (age < 18) {\nreturn Effect.fail(\"IllegalAgeError\")\n} else {\nreturn Effect.succeed(age)\n}\n}\n\nconst program = Effect.orElseFail(validate(-1), () => \"invalid age\")\n\nconsole.log(Effect.runSyncExit(program))\n// Output:\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: { _id: 'Cause', _tag: 'Fail', failure: 'invalid age' }\n// }\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst validate = (age: number): Effect.Effect<number, string> => {\nif (age < 0) {\nreturn Effect.fail(\"NegativeAgeError\")\n} else if (age < 18) {\nreturn Effect.fail(\"IllegalAgeError\")\n} else {\nreturn Effect.succeed(age)\n}\n}\n\nconst program = Effect.orElseFail(validate(-1), () => \"invalid age\")\n\nconsole.log(Effect.runSyncExit(program))\n// Output:\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: { _id: 'Cause', _tag: 'Fail', failure: 'invalid age' }\n// }"
+    }
+  ],
+  "tags": [
+    "Fallback"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 23415,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L23415"
+}

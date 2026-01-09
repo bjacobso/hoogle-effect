@@ -1,0 +1,17 @@
+{
+  "id": "HttpLayerRouter.add",
+  "name": "add",
+  "module": "HttpLayerRouter",
+  "package": "@effect/platform",
+  "signature": "<E, R>(method: \"*\" | \"GET\" | \"POST\" | \"PUT\" | \"PATCH\" | \"DELETE\" | \"OPTIONS\", path: PathInput, handler: Effect<HttpServerResponse, E, R> | ((request: HttpServerRequest) => Effect<HttpServerResponse, E, R>), options?: { readonly uninterruptible?: boolean; }) => Layer<never, never, HttpRouter | Request.From<\"Requires\", Exclude<R, Provided>> | Request.From<\"Error\", E>>",
+  "description": "Create a layer that adds a single route to the HTTP router.",
+  "documentation": "Create a layer that adds a single route to the HTTP router.\n\n```ts\nimport * as HttpLayerRouter from \"@effect/platform/HttpLayerRouter\"\nimport * as HttpServerResponse from \"@effect/platform/HttpServerResponse\"\n\nconst Route = HttpLayerRouter.add(\"GET\", \"/hello\", HttpServerResponse.text(\"Hello, World!\"))\n```",
+  "examples": [],
+  "tags": [
+    "HttpRouter"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpLayerRouter.d.ts",
+  "sourceLine": 133,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpLayerRouter.ts#L133"
+}

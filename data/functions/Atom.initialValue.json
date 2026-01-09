@@ -1,0 +1,17 @@
+{
+  "id": "Atom.initialValue",
+  "name": "initialValue",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "{ <A>(initialValue: A): (self: Atom<A>) => readonly [Atom<A>, A]; <A>(self: Atom<A>, initialValue: A): readonly [Atom<A>, A]; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 447,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L447"
+}

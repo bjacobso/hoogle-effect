@@ -1,0 +1,17 @@
+{
+  "id": "HttpServer.HttpServer",
+  "name": "HttpServer",
+  "module": "HttpServer",
+  "package": "@effect/platform",
+  "signature": "Tag<HttpServer, HttpServer>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpServer.d.ts",
+  "sourceLine": 71,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpServer.ts#L71"
+}

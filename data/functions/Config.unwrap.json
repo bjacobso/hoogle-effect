@@ -1,0 +1,17 @@
+{
+  "id": "Config.unwrap",
+  "name": "unwrap",
+  "module": "Config",
+  "package": "effect",
+  "signature": "<A>(wrapped: Config.Wrap<A>) => Config<A>",
+  "description": "Constructs a config from some configuration wrapped with the `Wrap<A>` utility type. For example:",
+  "documentation": "Constructs a config from some configuration wrapped with the `Wrap<A>` utility type.\n\nFor example:\n\n```\nimport { Config, unwrap } from \"./Config\"\n\ninterface Options { key: string }\n\nconst makeConfig = (config: Config.Wrap<Options>): Config<Options> => unwrap(config)\n```",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Config.d.ts",
+  "sourceLine": 516,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Config.ts#L516"
+}

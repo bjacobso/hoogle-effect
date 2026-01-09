@@ -1,0 +1,21 @@
+{
+  "id": "Stream.fromIterableEffect",
+  "name": "fromIterableEffect",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(effect: Effect<Iterable<A>, E, R>) => Stream<A, E, R>",
+  "description": "Creates a stream from an effect producing a value of type `Iterable<A>`.",
+  "documentation": "Creates a stream from an effect producing a value of type `Iterable<A>`.",
+  "examples": [
+    {
+      "code": "import { Context, Effect, Stream } from \"effect\"\n\nclass Database extends Context.Tag(\"Database\")<\nDatabase,\n{ readonly getUsers: Effect.Effect<Array<string>> }\n>() {}\n\nconst getUsers = Database.pipe(Effect.andThen((_) => _.getUsers))\n\nconst stream = Stream.fromIterableEffect(getUsers)\n\nEffect.runPromise(\nStream.runCollect(stream.pipe(Stream.provideService(Database, { getUsers: Effect.succeed([\"user1\", \"user2\"]) })))\n).then(console.log)\n// { _id: 'Chunk', values: [ 'user1', 'user2' ] }"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 3151,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L3151"
+}

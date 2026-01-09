@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.fromDelay",
+  "name": "fromDelay",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "(delay: DurationInput) => Schedule<Duration, unknown, never>",
+  "description": "Creates a schedule that recurs once after a specified duration.\n*Details This schedule executes a single time after waiting for the given duration.\nOnce it has executed, it does not repeat.",
+  "documentation": "Creates a schedule that recurs once after a specified duration.\n*Details**\n\nThis schedule executes a single time after waiting for the given duration.\nOnce it has executed, it does not repeat.",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 1571,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L1571"
+}

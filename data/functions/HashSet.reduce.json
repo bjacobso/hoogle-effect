@@ -1,0 +1,21 @@
+{
+  "id": "HashSet.reduce",
+  "name": "reduce",
+  "module": "HashSet",
+  "package": "effect",
+  "signature": "{ <A, Z>(zero: Z, f: (accumulator: Z, value: A) => Z): (self: HashSet<A>) => Z; <A, Z>(self: HashSet<A>, zero: Z, f: (accumulator: Z, value: A) => Z): Z; }",
+  "description": "Reduces the specified state over the values of the `HashSet`. The time complexity is of `O(n)`.",
+  "documentation": "Reduces the specified state over the values of the `HashSet`.\n\nThe time complexity is of **`O(n)`**.",
+  "examples": [
+    {
+      "code": "// Syntax\nimport { HashSet, pipe } from \"effect\"\n\nconst sum = (a: number, b: number): number => a + b\n\n// with `data-last`, a.k.a. `pipeable` API\npipe(HashSet.make(0, 1, 2), HashSet.reduce(0, sum))\n\n// or with the pipe method\nHashSet.make(0, 1, 2).pipe(HashSet.reduce(0, sum))\n\n// or with `data-first` API\nHashSet.reduce(HashSet.make(0, 1, 2), 0, sum)"
+    }
+  ],
+  "tags": [
+    "folding"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashSet.d.ts",
+  "sourceLine": 1931,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashSet.ts#L1931"
+}

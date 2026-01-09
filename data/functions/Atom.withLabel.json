@@ -1,0 +1,17 @@
+{
+  "id": "Atom.withLabel",
+  "name": "withLabel",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "{ (name: string): <A extends Atom<any>>(self: A) => A; <A extends Atom<any>>(self: A, name: string): A; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 439,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L439"
+}

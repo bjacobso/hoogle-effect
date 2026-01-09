@@ -1,0 +1,17 @@
+{
+  "id": "Fiber.join",
+  "name": "join",
+  "module": "Fiber",
+  "package": "effect",
+  "signature": "<A, E>(self: Fiber<A, E>) => Effect<A, E, never>",
+  "description": "Joins the fiber, which suspends the joining fiber until the result of the\nfiber has been determined. Attempting to join a fiber that has erred will\nresult in a catchable error. Joining an interrupted fiber will result in an\n\"inner interruption\" of this fiber, unlike interruption triggered by\nanother fiber, \"inner interruption\" can be caught and recovered.",
+  "documentation": "Joins the fiber, which suspends the joining fiber until the result of the\nfiber has been determined. Attempting to join a fiber that has erred will\nresult in a catchable error. Joining an interrupted fiber will result in an\n\"inner interruption\" of this fiber, unlike interruption triggered by\nanother fiber, \"inner interruption\" can be caught and recovered.",
+  "examples": [],
+  "tags": [
+    "destructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Fiber.d.ts",
+  "sourceLine": 504,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Fiber.ts#L504"
+}

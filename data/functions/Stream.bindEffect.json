@@ -1,0 +1,17 @@
+{
+  "id": "Stream.bindEffect",
+  "name": "bindEffect",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <N extends string, A, B, E2, R2>(tag: Exclude<N, keyof A>, f: (_: NoInfer<A>) => Effect<B, E2, R2>, options?: { readonly concurrency?: number | \"unbounded\"; readonly bufferSize?: number; }): <E, R>(self: Stream<A, E, R>) => Stream<{ [K in N | keyof A]: K extends keyof A ? A[K] : B; }, E2 | E, R2 | R>; <A, E, R, N extends string, B, E2, R2>(self: Stream<A, E, R>, tag: Exclude<N, keyof A>, f: (_: NoInfer<A>) => Effect<B, E2, R2>, options?: { readonly concurrency?: number | \"unbounded\"; readonly unordered?: boolean; }): Stream<{ [K in N | keyof A]: K extends keyof A ? A[K] : B; }, E | E2, R | R2>; }",
+  "description": "Binds an effectful value in a `do` scope",
+  "documentation": "Binds an effectful value in a `do` scope",
+  "examples": [],
+  "tags": [
+    "do notation"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 10567,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L10567"
+}

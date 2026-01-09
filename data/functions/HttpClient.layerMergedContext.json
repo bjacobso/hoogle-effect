@@ -1,0 +1,15 @@
+{
+  "id": "HttpClient.layerMergedContext",
+  "name": "layerMergedContext",
+  "module": "HttpClient",
+  "package": "@effect/platform",
+  "signature": "<E, R>(effect: Effect<HttpClient, E, R>) => Layer<HttpClient, E, R>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpClient.d.ts",
+  "sourceLine": 677,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpClient.ts#L677"
+}

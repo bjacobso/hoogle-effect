@@ -1,0 +1,17 @@
+{
+  "id": "List.splitAt",
+  "name": "splitAt",
+  "module": "List",
+  "package": "effect",
+  "signature": "{ (n: number): <A>(self: List<A>) => [beforeIndex: List<A>, fromIndex: List<A>]; <A>(self: List<A>, n: number): [beforeIndex: List<A>, fromIndex: List<A>]; }",
+  "description": "Splits the specified list into two lists at the specified index.",
+  "documentation": "Splits the specified list into two lists at the specified index.",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 861,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L861"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Fiber.interruptFork",
+  "name": "interruptFork",
+  "module": "Fiber",
+  "package": "effect",
+  "signature": "<A, E>(self: Fiber<A, E>) => Effect<void, never, never>",
+  "description": "Interrupts the fiber from whichever fiber is calling this method. The\ninterruption will happen in a separate daemon fiber, and the returned\neffect will always resume immediately without waiting.",
+  "documentation": "Interrupts the fiber from whichever fiber is calling this method. The\ninterruption will happen in a separate daemon fiber, and the returned\neffect will always resume immediately without waiting.",
+  "examples": [],
+  "tags": [
+    "interruption"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Fiber.d.ts",
+  "sourceLine": 493,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Fiber.ts#L493"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Effect.logInfo",
+  "name": "logInfo",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "(...message: readonly any[]) => Effect<void, never, never>",
+  "description": "Logs messages at the INFO log level.\n*Details This function logs messages at the INFO level, suitable for general\napplication events or operational messages. INFO logs are shown by default\nand are commonly used for highlighting normal, non-error operations.",
+  "documentation": "Logs messages at the INFO log level.\n*Details**\n\nThis function logs messages at the INFO level, suitable for general\napplication events or operational messages. INFO logs are shown by default\nand are commonly used for highlighting normal, non-error operations.",
+  "examples": [],
+  "tags": [
+    "Logging"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 22377,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L22377"
+}

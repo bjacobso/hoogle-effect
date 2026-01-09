@@ -1,0 +1,17 @@
+{
+  "id": "Cause.map",
+  "name": "map",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "{ <E, E2>(f: (e: E) => E2): (self: Cause<E>) => Cause<E2>; <E, E2>(self: Cause<E>, f: (e: E) => E2): Cause<E2>; }",
+  "description": "Transforms the errors in a `Cause` using a user-provided function.\n*Details This function applies `f` to each `Fail` error while leaving defects (`Die`)\nand interruptions untouched. It's useful for changing or simplifying error\ntypes in your effectful workflows.",
+  "documentation": "Transforms the errors in a `Cause` using a user-provided function.\n*Details**\n\nThis function applies `f` to each `Fail` error while leaving defects (`Die`)\nand interruptions untouched. It's useful for changing or simplifying error\ntypes in your effectful workflows.",
+  "examples": [],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 995,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L995"
+}

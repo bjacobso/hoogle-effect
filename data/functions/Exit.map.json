@@ -1,0 +1,17 @@
+{
+  "id": "Exit.map",
+  "name": "map",
+  "module": "Exit",
+  "package": "effect",
+  "signature": "{ <A, B>(f: (a: A) => B): <E>(self: Exit<A, E>) => Exit<B, E>; <A, E, B>(self: Exit<A, E>, f: (a: A) => B): Exit<B, E>; }",
+  "description": "Maps over the `Success` value of the specified exit using the provided\nfunction.",
+  "documentation": "Maps over the `Success` value of the specified exit using the provided\nfunction.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Exit.d.ts",
+  "sourceLine": 323,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Exit.ts#L323"
+}

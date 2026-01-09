@@ -1,0 +1,17 @@
+{
+  "id": "Stream.either",
+  "name": "either",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Stream<A, E, R>) => Stream<Either<A, E>, never, R>",
+  "description": "Returns a stream whose failures and successes have been lifted into an\n`Either`. The resulting stream cannot fail, because the failures have been\nexposed as part of the `Either` success case.",
+  "documentation": "Returns a stream whose failures and successes have been lifted into an\n`Either`. The resulting stream cannot fail, because the failures have been\nexposed as part of the `Either` success case.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 2277,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L2277"
+}

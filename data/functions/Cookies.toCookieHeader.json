@@ -1,0 +1,17 @@
+{
+  "id": "Cookies.toCookieHeader",
+  "name": "toCookieHeader",
+  "module": "Cookies",
+  "package": "@effect/platform",
+  "signature": "(self: Cookies) => string",
+  "description": "Serialize a Cookies object into a Cookie header",
+  "documentation": "Serialize a Cookies object into a Cookie header",
+  "examples": [],
+  "tags": [
+    "encoding"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Cookies.d.ts",
+  "sourceLine": 369,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Cookies.ts#L369"
+}

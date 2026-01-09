@@ -1,0 +1,17 @@
+{
+  "id": "Multipart.isFile",
+  "name": "isFile",
+  "module": "Multipart",
+  "package": "@effect/platform",
+  "signature": "(u: unknown) => u is File",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Guards"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Multipart.d.ts",
+  "sourceLine": 79,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Multipart.ts#L79"
+}

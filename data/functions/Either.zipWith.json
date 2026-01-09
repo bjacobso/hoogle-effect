@@ -1,0 +1,17 @@
+{
+  "id": "Either.zipWith",
+  "name": "zipWith",
+  "module": "Either",
+  "package": "effect",
+  "signature": "{ <A2, E2, A, B>(that: Either<A2, E2>, f: (right: A, right2: A2) => B): <E>(self: Either<A, E>) => Either<B, E2 | E>; <A, E, A2, E2, B>(self: Either<A, E>, that: Either<A2, E2>, f: (right: A, right2: A2) => B): Either<B, E | E2>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Either.d.ts",
+  "sourceLine": 1025,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Either.ts#L1025"
+}

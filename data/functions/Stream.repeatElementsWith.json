@@ -1,0 +1,17 @@
+{
+  "id": "Stream.repeatElementsWith",
+  "name": "repeatElementsWith",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <B, R2, A, C>(schedule: Schedule<B, unknown, R2>, options: { readonly onElement: (a: A) => C; readonly onSchedule: (b: B) => C; }): <E, R>(self: Stream<A, E, R>) => Stream<C, E, R2 | R>; <A, E, R, B, R2, C>(self: Stream<A, E, R>, schedule: Schedule<B, unknown, R2>, options: { readonly onElement: (a: A) => C; readonly onSchedule: (b: B) => C; }): Stream<C, E, R | R2>; }",
+  "description": "Repeats each element of the stream using the provided schedule. When the\nschedule is finished, then the output of the schedule will be emitted into\nthe stream. Repetitions are done in addition to the first execution, which\nmeans using `Schedule.recurs(1)` actually results in the original effect,\nplus an additional recurrence, for a total of two repetitions of each value\nin the stream. This function accepts two conversion functions, which allow the output of\nthis stream and the output of the provided schedule to be unified into a\nsingle type. For example, `Either` or similar data type.",
+  "documentation": "Repeats each element of the stream using the provided schedule. When the\nschedule is finished, then the output of the schedule will be emitted into\nthe stream. Repetitions are done in addition to the first execution, which\nmeans using `Schedule.recurs(1)` actually results in the original effect,\nplus an additional recurrence, for a total of two repetitions of each value\nin the stream.\n\nThis function accepts two conversion functions, which allow the output of\nthis stream and the output of the provided schedule to be unified into a\nsingle type. For example, `Either` or similar data type.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 6778,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L6778"
+}

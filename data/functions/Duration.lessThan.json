@@ -1,0 +1,17 @@
+{
+  "id": "Duration.lessThan",
+  "name": "lessThan",
+  "module": "Duration",
+  "package": "effect",
+  "signature": "{ (that: DurationInput): (self: DurationInput) => boolean; (self: DurationInput, that: DurationInput): boolean; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "predicates"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Duration.d.ts",
+  "sourceLine": 390,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Duration.ts#L390"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Stream.fromPull",
+  "name": "fromPull",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<R, R2, E, A>(effect: Effect<Effect<Chunk<A>, Option<E>, R2>, never, Scope | R>) => Stream<A, E, R2 | Exclude<R, Scope>>",
+  "description": "Creates a stream from an effect that pulls elements from another stream. See `Stream.toPull` for reference.",
+  "documentation": "Creates a stream from an effect that pulls elements from another stream.\n\nSee `Stream.toPull` for reference.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 3167,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L3167"
+}

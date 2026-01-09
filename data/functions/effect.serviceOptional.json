@@ -1,0 +1,17 @@
+{
+  "id": "Effect.serviceOptional",
+  "name": "serviceOptional",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<I, S>(tag: Tag<I, S>) => Effect<S, NoSuchElementException, never>",
+  "description": "Retrieves a service from the context, throwing an error if it is missing.\n*Details This function retrieves a required service from the context. If the service\nis available, it returns the service. If the service is missing, it throws a\n`NoSuchElementException`, which can be handled using Effect's error-handling\nmechanisms. This is useful for services that are critical to the execution of\nyour effect.",
+  "documentation": "Retrieves a service from the context, throwing an error if it is missing.\n*Details**\n\nThis function retrieves a required service from the context. If the service\nis available, it returns the service. If the service is missing, it throws a\n`NoSuchElementException`, which can be handled using Effect's error-handling\nmechanisms. This is useful for services that are critical to the execution of\nyour effect.",
+  "examples": [],
+  "tags": [
+    "Context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 14745,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L14745"
+}

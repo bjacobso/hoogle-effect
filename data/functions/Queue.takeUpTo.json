@@ -1,0 +1,17 @@
+{
+  "id": "Queue.takeUpTo",
+  "name": "takeUpTo",
+  "module": "Queue",
+  "package": "effect",
+  "signature": "{ (max: number): <A>(self: Dequeue<A>) => Effect<Chunk<A>, never, never>; <A>(self: Dequeue<A>, max: number): Effect<Chunk<A>, never, never>; }",
+  "description": "Takes up to max number of values from the queue.",
+  "documentation": "Takes up to max number of values from the queue.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Queue.d.ts",
+  "sourceLine": 592,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Queue.ts#L592"
+}

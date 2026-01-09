@@ -1,0 +1,21 @@
+{
+  "id": "Stream.zipLatest",
+  "name": "zipLatest",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <AR, ER, RR>(right: Stream<AR, ER, RR>): <AL, EL, RL>(left: Stream<AL, EL, RL>) => Stream<[AL, AR], ER | EL, RR | RL>; <AL, EL, RL, AR, ER, RR>(left: Stream<AL, EL, RL>, right: Stream<AR, ER, RR>): Stream<[AL, AR], EL | ER, RL | RR>; }",
+  "description": "Zips the two streams so that when a value is emitted by either of the two\nstreams, it is combined with the latest value from the other stream to\nproduce a result. Note: tracking the latest value is done on a per-chunk basis. That means\nthat emitted elements that are not the last value in chunks will never be\nused for zipping.",
+  "documentation": "Zips the two streams so that when a value is emitted by either of the two\nstreams, it is combined with the latest value from the other stream to\nproduce a result.\n\nNote: tracking the latest value is done on a per-chunk basis. That means\nthat emitted elements that are not the last value in chunks will never be\nused for zipping.",
+  "examples": [
+    {
+      "code": "import { Effect, Schedule, Stream } from \"effect\"\n\nconst s1 = Stream.make(1, 2, 3).pipe(\nStream.schedule(Schedule.spaced(\"1 second\"))\n)\n\nconst s2 = Stream.make(\"a\", \"b\", \"c\", \"d\").pipe(\nStream.schedule(Schedule.spaced(\"500 millis\"))\n)\n\nconst stream = Stream.zipLatest(s1, s2)\n\nEffect.runPromise(Stream.runCollect(stream)).then(console.log)\n// { _id: \"Chunk\", values: [ [ 1, \"a\" ], [ 1, \"b\" ], [ 2, \"b\" ], [ 2, \"c\" ], [ 2, \"d\" ], [ 3, \"d\" ] ] }"
+    }
+  ],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 9994,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L9994"
+}

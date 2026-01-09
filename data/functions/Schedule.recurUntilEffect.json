@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.recurUntilEffect",
+  "name": "recurUntilEffect",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "<A, R>(f: (a: A) => Effect<boolean, never, R>) => Schedule<A, A, R>",
+  "description": "A schedule that recurs until the given effectful predicate evaluates to true.",
+  "documentation": "A schedule that recurs until the given effectful predicate evaluates to true.\n**Details**\nThis schedule continues executing as long as the provided effectful predicate\n`f` returns `false`. Once `f` evaluates to `true`, the schedule stops\nrecurring. Unlike {@link recurUntil}, this function allows the stopping\ncondition to be computed asynchronously or based on external dependencies.\nThis is useful when the stopping condition depends on an effectful\ncomputation, such as checking a database, making an API call, or retrieving\nsystem state dynamically.",
+  "examples": [],
+  "tags": [
+    "Recurrence Conditions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2313,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2313"
+}

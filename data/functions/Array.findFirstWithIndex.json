@@ -1,0 +1,17 @@
+{
+  "id": "Array.findFirstWithIndex",
+  "name": "findFirstWithIndex",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <A, B>(f: (a: NoInfer<A>, i: number) => Option<B>): (self: Iterable<A>) => Option<[B, number]>; <A, B extends A>(refinement: (a: NoInfer<A>, i: number) => a is B): (self: Iterable<A>) => Option<[B, number]>; <A>(predicate: (a: NoInfer<A>, i: number) => boolean): (self: Iterable<A>) => Option<[A, number]>; <A, B>(self: Iterable<A>, f: (a: A, i: number) => Option<B>): Option<[B, number]>; <A, B extends A>(self: Iterable<A>, refinement: (a: A, i: number) => a is B): Option<[B, number]>; <A>(self: Iterable<A>, predicate: (a: A, i: number) => boolean): Option<[A, number]>; }",
+  "description": "Returns a tuple of the first element that satisfies the specified\npredicate and its index, or `None` if no such element exists.\n*Example",
+  "documentation": "Returns a tuple of the first element that satisfies the specified\npredicate and its index, or `None` if no such element exists.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.findFirstWithIndex([1, 2, 3, 4, 5], x => x > 3)\nconsole.log(result) // Option.some([4, 3])\n```",
+  "examples": [],
+  "tags": [
+    "elements"
+  ],
+  "since": "3.17.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 1888,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L1888"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.forEach",
+  "name": "forEach",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <A, B>(f: (a: A, index: number) => B): (self: Chunk<A>) => void; <A, B>(self: Chunk<A>, f: (a: A, index: number) => B): void; }",
+  "description": "Iterates over each element of a `Chunk` and applies a function to it.\n*Details This function processes every element of the given `Chunk`, calling the\nprovided function `f` on each element. It does not return a new value;\ninstead, it is primarily used for side effects, such as logging or\naccumulating data in an external variable.",
+  "documentation": "Iterates over each element of a `Chunk` and applies a function to it.\n*Details**\n\nThis function processes every element of the given `Chunk`, calling the\nprovided function `f` on each element. It does not return a new value;\ninstead, it is primarily used for side effects, such as logging or\naccumulating data in an external variable.",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 638,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L638"
+}

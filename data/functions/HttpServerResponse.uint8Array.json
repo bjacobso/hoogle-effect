@@ -1,0 +1,17 @@
+{
+  "id": "HttpServerResponse.uint8Array",
+  "name": "uint8Array",
+  "module": "HttpServerResponse",
+  "package": "@effect/platform",
+  "signature": "(body: Uint8Array, options?: Options.WithContentType) => HttpServerResponse",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpServerResponse.d.ts",
+  "sourceLine": 89,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpServerResponse.ts#L89"
+}

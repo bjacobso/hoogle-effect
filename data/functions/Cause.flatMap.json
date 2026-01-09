@@ -1,0 +1,17 @@
+{
+  "id": "Cause.flatMap",
+  "name": "flatMap",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "{ <E, E2>(f: (e: E) => Cause<E2>): (self: Cause<E>) => Cause<E2>; <E, E2>(self: Cause<E>, f: (e: E) => Cause<E2>): Cause<E2>; }",
+  "description": "Transforms errors in a `Cause` into new causes.\n*Details This function applies a function `f` to each `Fail` error, converting it into\na new `Cause`. This is especially powerful for merging or restructuring error\ntypes while preserving or combining cause information.",
+  "documentation": "Transforms errors in a `Cause` into new causes.\n*Details**\n\nThis function applies a function `f` to each `Fail` error, converting it into\na new `Cause`. This is especially powerful for merging or restructuring error\ntypes while preserving or combining cause information.",
+  "examples": [],
+  "tags": [
+    "Sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 1041,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L1041"
+}

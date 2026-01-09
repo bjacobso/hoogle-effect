@@ -1,0 +1,17 @@
+{
+  "id": "Exit.mapError",
+  "name": "mapError",
+  "module": "Exit",
+  "package": "effect",
+  "signature": "{ <E, E2>(f: (e: E) => E2): <A>(self: Exit<A, E>) => Exit<A, E2>; <A, E, E2>(self: Exit<A, E>, f: (e: E) => E2): Exit<A, E2>; }",
+  "description": "Maps over the error contained in the `Failure` of the specified exit using\nthe provided function.",
+  "documentation": "Maps over the error contained in the `Failure` of the specified exit using\nthe provided function.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Exit.d.ts",
+  "sourceLine": 379,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Exit.ts#L379"
+}

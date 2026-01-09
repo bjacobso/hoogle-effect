@@ -1,0 +1,17 @@
+{
+  "id": "KeyValueStore.layerStorage",
+  "name": "layerStorage",
+  "module": "KeyValueStore",
+  "package": "@effect/platform",
+  "signature": "(evaluate: LazyArg<Storage>) => Layer<KeyValueStore, never, never>",
+  "description": "Creates an KeyValueStorage from an instance of the `Storage` api.",
+  "documentation": "Creates an KeyValueStorage from an instance of the `Storage` api.",
+  "examples": [],
+  "tags": [
+    "layers"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/KeyValueStore.d.ts",
+  "sourceLine": 192,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/KeyValueStore.ts#L192"
+}

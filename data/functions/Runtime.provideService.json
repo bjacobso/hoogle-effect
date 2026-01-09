@@ -1,0 +1,21 @@
+{
+  "id": "Runtime.provideService",
+  "name": "provideService",
+  "module": "Runtime",
+  "package": "effect",
+  "signature": "{ <I, S>(tag: Tag<I, S>, service: S): <R>(self: Runtime<R>) => Runtime<I | R>; <R, I, S>(self: Runtime<R>, tag: Tag<I, S>, service: S): Runtime<R | I>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [
+    {
+      "code": "import { Context, Runtime } from \"effect\"\n\nclass Name extends Context.Tag(\"Name\")<Name, string>() {}\n\nconst runtime: Runtime.Runtime<Name> = Runtime.defaultRuntime.pipe(\nRuntime.provideService(Name, \"John\")\n)"
+    }
+  ],
+  "tags": [
+    "context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Runtime.d.ts",
+  "sourceLine": 417,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Runtime.ts#L417"
+}

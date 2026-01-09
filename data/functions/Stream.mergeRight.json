@@ -1,0 +1,17 @@
+{
+  "id": "Stream.mergeRight",
+  "name": "mergeRight",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <AR, ER, RR>(right: Stream<AR, ER, RR>): <AL, EL, RL>(left: Stream<AL, EL, RL>) => Stream<AR, ER | EL, RR | RL>; <AL, EL, RL, AR, ER, RR>(left: Stream<AL, EL, RL>, right: Stream<AR, ER, RR>): Stream<AR, EL | ER, RL | RR>; }",
+  "description": "Merges this stream and the specified stream together, discarding the values\nfrom the left stream.",
+  "documentation": "Merges this stream and the specified stream together, discarding the values\nfrom the left stream.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 5197,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L5197"
+}

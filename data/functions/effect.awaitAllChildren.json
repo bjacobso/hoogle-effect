@@ -1,0 +1,17 @@
+{
+  "id": "Effect.awaitAllChildren",
+  "name": "awaitAllChildren",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, E, R>) => Effect<A, E, R>",
+  "description": "Returns a new effect that will not succeed with its value before first\nwaiting for the end of all child fibers forked by the effect.",
+  "documentation": "Returns a new effect that will not succeed with its value before first\nwaiting for the end of all child fibers forked by the effect.",
+  "examples": [],
+  "tags": [
+    "Supervision & Fibers"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 11196,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L11196"
+}

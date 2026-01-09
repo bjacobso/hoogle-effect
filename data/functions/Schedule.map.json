@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.map",
+  "name": "map",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <Out, Out2>(f: (out: Out) => Out2): <In, R>(self: Schedule<Out, In, R>) => Schedule<Out2, In, R>; <Out, In, R, Out2>(self: Schedule<Out, In, R>, f: (out: Out) => Out2): Schedule<Out2, In, R>; }",
+  "description": "Returns a new schedule that transforms its output using the specified\nfunction.\n*Details This function modifies an existing schedule so that its outputs are\ntransformed by the provided function `f`. The timing and recurrence behavior\nof the schedule remain unchanged, but the values it produces are mapped to\nnew values. This is useful when composing schedules where you need to adjust the output\nformat or apply additional processing.",
+  "documentation": "Returns a new schedule that transforms its output using the specified\nfunction.\n*Details**\n\nThis function modifies an existing schedule so that its outputs are\ntransformed by the provided function `f`. The timing and recurrence behavior\nof the schedule remain unchanged, but the values it produces are mapped to\nnew values.\n\nThis is useful when composing schedules where you need to adjust the output\nformat or apply additional processing.",
+  "examples": [],
+  "tags": [
+    "Mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 1898,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L1898"
+}

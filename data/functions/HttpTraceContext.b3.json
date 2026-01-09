@@ -1,0 +1,17 @@
+{
+  "id": "HttpTraceContext.b3",
+  "name": "b3",
+  "module": "HttpTraceContext",
+  "package": "@effect/platform",
+  "signature": "FromHeaders",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "decoding"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpTraceContext.d.ts",
+  "sourceLine": 28,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpTraceContext.ts#L28"
+}

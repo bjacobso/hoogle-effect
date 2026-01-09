@@ -1,0 +1,17 @@
+{
+  "id": "Stream.suspend",
+  "name": "suspend",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(stream: LazyArg<Stream<A, E, R>>) => Stream<A, E, R>",
+  "description": "Returns a lazily constructed stream.",
+  "documentation": "Returns a lazily constructed stream.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 8041,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L8041"
+}

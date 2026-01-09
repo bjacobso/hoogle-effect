@@ -1,0 +1,17 @@
+{
+  "id": "HttpClient.HttpClient",
+  "name": "HttpClient",
+  "module": "HttpClient",
+  "package": "@effect/platform",
+  "signature": "Tag<HttpClient, HttpClient>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "tags"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpClient.d.ts",
+  "sourceLine": 70,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpClient.ts#L70"
+}

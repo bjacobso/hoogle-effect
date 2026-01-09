@@ -1,0 +1,17 @@
+{
+  "id": "Exit.all",
+  "name": "all",
+  "module": "Exit",
+  "package": "effect",
+  "signature": "<A, E>(exits: Iterable<Exit<A, E>>, options?: { readonly parallel?: boolean; }) => Option<Exit<A[], E>>",
+  "description": "Collects all of the specified exit values into a `Some<Exit<List<A>, E>>`. If\nthe provided iterable contains no elements, `None` will be returned.",
+  "documentation": "Collects all of the specified exit values into a `Some<Exit<List<A>, E>>`. If\nthe provided iterable contains no elements, `None` will be returned.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Exit.d.ts",
+  "sourceLine": 147,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Exit.ts#L147"
+}

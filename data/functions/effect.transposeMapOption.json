@@ -1,0 +1,21 @@
+{
+  "id": "Effect.transposeMapOption",
+  "name": "transposeMapOption",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "(<A, B, E = never, R = never>(f: (self: A) => Effect<B, E, R>) => (self: Option<A>) => Effect<Option<B>, E, R>) & (<A, B, E = never, R = never>(self: Option<A>, f: (self: A) => Effect<B, E, R>) => Effect<Option<B>, E, R>)",
+  "description": "Applies an `Effect` on an `Option` and transposes the result.\n*Details If the `Option` is `None`, the resulting `Effect` will immediately succeed with a `None` value.\nIf the `Option` is `Some`, the effectful operation will be executed on the inner value, and its result wrapped in a `Some`.",
+  "documentation": "Applies an `Effect` on an `Option` and transposes the result.\n*Details**\n\nIf the `Option` is `None`, the resulting `Effect` will immediately succeed with a `None` value.\nIf the `Option` is `Some`, the effectful operation will be executed on the inner value, and its result wrapped in a `Some`.",
+  "examples": [
+    {
+      "code": "import { Effect, Option, pipe } from \"effect\"\n\n// ┌─── Effect<Option<number>, never, never>>\n// ▼\nconst noneResult = pipe(\nOption.none(),\nEffect.transposeMapOption(() => Effect.succeed(42)) // will not be executed\n)\nconsole.log(Effect.runSync(noneResult))\n// Output: { _id: 'Option', _tag: 'None' }\n\n// ┌─── Effect<Option<number>, never, never>>\n// ▼\nconst someSuccessResult = pipe(\nOption.some(42),\nEffect.transposeMapOption((value) => Effect.succeed(value * 2))\n)\nconsole.log(Effect.runSync(someSuccessResult))\n// Output: { _id: 'Option', _tag: 'Some', value: 84 }"
+    }
+  ],
+  "tags": [
+    "Optional Wrapping & Unwrapping"
+  ],
+  "since": "3.14.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 26362,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L26362"
+}

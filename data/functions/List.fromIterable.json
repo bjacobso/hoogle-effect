@@ -1,0 +1,17 @@
+{
+  "id": "List.fromIterable",
+  "name": "fromIterable",
+  "module": "List",
+  "package": "effect",
+  "signature": "<A>(prefix: Iterable<A>) => List<A>",
+  "description": "Creates a new `List` from an iterable collection of values.",
+  "documentation": "Creates a new `List` from an iterable collection of values.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 153,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L153"
+}

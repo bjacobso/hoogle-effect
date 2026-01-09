@@ -1,0 +1,17 @@
+{
+  "id": "Exit.getOrElse",
+  "name": "getOrElse",
+  "module": "Exit",
+  "package": "effect",
+  "signature": "{ <E, A2>(orElse: (cause: Cause<E>) => A2): <A>(self: Exit<A, E>) => A2 | A; <A, E, A2>(self: Exit<A, E>, orElse: (cause: Cause<E>) => A2): A | A2; }",
+  "description": "Returns the `A` if specified exit is a `Success`, otherwise returns the\nalternate `A` value computed from the specified function which receives the\n`Cause<E>` of the exit `Failure`.",
+  "documentation": "Returns the `A` if specified exit is a `Success`, otherwise returns the\nalternate `A` value computed from the specified function which receives the\n`Cause<E>` of the exit `Failure`.",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Exit.d.ts",
+  "sourceLine": 288,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Exit.ts#L288"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.split",
+  "name": "split",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ (n: number): <A>(self: Chunk<A>) => Chunk<Chunk<A>>; <A>(self: Chunk<A>, n: number): Chunk<Chunk<A>>; }",
+  "description": "Splits this chunk into `n` equally sized chunks.",
+  "documentation": "Splits this chunk into `n` equally sized chunks.",
+  "examples": [],
+  "tags": [
+    "splitting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 1072,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L1072"
+}

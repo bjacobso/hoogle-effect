@@ -1,0 +1,17 @@
+{
+  "id": "Stream.slidingSize",
+  "name": "slidingSize",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ (chunkSize: number, stepSize: number): <A, E, R>(self: Stream<A, E, R>) => Stream<Chunk<A>, E, R>; <A, E, R>(self: Stream<A, E, R>, chunkSize: number, stepSize: number): Stream<Chunk<A>, E, R>; }",
+  "description": "Like `sliding`, but with a configurable `stepSize` parameter.",
+  "documentation": "Like `sliding`, but with a configurable `stepSize` parameter.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 7822,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L7822"
+}

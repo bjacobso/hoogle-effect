@@ -1,0 +1,17 @@
+{
+  "id": "Queue.unbounded",
+  "name": "unbounded",
+  "module": "Queue",
+  "package": "effect",
+  "signature": "<A>() => Effect<Queue<A>, never, never>",
+  "description": "Creates a new unbounded `Queue`.",
+  "documentation": "Creates a new unbounded `Queue`.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Queue.d.ts",
+  "sourceLine": 404,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Queue.ts#L404"
+}

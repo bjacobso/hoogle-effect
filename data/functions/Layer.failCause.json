@@ -1,0 +1,17 @@
+{
+  "id": "Layer.failCause",
+  "name": "failCause",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "<E>(cause: Cause<E>) => Layer<unknown, E, never>",
+  "description": "Constructs a layer that fails with the specified cause.",
+  "documentation": "Constructs a layer that fails with the specified cause.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 383,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L383"
+}

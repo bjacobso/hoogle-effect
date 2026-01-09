@@ -1,0 +1,24 @@
+{
+  "id": "Effect.tryPromise",
+  "name": "tryPromise",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A, E>(options: { readonly try: (signal: AbortSignal) => PromiseLike<A>; readonly catch: (error: unknown) => E; }): Effect<A, E, never>; <A>(evaluate: (signal: AbortSignal) => PromiseLike<A>): Effect<A, UnknownException, never>; }",
+  "description": "Creates an `Effect` that represents an asynchronous computation that might\nfail.\n*When to Use In situations where you need to perform asynchronous operations that might\nfail, such as fetching data from an API, you can use the `tryPromise`\nconstructor. This constructor is designed to handle operations that could\nthrow exceptions by capturing those exceptions and transforming them into\nmanageable errors.\n*Error Handling There are two ways to handle errors with `tryPromise`: 1. If you don't provide a `catch` function, the error is caught and the\neffect fails with an `UnknownException`.\n2. If you provide a `catch` function, the error is caught and the `catch`\nfunction maps it to an error of type `E`.\n*Interruptions An optional `AbortSignal` can be provided to allow for interruption of the\nwrapped `Promise` API.\n*Example (Fetching a TODO Item) *Example (Custom Error Handling)",
+  "documentation": "Creates an `Effect` that represents an asynchronous computation that might\nfail.\n*When to Use**\n\nIn situations where you need to perform asynchronous operations that might\nfail, such as fetching data from an API, you can use the `tryPromise`\nconstructor. This constructor is designed to handle operations that could\nthrow exceptions by capturing those exceptions and transforming them into\nmanageable errors.\n*Error Handling**\n\nThere are two ways to handle errors with `tryPromise`:\n\n1. If you don't provide a `catch` function, the error is caught and the\neffect fails with an `UnknownException`.\n2. If you provide a `catch` function, the error is caught and the `catch`\nfunction maps it to an error of type `E`.\n*Interruptions**\n\nAn optional `AbortSignal` can be provided to allow for interruption of the\nwrapped `Promise` API.\n*Example** (Fetching a TODO Item)\n\n```ts\nimport { Effect } from \"effect\"\n\nconst getTodo = (id: number) =>\n// Will catch any errors and propagate them as UnknownException\nEffect.tryPromise(() =>\nfetch(`https://jsonplaceholder.typicode.com/todos/${id}`)\n)\n\n// ┌─── Effect<Response, UnknownException, never>\n// ▼\nconst program = getTodo(1)\n```\n*Example** (Custom Error Handling)\n\n```ts\nimport { Effect } from \"effect\"\n\nconst getTodo = (id: number) =>\nEffect.tryPromise({\ntry: () => fetch(`https://jsonplaceholder.typicode.com/todos/${id}`),\n// remap the error\ncatch: (unknown) => new Error(`something went wrong ${unknown}`)\n})\n\n// ┌─── Effect<Response, Error, never>\n// ▼\nconst program = getTodo(1)\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst getTodo = (id: number) =>\n// Will catch any errors and propagate them as UnknownException\nEffect.tryPromise(() =>\nfetch(`https://jsonplaceholder.typicode.com/todos/${id}`)\n)\n\n// ┌─── Effect<Response, UnknownException, never>\n// ▼\nconst program = getTodo(1)"
+    },
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst getTodo = (id: number) =>\nEffect.tryPromise({\ntry: () => fetch(`https://jsonplaceholder.typicode.com/todos/${id}`),\n// remap the error\ncatch: (unknown) => new Error(`something went wrong ${unknown}`)\n})\n\n// ┌─── Effect<Response, Error, never>\n// ▼\nconst program = getTodo(1)"
+    }
+  ],
+  "tags": [
+    "Creating Effects"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 8370,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L8370"
+}

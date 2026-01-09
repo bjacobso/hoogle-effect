@@ -1,0 +1,21 @@
+{
+  "id": "Option.toArray",
+  "name": "toArray",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<A>(self: Option<A>) => A[]",
+  "description": "Converts an `Option` into an `Array`.\nIf the input is `None`, an empty array is returned.\nIf the input is `Some`, its value is wrapped in a single-element array.",
+  "documentation": "Converts an `Option` into an `Array`.\nIf the input is `None`, an empty array is returned.\nIf the input is `Some`, its value is wrapped in a single-element array.",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\nconsole.log(Option.toArray(Option.some(1)))\n// Output: [1]\n\nconsole.log(Option.toArray(Option.none()))\n// Output: []"
+    }
+  ],
+  "tags": [
+    "Conversions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 2606,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L2606"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.setPartsUtc",
+  "name": "setPartsUtc",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "{ (parts: Partial<DateTime.PartsWithWeekday>): <A extends DateTime>(self: A) => A; <A extends DateTime>(self: A, parts: Partial<DateTime.PartsWithWeekday>): A; }",
+  "description": "Set the different parts of a `DateTime` as an object.",
+  "documentation": "Set the different parts of a `DateTime` as an object.",
+  "examples": [],
+  "tags": [
+    "parts"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 1349,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L1349"
+}

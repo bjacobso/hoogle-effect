@@ -1,0 +1,21 @@
+{
+  "id": "Context.empty",
+  "name": "empty",
+  "module": "Context",
+  "package": "effect",
+  "signature": "() => Context<never>",
+  "description": "Returns an empty `Context`.",
+  "documentation": "Returns an empty `Context`.",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { Context } from \"effect\"\n\nassert.strictEqual(Context.isContext(Context.empty()), true)"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Context.d.ts",
+  "sourceLine": 241,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Context.ts#L241"
+}

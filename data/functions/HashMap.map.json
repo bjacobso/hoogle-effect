@@ -1,0 +1,17 @@
+{
+  "id": "HashMap.map",
+  "name": "map",
+  "module": "HashMap",
+  "package": "effect",
+  "signature": "{ <A, V, K>(f: (value: V, key: K) => A): (self: HashMap<K, V>) => HashMap<K, A>; <K, V, A>(self: HashMap<K, V>, f: (value: V, key: K) => A): HashMap<K, A>; }",
+  "description": "Maps over the entries of the `HashMap` using the specified function.",
+  "documentation": "Maps over the entries of the `HashMap` using the specified function.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashMap.d.ts",
+  "sourceLine": 612,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashMap.ts#L612"
+}

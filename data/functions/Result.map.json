@@ -1,0 +1,17 @@
+{
+  "id": "Result.map",
+  "name": "map",
+  "module": "Result",
+  "package": "@effect-atom/atom",
+  "signature": "{ <A, B>(f: (a: A) => B): <E>(self: Result<A, E>) => Result<B, E>; <E, A, B>(self: Result<A, E>, f: (a: A) => B): Result<B, E>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Result.d.ts",
+  "sourceLine": 230,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Result.ts#L230"
+}

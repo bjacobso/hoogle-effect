@@ -1,0 +1,15 @@
+{
+  "id": "Array.replace",
+  "name": "replace",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <B>(i: number, b: B): <A, S extends Iterable<A> = Iterable<A>>(self: S) => ReadonlyArray.With<S, B | ReadonlyArray.Infer<S>>; <A, B, S extends Iterable<A> = Iterable<A>>(self: S, i: number, b: B): ReadonlyArray.With<S, B | ReadonlyArray.Infer<S>>; }",
+  "description": "Change the element at the specified index, creating a new `Array`,\nor return a copy of the input if the index is out of bounds.\n*Example",
+  "documentation": "Change the element at the specified index, creating a new `Array`,\nor return a copy of the input if the index is out of bounds.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.replace(['a', 'b', 'c', 'd'], 1, 'z')\nconsole.log(result) // ['a', 'z', 'c', 'd']\n```",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 2105,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L2105"
+}

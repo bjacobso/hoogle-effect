@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.filter",
+  "name": "filter",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ <A, B extends A>(refinement: Refinement<NoInfer<A>, B>): (self: Chunk<A>) => Chunk<B>; <A>(predicate: Predicate<NoInfer<A>>): (self: Chunk<A>) => Chunk<A>; <A, B extends A>(self: Chunk<A>, refinement: Refinement<A, B>): Chunk<B>; <A>(self: Chunk<A>, predicate: Predicate<A>): Chunk<A>; }",
+  "description": "Returns a filtered and mapped subset of the elements.",
+  "documentation": "Returns a filtered and mapped subset of the elements.",
+  "examples": [],
+  "tags": [
+    "filtering"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 537,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L537"
+}

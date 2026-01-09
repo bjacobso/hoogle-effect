@@ -1,0 +1,21 @@
+{
+  "id": "Logger.withMinimumLogLevel",
+  "name": "withMinimumLogLevel",
+  "module": "Logger",
+  "package": "effect",
+  "signature": "{ (level: LogLevel): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E, R>; <A, E, R>(self: Effect<A, E, R>, level: LogLevel): Effect<A, E, R>; }",
+  "description": "Sets the minimum log level for subsequent logging operations, allowing\ncontrol over which log messages are displayed based on their severity.",
+  "documentation": "Sets the minimum log level for subsequent logging operations, allowing\ncontrol over which log messages are displayed based on their severity.",
+  "examples": [
+    {
+      "code": "import { Effect, Logger, LogLevel } from \"effect\"\n\nconst program = Effect.logDebug(\"message1\").pipe(Logger.withMinimumLogLevel(LogLevel.Debug))\n\nEffect.runFork(program)\n// timestamp=... level=DEBUG fiber=#0 message=message1"
+    }
+  ],
+  "tags": [
+    "context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Logger.d.ts",
+  "sourceLine": 430,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Logger.ts#L430"
+}

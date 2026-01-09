@@ -1,0 +1,19 @@
+{
+  "id": "HashSet.toggle",
+  "name": "toggle",
+  "module": "HashSet",
+  "package": "effect",
+  "signature": "{ <A>(value: A): (self: HashSet<A>) => HashSet<A>; <A>(self: HashSet<A>, value: A): HashSet<A>; }",
+  "description": "Checks if a value is present in the `HashSet`. If it is present, the value\nwill be removed from the `HashSet`, otherwise the value will be added to the\n`HashSet`. Time complexity: `O(1)` average",
+  "documentation": "Checks if a value is present in the `HashSet`. If it is present, the value\nwill be removed from the `HashSet`, otherwise the value will be added to the\n`HashSet`.\n\nTime complexity: **`O(1)`** average",
+  "examples": [
+    {
+      "code": "// Syntax\nimport { HashSet, pipe } from \"effect\"\n\n// with `data-last`, a.k.a. `pipeable` API\npipe(HashSet.make(0, 1, 2), HashSet.toggle(0))\n\n// or piped with the pipe function\nHashSet.make(0, 1, 2).pipe(HashSet.toggle(0))\n\n// or with `data-first` API\nHashSet.toggle(HashSet.make(0, 1, 2), 0)"
+    }
+  ],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashSet.d.ts",
+  "sourceLine": 1656,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashSet.ts#L1656"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "Socket.defaultCloseCodeIsError",
+  "name": "defaultCloseCodeIsError",
+  "module": "Socket",
+  "package": "@effect/platform",
+  "signature": "(code: number) => boolean",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Socket.d.ts",
+  "sourceLine": 172,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Socket.ts#L172"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "Effect.zip",
+  "name": "zip",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A2, E2, R2>(that: Effect<A2, E2, R2>, options?: { readonly concurrent?: boolean; readonly batching?: boolean | \"inherit\"; readonly concurrentFinalizers?: boolean; }): <A, E, R>(self: Effect<A, E, R>) => Effect<[A, A2], E2 | E, R2 | R>; <A, E, R, A2, E2, R2>(self: Effect<A, E, R>, that: Effect<A2, E2, R2>, options?: { readonly concurrent?: boolean; readonly batching?: boolean | \"inherit\"; readonly concurrentFinalizers?: boolean; }): Effect<[A, A2], E | E2, R | R2>; }",
+  "description": "Combines two effects into a single effect, producing a tuple of their\nresults.\n*Details This function combines two effects, `self` and `that`, into one. It executes\nthe first effect (`self`) and then the second effect (`that`), collecting\ntheir results into a tuple. Both effects must succeed for the resulting\neffect to succeed. If either effect fails, the entire operation fails. By default, the effects are executed sequentially. If the `concurrent` option\nis set to `true`, the effects will run concurrently, potentially improving\nperformance for independent operations.\n*Example (Combining Two Effects Sequentially) *Example (Combining Two Effects Concurrently)",
+  "documentation": "Combines two effects into a single effect, producing a tuple of their\nresults.\n*Details**\n\nThis function combines two effects, `self` and `that`, into one. It executes\nthe first effect (`self`) and then the second effect (`that`), collecting\ntheir results into a tuple. Both effects must succeed for the resulting\neffect to succeed. If either effect fails, the entire operation fails.\n\nBy default, the effects are executed sequentially. If the `concurrent` option\nis set to `true`, the effects will run concurrently, potentially improving\nperformance for independent operations.\n*Example** (Combining Two Effects Sequentially)\n\n```ts\nimport { Effect } from \"effect\"\n\nconst task1 = Effect.succeed(1).pipe(\nEffect.delay(\"200 millis\"),\nEffect.tap(Effect.log(\"task1 done\"))\n)\nconst task2 = Effect.succeed(\"hello\").pipe(\nEffect.delay(\"100 millis\"),\nEffect.tap(Effect.log(\"task2 done\"))\n)\n\n// Combine the two effects together\n//\n// ┌─── Effect<[number, string], never, never>\n// ▼\nconst program = Effect.zip(task1, task2)\n\nEffect.runPromise(program).then(console.log)\n// Output:\n// timestamp=... level=INFO fiber=#0 message=\"task1 done\"\n// timestamp=... level=INFO fiber=#0 message=\"task2 done\"\n// [ 1, 'hello' ]\n```\n*Example** (Combining Two Effects Concurrently)\n\n```ts\nimport { Effect } from \"effect\"\n\nconst task1 = Effect.succeed(1).pipe(\nEffect.delay(\"200 millis\"),\nEffect.tap(Effect.log(\"task1 done\"))\n)\nconst task2 = Effect.succeed(\"hello\").pipe(\nEffect.delay(\"100 millis\"),\nEffect.tap(Effect.log(\"task2 done\"))\n)\n\n// Run both effects concurrently using the concurrent option\nconst program = Effect.zip(task1, task2, { concurrent: true })\n\nEffect.runPromise(program).then(console.log)\n// Output:\n// timestamp=... level=INFO fiber=#0 message=\"task2 done\"\n// timestamp=... level=INFO fiber=#0 message=\"task1 done\"\n// [ 1, 'hello' ]\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst task1 = Effect.succeed(1).pipe(\nEffect.delay(\"200 millis\"),\nEffect.tap(Effect.log(\"task1 done\"))\n)\nconst task2 = Effect.succeed(\"hello\").pipe(\nEffect.delay(\"100 millis\"),\nEffect.tap(Effect.log(\"task2 done\"))\n)\n\n// Combine the two effects together\n//\n// ┌─── Effect<[number, string], never, never>\n// ▼\nconst program = Effect.zip(task1, task2)\n\nEffect.runPromise(program).then(console.log)\n// Output:\n// timestamp=... level=INFO fiber=#0 message=\"task1 done\"\n// timestamp=... level=INFO fiber=#0 message=\"task2 done\"\n// [ 1, 'hello' ]"
+    },
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst task1 = Effect.succeed(1).pipe(\nEffect.delay(\"200 millis\"),\nEffect.tap(Effect.log(\"task1 done\"))\n)\nconst task2 = Effect.succeed(\"hello\").pipe(\nEffect.delay(\"100 millis\"),\nEffect.tap(Effect.log(\"task2 done\"))\n)\n\n// Run both effects concurrently using the concurrent option\nconst program = Effect.zip(task1, task2, { concurrent: true })\n\nEffect.runPromise(program).then(console.log)\n// Output:\n// timestamp=... level=INFO fiber=#0 message=\"task2 done\"\n// timestamp=... level=INFO fiber=#0 message=\"task1 done\"\n// [ 1, 'hello' ]"
+    }
+  ],
+  "tags": [
+    "Zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 24949,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L24949"
+}

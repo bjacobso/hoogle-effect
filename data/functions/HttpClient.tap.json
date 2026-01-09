@@ -1,0 +1,17 @@
+{
+  "id": "HttpClient.tap",
+  "name": "tap",
+  "module": "HttpClient",
+  "package": "@effect/platform",
+  "signature": "{ <_, E2, R2>(f: (response: HttpClientResponse) => Effect<_, E2, R2>): <E, R>(self: HttpClient.With<E, R>) => HttpClient.With<E2 | E, R2 | R>; <E, R, _, E2, R2>(self: HttpClient.With<E, R>, f: (response: HttpClientResponse) => Effect<_, E2, R2>): HttpClient.With<E | E2, R | R2>; }",
+  "description": "Performs an additional effect after a successful request.",
+  "documentation": "Performs an additional effect after a successful request.",
+  "examples": [],
+  "tags": [
+    "mapping & sequencing"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpClient.d.ts",
+  "sourceLine": 516,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpClient.ts#L516"
+}

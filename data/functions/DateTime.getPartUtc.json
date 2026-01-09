@@ -1,0 +1,21 @@
+{
+  "id": "DateTime.getPartUtc",
+  "name": "getPartUtc",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "{ (part: keyof DateTime.PartsWithWeekday): (self: DateTime) => number; (self: DateTime, part: keyof DateTime.PartsWithWeekday): number; }",
+  "description": "Get a part of a `DateTime` as a number. The part will be in the UTC time zone.",
+  "documentation": "Get a part of a `DateTime` as a number.\n\nThe part will be in the UTC time zone.",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { DateTime } from \"effect\"\n\nconst now = DateTime.unsafeMake({ year: 2024 })\nconst year = DateTime.getPartUtc(now, \"year\")\nassert.strictEqual(year, 2024)"
+    }
+  ],
+  "tags": [
+    "parts"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 1222,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L1222"
+}

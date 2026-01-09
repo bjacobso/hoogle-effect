@@ -1,0 +1,17 @@
+{
+  "id": "Metric.unsafeSnapshot",
+  "name": "unsafeSnapshot",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "(_: void) => readonly MetricPair.Untyped[]",
+  "description": "Unsafely captures a snapshot of all metrics recorded by the application.",
+  "documentation": "Unsafely captures a snapshot of all metrics recorded by the application.",
+  "examples": [],
+  "tags": [
+    "unsafe"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 1016,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L1016"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "Array.modifyNonEmptyHead",
+  "name": "modifyNonEmptyHead",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <A, B>(f: (a: A) => B): (self: readonly [A, ...A[]]) => [A | B, ...(A | B)[]]; <A, B>(self: readonly [A, ...A[]], f: (a: A) => B): [A | B, ...(A | B)[]]; }",
+  "description": "Apply a function to the head, creating a new `NonEmptyReadonlyArray`.\n*Example",
+  "documentation": "Apply a function to the head, creating a new `NonEmptyReadonlyArray`.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.modifyNonEmptyHead([1, 2, 3], n => n * 10)\nconsole.log(result) // [10, 2, 3]\n```",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 2870,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L2870"
+}

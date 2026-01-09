@@ -1,0 +1,21 @@
+{
+  "id": "Stream.concatAll",
+  "name": "concatAll",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(streams: Chunk<Stream<A, E, R>>) => Stream<A, E, R>",
+  "description": "Concatenates all of the streams in the chunk to one stream.",
+  "documentation": "Concatenates all of the streams in the chunk to one stream.",
+  "examples": [
+    {
+      "code": "import { Chunk, Effect, Stream } from \"effect\"\n\nconst s1 = Stream.make(1, 2, 3)\nconst s2 = Stream.make(4, 5)\nconst s3 = Stream.make(6, 7, 8)\n\nconst stream = Stream.concatAll(Chunk.make(s1, s2, s3))\n\nEffect.runPromise(Stream.runCollect(stream)).then(console.log)\n// {\n// _id: 'Chunk',\n// values: [\n// 1, 2, 3, 4,\n// 5, 6, 7, 8\n// ]\n// }"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 1607,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L1607"
+}

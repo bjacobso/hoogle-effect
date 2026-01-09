@@ -1,0 +1,17 @@
+{
+  "id": "Cause.andThen",
+  "name": "andThen",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "{ <E, E2>(f: (e: E) => Cause<E2>): (self: Cause<E>) => Cause<E2>; <E2>(f: Cause<E2>): <E>(self: Cause<E>) => Cause<E2>; <E, E2>(self: Cause<E>, f: (e: E) => Cause<E2>): Cause<E2>; <E, E2>(self: Cause<E>, f: Cause<E2>): Cause<E2>; }",
+  "description": "Sequences two `Cause`s. The second `Cause` can be dependent on the result of\nthe first `Cause`.",
+  "documentation": "Sequences two `Cause`s. The second `Cause` can be dependent on the result of\nthe first `Cause`.",
+  "examples": [],
+  "tags": [
+    "Sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 1080,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L1080"
+}

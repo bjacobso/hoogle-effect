@@ -1,0 +1,17 @@
+{
+  "id": "Queue.shutdown",
+  "name": "shutdown",
+  "module": "Queue",
+  "package": "effect",
+  "signature": "<A>(self: Dequeue<A> | Enqueue<A>) => Effect<void, never, never>",
+  "description": "Interrupts any fibers that are suspended on `offer` or `take`. Future calls\nto `offer*` and `take*` will be interrupted immediately.",
+  "documentation": "Interrupts any fibers that are suspended on `offer` or `take`. Future calls\nto `offer*` and `take*` will be interrupted immediately.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Queue.d.ts",
+  "sourceLine": 459,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Queue.ts#L459"
+}

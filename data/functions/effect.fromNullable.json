@@ -1,0 +1,21 @@
+{
+  "id": "Effect.fromNullable",
+  "name": "fromNullable",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A>(value: A) => Effect<NonNullable<A>, NoSuchElementException, never>",
+  "description": "Safely handles nullable values by creating an effect that fails for `null` or\n`undefined`.\n*Details This function ensures that an input value is non-null and non-undefined\nbefore processing it. If the value is valid, the effect succeeds with the\nvalue. If the value is `null` or `undefined`, the effect fails with a\n`NoSuchElementException`. This is particularly useful for avoiding\nnull-related errors by clearly separating valid values from invalid ones in\neffectful computations. The failure with `NoSuchElementException` allows you to explicitly handle\ncases where a value is expected but not provided, leading to safer and more\npredictable code.\n*When to Use Use this function when working with values that may be `null` or `undefined`\nand you want to ensure that only non-null values are processed. It helps\nenforce null-safety and makes error handling more explicit.\n*Example",
+  "documentation": "Safely handles nullable values by creating an effect that fails for `null` or\n`undefined`.\n*Details**\n\nThis function ensures that an input value is non-null and non-undefined\nbefore processing it. If the value is valid, the effect succeeds with the\nvalue. If the value is `null` or `undefined`, the effect fails with a\n`NoSuchElementException`. This is particularly useful for avoiding\nnull-related errors by clearly separating valid values from invalid ones in\neffectful computations.\n\nThe failure with `NoSuchElementException` allows you to explicitly handle\ncases where a value is expected but not provided, leading to safer and more\npredictable code.\n*When to Use**\n\nUse this function when working with values that may be `null` or `undefined`\nand you want to ensure that only non-null values are processed. It helps\nenforce null-safety and makes error handling more explicit.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\n// ┌─── Effect<number, NoSuchElementException, never>\n// ▼\nconst maybe1 = Effect.fromNullable(1)\n\nEffect.runPromiseExit(maybe1).then(console.log)\n// Output:\n// { _id: 'Exit', _tag: 'Success', value: 1 }\n\n// ┌─── Effect<number, NoSuchElementException, never>\n// ▼\nconst maybe2 = Effect.fromNullable(null as number | null)\n\nEffect.runPromiseExit(maybe2).then(console.log)\n// Output:\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: {\n// _id: 'Cause',\n// _tag: 'Fail',\n// failure: { _tag: 'NoSuchElementException' }\n// }\n// }\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\n// ┌─── Effect<number, NoSuchElementException, never>\n// ▼\nconst maybe1 = Effect.fromNullable(1)\n\nEffect.runPromiseExit(maybe1).then(console.log)\n// Output:\n// { _id: 'Exit', _tag: 'Success', value: 1 }\n\n// ┌─── Effect<number, NoSuchElementException, never>\n// ▼\nconst maybe2 = Effect.fromNullable(null as number | null)\n\nEffect.runPromiseExit(maybe2).then(console.log)\n// Output:\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: {\n// _id: 'Cause',\n// _tag: 'Fail',\n// failure: { _tag: 'NoSuchElementException' }\n// }\n// }"
+    }
+  ],
+  "tags": [
+    "Optional Wrapping & Unwrapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 26241,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L26241"
+}

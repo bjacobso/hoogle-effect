@@ -1,0 +1,21 @@
+{
+  "id": "Effect.withRandomFixed",
+  "name": "withRandomFixed",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <T extends RA.NonEmptyArray<any>>(values: T): <A, E, R>(effect: Effect<A, E, R>) => Effect<A, E, R>; <T extends RA.NonEmptyArray<any>, A, E, R>(effect: Effect<A, E, R>, values: T): Effect<A, E, R>; }",
+  "description": "Executes the specified effect with a `Random` service that cycles through\na provided array of values.",
+  "documentation": "Executes the specified effect with a `Random` service that cycles through\na provided array of values.",
+  "examples": [
+    {
+      "code": "import { Effect, Random } from \"effect\"\n\nEffect.gen(function*() {\nconsole.log(yield* Random.next) // 0.2\nconsole.log(yield* Random.next) // 0.5\nconsole.log(yield* Random.next) // 0.8\n}).pipe(Effect.withRandomFixed([0.2, 0.5, 0.8]))"
+    }
+  ],
+  "tags": [
+    "Random"
+  ],
+  "since": "3.11.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 23791,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L23791"
+}

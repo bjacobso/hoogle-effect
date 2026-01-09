@@ -1,0 +1,17 @@
+{
+  "id": "Array.takeRight",
+  "name": "takeRight",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ (n: number): <A>(self: Iterable<A>) => A[]; <A>(self: Iterable<A>, n: number): A[]; }",
+  "description": "Keep only a max number of elements from the end of an `Iterable`, creating a new `Array`.\n*Note. `n` is normalized to a non negative integer.\n*Example",
+  "documentation": "Keep only a max number of elements from the end of an `Iterable`, creating a new `Array`.\n*Note**. `n` is normalized to a non negative integer.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.takeRight([1, 2, 3, 4, 5], 3)\nconsole.log(result) // [3, 4, 5]\n```",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 1175,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L1175"
+}

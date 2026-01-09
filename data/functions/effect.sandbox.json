@@ -1,0 +1,21 @@
+{
+  "id": "Effect.sandbox",
+  "name": "sandbox",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, E, R>) => Effect<A, Cause<E>, R>",
+  "description": "Transforms an effect to expose detailed error causes.",
+  "documentation": "Transforms an effect to expose detailed error causes.\n**Details**\nThis function enhances an effect by providing detailed information about any\nerror, defect, or interruption that may occur during its execution. It\nmodifies the error channel of the effect so that it includes a full cause of\nthe failure, wrapped in a `Cause<E>` type.\nAfter applying this function, you can use operators like {@link catchAll}and\n{@link catchTags}to handle specific types of errors.\nIf you no longer need the detailed cause information, you can revert the\nchanges using {@link unsandbox}to return to the original error-handling\nbehavior.\n**Example**\n```ts\nimport { Effect, Console } from \"effect\"\n// ┌─── Effect<string, Error, never>\n// ▼\nconst task = Effect.fail(new Error(\"Oh uh!\")).pipe(\nEffect.as(\"primary result\")\n)\n// ┌─── Effect<string, Cause<Error>, never>\n// ▼\nconst sandboxed = Effect.sandbox(task)\nconst program = Effect.catchTags(sandboxed, {\nDie: (cause) =>\nConsole.log(`Caught a defect: ${cause.defect}`).pipe(\nEffect.as(\"fallback result on defect\")\n),\nInterrupt: (cause) =>\nConsole.log(`Caught a defect: ${cause.fiberId}`).pipe(\nEffect.as(\"fallback result on fiber interruption\")\n),\nFail: (cause) =>\nConsole.log(`Caught a defect: ${cause.error}`).pipe(\nEffect.as(\"fallback result on failure\")\n)\n})\n// Restore the original error handling with unsandbox\nconst main = Effect.unsandbox(program)\nEffect.runPromise(main).then(console.log)\n// Output:\n// Caught a defect: Oh uh!\n// fallback result on failure\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Console } from \"effect\"\n// ┌─── Effect<string, Error, never>\n// ▼\nconst task = Effect.fail(new Error(\"Oh uh!\")).pipe(\nEffect.as(\"primary result\")\n)\n// ┌─── Effect<string, Cause<Error>, never>\n// ▼\nconst sandboxed = Effect.sandbox(task)\nconst program = Effect.catchTags(sandboxed, {\nDie: (cause) =>\nConsole.log(`Caught a defect: ${cause.defect}`).pipe(\nEffect.as(\"fallback result on defect\")\n),\nInterrupt: (cause) =>\nConsole.log(`Caught a defect: ${cause.fiberId}`).pipe(\nEffect.as(\"fallback result on fiber interruption\")\n),\nFail: (cause) =>\nConsole.log(`Caught a defect: ${cause.error}`).pipe(\nEffect.as(\"fallback result on failure\")\n)\n})\n// Restore the original error handling with unsandbox\nconst main = Effect.unsandbox(program)\nEffect.runPromise(main).then(console.log)\n// Output:\n// Caught a defect: Oh uh!\n// fallback result on failure"
+    }
+  ],
+  "tags": [
+    "Error handling"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 7295,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L7295"
+}

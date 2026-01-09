@@ -1,0 +1,17 @@
+{
+  "id": "Effect.withSpanScoped",
+  "name": "withSpanScoped",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ (name: string, options?: SpanOptions): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E, Scope | Exclude<R, ParentSpan>>; <A, E, R>(self: Effect<A, E, R>, name: string, options?: SpanOptions): Effect<A, E, Scope | Exclude<R, ParentSpan>>; }",
+  "description": "Wraps the effect with a new span for tracing. The span is ended when the Scope is finalized.",
+  "documentation": "Wraps the effect with a new span for tracing.\n\nThe span is ended when the Scope is finalized.",
+  "examples": [],
+  "tags": [
+    "Tracing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 26143,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L26143"
+}

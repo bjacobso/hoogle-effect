@@ -1,0 +1,17 @@
+{
+  "id": "Stream.bufferChunks",
+  "name": "bufferChunks",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ (options: { readonly capacity: number; readonly strategy?: \"dropping\" | \"sliding\" | \"suspend\"; }): <A, E, R>(self: Stream<A, E, R>) => Stream<A, E, R>; <A, E, R>(self: Stream<A, E, R>, options: { readonly capacity: number; readonly strategy?: \"dropping\" | \"sliding\" | \"suspend\"; }): Stream<A, E, R>; }",
+  "description": "Allows a faster producer to progress independently of a slower consumer by\nbuffering up to `capacity` chunks in a queue.",
+  "documentation": "Allows a faster producer to progress independently of a slower consumer by\nbuffering up to `capacity` chunks in a queue.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 1107,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L1107"
+}

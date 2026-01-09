@@ -1,0 +1,17 @@
+{
+  "id": "Atom.kvs",
+  "name": "kvs",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "<A>(options: { readonly runtime: AtomRuntime<KeyValueStore, any>; readonly key: string; readonly schema: Schema<A, any, never>; readonly defaultValue: LazyArg<A>; }) => Writable<A, A>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "KeyValueStore"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 526,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L526"
+}

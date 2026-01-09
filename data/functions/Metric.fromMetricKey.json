@@ -1,0 +1,17 @@
+{
+  "id": "Metric.fromMetricKey",
+  "name": "fromMetricKey",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "<Type extends MetricKeyType.MetricKeyType<any, any>>(key: MetricKey<Type>) => Metric<Type, MetricKeyType.InType<Type>, MetricKeyType.OutType<Type>>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 294,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L294"
+}

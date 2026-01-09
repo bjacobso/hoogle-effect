@@ -1,0 +1,17 @@
+{
+  "id": "List.TypeId",
+  "name": "TypeId",
+  "module": "List",
+  "package": "effect",
+  "signature": "typeof TypeId",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "symbol"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 38,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L38"
+}

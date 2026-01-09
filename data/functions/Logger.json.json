@@ -1,0 +1,21 @@
+{
+  "id": "Logger.json",
+  "name": "json",
+  "module": "Logger",
+  "package": "effect",
+  "signature": "Layer<never, never, never>",
+  "description": "The `json` logger formats log entries as JSON objects, making them easy to\nintegrate with logging systems that consume JSON data.",
+  "documentation": "The `json` logger formats log entries as JSON objects, making them easy to\nintegrate with logging systems that consume JSON data.",
+  "examples": [
+    {
+      "code": "import { Effect, Logger } from \"effect\"\n\nconst program = Effect.log(\"message1\", \"message2\").pipe(\nEffect.annotateLogs({ key1: \"value1\", key2: \"value2\" }),\nEffect.withLogSpan(\"myspan\")\n)\n\nEffect.runFork(program.pipe(Effect.provide(Logger.json)))\n// {\"message\":[\"message1\",\"message2\"],\"logLevel\":\"INFO\",\"timestamp\":\"...\",\"annotations\":{\"key2\":\"value2\",\"key1\":\"value1\"},\"spans\":{\"myspan\":0},\"fiberId\":\"#0\"}"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Logger.d.ts",
+  "sourceLine": 685,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Logger.ts#L685"
+}

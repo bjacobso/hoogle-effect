@@ -1,0 +1,17 @@
+{
+  "id": "Metric.zip",
+  "name": "zip",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "{ <Type2, In2, Out2>(that: Metric<Type2, In2, Out2>): <Type, In, Out>(self: Metric<Type, In, Out>) => Metric<readonly [Type, Type2], readonly [In, In2], [Out, Out2]>; <Type, In, Out, Type2, In2, Out2>(self: Metric<Type, In, Out>, that: Metric<Type2, In2, Out2>): Metric<readonly [Type, Type2], readonly [In, In2], [Out, Out2]>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 988,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L988"
+}

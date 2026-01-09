@@ -1,0 +1,17 @@
+{
+  "id": "Resource.ResourceTypeId",
+  "name": "ResourceTypeId",
+  "module": "Resource",
+  "package": "effect",
+  "signature": "typeof ResourceTypeId",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "symbols"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Resource.d.ts",
+  "sourceLine": 13,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Resource.ts#L13"
+}

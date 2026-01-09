@@ -1,0 +1,21 @@
+{
+  "id": "Either.liftPredicate",
+  "name": "liftPredicate",
+  "module": "Either",
+  "package": "effect",
+  "signature": "{ <A, B extends A, E>(refinement: Refinement<A, B>, orLeftWith: (a: A) => E): (a: A) => Either<B, E>; <B extends A, E, A = B>(predicate: Predicate<A>, orLeftWith: (a: A) => E): (a: B) => Either<B, E>; <A, E, B extends A>(self: A, refinement: Refinement<A, B>, orLeftWith: (a: A) => E): Either<B, E>; <B extends A, E, A = B>(self: B, predicate: Predicate<A>, orLeftWith: (a: A) => E): Either<B, E>; }",
+  "description": "Transforms a `Predicate` function into a `Right` of the input value if the predicate returns `true`\nor `Left` of the result of the provided function if the predicate returns false",
+  "documentation": "Transforms a `Predicate` function into a `Right` of the input value if the predicate returns `true`\nor `Left` of the result of the provided function if the predicate returns false",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { pipe, Either } from \"effect\"\n\nconst isPositive = (n: number): boolean => n > 0\nconst isPositiveEither = Either.liftPredicate(isPositive, n => `${n} is not positive`)\n\nassert.deepStrictEqual(\nisPositiveEither(1),\nEither.right(1)\n)\nassert.deepStrictEqual(\nisPositiveEither(0),\nEither.left(\"0 is not positive\")\n)"
+    }
+  ],
+  "tags": [
+    "lifting"
+  ],
+  "since": "3.4.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Either.d.ts",
+  "sourceLine": 491,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Either.ts#L491"
+}

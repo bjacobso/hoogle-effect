@@ -1,0 +1,17 @@
+{
+  "id": "Atom.fnSync",
+  "name": "fnSync",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "{ <Arg>(): { <A>(f: (arg: Arg, get: FnContext) => A): Writable<Option<A>, Arg>; <A>(f: (arg: Arg, get: FnContext) => A, options: { readonly initialValue: A; }): Writable<A, Arg>; }; <A, Arg = void>(f: (arg: Arg, get: FnContext) => A): Writable<Option<A>, Arg>; <A, Arg = void>(f: (arg: Arg, get: FnContext) => A, options: { readonly initialValue: A; }): Writable<A, Arg>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 324,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L324"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Effect.inheritFiberRefs",
+  "name": "inheritFiberRefs",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "(childFiberRefs: FiberRefs) => Effect<void, never, never>",
+  "description": "Inherits values from all `FiberRef` instances into current fiber.",
+  "documentation": "Inherits values from all `FiberRef` instances into current fiber.",
+  "examples": [],
+  "tags": [
+    "Fiber Refs"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 21430,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L21430"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.resetAfter",
+  "name": "resetAfter",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ (duration: DurationInput): <Out, In, R>(self: Schedule<Out, In, R>) => Schedule<Out, In, R>; <Out, In, R>(self: Schedule<Out, In, R>, duration: DurationInput): Schedule<Out, In, R>; }",
+  "description": "Returns a new schedule that automatically resets to its initial state after a\nperiod of inactivity defined by `duration`.\n*Details This function modifies a schedule so that if no inputs are received for the\nspecified `duration`, the schedule resets as if it were new.",
+  "documentation": "Returns a new schedule that automatically resets to its initial state after a\nperiod of inactivity defined by `duration`.\n*Details**\n\nThis function modifies a schedule so that if no inputs are received for the\nspecified `duration`, the schedule resets as if it were new.",
+  "examples": [],
+  "tags": [
+    "State Management"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2538,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2538"
+}

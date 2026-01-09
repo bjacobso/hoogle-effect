@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.zoneMakeLocal",
+  "name": "zoneMakeLocal",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "() => TimeZone.Named",
+  "description": "Create a named time zone from the system's local time zone.",
+  "documentation": "Create a named time zone from the system's local time zone.",
+  "examples": [],
+  "tags": [
+    "time zones"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 634,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L634"
+}

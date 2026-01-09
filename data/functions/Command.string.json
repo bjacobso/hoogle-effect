@@ -1,0 +1,17 @@
+{
+  "id": "Command.string",
+  "name": "string",
+  "module": "Command",
+  "package": "@effect/platform",
+  "signature": "{ (encoding?: string): (command: Command) => Effect<string, PlatformError, CommandExecutor>; (command: Command, encoding?: string): Effect<string, PlatformError, CommandExecutor>; }",
+  "description": "Runs the command returning the entire output as a string with the\nspecified encoding. If an encoding is not specified, the encoding will default to `utf-8`.",
+  "documentation": "Runs the command returning the entire output as a string with the\nspecified encoding.\n\nIf an encoding is not specified, the encoding will default to `utf-8`.",
+  "examples": [],
+  "tags": [
+    "execution"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Command.d.ts",
+  "sourceLine": 286,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Command.ts#L286"
+}

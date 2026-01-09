@@ -1,0 +1,17 @@
+{
+  "id": "HttpRouter.schemaJson",
+  "name": "schemaJson",
+  "module": "HttpRouter",
+  "package": "@effect/platform",
+  "signature": "<R, I extends Partial<{ readonly method: Method.HttpMethod; readonly url: string; readonly cookies: Readonly<Record<string, string | undefined>>; readonly headers: Readonly<Record<string, string | undefined>>; readonly pathParams: Readonly<Record<string, string | undefined>>; readonly searchParams: Readonly<Record<string, string | ReadonlyArray<string> | undefined>>; readonly body: any; }>, A>(schema: Schema<A, I, R>, options?: ParseOptions) => Effect<A, RequestError | ParseError, HttpServerRequest | RouteContext | R | ParsedSearchParams>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "route context"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpRouter.d.ts",
+  "sourceLine": 191,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpRouter.ts#L191"
+}

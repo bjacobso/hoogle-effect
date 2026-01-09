@@ -1,0 +1,15 @@
+{
+  "id": "Array.unzip",
+  "name": "unzip",
+  "module": "Array",
+  "package": "effect",
+  "signature": "<S extends Iterable<readonly [any, any]>>(self: S) => S extends readonly [readonly [infer A, infer B], ...(readonly [infer A, infer B])[]] ? [[A, ...A[]], [B, ...B[]]] : S extends Iterable<readonly [infer A, infer B]> ? [A[], B[]] : never",
+  "description": "This function is the inverse of `zip`. Takes an `Iterable` of pairs and return two corresponding `Array`s.\n*Example",
+  "documentation": "This function is the inverse of `zip`. Takes an `Iterable` of pairs and return two corresponding `Array`s.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.unzip([[1, \"a\"], [2, \"b\"], [3, \"c\"]])\nconsole.log(result) // [[1, 2, 3], ['a', 'b', 'c']]\n```",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 2790,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L2790"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Effect.whenFiberRef",
+  "name": "whenFiberRef",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <S>(fiberRef: FiberRef<S>, predicate: Predicate<S>): <A, E, R>(self: Effect<A, E, R>) => Effect<[S, Option<A>], E, R>; <A, E, R, S>(self: Effect<A, E, R>, fiberRef: FiberRef<S>, predicate: Predicate<S>): Effect<[S, Option<A>], E, R>; }",
+  "description": "Executes an effect conditionally based on the value of a `FiberRef` that\nsatisfies a predicate.\n*Details This function enables you to execute an effect only when the value of a\nspecified `FiberRef` meets a certain condition defined by a predicate. If the\nvalue satisfies the predicate, the effect is executed, and the result is\nwrapped in an `Option.some`. If the predicate is not satisfied, the effect is\nskipped, and the result is `Option.none`. In both cases, the current value of\nthe `FiberRef` is included in the result.",
+  "documentation": "Executes an effect conditionally based on the value of a `FiberRef` that\nsatisfies a predicate.\n*Details**\n\nThis function enables you to execute an effect only when the value of a\nspecified `FiberRef` meets a certain condition defined by a predicate. If the\nvalue satisfies the predicate, the effect is executed, and the result is\nwrapped in an `Option.some`. If the predicate is not satisfied, the effect is\nskipped, and the result is `Option.none`. In both cases, the current value of\nthe `FiberRef` is included in the result.",
+  "examples": [],
+  "tags": [
+    "Conditional Operators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 16827,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L16827"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "HttpRouter.currentRouterConfig",
+  "name": "currentRouterConfig",
+  "module": "HttpRouter",
+  "package": "@effect/platform",
+  "signature": "FiberRef<RouterConfig>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "router config"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpRouter.d.ts",
+  "sourceLine": 226,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpRouter.ts#L226"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.cron",
+  "name": "cron",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ (cron: Cron): Schedule<[number, number], unknown, never>; (expression: string, tz?: string | TimeZone): Schedule<[number, number], unknown, never>; }",
+  "description": "Creates a schedule that recurs based on a cron expression.\n*Details This schedule automatically executes at intervals defined by a cron\nexpression. It triggers at the beginning of each matched interval and\nproduces timestamps representing the start and end of the cron window. The cron `expression` is validated lazily, meaning errors may only be\ndetected when the schedule is executed.",
+  "documentation": "Creates a schedule that recurs based on a cron expression.\n*Details**\n\nThis schedule automatically executes at intervals defined by a cron\nexpression. It triggers at the beginning of each matched interval and\nproduces timestamps representing the start and end of the cron window.\n\nThe cron `expression` is validated lazily, meaning errors may only be\ndetected when the schedule is executed.",
+  "examples": [],
+  "tags": [
+    "Cron"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 963,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L963"
+}

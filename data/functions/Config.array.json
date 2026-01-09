@@ -1,0 +1,17 @@
+{
+  "id": "Config.array",
+  "name": "array",
+  "module": "Config",
+  "package": "effect",
+  "signature": "<A>(config: Config<A>, name?: string) => Config<A[]>",
+  "description": "Constructs a config for an array of values.",
+  "documentation": "Constructs a config for an array of values.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Config.d.ts",
+  "sourceLine": 102,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Config.ts#L102"
+}

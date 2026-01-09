@@ -1,0 +1,17 @@
+{
+  "id": "Stream.runCount",
+  "name": "runCount",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Stream<A, E, R>) => Effect<number, E, R>",
+  "description": "Runs the stream and emits the number of elements processed",
+  "documentation": "Runs the stream and emits the number of elements processed",
+  "examples": [],
+  "tags": [
+    "destructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 7001,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L7001"
+}

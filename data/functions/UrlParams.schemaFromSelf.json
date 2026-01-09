@@ -1,0 +1,17 @@
+{
+  "id": "UrlParams.schemaFromSelf",
+  "name": "schemaFromSelf",
+  "module": "UrlParams",
+  "package": "@effect/platform",
+  "signature": "Schema<UrlParams, UrlParams, never>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "schemas"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/UrlParams.d.ts",
+  "sourceLine": 43,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/UrlParams.ts#L43"
+}

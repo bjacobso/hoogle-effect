@@ -1,0 +1,17 @@
+{
+  "id": "PubSub.publishAll",
+  "name": "publishAll",
+  "module": "PubSub",
+  "package": "effect",
+  "signature": "{ <A>(elements: Iterable<A>): (self: PubSub<A>) => Effect<boolean, never, never>; <A>(self: PubSub<A>, elements: Iterable<A>): Effect<boolean, never, never>; }",
+  "description": "Publishes all of the specified messages to the `PubSub`, returning whether they\nwere published to the `PubSub`.",
+  "documentation": "Publishes all of the specified messages to the `PubSub`, returning whether they\nwere published to the `PubSub`.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/PubSub.d.ts",
+  "sourceLine": 170,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/PubSub.ts#L170"
+}

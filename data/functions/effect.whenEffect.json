@@ -1,0 +1,21 @@
+{
+  "id": "Effect.whenEffect",
+  "name": "whenEffect",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E, R>(condition: Effect<boolean, E, R>): <A, E2, R2>(effect: Effect<A, E2, R2>) => Effect<Option<A>, E | E2, R | R2>; <A, E2, R2, E, R>(self: Effect<A, E2, R2>, condition: Effect<boolean, E, R>): Effect<Option<A>, E2 | E, R2 | R>; }",
+  "description": "Conditionally executes an effect based on the result of another effect.\n*Details This function allows you to run an effect only if a conditional effect\nevaluating to a boolean resolves to `true`. If the conditional effect\nevaluates to `true`, the specified effect is executed, and its result is\nwrapped in `Option.some`. If the conditional effect evaluates to `false`, the\neffect is skipped, and the result is `Option.none`.\n*When to Use This function is particularly useful when the decision to execute an effect\ndepends on the result of another effect, such as a random value, a\nuser-provided input, or a network request result.\n*Example (Using an Effect as a Condition)",
+  "documentation": "Conditionally executes an effect based on the result of another effect.\n*Details**\n\nThis function allows you to run an effect only if a conditional effect\nevaluating to a boolean resolves to `true`. If the conditional effect\nevaluates to `true`, the specified effect is executed, and its result is\nwrapped in `Option.some`. If the conditional effect evaluates to `false`, the\neffect is skipped, and the result is `Option.none`.\n*When to Use**\n\nThis function is particularly useful when the decision to execute an effect\ndepends on the result of another effect, such as a random value, a\nuser-provided input, or a network request result.\n*Example** (Using an Effect as a Condition)\n\n```ts\nimport { Effect, Random } from \"effect\"\n\nconst randomIntOption = Random.nextInt.pipe(\nEffect.whenEffect(Random.nextBoolean)\n)\n\nconsole.log(Effect.runSync(randomIntOption))\n// Example Output:\n// { _id: 'Option', _tag: 'Some', value: 8609104974198840 }\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Random } from \"effect\"\n\nconst randomIntOption = Random.nextInt.pipe(\nEffect.whenEffect(Random.nextBoolean)\n)\n\nconsole.log(Effect.runSync(randomIntOption))\n// Example Output:\n// { _id: 'Option', _tag: 'Some', value: 8609104974198840 }"
+    }
+  ],
+  "tags": [
+    "Conditional Operators"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 16733,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L16733"
+}

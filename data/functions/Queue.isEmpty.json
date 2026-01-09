@@ -1,0 +1,17 @@
+{
+  "id": "Queue.isEmpty",
+  "name": "isEmpty",
+  "module": "Queue",
+  "package": "effect",
+  "signature": "<A>(self: Dequeue<A> | Enqueue<A>) => Effect<boolean, never, never>",
+  "description": "Returns `true` if the `Queue` contains zero elements, `false` otherwise.",
+  "documentation": "Returns `true` if the `Queue` contains zero elements, `false` otherwise.",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Queue.d.ts",
+  "sourceLine": 427,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Queue.ts#L427"
+}

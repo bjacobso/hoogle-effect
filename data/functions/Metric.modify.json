@@ -1,0 +1,17 @@
+{
+  "id": "Metric.modify",
+  "name": "modify",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "{ <In>(input: In): <Type, Out>(self: Metric<Type, In, Out>) => Effect<void, never, never>; <Type, In, Out>(self: Metric<Type, In, Out>, input: In): Effect<void, never, never>; }",
+  "description": "Modifies the metric with the specified update message. For example, if the\nmetric were a gauge, the update would increment the method by the provided\namount.",
+  "documentation": "Modifies the metric with the specified update message. For example, if the\nmetric were a gauge, the update would increment the method by the provided\namount.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "3.6.5",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 484,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L484"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Effect.withParentSpan",
+  "name": "withParentSpan",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ (span: AnySpan): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E, Exclude<R, ParentSpan>>; <A, E, R>(self: Effect<A, E, R>, span: AnySpan): Effect<A, E, Exclude<R, ParentSpan>>; }",
+  "description": "Adds the provided span to the current span stack.",
+  "documentation": "Adds the provided span to the current span stack.",
+  "examples": [],
+  "tags": [
+    "Tracing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 26169,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L26169"
+}

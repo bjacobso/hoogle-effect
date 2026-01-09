@@ -1,0 +1,17 @@
+{
+  "id": "HttpApiGroup.make",
+  "name": "make",
+  "module": "HttpApiGroup",
+  "package": "@effect/platform",
+  "signature": "<const Id extends string, const TopLevel extends (true | false) = false>(identifier: Id, options?: { readonly topLevel?: TopLevel; }) => HttpApiGroup<Id, never, never, never, TopLevel>",
+  "description": "An `HttpApiGroup` is a collection of `HttpApiEndpoint`s. You can use an `HttpApiGroup` to\nrepresent a portion of your domain. The endpoints can be implemented later using the `HttpApiBuilder.group` api.",
+  "documentation": "An `HttpApiGroup` is a collection of `HttpApiEndpoint`s. You can use an `HttpApiGroup` to\nrepresent a portion of your domain.\n\nThe endpoints can be implemented later using the `HttpApiBuilder.group` api.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpApiGroup.d.ts",
+  "sourceLine": 210,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpApiGroup.ts#L210"
+}

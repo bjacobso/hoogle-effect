@@ -1,0 +1,17 @@
+{
+  "id": "SortedSet.toggle",
+  "name": "toggle",
+  "module": "SortedSet",
+  "package": "effect",
+  "signature": "{ <A>(value: A): (self: SortedSet<A>) => SortedSet<A>; <A>(self: SortedSet<A>, value: A): SortedSet<A>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "elements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/SortedSet.d.ts",
+  "sourceLine": 297,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/SortedSet.ts#L297"
+}

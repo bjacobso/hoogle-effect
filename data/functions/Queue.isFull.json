@@ -1,0 +1,17 @@
+{
+  "id": "Queue.isFull",
+  "name": "isFull",
+  "module": "Queue",
+  "package": "effect",
+  "signature": "<A>(self: Dequeue<A> | Enqueue<A>) => Effect<boolean, never, never>",
+  "description": "Returns `true` if the `Queue` contains at least one element, `false`\notherwise.",
+  "documentation": "Returns `true` if the `Queue` contains at least one element, `false`\notherwise.",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Queue.d.ts",
+  "sourceLine": 435,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Queue.ts#L435"
+}

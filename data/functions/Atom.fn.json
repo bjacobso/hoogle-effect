@@ -1,0 +1,17 @@
+{
+  "id": "Atom.fn",
+  "name": "fn",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "{ <Arg>(): <E, A>(fn: (arg: Arg, get: FnContext) => Effect<A, E, Scope | AtomRegistry>, options?: { readonly initialValue?: A; readonly concurrent?: boolean; }) => AtomResultFn<Arg, A, E>; <E, A, Arg = void>(fn: (arg: Arg, get: FnContext) => Effect<A, E, Scope | AtomRegistry>, options?: { readonly initialValue?: A; readonly concurrent?: boolean; }): AtomResultFn<Arg, A, E>; <Arg>(): <E, A>(fn: (arg: Arg, get: FnContext) => Stream<A, E, AtomRegistry>, options?: { readonly initialValue?: A; readonly concurrent?: boolean; }) => AtomResultFn<Arg, A, E | NoSuchElementException>; <E, A, Arg = void>(fn: (arg: Arg, get: FnContext) => Stream<A, E, AtomRegistry>, options?: { readonly initialValue?: A; readonly concurrent?: boolean; }): AtomResultFn<Arg, A, E | NoSuchElementException>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 366,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L366"
+}

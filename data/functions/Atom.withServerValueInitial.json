@@ -1,0 +1,17 @@
+{
+  "id": "Atom.withServerValueInitial",
+  "name": "withServerValueInitial",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "<A extends Atom<Result.Result<any, any>>>(self: A) => A",
+  "description": "Sets the Atom's server value to `Result.initial(true)`.",
+  "documentation": "Sets the Atom's server value to `Result.initial(true)`.",
+  "examples": [],
+  "tags": [
+    "ServerValue"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 655,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L655"
+}

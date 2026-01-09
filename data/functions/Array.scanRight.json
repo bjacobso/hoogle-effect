@@ -1,0 +1,17 @@
+{
+  "id": "Array.scanRight",
+  "name": "scanRight",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <B, A>(b: B, f: (b: B, a: A) => B): (self: Iterable<A>) => [B, ...B[]]; <A, B>(self: Iterable<A>, b: B, f: (b: B, a: A) => B): [B, ...B[]]; }",
+  "description": "Accumulates values from an `Iterable` starting from the right, storing\neach intermediate result in an array. Useful for tracking the progression of\na value through a series of transformations.\n*Example",
+  "documentation": "Accumulates values from an `Iterable` starting from the right, storing\neach intermediate result in an array. Useful for tracking the progression of\na value through a series of transformations.\n*Example**\n\n```ts\nimport { Array } from \"effect\";\n\nconst result = Array.scanRight([1, 2, 3, 4], 0, (acc, value) => acc + value)\nconsole.log(result) // [10, 9, 7, 4, 0]\n```",
+  "examples": [],
+  "tags": [
+    "folding"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 773,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L773"
+}

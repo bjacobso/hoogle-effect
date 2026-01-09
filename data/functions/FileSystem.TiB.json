@@ -1,0 +1,17 @@
+{
+  "id": "FileSystem.TiB",
+  "name": "TiB",
+  "module": "FileSystem",
+  "package": "@effect/platform",
+  "signature": "(n: number) => Size",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "sizes"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/FileSystem.d.ts",
+  "sourceLine": 218,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/FileSystem.ts#L218"
+}

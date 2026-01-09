@@ -1,0 +1,17 @@
+{
+  "id": "Stream.runFoldWhile",
+  "name": "runFoldWhile",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <S, A>(s: S, cont: Predicate<S>, f: (s: S, a: A) => S): <E, R>(self: Stream<A, E, R>) => Effect<S, E, R>; <A, E, R, S>(self: Stream<A, E, R>, s: S, cont: Predicate<S>, f: (s: S, a: A) => S): Effect<S, E, R>; }",
+  "description": "Reduces the elements in the stream to a value of type `S`. Stops the fold\nearly when the condition is not fulfilled. Example:",
+  "documentation": "Reduces the elements in the stream to a value of type `S`. Stops the fold\nearly when the condition is not fulfilled. Example:",
+  "examples": [],
+  "tags": [
+    "destructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 7113,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L7113"
+}

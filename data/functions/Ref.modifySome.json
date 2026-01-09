@@ -1,0 +1,17 @@
+{
+  "id": "Ref.modifySome",
+  "name": "modifySome",
+  "module": "Ref",
+  "package": "effect",
+  "signature": "{ <B, A>(fallback: B, pf: (a: A) => Option<readonly [B, A]>): (self: Ref<A>) => Effect<B, never, never>; <A, B>(self: Ref<A>, fallback: B, pf: (a: A) => Option<readonly [B, A]>): Effect<B, never, never>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Ref.d.ts",
+  "sourceLine": 137,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Ref.ts#L137"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Stream.zipAllWith",
+  "name": "zipAllWith",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A2, E2, R2, A, A3>(options: { readonly other: Stream<A2, E2, R2>; readonly onSelf: (a: A) => A3; readonly onOther: (a2: A2) => A3; readonly onBoth: (a: A, a2: A2) => A3; }): <E, R>(self: Stream<A, E, R>) => Stream<A3, E2 | E, R2 | R>; <A, E, R, A2, E2, R2, A3>(self: Stream<A, E, R>, options: { readonly other: Stream<A2, E2, R2>; readonly onSelf: (a: A) => A3; readonly onOther: (a2: A2) => A3; readonly onBoth: (a: A, a2: A2) => A3; }): Stream<A3, E | E2, R | R2>; }",
+  "description": "Zips this stream with another point-wise. The provided functions will be\nused to create elements for the composed stream. The functions `left` and `right` will be used if the streams have different\nlengths and one of the streams has ended before the other.",
+  "documentation": "Zips this stream with another point-wise. The provided functions will be\nused to create elements for the composed stream.\n\nThe functions `left` and `right` will be used if the streams have different\nlengths and one of the streams has ended before the other.",
+  "examples": [
+    {
+      "code": "import { Effect, Stream } from \"effect\"\n\nconst stream = Stream.zipAllWith(Stream.make(1, 2, 3, 4, 5, 6), {\nother: Stream.make(\"a\", \"b\", \"c\"),\nonSelf: (n) => [n, \"x\"],\nonOther: (s) => [0, s],\nonBoth: (n, s) => [n - s.length, s]\n})\n\nEffect.runPromise(Stream.runCollect(stream)).then(console.log)\n// { _id: \"Chunk\", values: [ [ 0, \"a\" ], [ 1, \"b\" ], [ 2, \"c\" ], [ 4, \"x\" ], [ 5, \"x\" ], [ 6, \"x\" ] ] }"
+    }
+  ],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 9900,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L9900"
+}

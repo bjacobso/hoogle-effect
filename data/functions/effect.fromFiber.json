@@ -1,0 +1,17 @@
+{
+  "id": "Effect.fromFiber",
+  "name": "fromFiber",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E>(fiber: Fiber<A, E>) => Effect<A, E, never>",
+  "description": "Creates an `Effect` value that represents the exit value of the specified\nfiber.",
+  "documentation": "Creates an `Effect` value that represents the exit value of the specified\nfiber.",
+  "examples": [],
+  "tags": [
+    "Supervision & Fibers"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 11751,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L11751"
+}

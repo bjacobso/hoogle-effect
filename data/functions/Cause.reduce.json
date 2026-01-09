@@ -1,0 +1,17 @@
+{
+  "id": "Cause.reduce",
+  "name": "reduce",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "{ <Z, E>(zero: Z, pf: (accumulator: Z, cause: Cause<E>) => Option<Z>): (self: Cause<E>) => Z; <Z, E>(self: Cause<E>, zero: Z, pf: (accumulator: Z, cause: Cause<E>) => Option<Z>): Z; }",
+  "description": "Combines all parts of a `Cause` into a single value by starting with an\ninitial value.\n*Details This function processes a `Cause` by starting with an initial value (`zero`)\nand applying a custom function (`pf`) to combine all elements of the `Cause`\ninto a single result of type `Z`. The custom function determines how each\npart of the `Cause` contributes to the final result. The function can return\nan `Option` to either continue combining values or skip specific parts of the\n`Cause`. This function is useful for tasks such as:\n- Aggregating error messages from a `Cause` into a single string.\n- Summarizing the structure of a `Cause` into a simplified result.\n- Filtering or processing only specific parts of a `Cause`. The reduction proceeds in a top-down manner, visiting all nodes in the\n`Cause` structure. This gives you complete control over how each part of the\n`Cause` contributes to the final result.",
+  "documentation": "Combines all parts of a `Cause` into a single value by starting with an\ninitial value.\n*Details**\n\nThis function processes a `Cause` by starting with an initial value (`zero`)\nand applying a custom function (`pf`) to combine all elements of the `Cause`\ninto a single result of type `Z`. The custom function determines how each\npart of the `Cause` contributes to the final result. The function can return\nan `Option` to either continue combining values or skip specific parts of the\n`Cause`.\n\nThis function is useful for tasks such as:\n- Aggregating error messages from a `Cause` into a single string.\n- Summarizing the structure of a `Cause` into a simplified result.\n- Filtering or processing only specific parts of a `Cause`.\n\nThe reduction proceeds in a top-down manner, visiting all nodes in the\n`Cause` structure. This gives you complete control over how each part of the\n`Cause` contributes to the final result.",
+  "examples": [],
+  "tags": [
+    "Reducing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 1581,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L1581"
+}

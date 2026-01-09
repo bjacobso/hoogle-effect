@@ -1,0 +1,17 @@
+{
+  "id": "Hydration.toValues",
+  "name": "toValues",
+  "module": "Hydration",
+  "package": "@effect-atom/atom",
+  "signature": "(state: readonly DehydratedAtom[]) => DehydratedAtomValue[]",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "dehydration"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Hydration.d.ts",
+  "sourceLine": 33,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Hydration.ts#L33"
+}

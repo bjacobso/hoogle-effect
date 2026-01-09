@@ -1,0 +1,17 @@
+{
+  "id": "Stream.sync",
+  "name": "sync",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A>(evaluate: LazyArg<A>) => Stream<A, never, never>",
+  "description": "Creates a single-valued pure stream.",
+  "documentation": "Creates a single-valued pure stream.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 8034,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L8034"
+}

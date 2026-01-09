@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.formatIsoDateUtc",
+  "name": "formatIsoDateUtc",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "(self: DateTime) => string",
+  "description": "Format a `DateTime` as a UTC ISO date string.",
+  "documentation": "Format a `DateTime` as a UTC ISO date string.",
+  "examples": [],
+  "tags": [
+    "formatting"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 2371,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L2371"
+}

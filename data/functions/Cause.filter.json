@@ -1,0 +1,17 @@
+{
+  "id": "Cause.filter",
+  "name": "filter",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "{ <E, EB extends E>(refinement: Refinement<Cause<NoInfer<E>>, Cause<EB>>): (self: Cause<E>) => Cause<EB>; <E>(predicate: Predicate<Cause<NoInfer<E>>>): (self: Cause<E>) => Cause<E>; <E, EB extends E>(self: Cause<E>, refinement: Refinement<Cause<E>, Cause<EB>>): Cause<EB>; <E>(self: Cause<E>, predicate: Predicate<Cause<E>>): Cause<E>; }",
+  "description": "Preserves parts of a `Cause` that match a given predicate.\n*Details This function allows you to retain only the parts of a `Cause` structure that\nmatch a specified predicate or refinement. Any parts of the `Cause` that do\nnot match the provided condition are excluded from the result. You can use this function in two ways:\n- With a `Predicate`: A function that evaluates whether a `Cause` should be\nretained based on its value.\n- With a `Refinement`: A more specific predicate that can refine the type of\nthe `Cause`. This is useful when you need to extract specific types of errors, defects, or\ninterruptions from a `Cause` while discarding unrelated parts.",
+  "documentation": "Preserves parts of a `Cause` that match a given predicate.\n*Details**\n\nThis function allows you to retain only the parts of a `Cause` structure that\nmatch a specified predicate or refinement. Any parts of the `Cause` that do\nnot match the provided condition are excluded from the result.\n\nYou can use this function in two ways:\n- With a `Predicate`: A function that evaluates whether a `Cause` should be\nretained based on its value.\n- With a `Refinement`: A more specific predicate that can refine the type of\nthe `Cause`.\n\nThis is useful when you need to extract specific types of errors, defects, or\ninterruptions from a `Cause` while discarding unrelated parts.",
+  "examples": [],
+  "tags": [
+    "Filtering"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 1367,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L1367"
+}

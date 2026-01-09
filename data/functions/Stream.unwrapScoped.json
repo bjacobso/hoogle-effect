@@ -1,0 +1,17 @@
+{
+  "id": "Stream.unwrapScoped",
+  "name": "unwrapScoped",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E2, R2, E, R>(effect: Effect<Stream<A, E2, R2>, E, R>) => Stream<A, E2 | E, R2 | Exclude<R, Scope>>",
+  "description": "Creates a stream produced from a scoped `Effect`.",
+  "documentation": "Creates a stream produced from a scoped `Effect`.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 9266,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L9266"
+}

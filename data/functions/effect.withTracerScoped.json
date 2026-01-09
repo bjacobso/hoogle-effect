@@ -1,0 +1,17 @@
+{
+  "id": "Effect.withTracerScoped",
+  "name": "withTracerScoped",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "(value: Tracer) => Effect<void, never, Scope>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Tracing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 25733,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L25733"
+}

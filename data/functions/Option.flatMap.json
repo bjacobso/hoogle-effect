@@ -1,0 +1,21 @@
+{
+  "id": "Option.flatMap",
+  "name": "flatMap",
+  "module": "Option",
+  "package": "effect",
+  "signature": "{ <A, B>(f: (a: A) => Option<B>): (self: Option<A>) => Option<B>; <A, B>(self: Option<A>, f: (a: A) => Option<B>): Option<B>; }",
+  "description": "Applies a function to the value of a `Some` and flattens the resulting\n`Option`. If the input is `None`, it remains `None`.\n*Details This function allows you to chain computations that return `Option` values.\nIf the input `Option` is `Some`, the provided function `f` is applied to the\ncontained value, and the resulting `Option` is returned. If the input is\n`None`, the function is not applied, and the result remains `None`. This utility is particularly useful for sequencing operations that may fail\nor produce optional results, enabling clean and concise workflows for\nhandling such cases.",
+  "documentation": "Applies a function to the value of a `Some` and flattens the resulting\n`Option`. If the input is `None`, it remains `None`.\n*Details**\n\nThis function allows you to chain computations that return `Option` values.\nIf the input `Option` is `Some`, the provided function `f` is applied to the\ncontained value, and the resulting `Option` is returned. If the input is\n`None`, the function is not applied, and the result remains `None`.\n\nThis utility is particularly useful for sequencing operations that may fail\nor produce optional results, enabling clean and concise workflows for\nhandling such cases.",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\ninterface Address {\nreadonly city: string\nreadonly street: Option.Option<string>\n}\n\ninterface User {\nreadonly id: number\nreadonly username: string\nreadonly email: Option.Option<string>\nreadonly address: Option.Option<Address>\n}\n\nconst user: User = {\nid: 1,\nusername: \"john_doe\",\nemail: Option.some(\"john.doe@example.com\"),\naddress: Option.some({\ncity: \"New York\",\nstreet: Option.some(\"123 Main St\")\n})\n}\n\n// Use flatMap to extract the street value\nconst street = user.address.pipe(\nOption.flatMap((address) => address.street)\n)\n\nconsole.log(street)\n// Output: { _id: 'Option', _tag: 'Some', value: '123 Main St' }"
+    }
+  ],
+  "tags": [
+    "Sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 1463,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L1463"
+}

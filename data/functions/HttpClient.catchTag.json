@@ -1,0 +1,17 @@
+{
+  "id": "HttpClient.catchTag",
+  "name": "catchTag",
+  "module": "HttpClient",
+  "package": "@effect/platform",
+  "signature": "{ <K extends E extends { _tag: string; } ? E[\"_tag\"] : never, E, E1, R1>(tag: K, f: (e: Extract<E, { _tag: K; }>) => Effect<HttpClientResponse, E1, R1>): <R>(self: HttpClient.With<E, R>) => HttpClient.With<E1 | Exclude<E, { _tag: K; }>, R1 | R>; <R, E, K extends E extends { _tag: string; } ? E[\"_tag\"] : never, R1, E1>(self: HttpClient.With<E, R>, tag: K, f: (e: Extract<E, { _tag: K; }>) => Effect<HttpClientResponse, E1, R1>): HttpClient.With<E1 | Exclude<E, { _tag: K; }>, R | R1>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "error handling"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpClient.d.ts",
+  "sourceLine": 131,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpClient.ts#L131"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Duration.between",
+  "name": "between",
+  "module": "Duration",
+  "package": "effect",
+  "signature": "{ (options: { minimum: DurationInput; maximum: DurationInput; }): (self: DurationInput) => boolean; (self: DurationInput, options: { minimum: DurationInput; maximum: DurationInput; }): boolean; }",
+  "description": "Checks if a `Duration` is between a `minimum` and `maximum` value.",
+  "documentation": "Checks if a `Duration` is between a `minimum` and `maximum` value.",
+  "examples": [],
+  "tags": [
+    "predicates"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Duration.d.ts",
+  "sourceLine": 228,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Duration.ts#L228"
+}

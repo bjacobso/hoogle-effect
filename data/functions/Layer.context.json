@@ -1,0 +1,17 @@
+{
+  "id": "Layer.context",
+  "name": "context",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "<R>() => Layer<R, never, R>",
+  "description": "Constructs a `Layer` that passes along the specified context as an\noutput.",
+  "documentation": "Constructs a `Layer` that passes along the specified context as an\noutput.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 286,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L286"
+}

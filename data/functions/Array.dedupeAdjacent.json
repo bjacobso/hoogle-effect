@@ -1,0 +1,15 @@
+{
+  "id": "Array.dedupeAdjacent",
+  "name": "dedupeAdjacent",
+  "module": "Array",
+  "package": "effect",
+  "signature": "<A>(self: Iterable<A>) => A[]",
+  "description": "Deduplicates adjacent elements that are identical.\n*Example",
+  "documentation": "Deduplicates adjacent elements that are identical.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.dedupeAdjacent([1, 1, 2, 2, 3, 3])\nconsole.log(result) // [1, 2, 3]\n```",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 5318,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L5318"
+}

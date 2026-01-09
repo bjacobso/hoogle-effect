@@ -1,0 +1,17 @@
+{
+  "id": "HttpApiSchema.getStatusSuccess",
+  "name": "getStatusSuccess",
+  "module": "HttpApiSchema",
+  "package": "@effect/platform",
+  "signature": "<A extends Schema.Schema.Any>(self: A) => number",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "reflection"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpApiSchema.d.ts",
+  "sourceLine": 99,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpApiSchema.ts#L99"
+}

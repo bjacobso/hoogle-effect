@@ -1,0 +1,17 @@
+{
+  "id": "Stream.repeatElements",
+  "name": "repeatElements",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <B, R2>(schedule: Schedule<B, unknown, R2>): <A, E, R>(self: Stream<A, E, R>) => Stream<A, E, R2 | R>; <A, E, R, B, R2>(self: Stream<A, E, R>, schedule: Schedule<B, unknown, R2>): Stream<A, E, R | R2>; }",
+  "description": "Repeats each element of the stream using the provided schedule. Repetitions\nare done in addition to the first execution, which means using\n`Schedule.recurs(1)` actually results in the original effect, plus an\nadditional recurrence, for a total of two repetitions of each value in the\nstream.",
+  "documentation": "Repeats each element of the stream using the provided schedule. Repetitions\nare done in addition to the first execution, which means using\n`Schedule.recurs(1)` actually results in the original effect, plus an\nadditional recurrence, for a total of two repetitions of each value in the\nstream.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 6739,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L6739"
+}

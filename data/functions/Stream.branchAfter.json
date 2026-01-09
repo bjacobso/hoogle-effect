@@ -1,0 +1,17 @@
+{
+  "id": "Stream.branchAfter",
+  "name": "branchAfter",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A, A2, E2, R2>(n: number, f: (input: Chunk<A>) => Stream<A2, E2, R2>): <E, R>(self: Stream<A, E, R>) => Stream<A2, E2 | E, R2 | R>; <A, E, R, A2, E2, R2>(self: Stream<A, E, R>, n: number, f: (input: Chunk<A>) => Stream<A2, E2, R2>): Stream<A2, E | E2, R | R2>; }",
+  "description": "Returns a `Stream` that first collects `n` elements from the input `Stream`,\nand then creates a new `Stream` using the specified function, and sends all\nthe following elements through that.",
+  "documentation": "Returns a `Stream` that first collects `n` elements from the input `Stream`,\nand then creates a new `Stream` using the specified function, and sends all\nthe following elements through that.",
+  "examples": [],
+  "tags": [
+    "sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 497,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L497"
+}

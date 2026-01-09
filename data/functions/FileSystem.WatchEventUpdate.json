@@ -1,0 +1,17 @@
+{
+  "id": "FileSystem.WatchEventUpdate",
+  "name": "WatchEventUpdate",
+  "module": "FileSystem",
+  "package": "@effect/platform",
+  "signature": "Case.Constructor<WatchEvent.Update, \"_tag\">",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructor"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/FileSystem.d.ts",
+  "sourceLine": 486,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/FileSystem.ts#L486"
+}

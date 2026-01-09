@@ -1,0 +1,17 @@
+{
+  "id": "Config.withDescription",
+  "name": "withDescription",
+  "module": "Config",
+  "package": "effect",
+  "signature": "{ (description: string): <A>(self: Config<A>) => Config<A>; <A>(self: Config<A>, description: string): Config<A>; }",
+  "description": "Adds a description to this configuration, which is intended for humans.",
+  "documentation": "Adds a description to this configuration, which is intended for humans.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Config.d.ts",
+  "sourceLine": 601,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Config.ts#L601"
+}

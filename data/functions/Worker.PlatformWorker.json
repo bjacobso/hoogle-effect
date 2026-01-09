@@ -1,0 +1,17 @@
+{
+  "id": "Worker.PlatformWorker",
+  "name": "PlatformWorker",
+  "module": "Worker",
+  "package": "@effect/platform",
+  "signature": "Tag<PlatformWorker, PlatformWorker>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "tags"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Worker.d.ts",
+  "sourceLine": 74,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Worker.ts#L74"
+}

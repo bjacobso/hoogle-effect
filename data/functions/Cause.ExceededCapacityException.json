@@ -1,0 +1,17 @@
+{
+  "id": "Cause.ExceededCapacityException",
+  "name": "ExceededCapacityException",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "new (message?: string) => ExceededCapacityException",
+  "description": "Creates an error indicating resource capacity has been exceeded.\n*Details This function constructs an `ExceededCapacityException`, signifying that an\noperation or resource usage surpassed established limits. This can be\nessential for concurrency or resource management situations, ensuring your\napplication doesn't go beyond acceptable thresholds.",
+  "documentation": "Creates an error indicating resource capacity has been exceeded.\n*Details**\n\nThis function constructs an `ExceededCapacityException`, signifying that an\noperation or resource usage surpassed established limits. This can be\nessential for concurrency or resource management situations, ensuring your\napplication doesn't go beyond acceptable thresholds.",
+  "examples": [],
+  "tags": [
+    "Errors"
+  ],
+  "since": "3.5.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 1862,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L1862"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Logger.test",
+  "name": "test",
+  "module": "Logger",
+  "package": "effect",
+  "signature": "{ <Message>(input: Message): <Output>(self: Logger<Message, Output>) => Output; <Message, Output>(self: Logger<Message, Output>, input: Message): Output; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Logger.d.ts",
+  "sourceLine": 401,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Logger.ts#L401"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.check",
+  "name": "check",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <In, Out>(test: (input: In, output: Out) => boolean): <R>(self: Schedule<Out, In, R>) => Schedule<Out, In, R>; <Out, In, R>(self: Schedule<Out, In, R>, test: (input: In, output: Out) => boolean): Schedule<Out, In, R>; }",
+  "description": "Filters schedule executions based on a custom condition.\n*Details This function modifies a schedule by applying a custom test function to each\ninput-output pair. The test function determines whether the schedule should\ncontinue or stop. If the function returns `true`, the schedule proceeds as\nusual; if it returns `false`, the schedule terminates. This is useful for conditional retries, custom stop conditions, or\ndynamically controlling execution based on observed inputs and outputs.",
+  "documentation": "Filters schedule executions based on a custom condition.\n*Details**\n\nThis function modifies a schedule by applying a custom test function to each\ninput-output pair. The test function determines whether the schedule should\ncontinue or stop. If the function returns `true`, the schedule proceeds as\nusual; if it returns `false`, the schedule terminates.\n\nThis is useful for conditional retries, custom stop conditions, or\ndynamically controlling execution based on observed inputs and outputs.",
+  "examples": [],
+  "tags": [
+    "Recurrence Conditions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 524,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L524"
+}

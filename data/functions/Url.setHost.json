@@ -1,0 +1,17 @@
+{
+  "id": "Url.setHost",
+  "name": "setHost",
+  "module": "Url",
+  "package": "@effect/platform",
+  "signature": "{ (host: string): (url: URL) => URL; (url: URL, host: string): URL; }",
+  "description": "Updates the host (domain and port) of the URL.",
+  "documentation": "Updates the host (domain and port) of the URL.",
+  "examples": [],
+  "tags": [
+    "Setters"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Url.d.ts",
+  "sourceLine": 212,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Url.ts#L212"
+}

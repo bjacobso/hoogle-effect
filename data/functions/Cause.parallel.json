@@ -1,0 +1,17 @@
+{
+  "id": "Cause.parallel",
+  "name": "parallel",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E, E2>(left: Cause<E>, right: Cause<E2>) => Cause<E | E2>",
+  "description": "Combines two `Cause`s in parallel.\n*Details This function merges two errors that occurred simultaneously. Instead of\ndiscarding one error, both are retained, allowing for richer error reporting\nand debugging.",
+  "documentation": "Combines two `Cause`s in parallel.\n*Details**\n\nThis function merges two errors that occurred simultaneously. Instead of\ndiscarding one error, both are retained, allowing for richer error reporting\nand debugging.",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 589,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L589"
+}

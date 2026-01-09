@@ -1,0 +1,17 @@
+{
+  "id": "Array.fromRecord",
+  "name": "fromRecord",
+  "module": "Array",
+  "package": "effect",
+  "signature": "<K extends string, A>(self: Readonly<Record<K, A>>) => [K, A][]",
+  "description": "Takes a record and returns an array of tuples containing its keys and values.\n*Example",
+  "documentation": "Takes a record and returns an array of tuples containing its keys and values.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.fromRecord({ a: 1, b: 2, c: 3 })\nconsole.log(result) // [[\"a\", 1], [\"b\", 2], [\"c\", 3]]\n```",
+  "examples": [],
+  "tags": [
+    "conversions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 240,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L240"
+}

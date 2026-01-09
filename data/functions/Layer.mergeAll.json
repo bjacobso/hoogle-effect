@@ -1,0 +1,17 @@
+{
+  "id": "Layer.mergeAll",
+  "name": "mergeAll",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "<Layers extends readonly [Layer<never, any, any>, ...Array<Layer<never, any, any>>]>(...layers: Layers) => Layer<{ [k in keyof Layers]: Layer.Success<Layers[k]>; }[number], { [k in keyof Layers]: Layer.Error<Layers[k]>; }[number], { [k in keyof Layers]: Layer.Context<Layers[k]>; }[number]>",
+  "description": "Combines all the provided layers concurrently, creating a new layer with merged input, error, and output types.",
+  "documentation": "Combines all the provided layers concurrently, creating a new layer with merged input, error, and output types.",
+  "examples": [],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 698,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L698"
+}

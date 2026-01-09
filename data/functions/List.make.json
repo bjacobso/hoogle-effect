@@ -1,0 +1,17 @@
+{
+  "id": "List.make",
+  "name": "make",
+  "module": "List",
+  "package": "effect",
+  "signature": "<Elements extends readonly [any, ...Array<any>]>(...elements: Elements) => Cons<Elements[number]>",
+  "description": "Constructs a new `List<A>` from the specified values.",
+  "documentation": "Constructs a new `List<A>` from the specified values.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 160,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L160"
+}

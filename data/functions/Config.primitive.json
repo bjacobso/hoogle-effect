@@ -1,0 +1,17 @@
+{
+  "id": "Config.primitive",
+  "name": "primitive",
+  "module": "Config",
+  "package": "effect",
+  "signature": "<A>(description: string, parse: (text: string) => Either<A, ConfigError>) => Config<A>",
+  "description": "Constructs a new primitive config.",
+  "documentation": "Constructs a new primitive config.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Config.d.ts",
+  "sourceLine": 383,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Config.ts#L383"
+}

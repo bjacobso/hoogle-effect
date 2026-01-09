@@ -1,0 +1,21 @@
+{
+  "id": "HashSet.values",
+  "name": "values",
+  "module": "HashSet",
+  "package": "effect",
+  "signature": "<A>(self: HashSet<A>) => IterableIterator<A>",
+  "description": "Returns an `IterableIterator` of the values in the `HashSet`. Time complexity: `O(1)`",
+  "documentation": "Returns an `IterableIterator` of the values in the `HashSet`.\n\nTime complexity: **`O(1)`**",
+  "examples": [
+    {
+      "code": "import { HashSet, pipe } from \"effect\"\n\nconst numberIterable = pipe(\nHashSet.make(0, 1, 1, 2), // HashSet.HashSet<number>\nHashSet.values // takes an HashSet<A> and returns an IterableIterator<A>\n)\n\nfor (const number of numberIterable) {\nconsole.log(number) // it will logs: 0, 1, 2\n}"
+    }
+  ],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashSet.d.ts",
+  "sourceLine": 941,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashSet.ts#L941"
+}

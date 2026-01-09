@@ -1,0 +1,21 @@
+{
+  "id": "Option.isNone",
+  "name": "isNone",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<A>(self: Option<A>) => self is None<A>",
+  "description": "Checks whether an `Option` represents the absence of a value (`None`).",
+  "documentation": "Checks whether an `Option` represents the absence of a value (`None`).",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\nconsole.log(Option.isNone(Option.some(1)))\n// Output: false\n\nconsole.log(Option.isNone(Option.none()))\n// Output: true"
+    }
+  ],
+  "tags": [
+    "Guards"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 221,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L221"
+}

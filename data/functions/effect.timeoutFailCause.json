@@ -1,0 +1,21 @@
+{
+  "id": "Effect.timeoutFailCause",
+  "name": "timeoutFailCause",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <E1>(options: { readonly onTimeout: LazyArg<Cause<E1>>; readonly duration: DurationInput; }): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E1 | E, R>; <A, E, R, E1>(self: Effect<A, E, R>, options: { readonly onTimeout: LazyArg<Cause<E1>>; readonly duration: DurationInput; }): Effect<A, E | E1, R>; }",
+  "description": "Specifies a custom defect to be thrown when a timeout occurs.\n*Details This function allows you to handle timeouts as exceptional cases by\ngenerating a custom defect when an effect exceeds the specified duration. You\nprovide:\n- A `duration`: The time limit for the effect.\n- An `onTimeout` function: A lazy evaluation function that generates the\ncustom defect (typically created using `Cause.die`). If the effect completes within the time limit, its result is returned\nnormally. Otherwise, the custom defect is triggered, and the effect fails\nwith that defect.\n*When to Use This is especially useful when you need to treat timeouts as critical\nfailures in your application and wish to include meaningful information in\nthe defect.\n*Example",
+  "documentation": "Specifies a custom defect to be thrown when a timeout occurs.\n*Details**\n\nThis function allows you to handle timeouts as exceptional cases by\ngenerating a custom defect when an effect exceeds the specified duration. You\nprovide:\n- A `duration`: The time limit for the effect.\n- An `onTimeout` function: A lazy evaluation function that generates the\ncustom defect (typically created using `Cause.die`).\n\nIf the effect completes within the time limit, its result is returned\nnormally. Otherwise, the custom defect is triggered, and the effect fails\nwith that defect.\n*When to Use**\n\nThis is especially useful when you need to treat timeouts as critical\nfailures in your application and wish to include meaningful information in\nthe defect.\n*Example**\n\n```ts\nimport { Effect, Cause } from \"effect\"\n\nconst task = Effect.gen(function* () {\nconsole.log(\"Start processing...\")\nyield* Effect.sleep(\"2 seconds\") // Simulates a delay in processing\nconsole.log(\"Processing complete.\")\nreturn \"Result\"\n})\n\nconst program = task.pipe(\nEffect.timeoutFailCause({\nduration: \"1 second\",\nonTimeout: () => Cause.die(\"Timed out!\") // Custom defect for timeout\n})\n)\n\nEffect.runPromiseExit(program).then(console.log)\n// Output:\n// Start processing...\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: { _id: 'Cause', _tag: 'Die', defect: 'Timed out!' }\n// }\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Cause } from \"effect\"\n\nconst task = Effect.gen(function* () {\nconsole.log(\"Start processing...\")\nyield* Effect.sleep(\"2 seconds\") // Simulates a delay in processing\nconsole.log(\"Processing complete.\")\nreturn \"Result\"\n})\n\nconst program = task.pipe(\nEffect.timeoutFailCause({\nduration: \"1 second\",\nonTimeout: () => Cause.die(\"Timed out!\") // Custom defect for timeout\n})\n)\n\nEffect.runPromiseExit(program).then(console.log)\n// Output:\n// Start processing...\n// {\n// _id: 'Exit',\n// _tag: 'Failure',\n// cause: { _id: 'Cause', _tag: 'Die', defect: 'Timed out!' }\n// }"
+    }
+  ],
+  "tags": [
+    "Delays & Timeouts"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 13149,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L13149"
+}

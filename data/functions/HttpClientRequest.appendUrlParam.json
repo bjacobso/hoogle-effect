@@ -1,0 +1,17 @@
+{
+  "id": "HttpClientRequest.appendUrlParam",
+  "name": "appendUrlParam",
+  "module": "HttpClientRequest",
+  "package": "@effect/platform",
+  "signature": "{ (key: string, value: string): (self: HttpClientRequest) => HttpClientRequest; (self: HttpClientRequest, key: string, value: string): HttpClientRequest; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "combinators"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpClientRequest.d.ts",
+  "sourceLine": 329,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpClientRequest.ts#L329"
+}

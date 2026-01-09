@@ -1,0 +1,17 @@
+{
+  "id": "List.unsafeTail",
+  "name": "unsafeTail",
+  "module": "List",
+  "package": "effect",
+  "signature": "<A>(self: List<A>) => List<A>",
+  "description": "Unsafely returns the tail of the specified `List`.",
+  "documentation": "Unsafely returns the tail of the specified `List`.",
+  "examples": [],
+  "tags": [
+    "unsafe"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/List.d.ts",
+  "sourceLine": 936,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/List.ts#L936"
+}

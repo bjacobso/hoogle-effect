@@ -1,0 +1,21 @@
+{
+  "id": "Effect.exists",
+  "name": "exists",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A, E, R>(predicate: (a: A, i: number) => Effect<boolean, E, R>, options?: { readonly concurrency?: Concurrency; readonly batching?: boolean | \"inherit\"; readonly concurrentFinalizers?: boolean; }): (elements: Iterable<A>) => Effect<boolean, E, R>; <A, E, R>(elements: Iterable<A>, predicate: (a: A, i: number) => Effect<boolean, E, R>, options?: { readonly concurrency?: Concurrency; readonly batching?: boolean | \"inherit\"; readonly concurrentFinalizers?: boolean; }): Effect<boolean, E, R>; }",
+  "description": "Determines whether any element of the iterable satisfies the effectual\npredicate.\n*Details This function checks whether any element in a given collection (an iterable)\nsatisfies a condition defined by an effectful predicate. The predicate is a function that takes an element and its index, and it\nreturns an effect that evaluates to a boolean. The function will process each element, and if any element satisfies the\npredicate (returns `true`), the function will immediately return `true`. If none of the elements satisfy the condition, it will return `false`.\n*When to Use This function allows you to quickly check for a condition in a collection\nwithout having to manually iterate over it.\n*Example",
+  "documentation": "Determines whether any element of the iterable satisfies the effectual\npredicate.\n*Details**\n\nThis function checks whether any element in a given collection (an iterable)\nsatisfies a condition defined by an effectful predicate.\n\nThe predicate is a function that takes an element and its index, and it\nreturns an effect that evaluates to a boolean.\n\nThe function will process each element, and if any element satisfies the\npredicate (returns `true`), the function will immediately return `true`.\n\nIf none of the elements satisfy the condition, it will return `false`.\n*When to Use**\n\nThis function allows you to quickly check for a condition in a collection\nwithout having to manually iterate over it.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\nconst numbers = [1, 2, 3, 4]\nconst predicate = (n: number, i: number) => Effect.succeed(n > 2)\n\nconst program = Effect.gen(function*() {\nconst hasLargeNumber = yield* Effect.exists(numbers, predicate)\nconsole.log(hasLargeNumber)\n})\n\nEffect.runFork(program)\n// Output: true\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst numbers = [1, 2, 3, 4]\nconst predicate = (n: number, i: number) => Effect.succeed(n > 2)\n\nconst program = Effect.gen(function*() {\nconst hasLargeNumber = yield* Effect.exists(numbers, predicate)\nconsole.log(hasLargeNumber)\n})\n\nEffect.runFork(program)\n// Output: true"
+    }
+  ],
+  "tags": [
+    "Condition Checking"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 1951,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L1951"
+}

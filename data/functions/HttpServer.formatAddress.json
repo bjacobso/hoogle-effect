@@ -1,0 +1,17 @@
+{
+  "id": "HttpServer.formatAddress",
+  "name": "formatAddress",
+  "module": "HttpServer",
+  "package": "@effect/platform",
+  "signature": "(address: Address) => string",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "address"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpServer.d.ts",
+  "sourceLine": 136,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpServer.ts#L136"
+}

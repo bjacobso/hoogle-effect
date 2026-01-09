@@ -1,0 +1,17 @@
+{
+  "id": "Array.zipWith",
+  "name": "zipWith",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <B, A, C>(that: readonly [B, ...B[]], f: (a: A, b: B) => C): (self: readonly [A, ...A[]]) => [C, ...C[]]; <B, A, C>(that: Iterable<B>, f: (a: A, b: B) => C): (self: Iterable<A>) => C[]; <A, B, C>(self: readonly [A, ...A[]], that: readonly [B, ...B[]], f: (a: A, b: B) => C): [C, ...C[]]; <B, A, C>(self: Iterable<A>, that: Iterable<B>, f: (a: A, b: B) => C): C[]; }",
+  "description": "Apply a function to pairs of elements at the same index in two `Iterable`s, collecting the results in a new `Array`. If one\ninput `Iterable` is short, excess elements of the longer `Iterable` are discarded.\n*Example",
+  "documentation": "Apply a function to pairs of elements at the same index in two `Iterable`s, collecting the results in a new `Array`. If one\ninput `Iterable` is short, excess elements of the longer `Iterable` are discarded.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst result = Array.zipWith([1, 2, 3], [4, 5, 6], (a, b) => a + b)\nconsole.log(result) // [5, 7, 9]\n```",
+  "examples": [],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 2706,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L2706"
+}

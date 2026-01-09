@@ -1,0 +1,17 @@
+{
+  "id": "Cause.InvalidPubSubCapacityExceptionTypeId",
+  "name": "InvalidPubSubCapacityExceptionTypeId",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "typeof InvalidPubSubCapacityExceptionTypeId",
+  "description": "A unique symbol identifying the `InvalidPubSubCapacityException` type.\n*Details This provides a symbol that identifies an `InvalidPubSubCapacityException`.\nIt indicates an error related to an invalid capacity passed to a `PubSub`\nstructure.",
+  "documentation": "A unique symbol identifying the `InvalidPubSubCapacityException` type.\n*Details**\n\nThis provides a symbol that identifies an `InvalidPubSubCapacityException`.\nIt indicates an error related to an invalid capacity passed to a `PubSub`\nstructure.",
+  "examples": [],
+  "tags": [
+    "Symbols"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 153,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L153"
+}

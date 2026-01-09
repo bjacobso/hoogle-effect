@@ -1,0 +1,17 @@
+{
+  "id": "Stream.schedule",
+  "name": "schedule",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <X, A0 extends A, R2, A>(schedule: Schedule<X, A0, R2>): <E, R>(self: Stream<A, E, R>) => Stream<A, E, R2 | R>; <A, E, R, X, A0 extends A, R2>(self: Stream<A, E, R>, schedule: Schedule<X, A0, R2>): Stream<A, E, R | R2>; }",
+  "description": "Schedules the output of the stream using the provided `schedule`.",
+  "documentation": "Schedules the output of the stream using the provided `schedule`.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 7674,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L7674"
+}

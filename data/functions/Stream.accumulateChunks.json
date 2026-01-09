@@ -1,0 +1,17 @@
+{
+  "id": "Stream.accumulateChunks",
+  "name": "accumulateChunks",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Stream<A, E, R>) => Stream<A, E, R>",
+  "description": "Re-chunks the elements of the stream by accumulating each underlying chunk.",
+  "documentation": "Re-chunks the elements of the stream by accumulating each underlying chunk.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 172,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L172"
+}

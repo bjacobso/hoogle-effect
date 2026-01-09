@@ -1,0 +1,17 @@
+{
+  "id": "Registry.isRegistry",
+  "name": "isRegistry",
+  "module": "Registry",
+  "package": "@effect-atom/atom",
+  "signature": "(u: unknown) => u is Registry",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "guards"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Registry.d.ts",
+  "sourceLine": 25,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Registry.ts#L25"
+}

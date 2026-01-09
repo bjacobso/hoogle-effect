@@ -1,0 +1,17 @@
+{
+  "id": "Stream.onError",
+  "name": "onError",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <E, X, R2>(cleanup: (cause: Cause<E>) => Effect<X, never, R2>): <A, R>(self: Stream<A, E, R>) => Stream<A, E, R2 | R>; <A, E, R, X, R2>(self: Stream<A, E, R>, cleanup: (cause: Cause<E>) => Effect<X, never, R2>): Stream<A, E, R | R2>; }",
+  "description": "Runs the specified effect if this stream fails, providing the error to the\neffect if it exists. Note: Unlike `Effect.onError` there is no guarantee that the provided\neffect will not be interrupted.",
+  "documentation": "Runs the specified effect if this stream fails, providing the error to the\neffect if it exists.\n\nNote: Unlike `Effect.onError` there is no guarantee that the provided\neffect will not be interrupted.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 5316,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L5316"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "HashSet.beginMutation",
+  "name": "beginMutation",
+  "module": "HashSet",
+  "package": "effect",
+  "signature": "<A>(self: HashSet<A>) => HashSet<A>",
+  "description": "Creates a new mutable version of the `HashSet`\nWhen a `HashSet` is mutable, operations like {@link add}and {@link remove}* modify the data structure in place instead of creating a new one, which is\nmore efficient when performing multiple operations.",
+  "documentation": "Creates a new mutable version of the `HashSet`\nWhen a `HashSet` is mutable, operations like {@link add}and {@link remove}* modify the data structure in place instead of creating a new one, which is\nmore efficient when performing multiple operations.",
+  "examples": [
+    {
+      "code": "import { HashSet } from \"effect\"\nimport assert from \"node:assert/strict\"\n\nconst UPPER_BOUND = 10_000\n\nconst immutableSet = HashSet.empty<number>().pipe(HashSet.add(0))\n\n// Create a mutable version of the immutableSet\nconst mutableSet = HashSet.beginMutation(immutableSet)\n\nfor (let i = 1; i < UPPER_BOUND; i++) {\n// Operations now modify the set in place instead of creating new instances\n// This is more efficient when making multiple changes\nconst pointerToMutableSet = HashSet.add(mutableSet, i)\n\n// the two sets have the same identity, hence `add` is mutating mutableSet and not returning a new HashSet instance\nassert(Object.is(mutableSet, pointerToMutableSet))\nassert.equal(HashSet.has(mutableSet, i), true) // `i` is in the mutableSet\nassert.equal(HashSet.has(immutableSet, i), false) // `i` is not in the immutableSet\n}\n\nconst next = UPPER_BOUND + 1\n// When done, mark the set as immutable again\nHashSet.endMutation(mutableSet).pipe(\nHashSet.add(next) // since this returns a new HashSet, it will not be logged as part of the mutableSet\n)\nassert.equal(HashSet.has(mutableSet, next), false)\n\nconsole.log(HashSet.toValues(immutableSet)) // [0]\nconsole.log(HashSet.toValues(mutableSet).sort((a, b) => a - b)) // [0, 1, 2, 3, ...rest]"
+    }
+  ],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashSet.d.ts",
+  "sourceLine": 1039,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashSet.ts#L1039"
+}

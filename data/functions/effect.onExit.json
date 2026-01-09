@@ -1,0 +1,21 @@
+{
+  "id": "Effect.onExit",
+  "name": "onExit",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A, E, X, R2>(cleanup: (exit: Exit<A, E>) => Effect<X, never, R2>): <R>(self: Effect<A, E, R>) => Effect<A, E, R2 | R>; <A, E, R, X, R2>(self: Effect<A, E, R>, cleanup: (exit: Exit<A, E>) => Effect<X, never, R2>): Effect<A, E, R | R2>; }",
+  "description": "Guarantees that a cleanup function runs regardless of whether the effect\nsucceeds, fails, or is interrupted.\n*Details This function ensures that a provided cleanup function is executed after the\neffect completes, regardless of the outcome. The cleanup function is given\nthe `Exit` value of the effect, which provides detailed information about the\nresult:\n- If the effect succeeds, the `Exit` contains the success value.\n- If the effect fails, the `Exit` contains the error or failure cause.\n- If the effect is interrupted, the `Exit` reflects the interruption. The cleanup function is guaranteed to run uninterruptibly, ensuring reliable\nresource management even in complex or high-concurrency scenarios.\n*Example (Running a Cleanup Function with the Effect’s Result)",
+  "documentation": "Guarantees that a cleanup function runs regardless of whether the effect\nsucceeds, fails, or is interrupted.\n*Details**\n\nThis function ensures that a provided cleanup function is executed after the\neffect completes, regardless of the outcome. The cleanup function is given\nthe `Exit` value of the effect, which provides detailed information about the\nresult:\n- If the effect succeeds, the `Exit` contains the success value.\n- If the effect fails, the `Exit` contains the error or failure cause.\n- If the effect is interrupted, the `Exit` reflects the interruption.\n\nThe cleanup function is guaranteed to run uninterruptibly, ensuring reliable\nresource management even in complex or high-concurrency scenarios.\n*Example** (Running a Cleanup Function with the Effect’s Result)\n\n```ts\nimport { Console, Effect, Exit } from \"effect\"\n\n// Define a cleanup effect that logs the result\nconst handler = Effect.onExit((exit) =>\nConsole.log(`Cleanup completed: ${Exit.getOrElse(exit, String)}`)\n)\n\n// Define a successful effect\nconst success = Console.log(\"Task completed\").pipe(\nEffect.as(\"some result\"),\nhandler\n)\n\nEffect.runFork(success)\n// Output:\n// Task completed\n// Cleanup completed: some result\n\n// Define a failing effect\nconst failure = Console.log(\"Task failed\").pipe(\nEffect.andThen(Effect.fail(\"some error\")),\nhandler\n)\n\nEffect.runFork(failure)\n// Output:\n// Task failed\n// Cleanup completed: Error: some error\n\n// Define an interrupted effect\nconst interruption = Console.log(\"Task interrupted\").pipe(\nEffect.andThen(Effect.interrupt),\nhandler\n)\n\nEffect.runFork(interruption)\n// Output:\n// Task interrupted\n// Cleanup completed: All fibers interrupted without errors.\n```",
+  "examples": [
+    {
+      "code": "import { Console, Effect, Exit } from \"effect\"\n\n// Define a cleanup effect that logs the result\nconst handler = Effect.onExit((exit) =>\nConsole.log(`Cleanup completed: ${Exit.getOrElse(exit, String)}`)\n)\n\n// Define a successful effect\nconst success = Console.log(\"Task completed\").pipe(\nEffect.as(\"some result\"),\nhandler\n)\n\nEffect.runFork(success)\n// Output:\n// Task completed\n// Cleanup completed: some result\n\n// Define a failing effect\nconst failure = Console.log(\"Task failed\").pipe(\nEffect.andThen(Effect.fail(\"some error\")),\nhandler\n)\n\nEffect.runFork(failure)\n// Output:\n// Task failed\n// Cleanup completed: Error: some error\n\n// Define an interrupted effect\nconst interruption = Console.log(\"Task interrupted\").pipe(\nEffect.andThen(Effect.interrupt),\nhandler\n)\n\nEffect.runFork(interruption)\n// Output:\n// Task interrupted\n// Cleanup completed: All fibers interrupted without errors."
+    }
+  ],
+  "tags": [
+    "Scoping, Resources & Finalization"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 10786,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L10786"
+}

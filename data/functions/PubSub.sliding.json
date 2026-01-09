@@ -1,0 +1,17 @@
+{
+  "id": "PubSub.sliding",
+  "name": "sliding",
+  "module": "PubSub",
+  "package": "effect",
+  "signature": "<A>(capacity: number | { readonly capacity: number; readonly replay?: number; }) => Effect<PubSub<A>, never, never>",
+  "description": "Creates a bounded `PubSub` with the sliding strategy. The `PubSub` will add new\nmessages and drop old messages if the `PubSub` is at capacity. For best performance use capacities that are powers of two.",
+  "documentation": "Creates a bounded `PubSub` with the sliding strategy. The `PubSub` will add new\nmessages and drop old messages if the `PubSub` is at capacity.\n\nFor best performance use capacities that are powers of two.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/PubSub.d.ts",
+  "sourceLine": 70,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/PubSub.ts#L70"
+}

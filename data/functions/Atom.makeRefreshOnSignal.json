@@ -1,0 +1,17 @@
+{
+  "id": "Atom.makeRefreshOnSignal",
+  "name": "makeRefreshOnSignal",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "<_>(signal: Atom<_>) => <A extends Atom<any>>(self: A) => WithoutSerializable<A>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Focus"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 516,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L516"
+}

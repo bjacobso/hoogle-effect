@@ -1,0 +1,17 @@
+{
+  "id": "Cause.dieOption",
+  "name": "dieOption",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E>(self: Cause<E>) => Option<unknown>",
+  "description": "Retrieves the first `Die` defect in a `Cause`, if present.\n*Details This function returns an `Option` containing the first unexpected failure\n(`Die`) discovered. It's helpful for diagnosing the primary defect in a chain\nof errors.",
+  "documentation": "Retrieves the first `Die` defect in a `Cause`, if present.\n*Details**\n\nThis function returns an `Option` containing the first unexpected failure\n(`Die`) discovered. It's helpful for diagnosing the primary defect in a chain\nof errors.",
+  "examples": [],
+  "tags": [
+    "Getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 833,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L833"
+}

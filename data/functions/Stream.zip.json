@@ -1,0 +1,21 @@
+{
+  "id": "Stream.zip",
+  "name": "zip",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A2, E2, R2>(that: Stream<A2, E2, R2>): <A, E, R>(self: Stream<A, E, R>) => Stream<[A, A2], E2 | E, R2 | R>; <A, E, R, A2, E2, R2>(self: Stream<A, E, R>, that: Stream<A2, E2, R2>): Stream<[A, A2], E | E2, R | R2>; }",
+  "description": "Zips this stream with another point-wise and emits tuples of elements from\nboth streams. The new stream will end when one of the sides ends.",
+  "documentation": "Zips this stream with another point-wise and emits tuples of elements from\nboth streams.\n\nThe new stream will end when one of the sides ends.",
+  "examples": [
+    {
+      "code": "import { Effect, Stream } from \"effect\"\n\n// We create two streams and zip them together.\nconst stream = Stream.zip(\nStream.make(1, 2, 3, 4, 5, 6),\nStream.make(\"a\", \"b\", \"c\")\n)\n\nEffect.runPromise(Stream.runCollect(stream)).then(console.log)\n// { _id: 'Chunk', values: [ [ 1, 'a' ], [ 2, 'b' ], [ 3, 'c' ] ] }"
+    }
+  ],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 9426,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L9426"
+}

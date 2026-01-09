@@ -1,0 +1,17 @@
+{
+  "id": "Fiber.match",
+  "name": "match",
+  "module": "Fiber",
+  "package": "effect",
+  "signature": "{ <A, E, Z>(options: { readonly onFiber: (fiber: Fiber<A, E>) => Z; readonly onRuntimeFiber: (fiber: RuntimeFiber<A, E>) => Z; }): (self: Fiber<A, E>) => Z; <A, E, Z>(self: Fiber<A, E>, options: { readonly onFiber: (fiber: Fiber<A, E>) => Z; readonly onRuntimeFiber: (fiber: RuntimeFiber<A, E>) => Z; }): Z; }",
+  "description": "Folds over the `Fiber` or `RuntimeFiber`.",
+  "documentation": "Folds over the `Fiber` or `RuntimeFiber`.",
+  "examples": [],
+  "tags": [
+    "folding"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Fiber.d.ts",
+  "sourceLine": 589,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Fiber.ts#L589"
+}

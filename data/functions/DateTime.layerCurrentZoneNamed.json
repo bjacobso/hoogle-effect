@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.layerCurrentZoneNamed",
+  "name": "layerCurrentZoneNamed",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "(zoneId: string) => Layer<CurrentTimeZone, IllegalArgumentException, never>",
+  "description": "Create a Layer from the given IANA time zone identifier.",
+  "documentation": "Create a Layer from the given IANA time zone identifier.",
+  "examples": [],
+  "tags": [
+    "current time zone"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 2408,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L2408"
+}

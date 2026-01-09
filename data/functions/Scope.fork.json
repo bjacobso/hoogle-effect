@@ -1,0 +1,17 @@
+{
+  "id": "Scope.fork",
+  "name": "fork",
+  "module": "Scope",
+  "package": "effect",
+  "signature": "(self: Scope, strategy: ExecutionStrategy) => Effect<CloseableScope, never, never>",
+  "description": "Forks a new child scope with the specified execution strategy. The child scope\nwill automatically be closed when this scope is closed.",
+  "documentation": "Forks a new child scope with the specified execution strategy. The child scope\nwill automatically be closed when this scope is closed.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Scope.d.ts",
+  "sourceLine": 153,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Scope.ts#L153"
+}

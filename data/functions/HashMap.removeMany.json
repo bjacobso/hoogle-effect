@@ -1,0 +1,15 @@
+{
+  "id": "HashMap.removeMany",
+  "name": "removeMany",
+  "module": "HashMap",
+  "package": "effect",
+  "signature": "{ <K>(keys: Iterable<K>): <V>(self: HashMap<K, V>) => HashMap<K, V>; <K, V>(self: HashMap<K, V>, keys: Iterable<K>): HashMap<K, V>; }",
+  "description": "Removes all entries in the `HashMap` which have the specified keys.",
+  "documentation": "Removes all entries in the `HashMap` which have the specified keys.",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashMap.d.ts",
+  "sourceLine": 592,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashMap.ts#L592"
+}

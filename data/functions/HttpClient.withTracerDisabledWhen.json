@@ -1,0 +1,17 @@
+{
+  "id": "HttpClient.withTracerDisabledWhen",
+  "name": "withTracerDisabledWhen",
+  "module": "HttpClient",
+  "package": "@effect/platform",
+  "signature": "{ (predicate: Predicate<HttpClientRequest>): <E, R>(self: HttpClient.With<E, R>) => HttpClient.With<E, R>; <E, R>(self: HttpClient.With<E, R>, predicate: Predicate<HttpClientRequest>): HttpClient.With<E, R>; }",
+  "description": "Disables tracing for specific requests based on a provided predicate.",
+  "documentation": "Disables tracing for specific requests based on a provided predicate.",
+  "examples": [],
+  "tags": [
+    "Tracing"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpClient.d.ts",
+  "sourceLine": 631,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpClient.ts#L631"
+}

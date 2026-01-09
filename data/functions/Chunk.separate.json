@@ -1,0 +1,17 @@
+{
+  "id": "Chunk.separate",
+  "name": "separate",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "<A, B>(self: Chunk<Either<B, A>>) => [Chunk<A>, Chunk<B>]",
+  "description": "Partitions the elements of this chunk into two chunks.",
+  "documentation": "Partitions the elements of this chunk into two chunks.",
+  "examples": [],
+  "tags": [
+    "filtering"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 973,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L973"
+}

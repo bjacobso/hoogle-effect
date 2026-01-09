@@ -1,0 +1,17 @@
+{
+  "id": "Stream.mapInputContext",
+  "name": "mapInputContext",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <R0, R>(f: (env: Context<R0>) => Context<R>): <A, E>(self: Stream<A, E, R>) => Stream<A, E, R0>; <A, E, R0, R>(self: Stream<A, E, R>, f: (env: Context<R0>) => Context<R>): Stream<A, E, R0>; }",
+  "description": "Transforms the context being provided to the stream with the specified\nfunction.",
+  "documentation": "Transforms the context being provided to the stream with the specified\nfunction.",
+  "examples": [],
+  "tags": [
+    "context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 6328,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L6328"
+}

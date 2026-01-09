@@ -1,0 +1,17 @@
+{
+  "id": "SortedSet.values",
+  "name": "values",
+  "module": "SortedSet",
+  "package": "effect",
+  "signature": "<A>(self: SortedSet<A>) => IterableIterator<A>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/SortedSet.d.ts",
+  "sourceLine": 326,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/SortedSet.ts#L326"
+}

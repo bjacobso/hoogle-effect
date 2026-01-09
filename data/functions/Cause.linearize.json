@@ -1,0 +1,17 @@
+{
+  "id": "Cause.linearize",
+  "name": "linearize",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E>(self: Cause<E>) => HashSet<Cause<E>>",
+  "description": "Linearizes a `Cause` into a set of parallel causes, each containing a\nsequential chain of failures.\n*Details This function reorganizes the cause structure so that you can analyze each\nparallel branch separately, even if they have multiple sequential errors.",
+  "documentation": "Linearizes a `Cause` into a set of parallel causes, each containing a\nsequential chain of failures.\n*Details**\n\nThis function reorganizes the cause structure so that you can analyze each\nparallel branch separately, even if they have multiple sequential errors.",
+  "examples": [],
+  "tags": [
+    "Getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 874,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L874"
+}

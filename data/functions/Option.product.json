@@ -1,0 +1,17 @@
+{
+  "id": "Option.product",
+  "name": "product",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<A, B>(self: Option<A>, that: Option<B>) => Option<[A, B]>",
+  "description": "Combines two `Option` values into a single `Option` containing a tuple of\ntheir values if both are `Some`.\n*Details This function takes two `Option`s and combines their values into a tuple `[A,\nB]` if both are `Some`. If either of the `Option`s is `None`, the result is\n`None`. This is particularly useful for combining multiple `Option` values\ninto a single one, ensuring both contain valid values.",
+  "documentation": "Combines two `Option` values into a single `Option` containing a tuple of\ntheir values if both are `Some`.\n*Details**\n\nThis function takes two `Option`s and combines their values into a tuple `[A,\nB]` if both are `Some`. If either of the `Option`s is `None`, the result is\n`None`. This is particularly useful for combining multiple `Option` values\ninto a single one, ensuring both contain valid values.",
+  "examples": [],
+  "tags": [
+    "Combining"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 2282,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L2282"
+}

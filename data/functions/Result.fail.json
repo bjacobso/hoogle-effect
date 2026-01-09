@@ -1,0 +1,17 @@
+{
+  "id": "Result.fail",
+  "name": "fail",
+  "module": "Result",
+  "package": "@effect-atom/atom",
+  "signature": "<E, A = never>(error: E, options?: { readonly previousSuccess?: Option<Success<A, E>>; readonly waiting?: boolean; }) => Failure<A, E>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Result.d.ts",
+  "sourceLine": 164,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Result.ts#L164"
+}

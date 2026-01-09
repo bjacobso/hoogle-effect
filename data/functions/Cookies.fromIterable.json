@@ -1,0 +1,17 @@
+{
+  "id": "Cookies.fromIterable",
+  "name": "fromIterable",
+  "module": "Cookies",
+  "package": "@effect/platform",
+  "signature": "(cookies: Iterable<Cookie>) => Cookies",
+  "description": "Create a Cookies object from an Iterable",
+  "documentation": "Create a Cookies object from an Iterable",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Cookies.d.ts",
+  "sourceLine": 100,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Cookies.ts#L100"
+}

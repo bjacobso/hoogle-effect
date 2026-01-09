@@ -1,0 +1,17 @@
+{
+  "id": "Effect.updateFiberRefs",
+  "name": "updateFiberRefs",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "(f: (fiberId: Runtime, fiberRefs: FiberRefs) => FiberRefs) => Effect<void, never, never>",
+  "description": "Updates the `FiberRef` values for the fiber running this effect using the\nspecified function.",
+  "documentation": "Updates the `FiberRef` values for the fiber running this effect using the\nspecified function.",
+  "examples": [],
+  "tags": [
+    "Fiber Refs"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 21518,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L21518"
+}

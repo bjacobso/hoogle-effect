@@ -1,0 +1,17 @@
+{
+  "id": "Exit.zipParRight",
+  "name": "zipParRight",
+  "module": "Exit",
+  "package": "effect",
+  "signature": "{ <A2, E2>(that: Exit<A2, E2>): <A, E>(self: Exit<A, E>) => Exit<A2, E2 | E>; <A, E, A2, E2>(self: Exit<A, E>, that: Exit<A2, E2>): Exit<A2, E | E2>; }",
+  "description": "Parallelly zips the this result with the specified result discarding the\nfirst element of the tuple or else returns the failed `Cause<E | E2>`.",
+  "documentation": "Parallelly zips the this result with the specified result discarding the\nfirst element of the tuple or else returns the failed `Cause<E | E2>`.",
+  "examples": [],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Exit.d.ts",
+  "sourceLine": 614,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Exit.ts#L614"
+}

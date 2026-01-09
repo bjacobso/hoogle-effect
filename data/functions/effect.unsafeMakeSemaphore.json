@@ -1,0 +1,17 @@
+{
+  "id": "Effect.unsafeMakeSemaphore",
+  "name": "unsafeMakeSemaphore",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "(permits: number) => Semaphore",
+  "description": "Unsafely creates a new Semaphore.",
+  "documentation": "Unsafely creates a new Semaphore.",
+  "examples": [],
+  "tags": [
+    "Semaphore"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 24135,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L24135"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "DateTime.TimeZoneTypeId",
+  "name": "TimeZoneTypeId",
+  "module": "DateTime",
+  "package": "effect",
+  "signature": "typeof TimeZoneTypeId",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "type ids"
+  ],
+  "since": "3.6.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/DateTime.d.ts",
+  "sourceLine": 138,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/DateTime.ts#L138"
+}

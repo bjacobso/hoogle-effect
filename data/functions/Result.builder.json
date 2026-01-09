@@ -1,0 +1,17 @@
+{
+  "id": "Result.builder",
+  "name": "builder",
+  "module": "Result",
+  "package": "@effect-atom/atom",
+  "signature": "<A extends Result<any, any>>(self: A) => Builder<never, A extends Success<infer _A, infer _E> ? _A : never, A extends Failure<infer _A, infer _E_1> ? _E_1 : never, A extends Initial<infer _A, infer _E_2> ? true : never>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Builder"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Result.d.ts",
+  "sourceLine": 306,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Result.ts#L306"
+}

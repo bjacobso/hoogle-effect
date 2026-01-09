@@ -1,0 +1,17 @@
+{
+  "id": "Effect.succeedSome",
+  "name": "succeedSome",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A>(value: A) => Effect<Option<A>, never, never>",
+  "description": "Returns an effect which succeeds with the value wrapped in a `Some`.",
+  "documentation": "Returns an effect which succeeds with the value wrapped in a `Some`.",
+  "examples": [],
+  "tags": [
+    "Creating Effects"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 5300,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L5300"
+}

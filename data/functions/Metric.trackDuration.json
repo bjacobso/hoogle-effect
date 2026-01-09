@@ -1,0 +1,17 @@
+{
+  "id": "Metric.trackDuration",
+  "name": "trackDuration",
+  "module": "Metric",
+  "package": "effect",
+  "signature": "{ <Type, Out>(metric: Metric<Type, Duration, Out>): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E, R>; <A, E, R, Type, Out>(self: Effect<A, E, R>, metric: Metric<Type, Duration, Out>): Effect<A, E, R>; }",
+  "description": "Returns an aspect that will update this metric with the duration that the\neffect takes to execute. To call this method, the input type of the metric\nmust be `Duration`.",
+  "documentation": "Returns an aspect that will update this metric with the duration that the\neffect takes to execute. To call this method, the input type of the metric\nmust be `Duration`.",
+  "examples": [],
+  "tags": [
+    "aspects"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Metric.d.ts",
+  "sourceLine": 790,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Metric.ts#L790"
+}

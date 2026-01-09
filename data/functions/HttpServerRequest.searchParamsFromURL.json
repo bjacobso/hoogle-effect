@@ -1,0 +1,17 @@
+{
+  "id": "HttpServerRequest.searchParamsFromURL",
+  "name": "searchParamsFromURL",
+  "module": "HttpServerRequest",
+  "package": "@effect/platform",
+  "signature": "(url: URL) => ReadonlyRecord<string, string | string[]>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "search params"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpServerRequest.d.ts",
+  "sourceLine": 87,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpServerRequest.ts#L87"
+}

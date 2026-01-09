@@ -1,0 +1,19 @@
+{
+  "id": "Context.merge",
+  "name": "merge",
+  "module": "Context",
+  "package": "effect",
+  "signature": "{ <R1>(that: Context<R1>): <Services>(self: Context<Services>) => Context<R1 | Services>; <Services, R1>(self: Context<Services>, that: Context<R1>): Context<Services | R1>; }",
+  "description": "Merges two `Context`s, returning a new `Context` containing the services of both.",
+  "documentation": "Merges two `Context`s, returning a new `Context` containing the services of both.",
+  "examples": [
+    {
+      "code": "import * as assert from \"node:assert\"\nimport { Context } from \"effect\"\n\nconst Port = Context.GenericTag<{ PORT: number }>(\"Port\")\nconst Timeout = Context.GenericTag<{ TIMEOUT: number }>(\"Timeout\")\n\nconst firstContext = Context.make(Port, { PORT: 8080 })\nconst secondContext = Context.make(Timeout, { TIMEOUT: 5000 })\n\nconst Services = Context.merge(firstContext, secondContext)\n\nassert.deepStrictEqual(Context.get(Services, Port), { PORT: 8080 })\nassert.deepStrictEqual(Context.get(Services, Timeout), { TIMEOUT: 5000 })"
+    }
+  ],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Context.d.ts",
+  "sourceLine": 640,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Context.ts#L640"
+}

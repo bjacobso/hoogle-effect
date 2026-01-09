@@ -1,0 +1,17 @@
+{
+  "id": "Transferable.schema",
+  "name": "schema",
+  "module": "Transferable",
+  "package": "@effect/platform",
+  "signature": "{ <I>(f: (_: I) => Iterable<Transferable>): <A, R>(self: Schema<A, I, R>) => Schema<A, I, R>; <A, I, R>(self: Schema<A, I, R>, f: (_: I) => Iterable<Transferable>): Schema<A, I, R>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "schema"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Transferable.d.ts",
+  "sourceLine": 45,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Transferable.ts#L45"
+}

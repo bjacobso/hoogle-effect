@@ -1,0 +1,17 @@
+{
+  "id": "Atom.make",
+  "name": "make",
+  "module": "Atom",
+  "package": "@effect-atom/atom",
+  "signature": "{ <A, E>(create: (get: Context) => Effect<A, E, Scope | AtomRegistry>, options?: { readonly initialValue?: A; }): Atom<Result<A, E>>; <A, E>(effect: Effect<A, E, Scope | AtomRegistry>, options?: { readonly initialValue?: A; }): Atom<Result<A, E>>; <A, E>(create: (get: Context) => Stream<A, E, AtomRegistry>, options?: { readonly initialValue?: A; }): Atom<Result<A, E>>; <A, E>(stream: Stream<A, E, AtomRegistry>, options?: { readonly initialValue?: A; }): Atom<Result<A, E>>; <A>(create: (get: Context) => A): Atom<A>; <A>(initialValue: A): Writable<A, A>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Atom.d.ts",
+  "sourceLine": 167,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Atom.ts#L167"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Fiber.mapFiber",
+  "name": "mapFiber",
+  "module": "Fiber",
+  "package": "effect",
+  "signature": "{ <E, E2, A, B>(f: (a: A) => Fiber<B, E2>): (self: Fiber<A, E>) => Effect<Fiber<B, E | E2>, never, never>; <A, E, E2, B>(self: Fiber<A, E>, f: (a: A) => Fiber<B, E2>): Effect<Fiber<B, E | E2>, never, never>; }",
+  "description": "Passes the success of this fiber to the specified callback, and continues\nwith the fiber that it returns.",
+  "documentation": "Passes the success of this fiber to the specified callback, and continues\nwith the fiber that it returns.",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Fiber.d.ts",
+  "sourceLine": 565,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Fiber.ts#L565"
+}

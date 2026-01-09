@@ -1,0 +1,17 @@
+{
+  "id": "Transferable.Uint8Array",
+  "name": "Uint8Array",
+  "module": "Transferable",
+  "package": "@effect/platform",
+  "signature": "Schema<Uint8Array, Uint8Array, never>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "schema"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Transferable.d.ts",
+  "sourceLine": 71,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Transferable.ts#L71"
+}

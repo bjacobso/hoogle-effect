@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.recurs",
+  "name": "recurs",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "(n: number) => Schedule<number, unknown, never>",
+  "description": "A schedule that recurs a fixed number of times before terminating.\n*Details This schedule will continue executing until it has been stepped `n` times,\nafter which it will stop. The output of the schedule is the current count of\nrecurrences.",
+  "documentation": "A schedule that recurs a fixed number of times before terminating.\n*Details**\n\nThis schedule will continue executing until it has been stepped `n` times,\nafter which it will stop. The output of the schedule is the current count of\nrecurrences.",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2390,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2390"
+}

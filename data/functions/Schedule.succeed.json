@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.succeed",
+  "name": "succeed",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "<A>(value: A) => Schedule<A, unknown, never>",
+  "description": "Returns a schedule that recurs indefinitely, always producing the specified\nconstant value.",
+  "documentation": "Returns a schedule that recurs indefinitely, always producing the specified\nconstant value.",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2695,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2695"
+}

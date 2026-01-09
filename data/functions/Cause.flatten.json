@@ -1,0 +1,17 @@
+{
+  "id": "Cause.flatten",
+  "name": "flatten",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E>(self: Cause<Cause<E>>) => Cause<E>",
+  "description": "Flattens a nested `Cause` structure.\n*Details This function takes a `Cause<Cause<E>>` and merges the layers into a single\n`Cause<E>`. It's useful for eliminating additional nesting created by\nrepeated transformations or compositions.",
+  "documentation": "Flattens a nested `Cause` structure.\n*Details**\n\nThis function takes a `Cause<Cause<E>>` and merges the layers into a single\n`Cause<E>`. It's useful for eliminating additional nesting created by\nrepeated transformations or compositions.",
+  "examples": [],
+  "tags": [
+    "Sequencing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 1128,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L1128"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Stream.mergeEither",
+  "name": "mergeEither",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A2, E2, R2>(that: Stream<A2, E2, R2>): <A, E, R>(self: Stream<A, E, R>) => Stream<Either<A2, A>, E2 | E, R2 | R>; <A, E, R, A2, E2, R2>(self: Stream<A, E, R>, that: Stream<A2, E2, R2>): Stream<Either<A2, A>, E | E2, R | R2>; }",
+  "description": "Merges this stream and the specified stream together to produce a stream of\neithers.",
+  "documentation": "Merges this stream and the specified stream together to produce a stream of\neithers.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 5147,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L5147"
+}

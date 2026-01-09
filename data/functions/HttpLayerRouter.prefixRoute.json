@@ -1,0 +1,17 @@
+{
+  "id": "HttpLayerRouter.prefixRoute",
+  "name": "prefixRoute",
+  "module": "HttpLayerRouter",
+  "package": "@effect/platform",
+  "signature": "{ (prefix: string): <E, R>(self: Route<E, R>) => Route<E, R>; <E, R>(self: Route<E, R>, prefix: string): Route<E, R>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Route"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpLayerRouter.d.ts",
+  "sourceLine": 234,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpLayerRouter.ts#L234"
+}

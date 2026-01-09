@@ -1,0 +1,17 @@
+{
+  "id": "Pool.makeWithTTL",
+  "name": "makeWithTTL",
+  "module": "Pool",
+  "package": "effect",
+  "signature": "<A, E, R>(options: { readonly acquire: Effect<A, E, R>; readonly min: number; readonly max: number; readonly concurrency?: number; readonly targetUtilization?: number; readonly timeToLive: DurationInput; readonly timeToLiveStrategy?: \"creation\" | \"usage\"; }) => Effect<Pool<A, E>, never, Scope | R>",
+  "description": "Makes a new pool with the specified minimum and maximum sizes and time to\nlive before a pool whose excess items are not being used will be shrunk\ndown to the minimum size. The pool is returned in a `Scope`, which governs\nthe lifetime of the pool. When the pool is shutdown because the `Scope` is\nused, the individual items allocated by the pool will be released in some\nunspecified order. By setting the `concurrency` parameter, you can control the level of concurrent\naccess per pool item. By default, the number of permits is set to `1`. `targetUtilization` determines when to create new pool items. It is a value\nbetween 0 and 1, where 1 means only create new pool items when all the existing\nitems are fully utilized. A `targetUtilization` of 0.5 will create new pool items when the existing items are\n50% utilized. The `timeToLiveStrategy` determines how items are invalidated. If set to\n\"creation\", then items are invalidated based on their creation time. If set\nto \"usage\", then items are invalidated based on pool usage. By default, the `timeToLiveStrategy` is set to \"usage\".",
+  "documentation": "Makes a new pool with the specified minimum and maximum sizes and time to\nlive before a pool whose excess items are not being used will be shrunk\ndown to the minimum size. The pool is returned in a `Scope`, which governs\nthe lifetime of the pool. When the pool is shutdown because the `Scope` is\nused, the individual items allocated by the pool will be released in some\nunspecified order.\n\nBy setting the `concurrency` parameter, you can control the level of concurrent\naccess per pool item. By default, the number of permits is set to `1`.\n\n`targetUtilization` determines when to create new pool items. It is a value\nbetween 0 and 1, where 1 means only create new pool items when all the existing\nitems are fully utilized.\n\nA `targetUtilization` of 0.5 will create new pool items when the existing items are\n50% utilized.\n\nThe `timeToLiveStrategy` determines how items are invalidated. If set to\n\"creation\", then items are invalidated based on their creation time. If set\nto \"usage\", then items are invalidated based on pool usage.\n\nBy default, the `timeToLiveStrategy` is set to \"usage\".\n\n```ts skip-type-checking\nimport { createConnection } from \"mysql2\";\nimport { Duration, Effect, Pool } from \"effect\"\n\nconst acquireDBConnection = Effect.acquireRelease(\nEffect.sync(() => createConnection('mysql://...')),\n(connection) => Effect.sync(() => connection.end(() => {})),\n)\n\nconst connectionPool = Effect.flatMap(\nPool.makeWithTTL({\nacquire: acquireDBConnection,\nmin: 10,\nmax: 20,\ntimeToLive: Duration.seconds(60)\n}),\n(pool) => pool.get\n)\n```",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Pool.d.ts",
+  "sourceLine": 155,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Pool.ts#L155"
+}

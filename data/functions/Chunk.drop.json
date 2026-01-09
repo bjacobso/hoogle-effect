@@ -1,0 +1,15 @@
+{
+  "id": "Chunk.drop",
+  "name": "drop",
+  "module": "Chunk",
+  "package": "effect",
+  "signature": "{ (n: number): <A>(self: Chunk<A>) => Chunk<A>; <A>(self: Chunk<A>, n: number): Chunk<A>; }",
+  "description": "Drops the first up to `n` elements from the chunk",
+  "documentation": "Drops the first up to `n` elements from the chunk",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Chunk.d.ts",
+  "sourceLine": 265,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Chunk.ts#L265"
+}

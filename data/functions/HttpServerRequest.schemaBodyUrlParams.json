@@ -1,0 +1,17 @@
+{
+  "id": "HttpServerRequest.schemaBodyUrlParams",
+  "name": "schemaBodyUrlParams",
+  "module": "HttpServerRequest",
+  "package": "@effect/platform",
+  "signature": "<A, I extends Readonly<Record<string, string | ReadonlyArray<string> | undefined>>, R>(schema: Schema<A, I, R>, options?: ParseOptions) => Effect<A, RequestError | ParseError, HttpServerRequest | R>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "schema"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpServerRequest.d.ts",
+  "sourceLine": 132,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpServerRequest.ts#L132"
+}

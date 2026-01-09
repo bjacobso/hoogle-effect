@@ -1,0 +1,21 @@
+{
+  "id": "Duration.format",
+  "name": "format",
+  "module": "Duration",
+  "package": "effect",
+  "signature": "(self: DurationInput) => string",
+  "description": "Converts a `Duration` to a human readable string.",
+  "documentation": "Converts a `Duration` to a human readable string.",
+  "examples": [
+    {
+      "code": "import { Duration } from \"effect\"\n\nDuration.format(Duration.millis(1000)) // \"1s\"\nDuration.format(Duration.millis(1001)) // \"1s 1ms\""
+    }
+  ],
+  "tags": [
+    "conversions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Duration.d.ts",
+  "sourceLine": 493,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Duration.ts#L493"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "HashSet.isHashSet",
+  "name": "isHashSet",
+  "module": "HashSet",
+  "package": "effect",
+  "signature": "{ <A>(u: Iterable<A>): u is HashSet<A>; (u: unknown): u is HashSet<unknown>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "refinements"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashSet.d.ts",
+  "sourceLine": 288,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashSet.ts#L288"
+}

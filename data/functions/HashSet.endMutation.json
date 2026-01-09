@@ -1,0 +1,19 @@
+{
+  "id": "HashSet.endMutation",
+  "name": "endMutation",
+  "module": "HashSet",
+  "package": "effect",
+  "signature": "<A>(self: HashSet<A>) => HashSet<A>",
+  "description": "Makes the `HashSet` immutable again.\nAfter calling `endMutation`, operations like {@link add}and {@link remove}* will create new instances of the `HashSet` instead of modifying the existing\none.",
+  "documentation": "Makes the `HashSet` immutable again.\nAfter calling `endMutation`, operations like {@link add}and {@link remove}* will create new instances of the `HashSet` instead of modifying the existing\none.",
+  "examples": [
+    {
+      "code": "import { HashSet } from \"effect\"\nimport assert from \"node:assert/strict\"\n\n// Create a mutable set\nconst mutableSet = HashSet.beginMutation(HashSet.empty<number>())\n\n// Add some elements to the mutable set\nHashSet.add(mutableSet, 1)\nHashSet.add(mutableSet, 2)\n\n// Before endMutation, operations modify the set in place\nconst sameSet = HashSet.add(mutableSet, 3)\nassert(Object.is(mutableSet, sameSet)) // true - same object reference\nassert.deepStrictEqual(HashSet.toValues(mutableSet).sort(), [1, 2, 3])\n\n// Make the set immutable again\nconst immutableSet = HashSet.endMutation(mutableSet)\n\n// endMutation returns the same set instance, now made immutable\nassert(Object.is(mutableSet, immutableSet)) // true - same object reference\n\n// After endMutation, operations create new instances\nconst newSet = HashSet.add(immutableSet, 4)\nassert(!Object.is(immutableSet, newSet)) // false - different object references\n\n// The original set remains unchanged\nassert.deepStrictEqual(HashSet.toValues(immutableSet).sort(), [1, 2, 3])\n\n// The new set contains the added element\nassert.deepStrictEqual(HashSet.toValues(newSet).sort(), [1, 2, 3, 4])"
+    }
+  ],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashSet.d.ts",
+  "sourceLine": 1086,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashSet.ts#L1086"
+}

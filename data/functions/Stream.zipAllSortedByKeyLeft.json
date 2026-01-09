@@ -1,0 +1,17 @@
+{
+  "id": "Stream.zipAllSortedByKeyLeft",
+  "name": "zipAllSortedByKeyLeft",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <A2, E2, R2, A, K>(options: { readonly other: Stream<readonly [K, A2], E2, R2>; readonly defaultSelf: A; readonly order: Order<K>; }): <E, R>(self: Stream<readonly [K, A], E, R>) => Stream<[K, A], E2 | E, R2 | R>; <K, A, E, R, A2, E2, R2>(self: Stream<readonly [K, A], E, R>, options: { readonly other: Stream<readonly [K, A2], E2, R2>; readonly defaultSelf: A; readonly order: Order<K>; }): Stream<[K, A], E | E2, R | R2>; }",
+  "description": "Zips this stream that is sorted by distinct keys and the specified stream\nthat is sorted by distinct keys to produce a new stream that is sorted by\ndistinct keys. Keeps only values from this stream, using the specified\nvalue `default` to fill in missing values. This allows zipping potentially unbounded streams of data by key in\nconstant space but the caller is responsible for ensuring that the\nstreams are sorted by distinct keys.",
+  "documentation": "Zips this stream that is sorted by distinct keys and the specified stream\nthat is sorted by distinct keys to produce a new stream that is sorted by\ndistinct keys. Keeps only values from this stream, using the specified\nvalue `default` to fill in missing values.\n\nThis allows zipping potentially unbounded streams of data by key in\nconstant space but the caller is responsible for ensuring that the\nstreams are sorted by distinct keys.",
+  "examples": [],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 9728,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L9728"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Effect.patchRuntimeFlags",
+  "name": "patchRuntimeFlags",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "(patch: RuntimeFlagsPatch) => Effect<void, never, never>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Runtime"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 23864,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L23864"
+}

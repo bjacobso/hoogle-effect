@@ -1,0 +1,17 @@
+{
+  "id": "Cookies.isEmpty",
+  "name": "isEmpty",
+  "module": "Cookies",
+  "package": "@effect/platform",
+  "signature": "(self: Cookies) => boolean",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "refinements"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Cookies.d.ts",
+  "sourceLine": 119,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Cookies.ts#L119"
+}

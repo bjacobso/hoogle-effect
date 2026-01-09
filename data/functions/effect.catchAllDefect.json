@@ -1,0 +1,22 @@
+{
+  "id": "Effect.catchAllDefect",
+  "name": "catchAllDefect",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <A2, E2, R2>(f: (defect: unknown) => Effect<A2, E2, R2>): <A, E, R>(self: Effect<A, E, R>) => Effect<A2 | A, E2 | E, R2 | R>; <A, E, R, A2, E2, R2>(self: Effect<A, E, R>, f: (defect: unknown) => Effect<A2, E2, R2>): Effect<A | A2, E | E2, R | R2>; }",
+  "description": "Recovers from all defects using a provided recovery function.",
+  "documentation": "Recovers from all defects using a provided recovery function.\n**When to Use**\nThere is no sensible way to recover from defects. This method should be used\nonly at the boundary between Effect and an external system, to transmit\ninformation on a defect for diagnostic or explanatory purposes.\n**Details**\n`catchAllDefect` allows you to handle defects, which are unexpected errors\nthat usually cause the program to terminate. This function lets you recover\nfrom these defects by providing a function that handles the error. However,\nit does not handle expected errors (like those from {@link fail}) or\nexecution interruptions (like those from {@link interrupt}).\n**When to Recover from Defects**\nDefects are unexpected errors that typically shouldn't be recovered from, as\nthey often indicate serious issues. However, in some cases, such as\ndynamically loaded plugins, controlled recovery might be needed.\n**Example** (Handling All Defects)\n```ts\nimport { Effect, Cause, Console } from \"effect\"\n// Simulating a runtime error\nconst task = Effect.dieMessage(\"Boom!\")\nconst program = Effect.catchAllDefect(task, (defect) => {\nif (Cause.isRuntimeException(defect)) {\nreturn Console.log(\n`RuntimeException defect caught: ${defect.message}`\n)\n}\nreturn Console.log(\"Unknown defect caught.\")\n})\n// We get an Exit.Success because we caught all defects\nEffect.runPromiseExit(program).then(console.log)\n// Output:\n// RuntimeException defect caught: Boom!\n// {\n// _id: \"Exit\",\n// _tag: \"Success\",\n// value: undefined\n// }\n```",
+  "examples": [
+    {
+      "title": "Handling All Defects",
+      "code": "import { Effect, Cause, Console } from \"effect\"\n// Simulating a runtime error\nconst task = Effect.dieMessage(\"Boom!\")\nconst program = Effect.catchAllDefect(task, (defect) => {\nif (Cause.isRuntimeException(defect)) {\nreturn Console.log(\n`RuntimeException defect caught: ${defect.message}`\n)\n}\nreturn Console.log(\"Unknown defect caught.\")\n})\n// We get an Exit.Success because we caught all defects\nEffect.runPromiseExit(program).then(console.log)\n// Output:\n// RuntimeException defect caught: Boom!\n// {\n// _id: \"Exit\",\n// _tag: \"Success\",\n// value: undefined\n// }"
+    }
+  ],
+  "tags": [
+    "Error handling"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 5877,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L5877"
+}

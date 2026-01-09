@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.provideService",
+  "name": "provideService",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <I, S>(tag: Tag<I, S>, service: NoInfer<S>): <Out, In, R>(self: Schedule<Out, In, R>) => Schedule<Out, In, Exclude<R, I>>; <Out, In, R, I, S>(self: Schedule<Out, In, R>, tag: Tag<I, S>, service: NoInfer<S>): Schedule<Out, In, Exclude<R, I>>; }",
+  "description": "Returns a new schedule with a single required service provided, eliminating\nthe need for external dependencies.\n*Details This function supplies a single service dependency to a schedule, allowing it\nto run without requiring that service externally. If a schedule depends on\nmultiple services, consider using `provideContext` instead. This is useful when working with schedules that require a specific service,\nsuch as logging, metrics, or configuration retrieval.",
+  "documentation": "Returns a new schedule with a single required service provided, eliminating\nthe need for external dependencies.\n*Details**\n\nThis function supplies a single service dependency to a schedule, allowing it\nto run without requiring that service externally. If a schedule depends on\nmultiple services, consider using `provideContext` instead.\n\nThis is useful when working with schedules that require a specific service,\nsuch as logging, metrics, or configuration retrieval.",
+  "examples": [],
+  "tags": [
+    "Context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2239,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2239"
+}

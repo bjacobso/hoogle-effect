@@ -1,0 +1,17 @@
+{
+  "id": "Result.getOrElse",
+  "name": "getOrElse",
+  "module": "Result",
+  "package": "@effect-atom/atom",
+  "signature": "{ <B>(orElse: LazyArg<B>): <A, E>(self: Result<A, E>) => B | A; <A, E, B>(self: Result<A, E>, orElse: LazyArg<B>): A | B; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "accessors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect-atom/atom/dist/dts/Result.d.ts",
+  "sourceLine": 202,
+  "githubUrl": "https://github.com/tim-smart/effect-atom/blob/main/packages/atom/src/Result.ts#L202"
+}

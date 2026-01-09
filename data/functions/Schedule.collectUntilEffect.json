@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.collectUntilEffect",
+  "name": "collectUntilEffect",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "<A, R>(f: (a: A) => Effect<boolean, never, R>) => Schedule<Chunk<A>, A, R>",
+  "description": "Collects all inputs into a `Chunk` until an effectful condition fails.\n*Details This function creates a schedule that continuously collects inputs into a\n`Chunk` until the given effectful predicate `f` returns `false`. The\npredicate runs as an effect, meaning it can involve asynchronous computations\nlike API calls, database lookups, or randomness.",
+  "documentation": "Collects all inputs into a `Chunk` until an effectful condition fails.\n*Details**\n\nThis function creates a schedule that continuously collects inputs into a\n`Chunk` until the given effectful predicate `f` returns `false`. The\npredicate runs as an effect, meaning it can involve asynchronous computations\nlike API calls, database lookups, or randomness.",
+  "examples": [],
+  "tags": [
+    "Collecting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 684,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L684"
+}

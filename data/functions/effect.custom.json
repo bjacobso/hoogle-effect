@@ -1,0 +1,21 @@
+{
+  "id": "Effect.custom",
+  "name": "custom",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <X, A, E, R>(i0: X, body: (this: { effect_instruction_i0: X; }) => Effect<A, E, R>): Effect<A, E, R>; <X, Y, A, E, R>(i0: X, i1: Y, body: (this: { effect_instruction_i0: X; effect_instruction_i1: Y; }) => Effect<A, E, R>): Effect<A, E, R>; <X, Y, Z, A, E, R>(i0: X, i1: Y, i2: Z, body: (this: { effect_instruction_i0: X; effect_instruction_i1: Y; effect_instruction_i2: Z; }) => Effect<A, E, R>): Effect<A, E, R>; }",
+  "description": "Low level constructor that enables for custom stack tracing cutpoints. It is meant to be called with a bag of instructions that become available in\nthe \"this\" of the effect.\n*Example",
+  "documentation": "Low level constructor that enables for custom stack tracing cutpoints.\n\nIt is meant to be called with a bag of instructions that become available in\nthe \"this\" of the effect.\n*Example**\n\n```ts\nimport { Effect } from \"effect\"\n\nconst throwingFunction = () => { throw new Error() }\nconst blowUp = Effect.custom(throwingFunction, function() {\nreturn Effect.succeed(this.effect_instruction_i0())\n})\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\nconst throwingFunction = () => { throw new Error() }\nconst blowUp = Effect.custom(throwingFunction, function() {\nreturn Effect.succeed(this.effect_instruction_i0())\n})"
+    }
+  ],
+  "tags": [
+    "Creating Effects"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 4746,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L4746"
+}

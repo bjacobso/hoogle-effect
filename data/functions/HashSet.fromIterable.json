@@ -1,0 +1,33 @@
+{
+  "id": "HashSet.fromIterable",
+  "name": "fromIterable",
+  "module": "HashSet",
+  "package": "effect",
+  "signature": "<A>(elements: Iterable<A>) => HashSet<A>",
+  "description": "Creates a new `HashSet` from an iterable collection of values. Time complexity: `O(n)` where n is the number of elements in the iterable",
+  "documentation": "Creates a new `HashSet` from an iterable collection of values.\n\nTime complexity: **`O(n)`** where n is the number of elements in the iterable",
+  "examples": [
+    {
+      "code": "// Creating a HashSet from an Array\nimport { HashSet, pipe } from \"effect\"\n\nconsole.log(\npipe(\n[1, 2, 3, 4, 5, 1, 2, 3], // Array<number> is an Iterable<number>; Note the duplicates.\nHashSet.fromIterable,\nHashSet.toValues\n)\n) // Output: [1, 2, 3, 4, 5]"
+    },
+    {
+      "code": "// Creating a HashSet from a Set\nimport { HashSet, pipe } from \"effect\"\n\nconsole.log(\npipe(\nnew Set([\"apple\", \"banana\", \"orange\", \"apple\"]), // Set<string> is an Iterable<string>\nHashSet.fromIterable,\nHashSet.toValues\n)\n) // Output: [\"apple\", \"banana\", \"orange\"]"
+    },
+    {
+      "code": "// Creating a HashSet from a Generator\nimport { HashSet } from \"effect\"\n\n// Generator functions return iterables\nfunction* fibonacci(n: number): Generator<number, void, unknown> {\nlet [a, b] = [0, 1]\nfor (let i = 0; i < n; i++) {\nyield a\n;[a, b] = [b, a + b]\n}\n}\n\n// Create a HashSet from the first 10 Fibonacci numbers\nconst fibonacciSet = HashSet.fromIterable(fibonacci(10))\n\nconsole.log(HashSet.toValues(fibonacciSet))\n// Outputs: [0, 1, 2, 3, 5, 8, 13, 21, 34] but in unsorted order"
+    },
+    {
+      "code": "// Creating a HashSet from another HashSet\nimport { HashSet, pipe } from \"effect\"\n\nconsole.log(\npipe(\n// since HashSet implements the Iterable interface, we can use it to create a new HashSet\nHashSet.make(1, 2, 3, 4),\nHashSet.fromIterable,\nHashSet.toValues // turns the HashSet back into an array\n)\n) // Output: [1, 2, 3, 4]"
+    },
+    {
+      "code": "// Creating a HashSet from other Effect's data structures like Chunk\nimport { Chunk, HashSet, pipe } from \"effect\"\n\nconsole.log(\npipe(\nChunk.make(1, 2, 3, 4), // Iterable<number>\nHashSet.fromIterable,\nHashSet.toValues // turns the HashSet back into an array\n)\n) // Outputs: [1, 2, 3, 4]"
+    }
+  ],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashSet.d.ts",
+  "sourceLine": 461,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashSet.ts#L461"
+}

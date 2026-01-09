@@ -1,0 +1,17 @@
+{
+  "id": "Cause.failureOrCause",
+  "name": "failureOrCause",
+  "module": "Cause",
+  "package": "effect",
+  "signature": "<E>(self: Cause<E>) => Either<Cause<never>, E>",
+  "description": "Splits a `Cause` into either its first `Fail` error or the rest of the cause\n(which might only contain `Die` or `Interrupt`).\n*Details This function either returns the checked error (`E`) or the remaining\n`Cause<never>` with defects/interruptions. It helps you decide if there's a\nrecoverable path or if only unhandled issues remain.",
+  "documentation": "Splits a `Cause` into either its first `Fail` error or the rest of the cause\n(which might only contain `Die` or `Interrupt`).\n*Details**\n\nThis function either returns the checked error (`E`) or the remaining\n`Cause<never>` with defects/interruptions. It helps you decide if there's a\nrecoverable path or if only unhandled issues remain.",
+  "examples": [],
+  "tags": [
+    "Getters"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Cause.d.ts",
+  "sourceLine": 806,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Cause.ts#L806"
+}

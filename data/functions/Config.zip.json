@@ -1,0 +1,17 @@
+{
+  "id": "Config.zip",
+  "name": "zip",
+  "module": "Config",
+  "package": "effect",
+  "signature": "{ <B>(that: Config<B>): <A>(self: Config<A>) => Config<[A, B]>; <A, B>(self: Config<A>, that: Config<B>): Config<[A, B]>; }",
+  "description": "Returns a config that is the composition of this config and the specified\nconfig.",
+  "documentation": "Returns a config that is the composition of this config and the specified\nconfig.",
+  "examples": [],
+  "tags": [
+    "zipping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Config.d.ts",
+  "sourceLine": 624,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Config.ts#L624"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Effect.configProviderWith",
+  "name": "configProviderWith",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(f: (provider: ConfigProvider) => Effect<A, E, R>) => Effect<A, E, R>",
+  "description": "Allows working with the default configuration provider.\n*Details This function retrieves the default configuration provider and passes it to\nthe provided function, which can use it to perform computations or retrieve\nconfiguration values. The function can return an effect that leverages the\nconfiguration provider for its operations.",
+  "documentation": "Allows working with the default configuration provider.\n*Details**\n\nThis function retrieves the default configuration provider and passes it to\nthe provided function, which can use it to perform computations or retrieve\nconfiguration values. The function can return an effect that leverages the\nconfiguration provider for its operations.",
+  "examples": [],
+  "tags": [
+    "Config"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 13482,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L13482"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "Effect.promise",
+  "name": "promise",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A>(evaluate: (signal: AbortSignal) => PromiseLike<A>) => Effect<A, never, never>",
+  "description": "Creates an `Effect` that represents an asynchronous computation guaranteed to\nsucceed.",
+  "documentation": "Creates an `Effect` that represents an asynchronous computation guaranteed to\nsucceed.\n**Details**\nThe provided function (`thunk`) returns a `Promise` that should never reject; if it does, the error\nwill be treated as a \"defect\".\nThis defect is not a standard error but indicates a flaw in the logic that\nwas expected to be error-free. You can think of it similar to an unexpected\ncrash in the program, which can be further managed or logged using tools like\n{@link catchAllDefect}.\n**Interruptions**\nAn optional `AbortSignal` can be provided to allow for interruption of the\nwrapped `Promise` API.\n**When to Use**\nUse this function when you are sure the operation will not reject.\n**Example** (Delayed Message)\n```ts\nimport { Effect } from \"effect\"\nconst delay = (message: string) =>\nEffect.promise<string>(\n() =>\nnew Promise((resolve) => {\nsetTimeout(() => {\nresolve(message)\n}, 2000)\n})\n)\n// ┌─── Effect<string, never, never>\n// ▼\nconst program = delay(\"Async operation completed successfully!\")\n```",
+  "examples": [
+    {
+      "title": "Delayed Message",
+      "code": "import { Effect } from \"effect\"\nconst delay = (message: string) =>\nEffect.promise<string>(\n() =>\nnew Promise((resolve) => {\nsetTimeout(() => {\nresolve(message)\n}, 2000)\n})\n)\n// ┌─── Effect<string, never, never>\n// ▼\nconst program = delay(\"Async operation completed successfully!\")"
+    }
+  ],
+  "tags": [
+    "Creating Effects"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 5249,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L5249"
+}

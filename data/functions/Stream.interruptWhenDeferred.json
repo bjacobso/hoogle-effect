@@ -1,0 +1,17 @@
+{
+  "id": "Stream.interruptWhenDeferred",
+  "name": "interruptWhenDeferred",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <X, E2>(deferred: Deferred<X, E2>): <A, E, R>(self: Stream<A, E, R>) => Stream<A, E2 | E, R>; <A, E, R, X, E2>(self: Stream<A, E, R>, deferred: Deferred<X, E2>): Stream<A, E | E2, R>; }",
+  "description": "Interrupts the evaluation of this stream when the provided promise\nresolves. This combinator will also interrupt any in-progress element being\npulled from upstream. If the promise completes with a failure, the stream will emit that failure.",
+  "documentation": "Interrupts the evaluation of this stream when the provided promise\nresolves. This combinator will also interrupt any in-progress element being\npulled from upstream.\n\nIf the promise completes with a failure, the stream will emit that failure.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 4282,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L4282"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Exit.forEachEffect",
+  "name": "forEachEffect",
+  "module": "Exit",
+  "package": "effect",
+  "signature": "{ <A, B, E2, R>(f: (a: A) => Effect<B, E2, R>): <E>(self: Exit<A, E>) => Effect<Exit<B, E2 | E>, never, R>; <A, E, B, E2, R>(self: Exit<A, E>, f: (a: A) => Effect<B, E2, R>): Effect<Exit<B, E | E2>, never, R>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "traversing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Exit.d.ts",
+  "sourceLine": 254,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Exit.ts#L254"
+}

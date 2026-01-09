@@ -1,0 +1,17 @@
+{
+  "id": "Effect.scope",
+  "name": "scope",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "Effect<Scope, never, Scope>",
+  "description": "Provides access to the current scope in a scoped workflow.",
+  "documentation": "Provides access to the current scope in a scoped workflow.",
+  "examples": [],
+  "tags": [
+    "Scoping, Resources & Finalization"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 11009,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L11009"
+}

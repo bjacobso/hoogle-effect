@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.collectWhile",
+  "name": "collectWhile",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "<A>(f: Predicate<A>) => Schedule<Chunk<A>, A, never>",
+  "description": "Collects all inputs into a `Chunk` while a condition holds.\n*Details This function creates a schedule that continuously collects inputs into a\n`Chunk` while the given predicate function `f` evaluates to `true`. As soon\nas the condition fails, the schedule stops.",
+  "documentation": "Collects all inputs into a `Chunk` while a condition holds.\n*Details**\n\nThis function creates a schedule that continuously collects inputs into a\n`Chunk` while the given predicate function `f` evaluates to `true`. As soon\nas the condition fails, the schedule stops.",
+  "examples": [],
+  "tags": [
+    "Collecting"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 697,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L697"
+}

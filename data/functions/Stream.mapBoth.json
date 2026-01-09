@@ -1,0 +1,17 @@
+{
+  "id": "Stream.mapBoth",
+  "name": "mapBoth",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <E, E2, A, A2>(options: { readonly onFailure: (e: E) => E2; readonly onSuccess: (a: A) => A2; }): <R>(self: Stream<A, E, R>) => Stream<A2, E2, R>; <A, E, R, E2, A2>(self: Stream<A, E, R>, options: { readonly onFailure: (e: E) => E2; readonly onSuccess: (a: A) => A2; }): Stream<A2, E2, R>; }",
+  "description": "Returns a stream whose failure and success channels have been mapped by the\nspecified `onFailure` and `onSuccess` functions.",
+  "documentation": "Returns a stream whose failure and success channels have been mapped by the\nspecified `onFailure` and `onSuccess` functions.",
+  "examples": [],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 4490,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L4490"
+}

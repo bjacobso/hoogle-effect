@@ -1,0 +1,21 @@
+{
+  "id": "Effect.provideService",
+  "name": "provideService",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "{ <I, S>(tag: Tag<I, S>, service: NoInfer<S>): <A, E, R>(self: Effect<A, E, R>) => Effect<A, E, Exclude<R, I>>; <A, E, R, I, S>(self: Effect<A, E, R>, tag: Tag<I, S>, service: NoInfer<S>): Effect<A, E, Exclude<R, I>>; }",
+  "description": "Provides an implementation for a service in the context of an effect.\n*Details This function allows you to supply a specific implementation for a service\nrequired by an effect. Services are typically defined using `Context.Tag`,\nwhich acts as a unique identifier for the service. By using this function,\nyou link the service to its concrete implementation, enabling the effect to\nexecute successfully without additional requirements. For example, you can use this function to provide a random number generator,\na logger, or any other service your effect depends on. Once the service is\nprovided, all parts of the effect that rely on the service will automatically\nuse the implementation you supplied.\n*Example",
+  "documentation": "Provides an implementation for a service in the context of an effect.\n*Details**\n\nThis function allows you to supply a specific implementation for a service\nrequired by an effect. Services are typically defined using `Context.Tag`,\nwhich acts as a unique identifier for the service. By using this function,\nyou link the service to its concrete implementation, enabling the effect to\nexecute successfully without additional requirements.\n\nFor example, you can use this function to provide a random number generator,\na logger, or any other service your effect depends on. Once the service is\nprovided, all parts of the effect that rely on the service will automatically\nuse the implementation you supplied.\n*Example**\n\n```ts\nimport { Effect, Context } from \"effect\"\n\n// Declaring a tag for a service that generates random numbers\nclass Random extends Context.Tag(\"MyRandomService\")<\nRandom,\n{ readonly next: Effect.Effect<number> }\n>() {}\n\n// Using the service\nconst program = Effect.gen(function* () {\nconst random = yield* Random\nconst randomNumber = yield* random.next\nconsole.log(`random number: ${randomNumber}`)\n})\n\n// Providing the implementation\n//\n// ┌─── Effect<void, never, never>\n// ▼\nconst runnable = Effect.provideService(program, Random, {\nnext: Effect.sync(() => Math.random())\n})\n\n// Run successfully\nEffect.runPromise(runnable)\n// Example Output:\n// random number: 0.8241872233134417\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Context } from \"effect\"\n\n// Declaring a tag for a service that generates random numbers\nclass Random extends Context.Tag(\"MyRandomService\")<\nRandom,\n{ readonly next: Effect.Effect<number> }\n>() {}\n\n// Using the service\nconst program = Effect.gen(function* () {\nconst random = yield* Random\nconst randomNumber = yield* random.next\nconsole.log(`random number: ${randomNumber}`)\n})\n\n// Providing the implementation\n//\n// ┌─── Effect<void, never, never>\n// ▼\nconst runnable = Effect.provideService(program, Random, {\nnext: Effect.sync(() => Math.random())\n})\n\n// Run successfully\nEffect.runPromise(runnable)\n// Example Output:\n// random number: 0.8241872233134417"
+    }
+  ],
+  "tags": [
+    "Context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 14489,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L14489"
+}

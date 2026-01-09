@@ -1,0 +1,17 @@
+{
+  "id": "Layer.succeedContext",
+  "name": "succeedContext",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "<A>(context: Context<A>) => Layer<A, never, never>",
+  "description": "Constructs a layer from the specified value, which must return one or more\nservices.",
+  "documentation": "Constructs a layer from the specified value, which must return one or more\nservices.",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 935,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L935"
+}

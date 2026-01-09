@@ -1,0 +1,21 @@
+{
+  "id": "Option.all",
+  "name": "all",
+  "module": "Option",
+  "package": "effect",
+  "signature": "<const I extends Iterable<Option<any>> | Record<string, Option<any>>>(input: I) => [I] extends [readonly Option<any>[]] ? Option<{ -readonly [K in keyof I]: [I[K]] extends [Option<infer A>] ? A : never; }> : [I] extends [Iterable<Option<infer A>>] ? Option<A[]> : Option<{ -readonly [K in keyof I]: [I[K]] extends [Option<infer A>] ? A : never; }>",
+  "description": "Combines a structure of `Option`s into a single `Option` containing the\nvalues with the same structure.\n*Details This function takes a structure of `Option`s (a tuple, struct, or iterable)\nand produces a single `Option` that contains the values from the input\nstructure if all `Option`s are `Some`. If any `Option` in the input is\n`None`, the result is `None`. The structure of the input is preserved in the\noutput. - If the input is a tuple (e.g., an array), the result will be an `Option`\ncontaining a tuple with the same length.\n- If the input is a struct (e.g., an object), the result will be an `Option`\ncontaining a struct with the same keys.\n- If the input is an iterable, the result will be an `Option` containing an\narray.",
+  "documentation": "Combines a structure of `Option`s into a single `Option` containing the\nvalues with the same structure.\n*Details**\n\nThis function takes a structure of `Option`s (a tuple, struct, or iterable)\nand produces a single `Option` that contains the values from the input\nstructure if all `Option`s are `Some`. If any `Option` in the input is\n`None`, the result is `None`. The structure of the input is preserved in the\noutput.\n\n- If the input is a tuple (e.g., an array), the result will be an `Option`\ncontaining a tuple with the same length.\n- If the input is a struct (e.g., an object), the result will be an `Option`\ncontaining a struct with the same keys.\n- If the input is an iterable, the result will be an `Option` containing an\narray.",
+  "examples": [
+    {
+      "code": "import { Option } from \"effect\"\n\nconst maybeName: Option.Option<string> = Option.some(\"John\")\nconst maybeAge: Option.Option<number> = Option.some(25)\n\n// ┌─── Option<[string, number]>\n// ▼\nconst tuple = Option.all([maybeName, maybeAge])\nconsole.log(tuple)\n// Output:\n// { _id: 'Option', _tag: 'Some', value: [ 'John', 25 ] }\n\n// ┌─── Option<{ name: string; age: number; }>\n// ▼\nconst struct = Option.all({ name: maybeName, age: maybeAge })\nconsole.log(struct)\n// Output:\n// { _id: 'Option', _tag: 'Some', value: { name: 'John', age: 25 } }"
+    }
+  ],
+  "tags": [
+    "Combining"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Option.d.ts",
+  "sourceLine": 2342,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Option.ts#L2342"
+}

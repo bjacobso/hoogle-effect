@@ -1,0 +1,17 @@
+{
+  "id": "Array.makeBy",
+  "name": "makeBy",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <A>(f: (i: number) => A): (n: number) => [A, ...A[]]; <A>(n: number, f: (i: number) => A): [A, ...A[]]; }",
+  "description": "Return a `NonEmptyArray` of length `n` with element `i` initialized with `f(i)`.\n*Note. `n` is normalized to an integer >= 1.\n*Example",
+  "documentation": "Return a `NonEmptyArray` of length `n` with element `i` initialized with `f(i)`.\n*Note**. `n` is normalized to an integer >= 1.\n*Example**\n\n```ts\nimport { makeBy } from \"effect/Array\"\n\nconst result = makeBy(5, n => n * 2)\nconsole.log(result) // [0, 2, 4, 6, 8]\n```",
+  "examples": [],
+  "tags": [
+    "constructors"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 81,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L81"
+}

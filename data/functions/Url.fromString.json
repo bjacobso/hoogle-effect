@@ -1,0 +1,17 @@
+{
+  "id": "Url.fromString",
+  "name": "fromString",
+  "module": "Url",
+  "package": "@effect/platform",
+  "signature": "(url: string, base?: string | URL) => Either<URL, IllegalArgumentException>",
+  "description": "Parses a URL string into a `URL` object, returning an `Either` type for safe\nerror handling.\n*Details This function converts a string into a `URL` object, enabling safe URL\nparsing with built-in error handling. If the string is invalid or fails to\nparse, this function does not throw an error; instead, it wraps the error in\na `IllegalArgumentException` and returns it as the `Left` value of an\n`Either`. The `Right` value contains the successfully parsed `URL`. An optional `base` parameter can be provided to resolve relative URLs. If\nspecified, the function interprets the input `url` as relative to this\n`base`. This is especially useful when dealing with URLs that might not be\nfully qualified.\n*Example",
+  "documentation": "Parses a URL string into a `URL` object, returning an `Either` type for safe\nerror handling.\n*Details**\n\nThis function converts a string into a `URL` object, enabling safe URL\nparsing with built-in error handling. If the string is invalid or fails to\nparse, this function does not throw an error; instead, it wraps the error in\na `IllegalArgumentException` and returns it as the `Left` value of an\n`Either`. The `Right` value contains the successfully parsed `URL`.\n\nAn optional `base` parameter can be provided to resolve relative URLs. If\nspecified, the function interprets the input `url` as relative to this\n`base`. This is especially useful when dealing with URLs that might not be\nfully qualified.\n*Example**\n\n```ts\nimport { Url } from \"@effect/platform\"\nimport { Either } from \"effect\"\n\n// Parse an absolute URL\n//\n// ┌─── Either<URL, IllegalArgumentException>\n// ▼\nconst parsed = Url.fromString(\"https://example.com/path\")\n\nif (Either.isRight(parsed)) {\nconsole.log(\"Parsed URL:\", parsed.right.toString())\n} else {\nconsole.log(\"Error:\", parsed.left.message)\n}\n// Output: Parsed URL: https://example.com/path\n\n// Parse a relative URL with a base\nconst relativeParsed = Url.fromString(\"/relative-path\", \"https://example.com\")\n\nif (Either.isRight(relativeParsed)) {\nconsole.log(\"Parsed relative URL:\", relativeParsed.right.toString())\n} else {\nconsole.log(\"Error:\", relativeParsed.left.message)\n}\n// Output: Parsed relative URL: https://example.com/relative-path\n```",
+  "examples": [],
+  "tags": [
+    "Constructors"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/Url.d.ts",
+  "sourceLine": 58,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/Url.ts#L58"
+}

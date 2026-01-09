@@ -1,0 +1,21 @@
+{
+  "id": "Effect.runPromiseExit",
+  "name": "runPromiseExit",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E>(effect: Effect<A, E, never>, options?: { readonly signal?: AbortSignal; }) => Promise<Exit<A, E>>",
+  "description": "Runs an effect and returns a `Promise` that resolves to an `Exit`,\nrepresenting the outcome.\n*Details This function executes an effect and resolves to an `Exit` object. The `Exit`\ntype provides detailed information about the result of the effect:\n- If the effect succeeds, the `Exit` will be of type `Success` and include\nthe value produced by the effect.\n- If the effect fails, the `Exit` will be of type `Failure` and contain a\n`Cause` object, detailing the failure. Using this function allows you to examine both successful results and failure\ncases in a unified way, while still leveraging `Promise` for handling the\nasynchronous behavior of the effect.\n*When to Use Use this function when you need to understand the outcome of an effect,\nwhether it succeeded or failed, and want to work with this result using\n`Promise` syntax. This is particularly useful when integrating with systems\nthat rely on promises but need more detailed error handling than a simple\nrejection.\n*Example (Handling Results as Exit)",
+  "documentation": "Runs an effect and returns a `Promise` that resolves to an `Exit`,\nrepresenting the outcome.\n*Details**\n\nThis function executes an effect and resolves to an `Exit` object. The `Exit`\ntype provides detailed information about the result of the effect:\n- If the effect succeeds, the `Exit` will be of type `Success` and include\nthe value produced by the effect.\n- If the effect fails, the `Exit` will be of type `Failure` and contain a\n`Cause` object, detailing the failure.\n\nUsing this function allows you to examine both successful results and failure\ncases in a unified way, while still leveraging `Promise` for handling the\nasynchronous behavior of the effect.\n*When to Use**\n\nUse this function when you need to understand the outcome of an effect,\nwhether it succeeded or failed, and want to work with this result using\n`Promise` syntax. This is particularly useful when integrating with systems\nthat rely on promises but need more detailed error handling than a simple\nrejection.\n*Example** (Handling Results as Exit)\n\n```ts\nimport { Effect } from \"effect\"\n\n// Execute a successful effect and get the Exit result as a Promise\nEffect.runPromiseExit(Effect.succeed(1)).then(console.log)\n// Output:\n// {\n// _id: \"Exit\",\n// _tag: \"Success\",\n// value: 1\n// }\n\n// Execute a failing effect and get the Exit result as a Promise\nEffect.runPromiseExit(Effect.fail(\"my error\")).then(console.log)\n// Output:\n// {\n// _id: \"Exit\",\n// _tag: \"Failure\",\n// cause: {\n// _id: \"Cause\",\n// _tag: \"Fail\",\n// failure: \"my error\"\n// }\n// }\n```",
+  "examples": [
+    {
+      "code": "import { Effect } from \"effect\"\n\n// Execute a successful effect and get the Exit result as a Promise\nEffect.runPromiseExit(Effect.succeed(1)).then(console.log)\n// Output:\n// {\n// _id: \"Exit\",\n// _tag: \"Success\",\n// value: 1\n// }\n\n// Execute a failing effect and get the Exit result as a Promise\nEffect.runPromiseExit(Effect.fail(\"my error\")).then(console.log)\n// Output:\n// {\n// _id: \"Exit\",\n// _tag: \"Failure\",\n// cause: {\n// _id: \"Cause\",\n// _tag: \"Fail\",\n// failure: \"my error\"\n// }\n// }"
+    }
+  ],
+  "tags": [
+    "Running Effects"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 24481,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L24481"
+}

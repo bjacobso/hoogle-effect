@@ -1,0 +1,17 @@
+{
+  "id": "HttpMethod.isHttpMethod",
+  "name": "isHttpMethod",
+  "module": "HttpMethod",
+  "package": "@effect/platform",
+  "signature": "(u: unknown) => u is HttpMethod",
+  "description": "Tests if a value is a `HttpMethod`.\n*Example",
+  "documentation": "Tests if a value is a `HttpMethod`.\n*Example**\n\n```ts\nimport { HttpMethod } from \"@effect/platform\"\n\nconsole.log(HttpMethod.isHttpMethod(\"GET\"))\n// true\nconsole.log(HttpMethod.isHttpMethod(\"get\"))\n// false\nconsole.log(HttpMethod.isHttpMethod(1))\n// false\n```",
+  "examples": [],
+  "tags": [
+    "refinements"
+  ],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/HttpMethod.d.ts",
+  "sourceLine": 49,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/HttpMethod.ts#L49"
+}

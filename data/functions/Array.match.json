@@ -1,0 +1,17 @@
+{
+  "id": "Array.match",
+  "name": "match",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <B, A, C = B>(options: { readonly onEmpty: LazyArg<B>; readonly onNonEmpty: (self: readonly [A, ...A[]]) => C; }): (self: readonly A[]) => B | C; <A, B, C = B>(self: readonly A[], options: { readonly onEmpty: LazyArg<B>; readonly onNonEmpty: (self: readonly [A, ...A[]]) => C; }): B | C; }",
+  "description": "Matches the elements of an array, applying functions to cases of empty and non-empty arrays.\n*Example",
+  "documentation": "Matches the elements of an array, applying functions to cases of empty and non-empty arrays.\n*Example**\n\n```ts\nimport { Array } from \"effect\"\n\nconst match = Array.match({\nonEmpty: () => \"empty\",\nonNonEmpty: ([head, ...tail]) => `head: ${head}, tail: ${tail.length}`\n})\nconsole.log(match([])) // \"empty\"\nconsole.log(match([1, 2, 3])) // \"head: 1, tail: 2\"\n```",
+  "examples": [],
+  "tags": [
+    "pattern matching"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 276,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L276"
+}

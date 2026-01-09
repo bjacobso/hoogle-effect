@@ -1,0 +1,17 @@
+{
+  "id": "Schedule.recurUpTo",
+  "name": "recurUpTo",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "(duration: DurationInput) => Schedule<Duration, unknown, never>",
+  "description": "A schedule that recurs until the specified duration has elapsed.\n*Details This schedule continues executing for the given `duration`, after which it\nstops. The schedule outputs the elapsed time on each recurrence. This is useful for limiting the duration of retries, enforcing time-based\nconstraints, or ensuring that an operation does not run indefinitely.",
+  "documentation": "A schedule that recurs until the specified duration has elapsed.\n*Details**\n\nThis schedule continues executing for the given `duration`, after which it\nstops. The schedule outputs the elapsed time on each recurrence.\n\nThis is useful for limiting the duration of retries, enforcing time-based\nconstraints, or ensuring that an operation does not run indefinitely.",
+  "examples": [],
+  "tags": [
+    "Recurrence Conditions"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2345,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2345"
+}

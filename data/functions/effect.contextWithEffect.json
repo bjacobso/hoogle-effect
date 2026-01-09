@@ -1,0 +1,17 @@
+{
+  "id": "Effect.contextWithEffect",
+  "name": "contextWithEffect",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<R2, A, E, R>(f: (context: Context<R2>) => Effect<A, E, R>) => Effect<A, E, R2 | R>",
+  "description": "Accesses the context and performs an effectful transformation.\n*Details This function retrieves the context and allows you to transform it\neffectually using another effect. It is useful when the transformation\ninvolves asynchronous or effectful operations.",
+  "documentation": "Accesses the context and performs an effectful transformation.\n*Details**\n\nThis function retrieves the context and allows you to transform it\neffectually using another effect. It is useful when the transformation\ninvolves asynchronous or effectful operations.",
+  "examples": [],
+  "tags": [
+    "Context"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 13656,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L13656"
+}

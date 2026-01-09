@@ -1,0 +1,19 @@
+{
+  "id": "PlatformLogger.toFile",
+  "name": "toFile",
+  "module": "PlatformLogger",
+  "package": "@effect/platform",
+  "signature": "{ (path: string, options?: OpenFileOptions & { readonly batchWindow?: DurationInput; }): <Message>(self: Logger<Message, string>) => Effect<Logger<Message, void>, PlatformError, Scope | FileSystem>; <Message>(self: Logger<Message, string>, path: string, options?: OpenFileOptions & { readonly batchWindow?: DurationInput; }): Effect<Logger<Message, void>, PlatformError, Scope | FileSystem>; }",
+  "description": "Create a Logger from another string Logger that writes to the specified file.\n*Example",
+  "documentation": "Create a Logger from another string Logger that writes to the specified file.\n*Example**\n\n```ts\nimport { PlatformLogger } from \"@effect/platform\"\nimport { NodeFileSystem, NodeRuntime } from \"@effect/platform-node\"\nimport { Effect, Layer, Logger } from \"effect\"\n\nconst fileLogger = Logger.logfmtLogger.pipe(\nPlatformLogger.toFile(\"/tmp/log.txt\")\n)\nconst LoggerLive = Logger.replaceScoped(Logger.defaultLogger, fileLogger).pipe(\nLayer.provide(NodeFileSystem.layer)\n)\n\nEffect.log(\"a\").pipe(\nEffect.zipRight(Effect.log(\"b\")),\nEffect.zipRight(Effect.log(\"c\")),\nEffect.provide(LoggerLive),\nNodeRuntime.runMain\n)\n```",
+  "examples": [
+    {
+      "code": "import { PlatformLogger } from \"@effect/platform\"\nimport { NodeFileSystem, NodeRuntime } from \"@effect/platform-node\"\nimport { Effect, Layer, Logger } from \"effect\"\n\nconst fileLogger = Logger.logfmtLogger.pipe(\nPlatformLogger.toFile(\"/tmp/log.txt\")\n)\nconst LoggerLive = Logger.replaceScoped(Logger.defaultLogger, fileLogger).pipe(\nLayer.provide(NodeFileSystem.layer)\n)\n\nEffect.log(\"a\").pipe(\nEffect.zipRight(Effect.log(\"b\")),\nEffect.zipRight(Effect.log(\"c\")),\nEffect.provide(LoggerLive),\nNodeRuntime.runMain\n)"
+    }
+  ],
+  "tags": [],
+  "since": "1.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/@effect/platform/dist/dts/PlatformLogger.d.ts",
+  "sourceLine": 37,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/platform/src/PlatformLogger.ts#L37"
+}

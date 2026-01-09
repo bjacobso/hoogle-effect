@@ -1,0 +1,21 @@
+{
+  "id": "Stream.ensuring",
+  "name": "ensuring",
+  "module": "Stream",
+  "package": "effect",
+  "signature": "{ <X, R2>(finalizer: Effect<X, never, R2>): <A, E, R>(self: Stream<A, E, R>) => Stream<A, E, R2 | R>; <A, E, R, X, R2>(self: Stream<A, E, R>, finalizer: Effect<X, never, R2>): Stream<A, E, R | R2>; }",
+  "description": "Executes the provided finalizer after this stream's finalizers run.",
+  "documentation": "Executes the provided finalizer after this stream's finalizers run.",
+  "examples": [
+    {
+      "code": "import { Console, Effect, Stream } from \"effect\"\n\nconst program = Stream.fromEffect(Console.log(\"Application Logic.\")).pipe(\nStream.concat(Stream.finalizer(Console.log(\"Finalizing the stream\"))),\nStream.ensuring(\nConsole.log(\"Doing some other works after stream's finalization\")\n)\n)\n\nEffect.runPromise(Stream.runCollect(program)).then(console.log)\n// Application Logic.\n// Finalizing the stream\n// Doing some other works after stream's finalization\n// { _id: 'Chunk', values: [ undefined, undefined ] }"
+    }
+  ],
+  "tags": [
+    "utils"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Stream.d.ts",
+  "sourceLine": 2319,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Stream.ts#L2319"
+}

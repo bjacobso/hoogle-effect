@@ -1,0 +1,21 @@
+{
+  "id": "Effect.forkScoped",
+  "name": "forkScoped",
+  "module": "Effect",
+  "package": "effect",
+  "signature": "<A, E, R>(self: Effect<A, E, R>) => Effect<RuntimeFiber<A, E>, never, Scope | R>",
+  "description": "Forks a fiber in a local scope, ensuring it outlives its parent.",
+  "documentation": "Forks a fiber in a local scope, ensuring it outlives its parent.\n**Details**\nThis function is used to create fibers that are tied to a local scope,\nmeaning they are not dependent on their parent fiber's lifecycle. Instead,\nthey will continue running until the scope they were created in is closed.\nThis is particularly useful when you need a fiber to run independently of the\nparent fiber, but still want it to be terminated when the scope ends.\nFibers created with this function are isolated from the parent fiber’s\ntermination, so they can run for a longer period. This behavior is different\nfrom fibers created with {@link fork}, which are terminated when the parent fiber\nterminates. With `forkScoped`, the child fiber will keep running until the\nlocal scope ends, regardless of the state of the parent fiber.\n**Example** (Forking a Fiber in a Local Scope)\nIn this example, the child fiber continues to run beyond the lifetime of the parent fiber.\nThe child fiber is tied to the local scope and will be terminated only when the scope ends.\n```ts\nimport { Effect, Console, Schedule } from \"effect\"\n// Child fiber that logs a message repeatedly every second\nconst child = Effect.repeat(\nConsole.log(\"child: still running!\"),\nSchedule.fixed(\"1 second\")\n)\n// ┌─── Effect<void, never, Scope>\n// ▼\nconst parent = Effect.gen(function* () {\nconsole.log(\"parent: started!\")\n// Child fiber attached to local scope\nyield* Effect.forkScoped(child)\nyield* Effect.sleep(\"3 seconds\")\nconsole.log(\"parent: finished!\")\n})\n// Program runs within a local scope\nconst program = Effect.scoped(\nEffect.gen(function* () {\nconsole.log(\"Local scope started!\")\nyield* Effect.fork(parent)\n// Scope lasts for 5 seconds\nyield* Effect.sleep(\"5 seconds\")\nconsole.log(\"Leaving the local scope!\")\n})\n)\nEffect.runFork(program)\n// Output:\n// Local scope started!\n// parent: started!\n// child: still running!\n// child: still running!\n// child: still running!\n// parent: finished!\n// child: still running!\n// child: still running!\n// Leaving the local scope!\n```",
+  "examples": [
+    {
+      "code": "import { Effect, Console, Schedule } from \"effect\"\n// Child fiber that logs a message repeatedly every second\nconst child = Effect.repeat(\nConsole.log(\"child: still running!\"),\nSchedule.fixed(\"1 second\")\n)\n// ┌─── Effect<void, never, Scope>\n// ▼\nconst parent = Effect.gen(function* () {\nconsole.log(\"parent: started!\")\n// Child fiber attached to local scope\nyield* Effect.forkScoped(child)\nyield* Effect.sleep(\"3 seconds\")\nconsole.log(\"parent: finished!\")\n})\n// Program runs within a local scope\nconst program = Effect.scoped(\nEffect.gen(function* () {\nconsole.log(\"Local scope started!\")\nyield* Effect.fork(parent)\n// Scope lasts for 5 seconds\nyield* Effect.sleep(\"5 seconds\")\nconsole.log(\"Leaving the local scope!\")\n})\n)\nEffect.runFork(program)\n// Output:\n// Local scope started!\n// parent: started!\n// child: still running!\n// child: still running!\n// child: still running!\n// parent: finished!\n// child: still running!\n// child: still running!\n// Leaving the local scope!"
+    }
+  ],
+  "tags": [
+    "Supervision & Fibers"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/effect.d.ts",
+  "sourceLine": 11719,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/effect.ts#L11719"
+}

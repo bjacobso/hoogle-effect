@@ -1,0 +1,15 @@
+{
+  "id": "Array.max",
+  "name": "max",
+  "module": "Array",
+  "package": "effect",
+  "signature": "{ <A>(O: Order<A>): (self: readonly [A, ...A[]]) => A; <A>(self: readonly [A, ...A[]], O: Order<A>): A; }",
+  "description": "Finds the maximum element in an array based on a comparator.\n*Example",
+  "documentation": "Finds the maximum element in an array based on a comparator.\n*Example**\n\n```ts\nimport { Array, Order } from \"effect\"\n\nconst result = Array.max([3, 1, 2], Order.number)\nconsole.log(result) // 3\n```",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Array.d.ts",
+  "sourceLine": 5080,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Array.ts#L5080"
+}

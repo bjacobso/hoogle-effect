@@ -1,0 +1,17 @@
+{
+  "id": "Layer.setRandom",
+  "name": "setRandom",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "<A extends Random.Random>(random: A) => Layer<never, never, never>",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "Random"
+  ],
+  "since": "3.15.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 1217,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L1217"
+}

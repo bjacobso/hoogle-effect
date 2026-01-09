@@ -1,0 +1,17 @@
+{
+  "id": "HashMap.forEach",
+  "name": "forEach",
+  "module": "HashMap",
+  "package": "effect",
+  "signature": "{ <V, K>(f: (value: V, key: K) => void): (self: HashMap<K, V>) => void; <V, K>(self: HashMap<K, V>, f: (value: V, key: K) => void): void; }",
+  "description": "Applies the specified function to the entries of the `HashMap`.",
+  "documentation": "Applies the specified function to the entries of the `HashMap`.",
+  "examples": [],
+  "tags": [
+    "traversing"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/HashMap.d.ts",
+  "sourceLine": 662,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/HashMap.ts#L662"
+}

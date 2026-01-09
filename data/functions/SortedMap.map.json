@@ -1,0 +1,17 @@
+{
+  "id": "SortedMap.map",
+  "name": "map",
+  "module": "SortedMap",
+  "package": "effect",
+  "signature": "{ <A, K, B>(f: (a: A, k: K) => B): (self: SortedMap<K, A>) => SortedMap<K, B>; <K, A, B>(self: SortedMap<K, A>, f: (a: A, k: K) => B): SortedMap<K, B>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "mapping"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/SortedMap.d.ts",
+  "sourceLine": 132,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/SortedMap.ts#L132"
+}

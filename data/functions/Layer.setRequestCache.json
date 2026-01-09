@@ -1,0 +1,17 @@
+{
+  "id": "Layer.setRequestCache",
+  "name": "setRequestCache",
+  "module": "Layer",
+  "package": "effect",
+  "signature": "{ <E, R>(cache: Effect<Cache, E, R>): Layer<never, E, Exclude<R, Scope>>; (cache: Cache): Layer<never, never, never>; }",
+  "description": "",
+  "documentation": "",
+  "examples": [],
+  "tags": [
+    "requests & batching"
+  ],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Layer.d.ts",
+  "sourceLine": 1232,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Layer.ts#L1232"
+}

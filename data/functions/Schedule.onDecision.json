@@ -1,0 +1,15 @@
+{
+  "id": "Schedule.onDecision",
+  "name": "onDecision",
+  "module": "Schedule",
+  "package": "effect",
+  "signature": "{ <Out, X, R2>(f: (out: Out, decision: ScheduleDecision) => Effect<X, never, R2>): <In, R>(self: Schedule<Out, In, R>) => Schedule<Out, In, R2 | R>; <Out, In, R, X, R2>(self: Schedule<Out, In, R>, f: (out: Out, decision: ScheduleDecision) => Effect<X, never, R2>): Schedule<Out, In, R | R2>; }",
+  "description": "Returns a new schedule that executes an effect every time the schedule makes\na decision.\n*Details This function enhances an existing schedule by running an effectful function\n`f` whenever a scheduling decision is made. The function receives the current\nschedule output (`out`) and the decision (`ScheduleDecision`), allowing\nadditional logic to be executed, such as logging, monitoring, or side\neffects.",
+  "documentation": "Returns a new schedule that executes an effect every time the schedule makes\na decision.\n*Details**\n\nThis function enhances an existing schedule by running an effectful function\n`f` whenever a scheduling decision is made. The function receives the current\nschedule output (`out`) and the decision (`ScheduleDecision`), allowing\nadditional logic to be executed, such as logging, monitoring, or side\neffects.",
+  "examples": [],
+  "tags": [],
+  "since": "2.0.0",
+  "sourceFile": "/Users/benjacobson/conductor/workspaces/hoogle-effect/san-juan-v1/packages/api/node_modules/effect/dist/dts/Schedule.d.ts",
+  "sourceLine": 2121,
+  "githubUrl": "https://github.com/Effect-TS/effect/blob/main/packages/effect/src/Schedule.ts#L2121"
+}
