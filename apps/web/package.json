@@ -6,11 +6,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "copy-index": "cp -r ../../data public/",
+    "copy-index": "cp -r ../../packages/data/generated public/data",
     "prebuild": "pnpm copy-index"
   },
   "dependencies": {
     "@hoogle-effect/api": "workspace:*",
+    "@hoogle-effect/data": "workspace:*",
     "fuse.js": "^7.0.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",

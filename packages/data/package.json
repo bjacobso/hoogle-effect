@@ -1,0 +1,22 @@
+{
+  "name": "@hoogle-effect/data",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    "./index.json": "./generated/index.json",
+    "./functions/*": "./generated/functions/*"
+  },
+  "scripts": {
+    "build": "tsx src/build.ts",
+    "clean": "rm -rf generated"
+  },
+  "dependencies": {
+    "@hoogle-effect/api": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "files": ["generated"]
+}

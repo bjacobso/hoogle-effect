@@ -7,9 +7,8 @@ import Fuse from 'fuse.js';
 import type { FunctionEntry, SearchIndex } from '@hoogle-effect/api';
 
 // Import the index at build time (bundled with worker)
-// Path from apps/simple/src/services/ to root data/ directory
 // @ts-expect-error - JSON import resolved at bundle time
-import indexData from '../../../../data/index.json';
+import indexData from '@hoogle-effect/data/index.json';
 
 // Cached Fuse instance
 let fuseInstance: Fuse<FunctionEntry> | null = null;
