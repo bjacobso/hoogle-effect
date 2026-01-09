@@ -8,7 +8,7 @@
     "dev:full": "pnpm build:index && pnpm --filter @hoogle-effect/web copy-index && pnpm --filter @hoogle-effect/web dev",
     "dev:simple": "pnpm build:index && pnpm --filter @hoogle-effect/simple build:css && pnpm --filter @hoogle-effect/simple dev",
     "build": "turbo build",
-    "build:index": "turbo run build:index",
+    "build:index": "turbo run build --filter=@hoogle-effect/data",
     "build:simple": "pnpm build:index && pnpm --filter @hoogle-effect/simple build:css && pnpm --filter @hoogle-effect/simple build",
     "deploy:simple": "pnpm build:index && pnpm --filter @hoogle-effect/simple build:css && pnpm --filter @hoogle-effect/simple deploy",
     "test": "turbo test",

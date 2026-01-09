@@ -1,12 +1,11 @@
-#!/usr/bin/env tsx
 /**
  * Build the search index from Effect-TS type definitions
  *
- * This script:
- * 1. Loads Effect package from node_modules
- * 2. Parses TypeScript declarations using ts-morph
- * 3. Extracts function signatures, documentation, examples
- * 4. Generates index.json for the search UI
+ * This module exports functions to:
+ * 1. Load Effect packages from node_modules
+ * 2. Parse TypeScript declarations using ts-morph
+ * 3. Extract function signatures, documentation, examples
+ * 4. Generate index.json for the search UI
  */
 
 import { Project, SourceFile, FunctionDeclaration, VariableDeclaration, Node, JSDoc, SyntaxKind, TypeAliasDeclaration, InterfaceDeclaration } from "ts-morph";
@@ -142,7 +141,6 @@ const CONFIG = {
       ],
     },
   ],
-  outputDir: path.resolve(process.cwd(), "../../data"),
 };
 
 // Initialize ts-morph project
@@ -158,11 +156,16 @@ function createProject(): Project {
   return project;
 }
 
-// Find a package in node_modules
+// Find a package in node_modules (relative to this package or monorepo root)
 function findPackage(packageName: string): string {
+  const apiPackageRoot = path.resolve(import.meta.dirname, "../..");
   const possiblePaths = [
+    // api package's own node_modules (pnpm hoists here for workspace deps)
+    path.resolve(apiPackageRoot, `node_modules/${packageName}`),
+    // Monorepo root node_modules
+    path.resolve(apiPackageRoot, `../../node_modules/${packageName}`),
+    // Caller's cwd (fallback)
     path.resolve(process.cwd(), `node_modules/${packageName}`),
-    path.resolve(process.cwd(), `../../node_modules/${packageName}`),
   ];
 
   for (const p of possiblePaths) {
@@ -251,6 +254,36 @@ function parseExamplesFromDescription(description: string): { cleanDescription: 
   return { cleanDescription, examples };
 }
 
+/**
+ * Clean JSDoc comment syntax from text
+ */
+function cleanJSDocText(text: string): string {
+  if (!text) return "";
+
+  return text
+    .replace(/^\/\*\*\s*/, "")           // Remove opening /**
+    .replace(/\s*\*\/$/, "")             // Remove closing */
+    .replace(/^\s*\*\s?/gm, "")          // Remove leading * from lines
+    .replace(/ {2,}/g, " ")              // Collapse multiple spaces
+    .split("\n")
+    .map(line => line.trim())
+    .join("\n")
+    .trim();
+}
+
+/**
+ * Clean JSDoc comment syntax from code examples
+ */
+function cleanJSDocCode(code: string): string {
+  if (!code) return "";
+
+  return code
+    .replace(/^\/\*\*\s*/, "")           // Remove opening /**
+    .replace(/\s*\*\/$/, "")             // Remove closing */
+    .replace(/^\s*\*\s?/gm, "")          // Remove leading * from lines
+    .trim();
+}
+
 // Extract JSDoc comment text
 function extractJSDoc(node: Node): { description: string; fullDescription: string; examples: Example[]; tags: Record<string, string> } {
   const jsDocs = (node as unknown as { getJsDocs?: () => JSDoc[] }).getJsDocs?.() ?? [];
@@ -262,7 +295,8 @@ function extractJSDoc(node: Node): { description: string; fullDescription: strin
     // Get main description
     const comment = jsDoc.getComment();
     if (comment) {
-      rawDescription = typeof comment === "string" ? comment : comment.map((c) => c?.getText() ?? "").join("");
+      const rawComment = typeof comment === "string" ? comment : comment.map((c) => c?.getText() ?? "").join("");
+      rawDescription = cleanJSDocText(rawComment);
     }
 
     // Extract tags
@@ -272,16 +306,18 @@ function extractJSDoc(node: Node): { description: string; fullDescription: strin
 
       if (tagName === "example") {
         // Parse example code blocks from @example tags
-        const code = tagText.replace(/^```[\w-]*\n?/, "").replace(/\n?```$/, "").trim();
+        const cleanedTagText = cleanJSDocText(tagText);
+        const code = cleanedTagText.replace(/^```[\w-]*\n?/, "").replace(/\n?```$/, "").trim();
         if (code) {
-          examples.push({ code });
+          const cleanCode = cleanJSDocCode(code);
+          examples.push({ code: cleanCode });
         }
       } else if (tagName === "since") {
-        tags.since = tagText;
+        tags.since = cleanJSDocText(tagText);
       } else if (tagName === "deprecated") {
-        tags.deprecated = tagText;
+        tags.deprecated = cleanJSDocText(tagText);
       } else if (tagName === "category") {
-        tags.category = tagText;
+        tags.category = cleanJSDocText(tagText);
       }
     }
   }
@@ -488,8 +524,10 @@ function processSourceFile(sourceFile: SourceFile, moduleName: string, packageNa
   return entries;
 }
 
-// Load and process all configured packages
-async function buildIndex(): Promise<SearchIndex> {
+/**
+ * Build the search index by loading and processing all configured packages
+ */
+export async function buildIndex(): Promise<SearchIndex> {
   console.log("Building Hoogle-Effect search index...\n");
 
   const project = createProject();
@@ -550,10 +588,10 @@ async function buildIndex(): Promise<SearchIndex> {
   };
 }
 
-// Write index to disk
-function writeIndex(index: SearchIndex): void {
-  const outputDir = CONFIG.outputDir;
-
+/**
+ * Write the search index to disk
+ */
+export function writeIndex(index: SearchIndex, outputDir: string): void {
   // Ensure output directory exists
   fs.mkdirSync(outputDir, { recursive: true });
 
@@ -593,17 +631,3 @@ function writeIndex(index: SearchIndex): void {
     console.log(`  ${m.name}: ${m.count}`);
   }
 }
-
-// Main entry point
-async function main() {
-  try {
-    const index = await buildIndex();
-    writeIndex(index);
-    console.log("\nIndex build complete!");
-  } catch (error) {
-    console.error("Error building index:", error);
-    process.exit(1);
-  }
-}
-
-main();
